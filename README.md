@@ -219,7 +219,12 @@ https://codeexperts.com.br/curso/laravel-mastery
 
 ## <a name="parte4">4 - 03 - Ferramentas</a>
 
+- PHP Storm
+Para estudantes, solicite em https://www.jetbrains.com/student/
 
+Para open source, caso você contribua, solicite em https://www.jetbrains.com/community/opensource/
+
+Visual Studio Code: https://code.visualstudio.com/
 
 [Voltar ao Índice](#indice)
 
@@ -228,7 +233,22 @@ https://codeexperts.com.br/curso/laravel-mastery
 
 ## <a name="parte5">5 - 2. Ambiente</a>
 
+- php 7.3+
 
+```
+$ php -m
+[PHP Modules]
+bcmath
+ctype
+fileinfo
+json
+mbstring
+openssl
+PDO
+tokenizer
+xml
+
+```
 
 [Voltar ao Índice](#indice)
 
@@ -264,7 +284,16 @@ https://codeexperts.com.br/curso/laravel-mastery
 
 ## <a name="parte9">9 - 07 - Laravel Installer Windows</a>
 
+```
+$ composer global require laravel/installer
 
+add PATH Composer e /laravel/bin/
+
+laravel new projeto01
+
+php artisan serve
+
+```
 
 [Voltar ao Índice](#indice)
 
