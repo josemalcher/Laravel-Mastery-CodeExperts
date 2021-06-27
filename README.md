@@ -329,6 +329,25 @@ php artisan serve
 
 ## <a name="parte13">13 - 10 - Panorama Inicial do Laravel</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php)
+
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('hello', function (){
+    return view('hello');
+});
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php)
+
 
 
 [Voltar ao Índice](#indice)
