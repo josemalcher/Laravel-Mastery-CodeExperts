@@ -411,7 +411,13 @@ Route::get('/hello-name/{name?}', [\App\Http\Controllers\HelloWorldController::c
 
 ## <a name="parte16">16 - 13 - O Artisan</a>
 
+```
+php artisan
 
+php artisan make:controller --help
+
+php artisan help make:controller
+```
 
 [Voltar ao Índice](#indice)
 
