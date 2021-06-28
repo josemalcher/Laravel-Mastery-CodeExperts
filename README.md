@@ -2,51 +2,236 @@
 
 https://codeexperts.com.br/curso/laravel-mastery
 
+
+
 ## <a name="indice">Índice</a>
 
-1. [Boas Vindas](#parte1)
-2. [Ambiente](#parte2)
-3. [Primeiros Passos Visão Geral](#parte3)
-4. [Migrations, Seeders e Factories](#parte4)
-5. [Eloquent](#parte5)
-6. [Factories com Relacionamentos](#parte6)
-7. [View: Laravel Blade](#parte7)
-8. [View: Manipulação de Formulários](#parte8)
-9. [Laravel Router](#parte9)
-10. [Manipulando Validações](#parte10)
-11. [Controllers como Recurso](#parte11)
-12. [Primeiro Starter Point: Laravel UI](#parte12)
-13. [Melhorias Projeto Eventos](#parte13)
-14. [Upload de Arquivos](#parte14)
-15. [Melhorias & Encerramento Bloco 1](#parte15)
-16. [ACL & Autorização](#parte16)
-17. [Bloco 2 - Iniciando](#parte17)
-18. [Primeiros Passos com Livewire](#parte18)
+1. [1. Boas Vindas](#parte1)     
+2. [01 - Seja Bem-Vindo](#parte2)     
+3. [02 - Quem Sou Eu](#parte3)     
+4. [03 - Ferramentas](#parte4)     
+5. [2. Ambiente](#parte5)     
+6. [04 - Formas de Iniciar Projeto](#parte6)     
+7. [05 - Laravel Installer OS X](#parte7)     
+8. [06 - Laravel Installer Linux](#parte8)     
+9. [07 - Laravel Installer Windows](#parte9)     
+10. [3. Primeiros Passos Visão Geral](#parte10)     
+11. [08 - Iniciando Projeto](#parte11)     
+12. [09 - Diretórios Projeto](#parte12)     
+13. [10 - Panorama Inicial do Laravel](#parte13)     
+14. [11 - Parâmetros Dinâmicos Rota](#parte14)     
+15. [12 - Rotas & Controllers](#parte15)     
+16. [13 - O Artisan](#parte16)     
+17. [14 - Entendendo as Configurações](#parte17)     
+18. [15 - Migrations](#parte18)     
+19. [16 - Executando Migrations](#parte19)     
+20. [17 - Criando Primeira Migração](#parte20)     
+21. [18 - Os Models](#parte21)     
+22. [19 - O Eloquent e Queries](#parte22)     
+23. [20 - O Tinker](#parte23)     
+24. [21 - Assets Frontend](#parte24)     
+25. [22 - Conclusões](#parte25)     
+26. [4. Migrations, Seeders e Factories](#parte26)     
+27. [23 - Introdução](#parte27)     
+28. [24 - Seeders e Factories](#parte28)     
+29. [25 - Executando Seeds e Factories](#parte29)     
+30. [26 - Primeira Factory e Seeds](#parte30)     
+31. [27 - Comandos Fresh e Refresh](#parte31)     
+32. [28 - Comando Rollback e Reset](#parte32)     
+33. [29 - Falando Sobre Migrações](#parte33)     
+34. [30 - Uma Migração de Edição](#parte34)     
+35. [31 - Schema Dump](#parte35)     
+36. [32 - Conclusões](#parte36)     
+37. [5. Eloquent](#parte37)     
+38. [33 - Introdução](#parte38)     
+39. [34 - Relembrando Models](#parte39)     
+40. [35 - Active Record Inserção](#parte40)     
+41. [36 - Active Record Atualização](#parte41)     
+42. [37 - Mass Assignment Criação](#parte42)     
+43. [38 - Update em Massa](#parte43)     
+44. [39 - Removendo Dados](#parte44)     
+45. [40 - Organizando CRUD](#parte45)     
+46. [41 - Prelúdio Relacionamentos](#parte46)     
+47. [42 - Migração Tabela Perfil](#parte47)     
+48. [43 - Mapeando 1:1 Models](#parte48)     
+49. [44 - Salvando 1:1](#parte49)     
+50. [45 - Recuperando 1:1](#parte50)     
+51. [46 - Migração 1:N](#parte51)     
+52. [47 - Mapeando 1:N Models](#parte52)     
+53. [48 - Salvando 1:N](#parte53)     
+54. [49 - Recuperando 1:N](#parte54)     
+55. [50 - Migração N:N](#parte55)     
+56. [51 - Gerando Algumas Categories](#parte56)     
+57. [52 - Mapeando N:N Models](#parte57)     
+58. [53 - Salvando N:N](#parte58)     
+59. [54 - Recuperando N:N](#parte59)     
+60. [55 - Manipulando BelongsTo](#parte60)     
+61. [56 - Conclusão](#parte61)     
+62. [6. Factories com Relacionamentos](#parte62)     
+63. [57 - Iniciando Factories: Profile e Photo](#parte63)     
+64. [58 - Factories com Relacionamento HasMany](#parte64)     
+65. [59 - Factories com Relacionamento HasOne](#parte65)     
+66. [60 - Factories com BelongsTo](#parte66)     
+67. [61 - Executando as Factories via Seed](#parte67)     
+68. [7. View: Laravel Blade](#parte68)     
+69. [62 - Introdução](#parte69)     
+70. [63 - Relembrando as Views](#parte70)     
+71. [64 - Loop e Passagem de Dados View](#parte71)     
+72. [65 - Diretiva ForElse](#parte72)     
+73. [66 - O print do Blade](#parte73)     
+74. [67 - Herança de Templates](#parte74)     
+75. [68 - Incrementando Views de Eventos](#parte75)     
+76. [69 - Melhorias Home e Inicio de Single](#parte76)     
+77. [70 - Compondo View Single Evento](#parte77)     
+78. [71 - Exibindo Fotos Evento se Existirem](#parte78)     
+79. [72 - Organizando com HomeController](#parte79)     
+80. [73 - Conclusões](#parte80)     
+81. [8. View: Manipulação de Formulários](#parte81)     
+82. [74 - Introdução](#parte82)     
+83. [75 - Organizando Rotas Painel Eventos](#parte83)     
+84. [76 - Listagem de Eventos](#parte84)     
+85. [77 - Paginando Dados](#parte85)     
+86. [78 - Tela de Criação de Evento](#parte86)     
+87. [79 - Entendendo CSRF no Laravel](#parte87)     
+88. [80 - Manipulando Dados da Request](#parte88)     
+89. [81 - Editando Eventos](#parte89)     
+90. [82 - Linkando Edição e Remoção de Evento](#parte90)     
+91. [83 - Melhorias Manipulação de Request](#parte91)     
+92. [84 - Conclusões](#parte92)     
+93. [9. Laravel Router](#parte93)     
+94. [85 - Introdução](#parte94)     
+95. [86 - Relembrando Rotas](#parte95)     
+96. [87 - Organizando Rotas com Prefixo e Grupo](#parte96)     
+97. [88 - Usando Apelido de Rotas](#parte97)     
+98. [89 - Refatorando Links nas Views](#parte98)     
+99. [90 - Refatorando Redirecionamentos](#parte99)     
+100. [91 - Dando um Tapa no Painel de Eventos](#parte100)     
+101. [92 - Conclusões](#parte101)     
+102. [10. Manipulando Validações](#parte102)     
+103. [93 - Introdução](#parte103)     
+104. [94 - Usando Validação Controller](#parte104)     
+105. [95 - Exibindo Todoas as Validações na View](#parte105)     
+106. [96 - Exibindo Validações POr Input](#parte106)     
+107. [97 - Diretiva @error](#parte107)     
+108. [98 - Traduzindo Mensagens de Validação](#parte108)     
+109. [99 - Melhorando Para Form Requests](#parte109)     
+110. [100 - Validação na Edição do Evento](#parte110)     
+111. [101 - Conclusões](#parte111)     
+112. [11. Controllers como Recurso](#parte112)     
+113. [102 - Introdução](#parte113)     
+114. [103 - O que são Controllers como Recurso](#parte114)     
+115. [104 - Criando Controllers como Recurso](#parte115)     
+116. [105 - Controller como Recurso em Eventos](#parte116)     
+117. [106 - Tomando Nota dos Ganhos](#parte117)     
+118. [107 - Recursos Aninhados](#parte118)     
+119. [108 - Recursos Aninhados no Projeto e Mais](#parte119)     
+120. [109 - Registrando Vários Recursos](#parte120)     
+121. [110 - DI nos Controllers](#parte121)     
+122. [111 - Conclusões](#parte122)     
+123. [12. Primeiro Starter Point: Laravel UI](#parte123)     
+124. [112 - Intro e Obtendo Laravel UI](#parte124)     
+125. [113 - Gerando Autenticação](#parte125)     
+126. [114 - Conhecendo os Arquivos do Auth](#parte126)     
+127. [115 - Adaptações do Nosso Painel](#parte127)     
+128. [116 - O Btn de Logout](#parte128)     
+129. [117 - Arquivo de Configurações Auth](#parte129)     
+130. [118 - Configurações para Dono de Evento](#parte130)     
+131. [119 - Eventos por Usuário Logado](#parte131)     
+132. [120 - O Middleware Authenticate](#parte132)     
+133. [121 - Conclusões](#parte133)     
+134. [13. Melhorias Projeto Eventos](#parte134)     
+135. [122 - Introdução](#parte135)     
+136. [123 - Entendendo Eloquent Accessors](#parte136)     
+137. [124 - Entendendo Eloquent Mutators](#parte137)     
+138. [125 - Máscara de Data Evento](#parte138)     
+139. [126 - Formatando Data para o Banco](#parte139)     
+140. [127 - Nosso primeiro Middleware](#parte140)     
+141. [128 - Usuário: Bloqueando Acesso A Outros Eventos](#parte141)     
+142. [129 - Melhorias Home de Eventos](#parte142)     
+143. [130 - Busca de Eventos](#parte143)     
+144. [131 - Filtro Por Categorias](#parte144)     
+145. [132 - View Share e Composer](#parte145)     
+146. [133 - Melhorando View Composer](#parte146)     
+147. [134 - Eventos Que Vão Acontecer e Concluindo](#parte147)     
+148. [14. Upload de Arquivos](#parte148)     
+149. [135 - Introdução](#parte149)     
+150. [136 - Iniciando Upload](#parte150)     
+151. [137 - Configurações de Upload](#parte151)     
+152. [138 - Upload e Save no Banco](#parte152)     
+153. [139 - Validando Upload de Imagens](#parte153)     
+154. [140 - Iniciando Upload na Edição](#parte154)     
+155. [141 - Concluindo Upload na Edição](#parte155)     
+156. [142 - Upload de Múltiplos Arquivos](#parte156)     
+157. [143 - Salvando Referencias no Banco Upload Múltiplo](#parte157)     
+158. [144 - Validando Múltiplos Arquivos](#parte158)     
+159. [145 - Deletando Fotos do Evento](#parte159)     
+160. [146 - Falando Mais Sobre Route Model Bind](#parte160)     
+161. [147 - Jogando o Upload para Trait](#parte161)     
+162. [148 - Conclusões](#parte162)     
+163. [15. Melhorias & Encerramento Bloco 1 --atualizando](#parte163)     
+164. [149 - Introdução](#parte164)     
+165. [150 - Mapeando Relação Inscrição](#parte165)     
+166. [151 - Entendendo M-M com Dados Extras](#parte166)     
+167. [152 - Iniciando Processo de Inscrição](#parte167)     
+168. [153 - Tela de Confirmação de Inscrição](#parte168)     
+169. [154 - Concluindo Processo de Inscrição](#parte169)     
+170. [155 - Melhorias Processo de Inscrição](#parte170)     
+171. [156 - Classe Mailable](#parte171)     
+172. [157 - Configurações e Envio de E-mail](#parte172)     
+173. [158 - Evento: Uma Inscrição Por Usuário](#parte173)     
+174. [159 - Categorias Na Criação e Edição de Eventos](#parte174)     
+175. [160 - Processando Associação de Categorias e Eventos](#parte175)     
+176. [161 - Melhorias Painel](#parte176)     
+177. [162 - Iniciando Perfil do Usuário](#parte177)     
+178. [163 - Processando Atualização de Perfil](#parte178)     
+179. [164 - Validações na Atualização do Perfil](#parte179)     
+180. [165 - O Validador Unique no Update](#parte180)     
+181. [166 - Concluindo Perfil](#parte181)     
 ---
 
 
-## <a name="parte1">1 - Boas Vindas</a>
+## <a name="parte1">1 - 1. Boas Vindas</a>
 
-01 - Seja Bem-Vindo
 
-02 - Quem Sou Eu
-
-03 - Ferramentas
-
-- PHP Storm Para estudantes, solicite em https://www.jetbrains.com/student/
-
-- Para open source, caso você contribua, solicite em https://www.jetbrains.com/community/opensource/
-
-- Visual Studio Code: https://code.visualstudio.com/
 
 [Voltar ao Índice](#indice)
 
 ---
 
 
-## <a name="parte2">2 - Ambiente</a>
+## <a name="parte2">2 - 01 - Seja Bem-Vindo</a>
 
-**04 - Formas de Iniciar Projeto**
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte3">3 - 02 - Quem Sou Eu</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte4">4 - 03 - Ferramentas</a>
+
+- PHP Storm
+Para estudantes, solicite em https://www.jetbrains.com/student/
+
+Para open source, caso você contribua, solicite em https://www.jetbrains.com/community/opensource/
+
+Visual Studio Code: https://code.visualstudio.com/
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte5">5 - 2. Ambiente</a>
 
 - php 7.3+
 
@@ -65,11 +250,39 @@ xml
 
 ```
 
-05 - Laravel Installer OS X
+[Voltar ao Índice](#indice)
 
-06 - Laravel Installer Linux
+---
 
-**07 - Laravel Installer Windows**
+
+## <a name="parte6">6 - 04 - Formas de Iniciar Projeto</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte7">7 - 05 - Laravel Installer OS X</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte8">8 - 06 - Laravel Installer Linux</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte9">9 - 07 - Laravel Installer Windows</a>
 
 ```
 $ composer global require laravel/installer
@@ -79,6 +292,7 @@ add PATH Composer e /laravel/bin/
 laravel new projeto01
 
 php artisan serve
+
 ```
 
 [Voltar ao Índice](#indice)
@@ -86,402 +300,79 @@ php artisan serve
 ---
 
 
-## <a name="parte3">3 - Primeiros Passos Visão Geral</a>
+## <a name="parte10">10 - 3. Primeiros Passos Visão Geral</a>
 
-**08 - Iniciando Projeto**
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel)
 
-- [3-Primeiros-Passos-Visao-Geral/meusEventos](3-Primeiros-Passos-Visao-Geral/meusEventos)
+[Voltar ao Índice](#indice)
 
-**09 - Diretórios Projeto**
+---
 
-**10 - Panorama Inicial do Laravel**
 
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php](3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php)
+## <a name="parte11">11 - 08 - Iniciando Projeto</a>
 
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte12">12 - 09 - Diretórios Projeto</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte13">13 - 10 - Panorama Inicial do Laravel</a>
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php)
 
 ```php
+<?php
+
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/ola-mundo', function () {
-    return "Olá Mundo!!";
-});*/
-Route::get('/ola-mundo', function () {
-    return view('ola-mundo');
-});
-
-//Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
-
-```
-
-**11 - Parâmetros Dinâmicos Rota**
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
-
-```php
-Route::get('/hello/{name}', function ($name = null) {
-    return 'Olá, ' . $name;
+Route::get('hello', function (){
+    return view('hello');
 });
 
 ```
 
-**12 - Rotas & Controllers**
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php)
 
-```
-php artisan make:controller HelloWordController
 
-```
 
-```php
-Route::get('/hello-world', [\App\Http\Controllers\HelloWordController::class, 'helloWord']);
+[Voltar ao Índice](#indice)
 
-//Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+---
 
-Route::get('/hello/{name?}',  [\App\Http\Controllers\HelloWordController::class, 'hello']);
 
-```
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/app/Http/Controllers/HelloWordController.php](3-Primeiros-Passos-Visao-Geral/meusEventos/app/Http/Controllers/HelloWordController.php)
+## <a name="parte14">14 - 11 - Parâmetros Dinâmicos Rota</a>
 
 ```php
-class HelloWordController extends Controller
-{
-    public function helloWord()
-    {
-        return view('ola-mundo');
-    }
 
-    public function hello($name = 'Fulano')
-    {
-        return 'Olá, ' . $name;
-    }
-}
-```
-
-**13 - O Artisan**
-
-```
-$ php artisan list
-Laravel Framework 8.61.0
-
-Usage:
-  command [options] [arguments]
-
-Options:
-  -h, --help            Display help for the given command. When no command is given display help for the list command
-  -q, --quiet           Do not output any message
-  -V, --version         Display this application version
-      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-  -n, --no-interaction  Do not ask any interactive question
-      --env[=ENV]       The environment the command should run under
-  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
-Available commands:
-  clear-compiled       Remove the compiled class file
-  db                   Start a new database CLI session
-  down                 Put the application into maintenance / demo mode
-  env                  Display the current framework environment
-  help                 Display help for a command
-  inspire              Display an inspiring quote
-  list                 List commands
-  migrate              Run the database migrations
-  optimize             Cache the framework bootstrap files
-  serve                Serve the application on the PHP development server
-  test                 Run the application tests
-  tinker               Interact with your application
-  up                   Bring the application out of maintenance mode
- auth
-  auth:clear-resets    Flush expired password reset tokens
- cache
-  cache:clear          Flush the application cache
-  cache:forget         Remove an item from the cache
-  cache:table          Create a migration for the cache database table
- config
-  config:cache         Create a cache file for faster configuration loading
-  config:clear         Remove the configuration cache file
- db
-  db:seed              Seed the database with records
-  db:wipe              Drop all tables, views, and types
- event
-  event:cache          Discover and cache the application's events and listeners
-  event:clear          Clear all cached events and listeners
-  event:generate       Generate the missing events and listeners based on registration
-  event:list           List the application's events and listeners
- key
-  key:generate         Set the application key
- make
-  make:cast            Create a new custom Eloquent cast class
-  make:channel         Create a new channel class
-  make:command         Create a new Artisan command
-  make:component       Create a new view component class
-  make:controller      Create a new controller class
-  make:event           Create a new event class
-  make:exception       Create a new custom exception class
-  make:factory         Create a new model factory
-  make:job             Create a new job class
-  make:listener        Create a new event listener class
-  make:mail            Create a new email class
-  make:middleware      Create a new middleware class
-  make:migration       Create a new migration file
-  make:model           Create a new Eloquent model class
-  make:notification    Create a new notification class
-  make:observer        Create a new observer class
-  make:policy          Create a new policy class
-  make:provider        Create a new service provider class
-  make:request         Create a new form request class
-  make:resource        Create a new resource
-  make:rule            Create a new validation rule
-  make:seeder          Create a new seeder class
-  make:test            Create a new test class
- migrate
-  migrate:fresh        Drop all tables and re-run all migrations
-  migrate:install      Create the migration repository
-  migrate:refresh      Reset and re-run all migrations
-  migrate:reset        Rollback all database migrations
-  migrate:rollback     Rollback the last database migration
-  migrate:status       Show the status of each migration
- model
-  model:prune          Prune models that are no longer needed
- notifications
-  notifications:table  Create a migration for the notifications table
- optimize
-  optimize:clear       Remove the cached bootstrap files
- package
-  package:discover     Rebuild the cached package manifest
- queue
-  queue:batches-table  Create a migration for the batches database table
-  queue:clear          Delete all of the jobs from the specified queue
-  queue:failed         List all of the failed queue jobs
-  queue:failed-table   Create a migration for the failed queue jobs database table
-  queue:flush          Flush all of the failed queue jobs
-  queue:forget         Delete a failed queue job
-  queue:listen         Listen to a given queue
-  queue:monitor        Monitor the size of the specified queues
-  queue:prune-batches  Prune stale entries from the batches database
-  queue:prune-failed   Prune stale entries from the failed jobs table
-  queue:restart        Restart queue worker daemons after their current job
-  queue:retry          Retry a failed queue job
-  queue:retry-batch    Retry the failed jobs for a batch
-  queue:table          Create a migration for the queue jobs database table
-  queue:work           Start processing jobs on the queue as a daemon
- route
-  route:cache          Create a route cache file for faster route registration
-  route:clear          Remove the route cache file
-  route:list           List all registered routes
- sail
-  sail:install         Install Laravel Sail's default Docker Compose file
-  sail:publish         Publish the Laravel Sail Docker files
- schedule
-  schedule:list        List the scheduled commands
-  schedule:run         Run the scheduled commands
-  schedule:test        Run a scheduled command
-  schedule:work        Start the schedule worker
- schema
-  schema:dump          Dump the given database schema
- session
-  session:table        Create a migration for the session database table
- storage
-  storage:link         Create the symbolic links configured for the application
- stub
-  stub:publish         Publish all stubs that are available for customization
- vendor
-  vendor:publish       Publish any publishable assets from vendor packages
- view
-  view:cache           Compile all of the application's Blade templates
-  view:clear           Clear all compiled view files
-
-```
-
-```
-$ php artisan make:controller --help
-Description:
-  Create a new controller class
-
-Usage:
-  make:controller [options] [--] <name>
-
-Arguments:
-  name                   The name of the class
-
-Options:
-      --api              Exclude the create and edit methods from the controller.
-      --type=TYPE        Manually specify the controller stub file to use.
-      --force            Create the class even if the controller already exists
-  -i, --invokable        Generate a single method, invokable controller class.
-  -m, --model[=MODEL]    Generate a resource controller for the given model.
-  -p, --parent[=PARENT]  Generate a nested resource controller class.
-  -r, --resource         Generate a resource controller class.
-  -h, --help             Display help for the given command. When no command is given display help for the list command
-  -q, --quiet            Do not output any message
-  -V, --version          Display this application version
-      --ansi|--no-ansi   Force (or disable --no-ansi) ANSI output
-  -n, --no-interaction   Do not ask any interactive question
-      --env[=ENV]        The environment the command should run under
-  -v|vv|vvv, --verbose   Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
-
-```
-
-**14 - Entendendo as Configurações**
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/.env](3-Primeiros-Passos-Visao-Geral/meusEventos/.env)
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php](3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php)
-
-
-**15 - Migrations**
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php](3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php)
-
-**16 - Executando Migrations**
-
-Comando cria uma tabela no banco de dados, 'meuseventos', chamada 'migrations' 
-
-```
-$ php artisan migrate:install
-Migration table created successfully.
-
-```
-
-comando para rodar os arquivos de migrates
-
-```
-$ php artisan migrate
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (31.36ms)
-Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (27.77ms)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (26.90ms)
-Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (36.64ms)
-```
-
-
-**17 - Criando Primeira Migração**
-
-```
-$ php artisan make:migration create_events_table
-Created Migration: 2021_09_15_013605_create_events_table
-
-```
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2021_09_15_013605_create_events_table.php](3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2021_09_15_013605_create_events_table.php)
-
-```php
-  public function up()
-    {
-        Schema::create('events', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->timestamps();
-        });
-    }
-```
-
-```
-$ php artisan migrate
-Migrating: 2021_09_15_013605_create_events_table
-Migrated:  2021_09_15_013605_create_events_table (24.80ms)
-
-```
-
-![img/17-table_migration_1.png](img/17-table_migration_1.png)
-
-
-18 - Os Models
-
-```
-$ php artisan make:model Event
-Model created successfully.
-
-```
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/app/Models/Event.php](3-Primeiros-Passos-Visao-Geral/meusEventos/app/Models/Event.php)
-
-19 - O Eloquent e Queries
-
-- [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
-
-```php
-Route::get('/queries/{event?}', function ($event){
-
-    //$events = \App\Models\Event::all();// SELECT * FROM events
-    $events = \App\Models\Event::all(['title', 'description']);// SELECT * FROM events
-
-    //$event = \App\Models\Event::where('id', 2)->get(); // SELECT * FROM events where id = 2
-    //$event = \App\Models\Event::where('id', 2)->first(); // SELECT * FROM events where id = 2
-    $event = \App\Models\Event::find($event); // SELECT * FROM events where id = 2
-
-    //return $events;
-    return $event;
-
+// ? -> informa que o parâmetro não é obrigatório
+Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
+    return 'Hello, ' . $name;
 });
-```
 
-20 - O Tinker
-
-```
-$ php artisan tinker
-Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
-
->>> $events = \App\Models\Event::all()
-
-=> Illuminate\Database\Eloquent\Collection {#4184
-     all: [
-       App\Models\Event {#4186
-         id: 2,
-         title: "Segundo Evento teste",
-         description: "desc evento 2",
-         created_at: "2021-09-15 08:46:29",
-         updated_at: null,
-       },
-       App\Models\Event {#4185
-         id: 3,
-         title: "terceiro evento",
-         description: "desc evento 3",
-         created_at: "2021-09-15 08:46:53",
-         updated_at: null,
-       },
-     ],
-   }
->>>
->>> \App\Models\Event::find(2);
-
-=> App\Models\Event {#4399
-     id: 2,
-     title: "Segundo Evento teste",
-     description: "desc evento 2",
-     created_at: "2021-09-15 08:46:29",
-     updated_at: null,
-   }
->>>
 
 ```
 
-21 - Assets Frontend
-
-22 - Conclusões
-
 [Voltar ao Índice](#indice)
 
 ---
 
 
-## <a name="parte4">4 - Migrations, Seeders e Factories</a>
-
-
-
-[Voltar ao Índice](#indice)
-
----
-
-
-## <a name="parte5">5 - Eloquent</a>
+## <a name="parte15">15 - 12 - Rotas & Controllers</a>
 
 
 
@@ -490,7 +381,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte6">6 - Factories com Relacionamentos</a>
+## <a name="parte16">16 - 13 - O Artisan</a>
 
 
 
@@ -499,7 +390,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte7">7 - View: Laravel Blade</a>
+## <a name="parte17">17 - 14 - Entendendo as Configurações</a>
 
 
 
@@ -508,7 +399,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte8">8 - View: Manipulação de Formulários</a>
+## <a name="parte18">18 - 15 - Migrations</a>
 
 
 
@@ -517,7 +408,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte9">9 - Laravel Router</a>
+## <a name="parte19">19 - 16 - Executando Migrations</a>
 
 
 
@@ -526,7 +417,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte10">10 - Manipulando Validações</a>
+## <a name="parte20">20 - 17 - Criando Primeira Migração</a>
 
 
 
@@ -535,7 +426,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte11">11 - Controllers como Recurso</a>
+## <a name="parte21">21 - 18 - Os Models</a>
 
 
 
@@ -544,7 +435,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte12">12 - Primeiro Starter Point: Laravel UI</a>
+## <a name="parte22">22 - 19 - O Eloquent e Queries</a>
 
 
 
@@ -553,7 +444,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte13">13 - Melhorias Projeto Eventos</a>
+## <a name="parte23">23 - 20 - O Tinker</a>
 
 
 
@@ -562,7 +453,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte14">14 - Upload de Arquivos</a>
+## <a name="parte24">24 - 21 - Assets Frontend</a>
 
 
 
@@ -571,7 +462,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte15">15 - Melhorias & Encerramento Bloco 1</a>
+## <a name="parte25">25 - 22 - Conclusões</a>
 
 
 
@@ -580,7 +471,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte16">16 - ACL & Autorização</a>
+## <a name="parte26">26 - 4. Migrations, Seeders e Factories</a>
 
 
 
@@ -589,7 +480,7 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte17">17 - Bloco 2 - Iniciando</a>
+## <a name="parte27">27 - 23 - Introdução</a>
 
 
 
@@ -598,7 +489,1384 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 ---
 
 
-## <a name="parte18">18 - Primeiros Passos com Livewire</a>
+## <a name="parte28">28 - 24 - Seeders e Factories</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte29">29 - 25 - Executando Seeds e Factories</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte30">30 - 26 - Primeira Factory e Seeds</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte31">31 - 27 - Comandos Fresh e Refresh</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte32">32 - 28 - Comando Rollback e Reset</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte33">33 - 29 - Falando Sobre Migrações</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte34">34 - 30 - Uma Migração de Edição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte35">35 - 31 - Schema Dump</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte36">36 - 32 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte37">37 - 5. Eloquent</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte38">38 - 33 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte39">39 - 34 - Relembrando Models</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte40">40 - 35 - Active Record Inserção</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte41">41 - 36 - Active Record Atualização</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte42">42 - 37 - Mass Assignment Criação</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte43">43 - 38 - Update em Massa</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte44">44 - 39 - Removendo Dados</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte45">45 - 40 - Organizando CRUD</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte46">46 - 41 - Prelúdio Relacionamentos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte47">47 - 42 - Migração Tabela Perfil</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte48">48 - 43 - Mapeando 1:1 Models</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte49">49 - 44 - Salvando 1:1</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte50">50 - 45 - Recuperando 1:1</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte51">51 - 46 - Migração 1:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte52">52 - 47 - Mapeando 1:N Models</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte53">53 - 48 - Salvando 1:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte54">54 - 49 - Recuperando 1:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte55">55 - 50 - Migração N:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte56">56 - 51 - Gerando Algumas Categories</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte57">57 - 52 - Mapeando N:N Models</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte58">58 - 53 - Salvando N:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte59">59 - 54 - Recuperando N:N</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte60">60 - 55 - Manipulando BelongsTo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte61">61 - 56 - Conclusão</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte62">62 - 6. Factories com Relacionamentos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte63">63 - 57 - Iniciando Factories: Profile e Photo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte64">64 - 58 - Factories com Relacionamento HasMany</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte65">65 - 59 - Factories com Relacionamento HasOne</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte66">66 - 60 - Factories com BelongsTo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte67">67 - 61 - Executando as Factories via Seed</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte68">68 - 7. View: Laravel Blade</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte69">69 - 62 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte70">70 - 63 - Relembrando as Views</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte71">71 - 64 - Loop e Passagem de Dados View</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte72">72 - 65 - Diretiva ForElse</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte73">73 - 66 - O print do Blade</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte74">74 - 67 - Herança de Templates</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte75">75 - 68 - Incrementando Views de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte76">76 - 69 - Melhorias Home e Inicio de Single</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte77">77 - 70 - Compondo View Single Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte78">78 - 71 - Exibindo Fotos Evento se Existirem</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte79">79 - 72 - Organizando com HomeController</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte80">80 - 73 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte81">81 - 8. View: Manipulação de Formulários</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte82">82 - 74 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte83">83 - 75 - Organizando Rotas Painel Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte84">84 - 76 - Listagem de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte85">85 - 77 - Paginando Dados</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte86">86 - 78 - Tela de Criação de Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte87">87 - 79 - Entendendo CSRF no Laravel</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte88">88 - 80 - Manipulando Dados da Request</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte89">89 - 81 - Editando Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte90">90 - 82 - Linkando Edição e Remoção de Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte91">91 - 83 - Melhorias Manipulação de Request</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte92">92 - 84 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte93">93 - 9. Laravel Router</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte94">94 - 85 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte95">95 - 86 - Relembrando Rotas</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte96">96 - 87 - Organizando Rotas com Prefixo e Grupo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte97">97 - 88 - Usando Apelido de Rotas</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte98">98 - 89 - Refatorando Links nas Views</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte99">99 - 90 - Refatorando Redirecionamentos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte100">100 - 91 - Dando um Tapa no Painel de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte101">101 - 92 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte102">102 - 10. Manipulando Validações</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte103">103 - 93 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte104">104 - 94 - Usando Validação Controller</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte105">105 - 95 - Exibindo Todoas as Validações na View</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte106">106 - 96 - Exibindo Validações POr Input</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte107">107 - 97 - Diretiva @error</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte108">108 - 98 - Traduzindo Mensagens de Validação</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte109">109 - 99 - Melhorando Para Form Requests</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte110">110 - 100 - Validação na Edição do Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte111">111 - 101 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte112">112 - 11. Controllers como Recurso</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte113">113 - 102 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte114">114 - 103 - O que são Controllers como Recurso</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte115">115 - 104 - Criando Controllers como Recurso</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte116">116 - 105 - Controller como Recurso em Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte117">117 - 106 - Tomando Nota dos Ganhos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte118">118 - 107 - Recursos Aninhados</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte119">119 - 108 - Recursos Aninhados no Projeto e Mais</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte120">120 - 109 - Registrando Vários Recursos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte121">121 - 110 - DI nos Controllers</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte122">122 - 111 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte123">123 - 12. Primeiro Starter Point: Laravel UI</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte124">124 - 112 - Intro e Obtendo Laravel UI</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte125">125 - 113 - Gerando Autenticação</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte126">126 - 114 - Conhecendo os Arquivos do Auth</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte127">127 - 115 - Adaptações do Nosso Painel</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte128">128 - 116 - O Btn de Logout</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte129">129 - 117 - Arquivo de Configurações Auth</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte130">130 - 118 - Configurações para Dono de Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte131">131 - 119 - Eventos por Usuário Logado</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte132">132 - 120 - O Middleware Authenticate</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte133">133 - 121 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte134">134 - 13. Melhorias Projeto Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte135">135 - 122 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte136">136 - 123 - Entendendo Eloquent Accessors</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte137">137 - 124 - Entendendo Eloquent Mutators</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte138">138 - 125 - Máscara de Data Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte139">139 - 126 - Formatando Data para o Banco</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte140">140 - 127 - Nosso primeiro Middleware</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte141">141 - 128 - Usuário: Bloqueando Acesso A Outros Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte142">142 - 129 - Melhorias Home de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte143">143 - 130 - Busca de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte144">144 - 131 - Filtro Por Categorias</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte145">145 - 132 - View Share e Composer</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte146">146 - 133 - Melhorando View Composer</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte147">147 - 134 - Eventos Que Vão Acontecer e Concluindo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte148">148 - 14. Upload de Arquivos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte149">149 - 135 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte150">150 - 136 - Iniciando Upload</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte151">151 - 137 - Configurações de Upload</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte152">152 - 138 - Upload e Save no Banco</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte153">153 - 139 - Validando Upload de Imagens</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte154">154 - 140 - Iniciando Upload na Edição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte155">155 - 141 - Concluindo Upload na Edição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte156">156 - 142 - Upload de Múltiplos Arquivos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte157">157 - 143 - Salvando Referencias no Banco Upload Múltiplo</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte158">158 - 144 - Validando Múltiplos Arquivos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte159">159 - 145 - Deletando Fotos do Evento</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte160">160 - 146 - Falando Mais Sobre Route Model Bind</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte161">161 - 147 - Jogando o Upload para Trait</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte162">162 - 148 - Conclusões</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte163">163 - 15. Melhorias & Encerramento Bloco 1 --atualizando</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte164">164 - 149 - Introdução</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte165">165 - 150 - Mapeando Relação Inscrição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte166">166 - 151 - Entendendo M-M com Dados Extras</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte167">167 - 152 - Iniciando Processo de Inscrição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte168">168 - 153 - Tela de Confirmação de Inscrição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte169">169 - 154 - Concluindo Processo de Inscrição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte170">170 - 155 - Melhorias Processo de Inscrição</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte171">171 - 156 - Classe Mailable</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte172">172 - 157 - Configurações e Envio de E-mail</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte173">173 - 158 - Evento: Uma Inscrição Por Usuário</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte174">174 - 159 - Categorias Na Criação e Edição de Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte175">175 - 160 - Processando Associação de Categorias e Eventos</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte176">176 - 161 - Melhorias Painel</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte177">177 - 162 - Iniciando Perfil do Usuário</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte178">178 - 163 - Processando Atualização de Perfil</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte179">179 - 164 - Validações na Atualização do Perfil</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte180">180 - 165 - O Validador Unique no Update</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte181">181 - 166 - Concluindo Perfil</a>
 
 
 
