@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('hello', function (){
     return view('hello');
 });
+
+// ? -> informa que o parâmetro não é obrigatório
+Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
+    return 'Hello, ' . $name;
+});

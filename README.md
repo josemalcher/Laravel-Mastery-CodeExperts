@@ -357,7 +357,15 @@ Route::get('hello', function (){
 
 ## <a name="parte14">14 - 11 - Parâmetros Dinâmicos Rota</a>
 
+```php
 
+// ? -> informa que o parâmetro não é obrigatório
+Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
+    return 'Hello, ' . $name;
+});
+
+
+```
 
 [Voltar ao Índice](#indice)
 
