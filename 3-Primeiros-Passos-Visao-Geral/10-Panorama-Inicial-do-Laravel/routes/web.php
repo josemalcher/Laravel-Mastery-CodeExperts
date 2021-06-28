@@ -17,11 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', function (){
-    return view('hello');
-});
+Route::get('hello', [\App\Http\Controllers\HelloWorldController::class, 'helloworld']);
 
 // ? -> informa que o parâmetro não é obrigatório
-Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
-    return 'Hello, ' . $name;
-});
+Route::get('/hello-name/{name?}', [\App\Http\Controllers\HelloWorldController::class,'hello']);

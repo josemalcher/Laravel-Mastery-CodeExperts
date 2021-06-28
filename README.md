@@ -374,7 +374,35 @@ Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
 
 ## <a name="parte15">15 - 12 - Rotas & Controllers</a>
 
+```php
+<?php
 
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HelloWorldController extends Controller
+{
+    public function helloworld()
+    {
+        return view('hello');
+    }
+
+    public function hello($name = 'Anônimo')
+    {
+        return 'Hello, ' . $name;
+    }
+}
+
+```
+
+```php
+Route::get('hello', [\App\Http\Controllers\HelloWorldController::class, 'helloworld']);
+
+// ? -> informa que o parâmetro não é obrigatório
+Route::get('/hello-name/{name?}', [\App\Http\Controllers\HelloWorldController::class,'hello']);
+
+```
 
 [Voltar ao Índice](#indice)
 
