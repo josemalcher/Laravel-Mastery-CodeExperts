@@ -426,6 +426,9 @@ php artisan help make:controller
 
 ## <a name="parte17">17 - 14 - Entendendo as Configurações</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/.env](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/.env)
+
+
 
 
 [Voltar ao Índice](#indice)
@@ -435,7 +438,13 @@ php artisan help make:controller
 
 ## <a name="parte18">18 - 15 - Migrations</a>
 
+```
+php artisan migrate:status
 
+php artisan migrate:install
+
+php artisan migrate
+```
 
 [Voltar ao Índice](#indice)
 
@@ -453,7 +462,21 @@ php artisan help make:controller
 
 ## <a name="parte20">20 - 17 - Criando Primeira Migração</a>
 
+```
+$ php artisan make:migration create_events_table
 
+public function up()
+    {
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
+```
+
+```
+    php artisan migrate
+```
 
 [Voltar ao Índice](#indice)
 
