@@ -485,7 +485,9 @@ public function up()
 
 ## <a name="parte21">21 - 18 - Os Models</a>
 
-
+```
+php artisan make:model Event -m // -m cria a migration junto
+```
 
 [Voltar ao Índice](#indice)
 
@@ -494,7 +496,22 @@ public function up()
 
 ## <a name="parte22">22 - 19 - O Eloquent e Queries</a>
 
+```php
 
+Route::get('/queries/{event}', function ($event) {
+
+    //$events = \App\Models\Event::all();
+    //$events = \App\Models\Event::all(['title', 'description']);
+
+    //$event =  \App\Models\Event::where('id', 1)->get();
+
+    //$event =  \App\Models\Event::where('id', 1)->first();
+    $events = \App\Models\Event::find($event);
+
+    return $events;
+
+}); 
+```
 
 [Voltar ao Índice](#indice)
 
