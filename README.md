@@ -491,7 +491,9 @@ Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
 
 ## <a name="parte28">28 - 24 - Seeders e Factories</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php)
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/UserFactory.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/UserFactory.php)
 
 [Voltar ao Índice](#indice)
 
@@ -499,6 +501,8 @@ Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
 
 
 ## <a name="parte29">29 - 25 - Executando Seeds e Factories</a>
+
+- [https://github.com/fzaninotto/Faker](https://github.com/fzaninotto/Faker)
 
 
 
@@ -509,7 +513,54 @@ Route::get('/hello-name/{name?}', function ($name = 'Anônimo'){
 
 ## <a name="parte30">30 - 26 - Primeira Factory e Seeds</a>
 
+```
+$ php artisan make:factory EventFactory
+Factory created successfully.
 
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/EventFactory.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/EventFactory.php)
+
+```php 
+public function definition()
+    {
+        return [
+            'title'       => $this->faker->sentence,
+            'description' => $this->faker->paragraph,
+        ];
+    }
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php)
+
+```php
+\App\Models\Event::factory(30)->create();
+```
+
+```
+$ php artisan db:seed
+Database seeding completed successfully.
+
+```
+
+```
+$ php artisan make:seeder UsersTableSeeder
+Seeder created successfully.
+
+$ php artisan make:seeder EventsTableSeeder
+Seeder created successfully.
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/DatabaseSeeder.php)
+
+```php
+    public function run()
+    {
+        $this->call(UsersTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
+    }
+```
 
 [Voltar ao Índice](#indice)
 
