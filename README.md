@@ -544,7 +544,13 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte24">24 - 21 - Assets Frontend</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/public](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/public)
 
+```
+yarn install
+
+yarn run dev
+```
 
 [Voltar ao Índice](#indice)
 
