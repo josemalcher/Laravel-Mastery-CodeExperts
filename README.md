@@ -785,7 +785,40 @@ Rolled back:  2014_10_12_000000_create_users_table (9.76ms)
 
 ## <a name="parte33">33 - 29 - Falando Sobre Migrações</a>
 
+```
+$ php artisan migrate:refresh --step=1
+Rolling back: 2021_06_29_132248_create_events_table
+Rolled back:  2021_06_29_132248_create_events_table (12.88ms)
+Migrating: 2021_06_29_132248_create_events_table
+Migrated:  2021_06_29_132248_create_events_table (15.55ms)
 
+```
+
+```
+$ php artisan migrate:refresh --seed
+Rolling back: 2021_06_29_132248_create_events_table
+Rolled back:  2021_06_29_132248_create_events_table (9.54ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (5.81ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (5.73ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (6.25ms)
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (30.65ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (27.50ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (87.49ms)
+Migrating: 2021_06_29_132248_create_events_table
+Migrated:  2021_06_29_132248_create_events_table (49.43ms)
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (119.07ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (58.96ms)
+Database seeding completed successfully.
+
+```
 
 [Voltar ao Índice](#indice)
 
