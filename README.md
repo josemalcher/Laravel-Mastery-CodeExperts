@@ -748,7 +748,35 @@ Migrated:  2021_06_29_132248_create_events_table (35.60ms)
 
 ## <a name="parte32">32 - 28 - Comando Rollback e Reset</a>
 
+```
+$ php artisan migrate:rollback
+Rolling back: 2021_06_29_132248_create_events_table
+Rolled back:  2021_06_29_132248_create_events_table (14.14ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (5.54ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (6.83ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (5.04ms)
+```
 
+```
+$ php artisan migrate:rollback --step=2
+
+```
+
+```
+$ php artisan migrate:reset
+Rolling back: 2021_06_29_132248_create_events_table
+Rolled back:  2021_06_29_132248_create_events_table (13.18ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (7.49ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (8.24ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (9.76ms)
+
+```
 
 [Voltar ao Índice](#indice)
 
