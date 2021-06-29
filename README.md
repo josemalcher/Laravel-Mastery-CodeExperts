@@ -520,7 +520,22 @@ Route::get('/queries/{event}', function ($event) {
 
 ## <a name="parte23">23 - 20 - O Tinker</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
+>>> \App\Models\Event::all()
+=> Illuminate\Database\Eloquent\Collection {#4125
+     all: [
+       App\Models\Event {#4127
+         id: 1,
+         title: "Evento 1",
+         description: "Evento teste descrição 1",
+         created_at: "2021-06-29 10:46:19",
+         updated_at: "2021-06-29 10:46:21",
+       },
+
+```
 
 [Voltar ao Índice](#indice)
 
