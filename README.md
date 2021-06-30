@@ -827,7 +827,36 @@ Database seeding completed successfully.
 
 ## <a name="parte34">34 - 30 - Uma Migração de Edição</a>
 
+- [https://laravel.com/docs/8.x/migrations#available-column-types](https://laravel.com/docs/8.x/migrations#available-column-types)
 
+```
+$ php artisan make:migration alter_events_table_add_column_slug --table=events
+
+Created Migration: 2021_06_29_234605_alter_events_table_add_column_slug
+
+$ php artisan migrate:status
++------+------------------------------------------------------+-------+
+| Ran? | Migration                                            | Batch |
++------+------------------------------------------------------+-------+
+| Yes  | 2014_10_12_000000_create_users_table                 | 2     |
+| Yes  | 2014_10_12_100000_create_password_resets_table       | 2     |
+| Yes  | 2019_08_19_000000_create_failed_jobs_table           | 2     |
+| Yes  | 2021_06_29_132248_create_events_table                | 2     |
+| No   | 2021_06_30_000514_alter_events_table_add_column_slug |       |
++------+------------------------------------------------------+-------+
+
+$ php artisan migrate
+Migrating: 2021_06_30_000514_alter_events_table_add_column_slug
+Migrated:  2021_06_30_000514_alter_events_table_add_column_slug (31.86ms)
+
+$ php artisan db:seed
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (140.18ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (53.62ms)
+Database seeding completed successfully.
+
+```
 
 [Voltar ao Índice](#indice)
 
