@@ -722,7 +722,27 @@ Seeder created successfully.
 
 ## <a name="parte48">48 - 43 - Mapeando 1:1 Models</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/User.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/User.php)
 
+```php
+    // Representa a ligação entre o MODEL User e o MODEL Profile
+    // e indica que User tem um Profile
+    public function profile()
+    {
+        // automaticamente procura por esta coluna: user_id, em profile
+        return $this->hasOne(Profile::class);
+    }
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Profile.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Profile.php)
+
+```php
+    public function user()
+    {
+        //por conta do nome do método que a coluna é user_id
+        return $this->belongsTo(User::class);
+    }
+```
 
 [Voltar ao Índice](#indice)
 
