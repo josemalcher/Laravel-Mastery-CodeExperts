@@ -44,23 +44,34 @@ Route::get('/queries/{event?}', function ($event = null) {
     */
 
     //update event set title = ? , description = ? (...) where id = ?
-/*  $event = \App\Models\Event::find(32);
-    $event->title = 'EVENTO 2 Atualizado';
-    $event->slug  = \Illuminate\Support\Str::slug($event->title);
-*/
+    /*  $event = \App\Models\Event::find(32);
+        $event->title = 'EVENTO 2 Atualizado';
+        $event->slug  = \Illuminate\Support\Str::slug($event->title);
+    */
 
     //return $event->save();
     //return $event;
 
-    // Atribuição Massa ou Mass Assingnment
-    $event = [
-        'title' => 'Titulo add 3',
-        'description' => 'Descrição 3',
-        'body' => 'Corpo 3',
-        'start_event' => date('Y-m-d H:i:s'),
-        'slug' => 'titulo-adddddd-3-with-array-3'
+    // Update em massa
+    /*
+        $eventData = [
+            //    'title' => 'Titulo add 3',
+            'description' => 'Descrição 3333 UPDATE MASS',
+            'body' => 'Corpo 3 UPDATE MASS',
+            //    'start_event' => date('Y-m-d H:i:s'),
+            //    'slug' => 'titulo-adddddd-3-with-array-3'
+        ];
 
-    ];
-    return \App\Models\Event::create($event);
+        $event = \App\Models\Event::find(33);
+        $event->update($eventData);
+    */
 
+    /*  $event = \App\Models\Event::findOrFail(1);
+        return $event->delete();
+    */
+    //Delete Models via ids  [ 2,3,4,5]
+    //return \App\Models\Event::destroy([2, 3, 4, 5]);
+
+    //Select * from events order by id ASC limt 3
+    return \App\Models\Event::orderBy('id', 'ASC')->limit(3)->get();
 });

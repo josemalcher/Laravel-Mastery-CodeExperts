@@ -951,6 +951,18 @@ $ php artisan schema:dump
 
 ## <a name="parte42">42 - 37 - Mass Assignment Criação</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Event.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Event.php)
+
+```php
+    protected $fillable = [
+        'title',
+        'description',
+        'body',
+        'start_event',
+        'slug'
+    ];
+```
+
 ```php
 // Atribuição Massa ou Mass Assingnment
     $event = [
@@ -971,7 +983,21 @@ $ php artisan schema:dump
 
 ## <a name="parte43">43 - 38 - Update em Massa</a>
 
+```php
+    // Update Massa ou Mass Assingnment
+    $eventData = [
+        //    'title' => 'Titulo add 3',
+        'description' => 'Descrição 3333 UPDATE MASS',
+        'body' => 'Corpo 3 UPDATE MASS',
+        //    'start_event' => date('Y-m-d H:i:s'),
+        //    'slug' => 'titulo-adddddd-3-with-array-3'
+    ];
 
+    $event = \App\Models\Event::find(33);
+    $event->update($eventData);
+
+    return $event;
+```
 
 [Voltar ao Índice](#indice)
 
@@ -980,7 +1006,20 @@ $ php artisan schema:dump
 
 ## <a name="parte44">44 - 39 - Removendo Dados</a>
 
+```php
+    $event = \App\Models\Event::findOrFail(1);
+    return $event->delete();
+```
 
+```php
+//  Delete Models via ids  [ 2,3,4,5]
+    return \App\Models\Event::destroy([2,3,4,5]);
+```
+
+```php
+    //Select * from events order by id ASC limt 3
+    return \App\Models\Event::orderBy('id', 'ASC')->limit(3)->get();
+```
 
 [Voltar ao Índice](#indice)
 
