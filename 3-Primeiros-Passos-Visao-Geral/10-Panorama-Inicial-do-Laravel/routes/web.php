@@ -75,3 +75,9 @@ Route::get('/queries/{event?}', function ($event = null) {
     //Select * from events order by id ASC limt 3
     return \App\Models\Event::orderBy('id', 'ASC')->limit(3)->get();
 });
+
+//Rotas CRUD BASE para evenos...
+Route::get('/events/index', [\App\Http\Controllers\EventController::class, 'index']);
+Route::get('/events/store', [\App\Http\Controllers\EventController::class, 'store']);
+Route::get('/events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
+Route::get('/events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);
