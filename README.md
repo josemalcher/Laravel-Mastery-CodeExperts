@@ -935,7 +935,14 @@ $ php artisan schema:dump
 
 ## <a name="parte41">41 - 36 - Active Record Atualização</a>
 
+```php
+    //update event set title = ? , description = ? (...) where id = ?
+    $event = \App\Models\Event::find(32);
+    $event->title = 'EVENTO 2 Atualizado';
+    $event->slug  = \Illuminate\Support\Str::slug($event->title);
 
+    return $event->save();
+```
 
 [Voltar ao Índice](#indice)
 

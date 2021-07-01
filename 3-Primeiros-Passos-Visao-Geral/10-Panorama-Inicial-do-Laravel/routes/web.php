@@ -34,12 +34,20 @@ Route::get('/queries/{event?}', function ($event = null) {
 
     // insert into events(title, description, body, start_event) values(?,?,?,?)
     //Active Record
+    /*
     $event = new \App\Models\Event();
     $event->title = 'Evento TESTE AR 2';
     $event->description = 'Evento gravado via AR 2';
     $event->body = 'conteudo...';
     $event->start_event = date('Y-m-d H:i:s');
     $event->slug = \Illuminate\Support\Str::slug($event->title);
+    */
+
+    //update event set title = ? , description = ? (...) where id = ?
+    $event = \App\Models\Event::find(32);
+    $event->title = 'EVENTO 2 Atualizado';
+    $event->slug  = \Illuminate\Support\Str::slug($event->title);
+
 
     return $event->save();
 
