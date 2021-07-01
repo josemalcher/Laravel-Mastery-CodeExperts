@@ -865,7 +865,10 @@ Database seeding completed successfully.
 
 ## <a name="parte35">35 - 31 - Schema Dump</a>
 
+```
+$ php artisan schema:dump
 
+```
 
 [Voltar ao Índice](#indice)
 
@@ -910,7 +913,20 @@ Database seeding completed successfully.
 
 ## <a name="parte40">40 - 35 - Active Record Inserção</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/routes/web.php)
 
+```php
+    // insert into events(title, description, body, start_event) values(?,?,?,?)
+    //Active Record
+    $event = new \App\Models\Event();
+    $event->title = 'Evento TESTE AR 2';
+    $event->description = 'Evento gravado via AR 2';
+    $event->body = 'conteudo...';
+    $event->start_event = date('Y-m-d H:i:s');
+    $event->slug = \Illuminate\Support\Str::slug($event->title);
+
+    return $event->save();
+```
 
 [Voltar ao Índice](#indice)
 
