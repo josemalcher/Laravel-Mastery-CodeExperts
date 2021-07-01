@@ -951,7 +951,18 @@ $ php artisan schema:dump
 
 ## <a name="parte42">42 - 37 - Mass Assignment Criação</a>
 
+```php
+// Atribuição Massa ou Mass Assingnment
+    $event = [
+        'title' => 'Titulo add 3',
+        'description' => 'Descrição 3',
+        'body' => 'Corpo 3',
+        'start_event' => date('Y-m-d H:i:s'),
+        'slug' => 'titulo-adddddd-3-with-array-3'
 
+    ];
+    return \App\Models\Event::create($event);
+```
 
 [Voltar ao Índice](#indice)
 
