@@ -1088,7 +1088,53 @@ class EventController extends Controller
 
 ## <a name="parte47">47 - 42 - Migração Tabela Perfil</a>
 
+```
+$ php artisan make:model Profile -m
+Model created successfully.
+Created Migration: 2021_07_01_123354_create_profiles_table
 
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_01_123354_create_profiles_table.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_01_123354_create_profiles_table.php)
+
+```php
+public function up()
+    {
+        Schema::create('profiles', function (Blueprint $table) {
+            $table->id();
+            /*
+             user_id (conter a chave estrangeira) && a chave estrangeira
+                ela tem um padrão: profiles_user_id_foreign
+            */
+            $table
+                ->foreignId('user_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
+            $table->text('about')->nullable();
+            $table->string('phone', 15)->nullable();
+            $table->text('social_networks')->nullable();
+
+            $table->timestamps();
+
+            //Definindo chave estrangeira anteriormente ao laravel 7
+           /* $table
+                ->foreignId('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');*/
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2021_07_01_123354_create_profiles_table
+Migrated:  2021_07_01_123354_create_profiles_table (118.53ms)
+
+```
+
+![42 - Migração Tabela Perfil](/imgs/42-table-profile.png)
 
 [Voltar ao Índice](#indice)
 
