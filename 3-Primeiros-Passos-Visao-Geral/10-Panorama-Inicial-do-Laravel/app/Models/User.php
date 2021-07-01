@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Representa a ligação entre o MODEL User e o MODEL Profile
+    // e indica que User tem um Profile
+    public function profile()
+    {
+        // automaticamente procura por esta coluna: user_id, em profile
+        return $this->hasOne(Profile::class);
+    }
 }
