@@ -1172,6 +1172,76 @@ Migrated:  2021_07_01_123354_create_profiles_table (118.53ms)
 
 ## <a name="parte49">49 - 44 - Salvando 1:1</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> $p = new \App\Models\Profile();
+=> App\Models\Profile {#3404}
+>>> $p-> about = 'Sobre Mim';
+=> "Sobre Mim"
+>>> $p-> phone = '99999888';
+=> "99999888"
+>>> $p->social_networks = 'facebook, google, twitte';
+=> "facebook, google, twitte"
+>>> $u = \App\Models\User::find(1);
+=> App\Models\User {#4195
+     id: 1,
+     name: "Miss Yvette Blick",
+     email: "brent79@example.com",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "hBxAvcgCOW",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+>>> $u->profile()->save($p)
+=> App\Models\Profile {#3404
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     user_id: 1,
+     updated_at: "2021-07-01 18:38:36",
+     created_at: "2021-07-01 18:38:36",
+     id: 1,
+   }
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> $user = \App\Models\User::find(2);
+=> App\Models\User {#4194
+     id: 2,
+     name: "Colt Howell",
+     email: "iparisian@example.com",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "Pzddxu1xeg",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+>>> $p = [
+... 'about' => 'Sobre mim 2',
+... 'phone' => '7777777',
+... 'social_networks' => 'twitter'
+... ];
+=> [
+     "about" => "Sobre mim 2",
+     "phone" => "7777777",
+     "social_networks" => "twitter",
+   ]
+
+>>> $user->profile()->create($p);
+=> App\Models\Profile {#4339
+     about: "Sobre mim 2",
+     phone: "7777777",
+     social_networks: "twitter",
+     user_id: 2,
+     updated_at: "2021-07-01 18:55:06",
+     created_at: "2021-07-01 18:55:06",
+     id: 2,
+   }
+```
 
 
 [Voltar ao Índice](#indice)
@@ -1181,7 +1251,95 @@ Migrated:  2021_07_01_123354_create_profiles_table (118.53ms)
 
 ## <a name="parte50">50 - 45 - Recuperando 1:1</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
+>>> $u = \App\Models\User::find(1)
+=> App\Models\User {#4196
+     id: 1,
+     name: "Miss Yvette Blick",
+     email: "brent79@example.com",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "hBxAvcgCOW",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+
+>>> $u->profile();
+=> Illuminate\Database\Eloquent\Relations\HasOne {#3409}
+
+>>> $u->profile;
+=> App\Models\Profile {#4129
+     id: 1,
+     user_id: 1,
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     created_at: "2021-07-01 18:38:36",
+     updated_at: "2021-07-01 18:38:36",
+   }
+
+```
+
+```
+>>> $user3 = \App\Models\User::find(3);
+=> App\Models\User {#4131
+     id: 3,
+     name: "Bessie Bode",
+     email: "orath@example.org",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "ZGczeoXU85",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+>>> $user3->profile;
+=> null
+
+>>> $user3->profile()->exists();
+=> false
+
+```
+
+```
+>>> $perfil1 = \App\Models\Profile::find(1);
+=> App\Models\Profile {#3405
+     id: 1,
+     user_id: 1,
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     created_at: "2021-07-01 18:38:36",
+     updated_at: "2021-07-01 18:38:36",
+   }
+>>> $perfil1->user()->first();
+=> App\Models\User {#4344
+     id: 1,
+     name: "Miss Yvette Blick",
+     email: "brent79@example.com",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "hBxAvcgCOW",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+>>> $perfil1->user;
+=> App\Models\User {#4345
+     id: 1,
+     name: "Miss Yvette Blick",
+     email: "brent79@example.com",
+     email_verified_at: "2021-06-30 00:08:08",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "hBxAvcgCOW",
+     created_at: "2021-06-30 00:08:08",
+     updated_at: "2021-06-30 00:08:08",
+   }
+>>> $perfil1->user->name;
+=> "Miss Yvette Blick"
+
+```
 
 [Voltar ao Índice](#indice)
 
