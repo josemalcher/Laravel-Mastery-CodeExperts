@@ -1348,7 +1348,43 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte51">51 - 46 - Migração 1:N</a>
 
+```
+$ php artisan make:model Photo -m
+Model created successfully.
+Created Migration: 2021_07_01_225814_create_photos_table
 
+```
+
+```php
+ public function up()
+    {
+        Schema::create('photos', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->string('photo');
+
+            $table->timestamps();
+        });
+    }
+```
+
+```php
+class Photo extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['photo'];
+}
+
+```
+
+```
+$ php artisan migrate
+Migrating: 2021_07_01_225814_create_photos_table
+Migrated:  2021_07_01_225814_create_photos_table (98.31ms)
+
+```
 
 [Voltar ao Índice](#indice)
 
