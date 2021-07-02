@@ -1393,7 +1393,23 @@ Migrated:  2021_07_01_225814_create_photos_table (98.31ms)
 
 ## <a name="parte52">52 - 47 - Mapeando 1:N Models</a>
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Event.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Event.php)
 
+```php
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Photo.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/app/Models/Photo.php)
+
+```php
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+```
 
 [Voltar ao Índice](#indice)
 
