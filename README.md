@@ -1706,7 +1706,60 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte55">55 - 50 - Migração N:N</a>
 
+```
+$ php artisan make:model Category -m
+Model created successfully.
+Created Migration: 2021_07_02_140211_create_categories_table
 
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_02_140211_create_categories_table.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_02_140211_create_categories_table.php)
+
+```php
+    public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+
+            $table->string('name');
+            $table->string('description')->nullable();
+            $table->string('slug');
+
+            $table->timestamps();
+        });
+    }
+
+```
+
+```
+$ php artisan make:migration create_category_event_table
+Created Migration: 2021_07_02_141405_create_category_event_table
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_02_141405_create_category_event_table.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/migrations/2021_07_02_141405_create_category_event_table.php)
+
+```php
+    public function up()
+    {
+        Schema::create('category_event', function (Blueprint $table) {
+
+            //event_id e category_id
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2021_07_02_140211_create_categories_table
+Migrated:  2021_07_02_140211_create_categories_table (28.44ms)
+Migrating: 2021_07_02_141405_create_category_event_table
+Migrated:  2021_07_02_141405_create_category_event_table (114.40ms)
+
+```
 
 [Voltar ao Índice](#indice)
 
