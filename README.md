@@ -1546,7 +1546,158 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte54">54 - 49 - Recuperando 1:N</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> namespace App\Models;
+>>> $event = Event::find(35);
+=> App\Models\Event {#4195
+     id: 35,
+     title: "Titulo add 363",
+     description: "Descrição 3333 UPDATE MASS",
+     body: "Corpo 3 UPDATE MASS",
+     start_event: "2021-07-01 12:04:44",
+     created_at: "2021-07-01 12:04:44",
+     updated_at: "2021-07-01 12:05:08",
+     slug: "titulo-adddddd-3-with-array-3",
+   }
+>>> $event->photos;
+=> Illuminate\Database\Eloquent\Collection {#4338
+     all: [
+       App\Models\Photo {#4091
+         id: 1,
+         event_id: 35,
+         photo: "imagem.png",
+         created_at: "2021-07-02 11:56:30",
+         updated_at: "2021-07-02 11:56:30",
+       },
+       App\Models\Photo {#4128
+         id: 2,
+         event_id: 35,
+         photo: "imagem2.png",
+         created_at: "2021-07-02 12:00:21",
+         updated_at: "2021-07-02 12:00:21",
+       },
+     ],
+   }
 
+```
+
+```
+>>> $event->photos();
+=> Illuminate\Database\Eloquent\Relations\HasMany {#3723}
+
+>>> $event->photos()->get();
+=> Illuminate\Database\Eloquent\Collection {#4284
+     all: [
+       App\Models\Photo {#3410
+         id: 1,
+         event_id: 35,
+         photo: "imagem.png",
+         created_at: "2021-07-02 11:56:30",
+         updated_at: "2021-07-02 11:56:30",
+       },
+       App\Models\Photo {#4346
+         id: 2,
+         event_id: 35,
+         photo: "imagem2.png",
+         created_at: "2021-07-02 12:00:21",
+         updated_at: "2021-07-02 12:00:21",
+       },
+     ],
+   }
+>>> $event->photos()->limit(1)->get();
+=> Illuminate\Database\Eloquent\Collection {#4285
+     all: [
+       App\Models\Photo {#4341
+         id: 1,
+         event_id: 35,
+         photo: "imagem.png",
+         created_at: "2021-07-02 11:56:30",
+         updated_at: "2021-07-02 11:56:30",
+       },
+     ],
+   }
+
+>>> $event->photos()->orderBy('id', 'desc')->get();
+=> Illuminate\Database\Eloquent\Collection {#3400
+     all: [
+       App\Models\Photo {#3410
+         id: 2,
+         event_id: 35,
+         photo: "imagem2.png",
+         created_at: "2021-07-02 12:00:21",
+         updated_at: "2021-07-02 12:00:21",
+       },
+       App\Models\Photo {#4346
+         id: 1,
+         event_id: 35,
+         photo: "imagem.png",
+         created_at: "2021-07-02 11:56:30",
+         updated_at: "2021-07-02 11:56:30",
+       },
+     ],
+   }
+
+```
+
+```
+>>> $photos = $event->photos;
+=> Illuminate\Database\Eloquent\Collection {#4338
+     all: [
+       App\Models\Photo {#4091
+         id: 1,
+         event_id: 35,
+         photo: "imagem.png",
+         created_at: "2021-07-02 11:56:30",
+         updated_at: "2021-07-02 11:56:30",
+       },
+       App\Models\Photo {#4128
+         id: 2,
+         event_id: 35,
+         photo: "imagem2.png",
+         created_at: "2021-07-02 12:00:21",
+         updated_at: "2021-07-02 12:00:21",
+       },
+     ],
+   }
+>>> $photos->count();
+=> 2
+
+>>> $photos->map(function($model){return $model->photo;});
+=> Illuminate\Support\Collection {#4341
+     all: [
+       "imagem.png",
+       "imagem2.png",
+     ],
+   }
+
+```
+
+```
+>>> Photo::find(1);
+=> App\Models\Photo {#4347
+     id: 1,
+     event_id: 35,
+     photo: "imagem.png",
+     created_at: "2021-07-02 11:56:30",
+     updated_at: "2021-07-02 11:56:30",
+   }
+>>> Photo::find(1)->event;
+=> App\Models\Event {#4285
+     id: 35,
+     title: "Titulo add 363",
+     description: "Descrição 3333 UPDATE MASS",
+     body: "Corpo 3 UPDATE MASS",
+     start_event: "2021-07-01 12:04:44",
+     created_at: "2021-07-01 12:04:44",
+     updated_at: "2021-07-01 12:05:08",
+     slug: "titulo-adddddd-3-with-array-3",
+   }
+>>> Photo::find(1)->event->title;
+=> "Titulo add 363"
+
+```
 
 [Voltar ao Índice](#indice)
 
