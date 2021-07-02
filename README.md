@@ -1418,7 +1418,126 @@ Migrated:  2021_07_01_225814_create_photos_table (98.31ms)
 
 ## <a name="parte53">53 - 48 - Salvando 1:N</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> $photo = ['photo'=> 'imagem.png'];
+=> [
+     "photo" => "imagem.png",
+   ]
+>>> \App\Models\Event::find(35)->photos()->create($photo);
+=> App\Models\Photo {#4284
+     photo: "imagem.png",
+     event_id: 35,
+     updated_at: "2021-07-02 11:56:30",
+     created_at: "2021-07-02 11:56:30",
+     id: 1,
+   }
+>>>
 
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> $photoModel = new \App\Models\Photo();
+=> App\Models\Photo {#3404}
+>>> $photoModel->photo = 'imagem2.png';
+=> "imagem2.png"
+>>> \App\Models\Event::find(35)->photos()->save($photoModel);
+=> App\Models\Photo {#3404
+     photo: "imagem2.png",
+     event_id: 35,
+     updated_at: "2021-07-02 12:00:21",
+     created_at: "2021-07-02 12:00:21",
+     id: 2,
+   }
+
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> namespace App\Models
+>>> $photo1 = new Photo();
+=> App\Models\Photo {#3397}
+>>> $photo1->photo = 'fotoexemplo1.jpg';
+=> "fotoexemplo1.jpg"
+>>> $photo2 = new Photo();
+=> App\Models\Photo {#3400}
+>>> $photo2->photo = 'fotoexemplo2.jpg';
+=> "fotoexemplo2.jpg"
+>>> $photosarray = [$photo1, $photo2];
+=> [
+     App\Models\Photo {#3397
+       photo: "fotoexemplo1.jpg",
+     },
+     App\Models\Photo {#3400
+       photo: "fotoexemplo2.jpg",
+     },
+   ]
+>>> Event::find(34)->photos()->saveMany($photosarray);
+=> [
+     App\Models\Photo {#3397
+       photo: "fotoexemplo1.jpg",
+       event_id: 34,
+       updated_at: "2021-07-02 12:06:13",
+       created_at: "2021-07-02 12:06:13",
+       id: 3,
+     },
+     App\Models\Photo {#3400
+       photo: "fotoexemplo2.jpg",
+       event_id: 34,
+       updated_at: "2021-07-02 12:06:13",
+       created_at: "2021-07-02 12:06:13",
+       id: 4,
+     },
+   ]
+
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> $photo11 = ['photo'=>'foto11.png'];
+=> [
+     "photo" => "foto11.png",
+   ]
+>>> $photo22 = ['photo'=>'foto22.png'];
+=> [
+     "photo" => "foto22.png",
+   ]
+>>> $photo1122array = [$photo11, $photo22];
+=> [
+     [
+       "photo" => "foto11.png",
+     ],
+     [
+       "photo" => "foto22.png",
+     ],
+   ]
+
+>>> \App\Models\Event::find(33)->photos()->createMany($photo1122array);
+=> Illuminate\Database\Eloquent\Collection {#4283
+     all: [
+       App\Models\Photo {#3411
+         photo: "foto11.png",
+         event_id: 33,
+         updated_at: "2021-07-02 12:10:23",
+         created_at: "2021-07-02 12:10:23",
+         id: 5,
+       },
+       App\Models\Photo {#4128
+         photo: "foto22.png",
+         event_id: 33,
+         updated_at: "2021-07-02 12:10:23",
+         created_at: "2021-07-02 12:10:23",
+         id: 6,
+       },
+     ],
+   }
+
+```
 
 [Voltar ao Índice](#indice)
 
