@@ -1768,6 +1768,78 @@ Migrated:  2021_07_02_141405_create_category_event_table (114.40ms)
 
 ## <a name="parte56">56 - 51 - Gerando Algumas Categories</a>
 
+```
+$ php artisan make:factory CategoryFactory
+Factory created successfully.
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/CategoryFactory.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/CategoryFactory.php)
+
+```php
+public function definition()
+    {
+        $categoryName = $this->faker->word;
+        return [
+            'name' => $categoryName,
+            'description' => $this->faker->sentence,
+            'slug' => Str::slug($categoryName)
+        ];
+    }
+}
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> \App\Models\Category::factory(5)->create();
+=> Illuminate\Database\Eloquent\Collection {#3441
+     all: [
+       App\Models\Category {#3439
+         name: "nihil",
+         description: "Dignissimos tempora soluta in totam qui et debitis.",
+         slug: "nihil",
+         updated_at: "2021-07-03 23:24:05",
+         created_at: "2021-07-03 23:24:05",
+         id: 1,
+       },
+       App\Models\Category {#3442
+         name: "eius",
+         description: "Culpa consectetur pariatur et quidem.",
+         slug: "eius",
+         updated_at: "2021-07-03 23:24:05",
+         created_at: "2021-07-03 23:24:05",
+         id: 2,
+       },
+       App\Models\Category {#3443
+         name: "voluptas",
+         description: "Quidem velit velit exercitationem natus vero error quisquam error.",
+         slug: "voluptas",
+         updated_at: "2021-07-03 23:24:05",
+         created_at: "2021-07-03 23:24:05",
+         id: 3,
+       },
+       App\Models\Category {#3444
+         name: "accusamus",
+         description: "Voluptas vel aut soluta in et nobis ducimus.",
+         slug: "accusamus",
+         updated_at: "2021-07-03 23:24:05",
+         created_at: "2021-07-03 23:24:05",
+         id: 4,
+       },
+       App\Models\Category {#3445
+         name: "quisquam",
+         description: "Ut consequatur ducimus similique sunt et.",
+         slug: "quisquam",
+         updated_at: "2021-07-03 23:24:05",
+         created_at: "2021-07-03 23:24:05",
+         id: 5,
+       },
+     ],
+   }
+
+```
+
 
 
 [Voltar ao Índice](#indice)
