@@ -2070,7 +2070,50 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte60">60 - 55 - Manipulando BelongsTo</a>
 
+```
+>>> $profile = \App\Models\Profile::find(1);
+=> App\Models\Profile {#4194
+     id: 1,
+     user_id: 1,
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     created_at: "2021-07-01 18:38:36",
+     updated_at: "2021-07-01 18:38:36",
+   }
 
+>>> $profile->user()->dissociate();
+=> App\Models\Profile {#4194
+     id: 1,
+     user_id: null,
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     created_at: "2021-07-01 18:38:36",
+     updated_at: "2021-07-01 18:38:36",
+     user: null,
+   }
+>>> $profile->save();
+Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null (SQL: update `profiles` set `user_id` = ?, `profiles`.`updated_at` = 2021-07-04 00:54:35 where `id` = 1)'
+>>>
+
+```
+
+```
+>>> $profile->user()->associate(3)
+=> App\Models\Profile {#4194
+     id: 1,
+     user_id: 3,
+     about: "Sobre Mim",
+     phone: "99999888",
+     social_networks: "facebook, google, twitte",
+     created_at: "2021-07-01 18:38:36",
+     updated_at: "2021-07-04 00:54:35",
+   }
+>>> $profile->save();
+=> true
+
+```
 
 [Voltar ao Índice](#indice)
 
