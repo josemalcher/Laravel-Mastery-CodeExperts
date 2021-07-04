@@ -1874,6 +1874,73 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte58">58 - 53 - Salvando N:N</a>
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+>>> namespace App\Models;
+>>> $e = Event::find(35)
+=> App\Models\Event {#4195
+     id: 35,
+     title: "Titulo add 363",
+     description: "Descrição 3333 UPDATE MASS",
+     body: "Corpo 3 UPDATE MASS",
+     start_event: "2021-07-01 12:04:44",
+     created_at: "2021-07-01 12:04:44",
+     updated_at: "2021-07-01 12:05:08",
+     slug: "titulo-adddddd-3-with-array-3",
+   }
+
+>>> $e->categories()->attach([1,2,3]);
+=> null
+
+>>> $e->categories()->attach([4]);
+=> null
+
+>>> $e->categories()->detach([4]);
+=> 1
+
+>>> $e->categories()->detach([1,2]);
+=> 2
+
+```
+
+```
+>>> $e->categories()->sync([1,2,4])
+=> [
+     "attached" => [
+       1,
+       2,
+       4,
+     ],
+     "detached" => [
+       3,
+     ],
+     "updated" => [],
+   ]
+
+```
+
+```
+>>> $e->categories()->toggle([1,2,4])
+=> [
+     "attached" => [],
+     "detached" => [
+       1,
+       2,
+       4,
+     ],
+   ]
+>>> $e->categories()->toggle([1,2,4])
+=> [
+     "attached" => [
+       1,
+       2,
+       4,
+     ],
+     "detached" => [],
+   ]
+
+```
 
 
 [Voltar ao Índice](#indice)
