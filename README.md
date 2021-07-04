@@ -1950,7 +1950,118 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 ## <a name="parte59">59 - 54 - Recuperando N:N</a>
 
+```
+>>> $e->categories
+=> Illuminate\Database\Eloquent\Collection {#3400
+     all: [
+       App\Models\Category {#3723
+         id: 1,
+         name: "nihil",
+         description: "Dignissimos tempora soluta in totam qui et debitis.",
+         slug: "nihil",
+         created_at: "2021-07-03 23:24:05",
+         updated_at: "2021-07-03 23:24:05",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4353
+           event_id: 35,
+           category_id: 1,
+         },
+       },
+       App\Models\Category {#4347
+         id: 2,
+         name: "eius",
+         description: "Culpa consectetur pariatur et quidem.",
+         slug: "eius",
+         created_at: "2021-07-03 23:24:05",
+         updated_at: "2021-07-03 23:24:05",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4352
+           event_id: 35,
+           category_id: 2,
+         },
+       },
+       App\Models\Category {#4354
+         id: 4,
+         name: "accusamus",
+         description: "Voluptas vel aut soluta in et nobis ducimus.",
+         slug: "accusamus",
+         created_at: "2021-07-03 23:24:05",
+         updated_at: "2021-07-03 23:24:05",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4343
+           event_id: 35,
+           category_id: 4,
+         },
+       },
+     ],
+   }
 
+>>> $e->categories->count();
+=> 3
+
+>>> $e->categories();
+=> Illuminate\Database\Eloquent\Relations\BelongsToMany {#4345
+     +withTimestamps: false,
+   }
+
+```
+
+```
+>>> $cat = Category::find(4);
+=> App\Models\Category {#4338
+     id: 4,
+     name: "accusamus",
+     description: "Voluptas vel aut soluta in et nobis ducimus.",
+     slug: "accusamus",
+     created_at: "2021-07-03 23:24:05",
+     updated_at: "2021-07-03 23:24:05",
+   }
+>>>
+
+>>> $cat->events
+=> Illuminate\Database\Eloquent\Collection {#4355
+     all: [
+       App\Models\Event {#4348
+         id: 35,
+         title: "Titulo add 363",
+         description: "Descrição 3333 UPDATE MASS",
+         body: "Corpo 3 UPDATE MASS",
+         start_event: "2021-07-01 12:04:44",
+         created_at: "2021-07-01 12:04:44",
+         updated_at: "2021-07-01 12:05:08",
+         slug: "titulo-adddddd-3-with-array-3",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4366
+           category_id: 4,
+           event_id: 35,
+         },
+       },
+     ],
+   }
+
+```
+
+```
+>>> $cat->events()->count();
+=> 1
+
+>>> $cat->events;
+=> Illuminate\Database\Eloquent\Collection {#4355
+     all: [
+       App\Models\Event {#4348
+         id: 35,
+         title: "Titulo add 363",
+         description: "Descrição 3333 UPDATE MASS",
+         body: "Corpo 3 UPDATE MASS",
+         start_event: "2021-07-01 12:04:44",
+         created_at: "2021-07-01 12:04:44",
+         updated_at: "2021-07-01 12:05:08",
+         slug: "titulo-adddddd-3-with-array-3",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4366
+           category_id: 4,
+           event_id: 35,
+         },
+       },
+     ],
+   }
+
+```
 
 [Voltar ao Índice](#indice)
 
