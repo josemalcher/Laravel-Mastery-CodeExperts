@@ -1966,7 +1966,42 @@ Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity cons
 ## <a name="parte62">6. Factories com Relacionamentos</a>
 
 - 57 - Iniciando Factories: Profile e Photo
-  
+
+```
+$ php artisan make:factory PhotoFactory
+Factory created successfully.
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/PhotoFactory.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/PhotoFactory.php)
+
+```
+public function definition()
+    {
+        return [
+            'photo' => $this->faker->imageUrl()
+        ];
+    }
+```
+
+```
+$ php artisan make:factory ProfileFactory
+Factory created successfully.
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/ProfileFactory.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/factories/ProfileFactory.php)
+
+```
+ public function definition()
+    {
+        return [
+            'about' => $this->faker->paragraph,
+            'phone' => $this->faker->phoneNumber,
+            'social_networks' => 'facebook-twitter-instagran'
+        ];
+    }
+```
+
+
 - 58 - Factories com Relacionamento HasMany
   
 - 59 - Factories com Relacionamento HasOne
