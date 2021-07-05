@@ -2003,7 +2003,117 @@ Factory created successfully.
 
 
 - 58 - Factories com Relacionamento HasMany
-  
+
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+
+>>> \App\Models\Event::factory(2)->make();
+=> Illuminate\Database\Eloquent\Collection {#3436
+     all: [
+       App\Models\Event {#3440
+         title: "Et sapiente ut quisquam sed.",
+         description: "voluptatem",
+         body: "Ut laboriosam omnis magnam ea quos expedita autem culpa. Libero quo error maxime saepe et adipisci qui. Dolores velit est optio rerum quae id minus. Eum eligendi quae saepe doloremque qui aliquid dolorem.",
+         slug: "et-sapiente-ut-quisquam-sed",
+         start_event: Illuminate\Support\Carbon @1625445861 {#3439
+           date: 2021-07-05 00:44:21.593325 UTC (+00:00),
+         },
+       },
+       App\Models\Event {#3442
+         title: "Sit unde aliquid odio omnis consectetur quisquam.",
+         description: "nam",
+         body: "Nihil eligendi mollitia voluptatem unde. Ut quae quisquam nisi dolore. Laborum error nihil qui error unde.",
+         slug: "sit-unde-aliquid-odio-omnis-consectetur-quisquam",
+         start_event: Illuminate\Support\Carbon @1625445861 {#3441
+           date: 2021-07-05 00:44:21.593493 UTC (+00:00),
+         },
+       },
+     ],
+   }
+```
+
+```
+>>> Event::factory()->has(Photo::factory(3))->create();
+=> App\Models\Event {#4237
+     title: "Quis eos ut adipisci.",
+     description: "eos",
+     body: "Quae quibusdam iusto rem quae omnis quidem rerum eum. Est blanditiis quo rem ducimus aut perspiciatis hic. Nesciunt perspiciatis reprehenderit repellendus id est accusamus. Ut dolorem repudiandae porro quia fugiat.",
+     slug: "quis-eos-ut-adipisci",
+     start_event: Illuminate\Support\Carbon @1625447636 {#4235
+       date: 2021-07-05 01:13:56.586102 UTC (+00:00),
+     },
+     updated_at: "2021-07-05 01:13:56",
+     created_at: "2021-07-05 01:13:56",
+     id: 36,
+   }
+
+>>> Event::factory(2)->has(Photo::factory(3))->create();
+=> Illuminate\Database\Eloquent\Collection {#3436
+     all: [
+       App\Models\Event {#4381
+         title: "Assumenda aliquam nisi consequuntur ipsam eum cupiditate ad laboriosam.",
+         description: "quibusdam",
+         body: "Incidunt cupiditate optio quasi voluptatem culpa eos dicta et. Qui quisquam doloremque quam dolor voluptatem rerum velit. Eum dolores repellendus ut accusamus adipisci esse.",
+         slug: "assumenda-aliquam-nisi-consequuntur-ipsam-eum-cupiditate-ad-laboriosam",
+         start_event: Illuminate\Support\Carbon @1625448483 {#4171
+           date: 2021-07-05 01:28:03.062581 UTC (+00:00),
+         },
+         updated_at: "2021-07-05 01:28:03",
+         created_at: "2021-07-05 01:28:03",
+         id: 37,
+       },
+       App\Models\Event {#4382
+         title: "Distinctio deleniti sint quis voluptas est aliquam.",
+         description: "eos",
+         body: "Autem sunt odio dolor quae. A at quia dolores aperiam maiores magni dolores. Tempora et quisquam labore ut et omnis ipsum eaque. Repellendus modi molestias hic.",
+         slug: "distinctio-deleniti-sint-quis-voluptas-est-aliquam",
+         start_event: Illuminate\Support\Carbon @1625448483 {#4169
+           date: 2021-07-05 01:28:03.062818 UTC (+00:00),
+         },
+         updated_at: "2021-07-05 01:28:03",
+         created_at: "2021-07-05 01:28:03",
+         id: 38,
+       },
+     ],
+   }
+
+
+```
+
+```
+>>> Event::factory(2)->hasPhotos(2)->create();
+=> Illuminate\Database\Eloquent\Collection {#3402
+     all: [
+       App\Models\Event {#4389
+         title: "Non mollitia odit porro sunt commodi cum odio.",
+         description: "et",
+         body: "Optio doloribus accusantium ullam assumenda et et. Voluptas sint quia cupiditate dignissimos molestiae. Quam fugiat dolorem est aut.",
+         slug: "non-mollitia-odit-porro-sunt-commodi-cum-odio",
+         start_event: Illuminate\Support\Carbon @1625450260 {#4383
+           date: 2021-07-05 01:57:40.465122 UTC (+00:00),
+         },
+         updated_at: "2021-07-05 01:57:40",
+         created_at: "2021-07-05 01:57:40",
+         id: 39,
+       },
+       App\Models\Event {#4388
+         title: "Qui quos perspiciatis ullam aspernatur rerum qui.",
+         description: "et",
+         body: "Dolor atque accusamus ut ut natus maiores omnis. Quaerat id cupiditate dolorum modi voluptas at laboriosam sint. Voluptas placeat rem ipsa.",
+         slug: "qui-quos-perspiciatis-ullam-aspernatur-rerum-qui",
+         start_event: Illuminate\Support\Carbon @1625450260 {#4386
+           date: 2021-07-05 01:57:40.465292 UTC (+00:00),
+         },
+         updated_at: "2021-07-05 01:57:40",
+         created_at: "2021-07-05 01:57:40",
+         id: 40,
+       },
+     ],
+   }
+
+```
+
 - 59 - Factories com Relacionamento HasOne
   
 - 60 - Factories com BelongsTo
