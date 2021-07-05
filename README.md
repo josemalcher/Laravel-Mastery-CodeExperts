@@ -2164,7 +2164,35 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 
 - 60 - Factories com BelongsTo
-  
+
+```
+>>> Profile::factory()->for(User::factory())->create()
+
+=> App\Models\Profile {#3459
+     about: "Dolorum sunt quia nihil maiores sed. Et quo eaque totam consequatur. Non nihil sed neque voluptas repellendus iusto quis quia. Impedit quaerat mollitia consequatur vero ipsum quis.",
+     phone: "(05) 8530-4726",
+     social_networks: "facebook-twitter-instagran",
+     user_id: 54,
+     updated_at: "2021-07-05 11:36:00",
+     created_at: "2021-07-05 11:36:00",
+     id: 6,
+   }
+
+>>> Profile::factory()->forUser()->create()
+
+=> App\Models\Profile {#3460
+     about: "Consequatur et itaque mollitia et vel. Ut dolorem rerum non voluptatem amet. Recusandae laboriosam sit amet.",
+     phone: "(86) 1991-7718",
+     social_networks: "facebook-twitter-instagran",
+     user_id: 55,
+     updated_at: "2021-07-05 11:36:47",
+     created_at: "2021-07-05 11:36:47",
+     id: 7,
+   }
+
+```
+
+
 - 61 - Executando as Factories via Seed
 
 
