@@ -22,8 +22,8 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            'about' => $this->faker->paragraph,
-            'phone' => $this->faker->phoneNumber,
+            'about' => $this->faker->paragraph(),
+            'phone' => $this->faker->randomNumber(15),
             'social_networks' => 'facebook-twitter-instagran'
         ];
     }

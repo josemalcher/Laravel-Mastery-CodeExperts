@@ -2116,6 +2116,53 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 - 59 - Factories com Relacionamento HasOne
   
+```
+>>> User::factory()->has(Profile::factory())->create();
+
+=> App\Models\User {#4236
+     name: "Marjorie Shanahan MD",
+     email: "yfarrell@example.com",
+     email_verified_at: "2021-07-05 11:22:02",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "OyPdhAoD5S",
+     updated_at: "2021-07-05 11:22:02",
+     created_at: "2021-07-05 11:22:02",
+     id: 51,
+   }
+
+```
+
+```
+>>> User::factory(2)->hasProfile()->create();
+
+=> Illuminate\Database\Eloquent\Collection {#4406
+     all: [
+       App\Models\User {#4417
+         name: "Margarette Romaguera",
+         email: "schimmel.earline@example.net",
+         email_verified_at: "2021-07-05 11:26:36",
+         #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+         #remember_token: "2BaYfSobu8",
+         updated_at: "2021-07-05 11:26:36",
+         created_at: "2021-07-05 11:26:36",
+         id: 52,
+       },
+       App\Models\User {#4418
+         name: "Demarco Kautzer",
+         email: "moises.feil@example.org",
+         email_verified_at: "2021-07-05 11:26:36",
+         #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+         #remember_token: "ICITRjOegc",
+         updated_at: "2021-07-05 11:26:36",
+         created_at: "2021-07-05 11:26:36",
+         id: 53,
+       },
+     ],
+   }
+
+```
+
+
 - 60 - Factories com BelongsTo
   
 - 61 - Executando as Factories via Seed
