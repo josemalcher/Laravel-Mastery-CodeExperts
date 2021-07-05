@@ -2195,6 +2195,109 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 - 61 - Executando as Factories via Seed
 
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/UsersTableSeeder.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/UsersTableSeeder.php)
+
+```php
+  public function run()
+    {
+         User::factory(50)
+             ->hasProfile()
+             ->create();
+    }
+```
+
+- [3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/EventsTableSeeder.php](3-Primeiros-Passos-Visao-Geral/10-Panorama-Inicial-do-Laravel/database/seeders/EventsTableSeeder.php)
+
+```php
+public function run()
+    {
+          Event::factory(30)
+              ->hasPhotos(4)
+              ->hasCategories(3)
+              ->create();
+    }
+```
+
+```
+$ php artisan migrate:fresh
+Dropped all tables successfully.
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (36.94ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (27.41ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (26.37ms)
+Migrating: 2021_06_29_132248_create_events_table
+Migrated:  2021_06_29_132248_create_events_table (13.16ms)
+Migrating: 2021_06_30_000514_alter_events_table_add_column_slug
+Migrated:  2021_06_30_000514_alter_events_table_add_column_slug (26.87ms)
+Migrating: 2021_07_01_123354_create_profiles_table
+Migrated:  2021_07_01_123354_create_profiles_table (55.27ms)
+Migrating: 2021_07_01_225814_create_photos_table
+Migrated:  2021_07_01_225814_create_photos_table (41.61ms)
+Migrating: 2021_07_02_140211_create_categories_table
+Migrated:  2021_07_02_140211_create_categories_table (18.11ms)
+Migrating: 2021_07_02_141405_create_category_event_table
+Migrated:  2021_07_02_141405_create_category_event_table (77.06ms)
+
+```
+
+```
+$ php artisan db:seed
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (265.87ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (473.01ms)
+Database seeding completed successfully.
+
+```
+
+```
+$ php artisan migrate:refresh --seed
+Rolling back: 2021_07_02_141405_create_category_event_table
+Rolled back:  2021_07_02_141405_create_category_event_table (8.11ms)
+Rolling back: 2021_07_02_140211_create_categories_table
+Rolled back:  2021_07_02_140211_create_categories_table (4.95ms)
+Rolling back: 2021_07_01_225814_create_photos_table
+Rolled back:  2021_07_01_225814_create_photos_table (5.24ms)
+Rolling back: 2021_07_01_123354_create_profiles_table
+Rolled back:  2021_07_01_123354_create_profiles_table (4.76ms)
+Rolling back: 2021_06_30_000514_alter_events_table_add_column_slug
+Rolled back:  2021_06_30_000514_alter_events_table_add_column_slug (78.79ms)
+Rolling back: 2021_06_29_132248_create_events_table
+Rolled back:  2021_06_29_132248_create_events_table (5.06ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (5.86ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (5.38ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (7.26ms)
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (34.75ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (30.58ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (27.42ms)
+Migrating: 2021_06_29_132248_create_events_table
+Migrated:  2021_06_29_132248_create_events_table (15.05ms)
+Migrating: 2021_06_30_000514_alter_events_table_add_column_slug
+Migrated:  2021_06_30_000514_alter_events_table_add_column_slug (27.60ms)
+Migrating: 2021_07_01_123354_create_profiles_table
+Migrated:  2021_07_01_123354_create_profiles_table (61.20ms)
+Migrating: 2021_07_01_225814_create_photos_table
+Migrated:  2021_07_01_225814_create_photos_table (53.49ms)
+Migrating: 2021_07_02_140211_create_categories_table
+Migrated:  2021_07_02_140211_create_categories_table (14.52ms)
+Migrating: 2021_07_02_141405_create_category_event_table
+Migrated:  2021_07_02_141405_create_category_event_table (77.81ms)
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (222.38ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (473.98ms)
+Database seeding completed successfully.
+
+```
 
 [Voltar ao Índice](#indice)
 
