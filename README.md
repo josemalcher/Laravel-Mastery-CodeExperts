@@ -2367,6 +2367,36 @@ Route::get('/', function () {
 
 - 67 - Herança de Templates
 
+- [7-View-Laravel-Blade/resources/views/layout/site.blade.php](7-View-Laravel-Blade/resources/views/layout/site.blade.php)
+
+```blade
+@yield('content')
+```
+
+- [7-View-Laravel-Blade/resources/views/welcome.blade.php](7-View-Laravel-Blade/resources/views/welcome.blade.php)
+
+```blade
+@extends('layout.site')
+
+@section('title')
+Principais Eventos
+@endsection
+
+@section('content')
+    <h2>Eventos</h2>
+    <hr>
+    <ul>
+        @forelse($events as $event)
+            <li>{{$event->title}}</li>
+        @empty
+            <li>Nenhum evento encotrado nesse site...</li>
+        @endforelse
+    </ul>
+    <hr>
+@endsection
+
+```
+
 - 68 - Incrementando Views de Eventos
 
 - 69 - Melhorias Home e Inicio de Single

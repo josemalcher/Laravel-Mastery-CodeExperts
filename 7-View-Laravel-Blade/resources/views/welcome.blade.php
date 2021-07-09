@@ -1,19 +1,18 @@
-<h2>Eventos</h2>
-<hr>
-<ul>
-    @forelse($events as $event)
-        <li>{{$event->title}}</li>
-    @empty
-        <li>Nenhum evento encotrado nesse site...</li>
-    @endforelse
-</ul>
-<hr>
-@if(count($events))
+@extends('layout.site')
+
+@section('title')
+Principais Eventos
+@endsection
+
+@section('content')
+    <h2>Eventos</h2>
+    <hr>
     <ul>
-        @foreach($events as $event)
+        @forelse($events as $event)
             <li>{{$event->title}}</li>
-        @endforeach
+        @empty
+            <li>Nenhum evento encotrado nesse site...</li>
+        @endforelse
     </ul>
-@else
-    <h3>Nenhum evento encotrado nesse site...</h3>
-@endif
+    <hr>
+@endsection
