@@ -2318,7 +2318,50 @@ Route::get('/view-teste', fn() => view('teste.index'));
 
 - 64 - Loop e Passagem de Dados View
 
+```php
+Route::get('/', function () {
+    $events = \App\Models\Event::all();
+
+    //return view('welcome', ['events'=>$events]);
+    // compac('event') => \App\Models\Event::all();
+    return view('welcome', compact('events'));
+});
+```
+
+```blade
+<ul>
+    @foreach($events as $event)
+        <li>{{$event->title}}</li>
+    @endforeach
+</ul>
+
+```
+
+
 - 65 - Diretiva ForElse
+
+```blade
+<h2>Eventos</h2>
+<hr>
+<ul>
+    @forelse($events as $event)
+        <li>{{$event->title}}</li>
+    @empty
+        <li>Nenhum evento encotrado nesse site...</li>
+    @endforelse
+</ul>
+<hr>
+@if(count($events))
+    <ul>
+        @foreach($events as $event)
+            <li>{{$event->title}}</li>
+        @endforeach
+    </ul>
+@else
+    <h3>Nenhum evento encotrado nesse site...</h3>
+@endif
+
+```
 
 - 66 - O print do Blade
 
