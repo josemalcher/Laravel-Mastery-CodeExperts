@@ -85,3 +85,10 @@ Route::get('/events/index', [\App\Http\Controllers\EventController::class, 'inde
 Route::get('/events/store', [\App\Http\Controllers\EventController::class, 'store']);
 Route::get('/events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('/events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);
+
+Route::get('/eventos/{slug}',  function($slug){
+
+    $event = \App\Models\Event::whereSlug($slug)->first();
+
+    return view('event', compact('event'));
+});

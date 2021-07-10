@@ -18,8 +18,9 @@
                     <img src="https://via.placeholder.com/640x480.png/0077cc?text=perspiciatis" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">{{$event->title}}</h5>
-                        <small>Acontece em {{$event->start_event}}</small>
+                        <small>Acontece em {{$event->start_event->format('d/m/Y H:i')}}</small>
                         <p class="card-text">{{$event->description}}</p>
+                        <a href="/eventos/{{$event->slug}}" class="btn btn-success">Ver Evento</a>
                     </div>
                 </div>
             </div>

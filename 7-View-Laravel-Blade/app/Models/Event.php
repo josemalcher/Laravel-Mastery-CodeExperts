@@ -17,6 +17,8 @@ class Event extends Model
         'slug'
     ];
 
+    protected $dates = ['start_event'];
+
     public function photos()
     {
         return $this->hasMany(Photo::class);
