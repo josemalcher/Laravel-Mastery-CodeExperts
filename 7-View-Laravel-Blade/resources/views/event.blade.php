@@ -20,18 +20,28 @@
                     <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab"
                        aria-controls="home" aria-selected="true">SOBRE</a>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab"
-                       aria-controls="profile" aria-selected="false">Photos</a>
-                </li>
+                @if($event->photos->count())
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab"
+                           aria-controls="profile" aria-selected="false">Photos</a>
+                    </li>
+                @endif
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <div class="tab-pane fade show active pt-5" id="about" role="tabpanel" aria-labelledby="about-tab">
                     {{$event->body}}
                 </div>
-                <div class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
-
-                </div>
+                @if($event->photos->count())
+                    <div class="tab-pane fade pt-5" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+                        <div class="row">
+                            @foreach($event->photos as $photo)
+                                <div class="col-3">
+                                    <img src="{{$photo->photo}}" alt="{{$photo->title}}" class="img-fluid">
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
