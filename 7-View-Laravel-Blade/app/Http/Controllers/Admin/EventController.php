@@ -16,7 +16,7 @@ class EventController extends Controller
         return view('admin.events.index', compact('events')); //admin.events.index
     }
 
-    public function store()
+    public function store(Request $request)
     {
         // Recuperando uma instância do Request
         // request()
@@ -38,7 +38,7 @@ class EventController extends Controller
 //            'start_event' => date('Y-m-d H:i:s'),
 //            'slug' => 'titulo-adddddd-3-with-array-3'
 //        ];
-        $event = request()->all();
+        $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
         Event::create($event);
@@ -57,12 +57,12 @@ class EventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event)
+    public function update($event, Request $request)
     {
 
         $event = Event::findOrFail($event);
 
-        $event->update(request()->all());
+        $event->update($request->all());
 
         return redirect()->back();
     }
