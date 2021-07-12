@@ -23,7 +23,7 @@ Route::get('/hello-name/{name?}', [\App\Http\Controllers\HelloWorldController::c
 Route::get('/queries/{event?}', function ($event = null) {
     return \App\Models\Event::orderBy('id', 'ASC')->limit(3)->get();
 });
-Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show'])->name('event.single');
 
 //Rotas CRUD BASE para evetos...
 

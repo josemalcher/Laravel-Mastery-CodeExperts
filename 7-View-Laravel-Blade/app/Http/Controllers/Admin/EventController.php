@@ -43,7 +43,7 @@ class EventController extends Controller
 
         Event::create($event);
 
-        return redirect()->to('/admin/events/');
+        return redirect()->route('admin.events.index');
     }
 
     public function create()
@@ -71,6 +71,6 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($event);
         $event->delete();
-        return redirect()->to('admin/events');
+        return redirect()->route('admin.events.index');
     }
 }

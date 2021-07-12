@@ -20,7 +20,7 @@
                         <h5 class="card-title">{{$event->title}}</h5>
                         <small>Acontece em {{$event->start_event->format('d/m/Y H:i')}}</small>
                         <p class="card-text">{{$event->description}}</p>
-                        <a href="/eventos/{{$event->slug}}" class="btn btn-success">Ver Evento</a>
+                        <a href="{{route('event.single', ['slug'=> $event->slug])}}" class="btn btn-success">Ver Evento</a>
                     </div>
                 </div>
             </div>
