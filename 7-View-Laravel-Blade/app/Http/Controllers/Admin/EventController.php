@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -17,15 +18,32 @@ class EventController extends Controller
 
     public function store()
     {
-        dd('chegamos no controller e no método ' . __METHOD__);
-        $eventData = [
-            'title' => 'Titulo add 3' . rand(1, 100),
-            'description' => 'Descrição 3333 UPDATE MASS',
-            'body' => 'Corpo 3 UPDATE MASS',
-            'start_event' => date('Y-m-d H:i:s'),
-            'slug' => 'titulo-adddddd-3-with-array-3'
-        ];
-        return Event::create($eventData);
+        // Recuperando uma instância do Request
+        // request()
+
+        // Recuperar todos os conteúdos do form enviado como array
+        //request()->all()
+
+        // Recuperar uma chave específica do envio do form
+        //request('title') || request()->get('title')
+
+        // Recuperar uma chave espefífica do envio como propriedade
+        // dd(request()->title)
+
+        //dd('chegamos no controller e no método ' . __METHOD__);
+//        $eventData = [
+//            'title' => 'Titulo add 3' . rand(1, 100),
+//            'description' => 'Descrição 3333 UPDATE MASS',
+//            'body' => 'Corpo 3 UPDATE MASS',
+//            'start_event' => date('Y-m-d H:i:s'),
+//            'slug' => 'titulo-adddddd-3-with-array-3'
+//        ];
+        $event = request()->all();
+        $event['slug'] = Str::slug($event['title']);
+
+        Event::create($event);
+
+        return redirect()->to('/admin/events/index');
     }
 
     public function create()
