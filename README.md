@@ -2416,6 +2416,27 @@ Principais Eventos
 
 ## <a name="parte81"> 8. View: Manipulação de Formulários</a>
 
+- 74 - Introdução
+
+- 75 - Organizando Rotas Painel Eventos
+
+- 76 - Listagem de Eventos
+
+- 77 - Paginando Dados
+
+- 78 - Tela de Criação de Evento
+
+- 79 - Entendendo CSRF no Laravel
+
+- 80 - Manipulando Dados da Request
+
+- 81 - Editando Eventos
+
+- 82 - Linkando Edição e Remoção de Evento
+
+- 83 - Melhorias Manipulação de Request
+
+- 84 - Conclusões
 
 
 [Voltar ao Índice](#indice)
