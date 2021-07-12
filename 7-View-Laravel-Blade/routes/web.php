@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $events = \App\Models\Event::all();
-    //$events = [];
-    //return view('welcome', ['events'=>$events]);
-    // compac('event') => \App\Models\Event::all();
-    return view('welcome', compact('events'));
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('hello', [\App\Http\Controllers\HelloWorldController::class, 'helloworld']);
 
@@ -86,9 +80,4 @@ Route::get('/events/store', [\App\Http\Controllers\EventController::class, 'stor
 Route::get('/events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('/events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);
 
-Route::get('/eventos/{slug}',  function($slug){
-
-    $event = \App\Models\Event::whereSlug($slug)->first();
-
-    return view('event', compact('event'));
-});
+Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show']);
