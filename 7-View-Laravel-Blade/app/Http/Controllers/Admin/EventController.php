@@ -51,16 +51,20 @@ class EventController extends Controller
         return view('admin.events.create');
     }
 
+    public function edit($event)
+    {
+        $event = Event::findOrFail($event);
+        return view('admin.events.edit', compact('event'));
+    }
+
     public function update($event)
     {
-        $eventData = [
-            'title' => 'Titulo add 3' . rand(1, 100),
-        ];
-        $event = \App\Models\Event::find($event);
 
-        $event->update($eventData);
+        $event = Event::findOrFail($event);
 
-        return $event;
+        $event->update(request()->all());
+
+        return redirect()->back();
     }
 
     public function destroy($event)
