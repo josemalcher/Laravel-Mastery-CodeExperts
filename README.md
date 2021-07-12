@@ -2467,6 +2467,16 @@ class AppServiceProvider extends ServiceProvider
 
 - 79 - Entendendo CSRF no Laravel
 
+- [7-View-Laravel-Blade/resources/views/admin/events/create.blade.php](7-View-Laravel-Blade/resources/views/admin/events/create.blade.php)
+
+```php
+ <form action="/admin/events/store" method="post">
+
+                @csrf
+
+                <div class="form-group">
+```
+
 - 80 - Manipulando Dados da Request
 
 - 81 - Editando Eventos

@@ -17,6 +17,7 @@ class EventController extends Controller
 
     public function store()
     {
+        dd('chegamos no controller e no método ' . __METHOD__);
         $eventData = [
             'title' => 'Titulo add 3' . rand(1, 100),
             'description' => 'Descrição 3333 UPDATE MASS',
