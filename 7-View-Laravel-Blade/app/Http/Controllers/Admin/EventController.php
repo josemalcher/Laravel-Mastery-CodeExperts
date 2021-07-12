@@ -27,6 +27,11 @@ class EventController extends Controller
         return Event::create($eventData);
     }
 
+    public function create()
+    {
+        return view('admin.events.create');
+    }
+
     public function update($event)
     {
         $eventData = [
