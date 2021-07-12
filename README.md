@@ -2424,6 +2424,45 @@ Principais Eventos
 
 - 77 - Paginando Dados
 
+- [7-View-Laravel-Blade/app/Http/Controllers/Admin/EventController.php](7-View-Laravel-Blade/app/Http/Controllers/Admin/EventController.php)
+
+```php
+    public function index()
+    {
+        //$events = Event::all();
+        $events = Event::paginate(10);
+        return view('admin.events.index', compact('events')); //admin.events.index
+    }
+```
+
+- [7-View-Laravel-Blade/app/Providers/AppServiceProvider.php](7-View-Laravel-Blade/app/Providers/AppServiceProvider.php)
+
+```php
+
+use Illuminate\Pagination\Paginator;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        Paginator::useBootstrap();
+    }
+
+```
+
+- [7-View-Laravel-Blade/resources/views/admin/events/index.blade.php](7-View-Laravel-Blade/resources/views/admin/events/index.blade.php)
+
+
+```php
+        {{$events->links()}}
+```
+
+
 - 78 - Tela de Criação de Evento
 
 - 79 - Entendendo CSRF no Laravel

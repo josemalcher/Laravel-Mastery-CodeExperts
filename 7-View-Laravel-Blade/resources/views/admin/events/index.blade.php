@@ -29,6 +29,9 @@
                 @endforelse
                 </tbody>
             </table>
+
+            {{$events->links()}}
+
         </div>
     </div>
 @endsection
