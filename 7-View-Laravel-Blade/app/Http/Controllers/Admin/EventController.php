@@ -70,6 +70,7 @@ class EventController extends Controller
     public function destroy($event)
     {
         $event = \App\Models\Event::findOrFail($event);
-        return $event->delete();
+        $event->delete();
+        return redirect()->to('admin/events/index');
     }
 }
