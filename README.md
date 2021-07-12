@@ -2526,6 +2526,32 @@ public function store()
 
 ## <a name="parte93">9. Laravel Router</a>
 
+- 85 - Introdução
+  
+- 86 - Relembrando Rotas
+
+```php
+// GET | POST | PUT | DELETE | OPTIONS | HEAD
+
+// any a qualquer verbo ou match
+//Route::any('/teste-any', fn() => 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
+
+//para fazer match com post e put
+//Route::match(['post', 'post'], '/teste-match', fn => 'Tora Mach');
+
+```
+
+- 87 - Organizando Rotas com Prefixo e Grupo
+  
+- 88 - Usando Apelido de Rotas
+  
+- 89 - Refatorando Links nas Views
+  
+- 90 - Refatorando Redirecionamentos
+  
+- 91 - Dando um Tapa no Painel de Eventos
+  
+- 92 - Conclusões
 
 
 [Voltar ao Índice](#indice)

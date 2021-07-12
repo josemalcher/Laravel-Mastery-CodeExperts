@@ -86,3 +86,14 @@ Route::post('/admin/events/update/{event}', [\App\Http\Controllers\Admin\EventCo
 Route::get('/admin/events/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
 
 Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show']);
+
+
+
+// GET | POST | PUT | DELETE | OPTIONS | HEAD
+
+// any a qualquer verbo ou match
+//Route::any('/teste-any', fn() => 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
+
+//para fazer match com post e put
+//Route::match(['post', 'post'], '/teste-match', fn => 'Tora Mach');
+
