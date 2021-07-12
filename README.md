@@ -2588,6 +2588,23 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
 ## <a name="parte102">10. Manipulando Validações</a>
 
+- 93 - Introdução
+  
+- 94 - Usando Validação Controller
+  
+- 95 - Exibindo Todoas as Validações na View
+  
+- 96 - Exibindo Validações POr Input
+  
+- 97 - Diretiva @error
+  
+- 98 - Traduzindo Mensagens de Validação
+  
+- 99 - Melhorando Para Form Requests
+  
+- 100 - Validação na Edição do Evento
+  
+- 101 - Conclusões
 
 
 [Voltar ao Índice](#indice)
