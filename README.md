@@ -2592,6 +2592,25 @@ Route::prefix('/admin')->name('admin.')->group(function () {
   
 - 94 - Usando Validação Controller
   
+```php
+public function store(Request $request)
+    {
+        $request->validate([
+                'title' => 'required|min:30',
+                'description' => 'required',
+                'body' => 'required',
+                'start_event' => 'required'
+            ]
+        );
+        $event = $request->all();
+        $event['slug'] = Str::slug($event['title']);
+
+        Event::create($event);
+
+        return redirect()->route('admin.events.index');
+    }
+```
+
 - 95 - Exibindo Todoas as Validações na View
   
 - 96 - Exibindo Validações POr Input

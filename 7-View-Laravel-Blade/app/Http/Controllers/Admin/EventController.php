@@ -38,6 +38,13 @@ class EventController extends Controller
 //            'start_event' => date('Y-m-d H:i:s'),
 //            'slug' => 'titulo-adddddd-3-with-array-3'
 //        ];
+        $request->validate([
+                'title' => 'required|min:30',
+                'description' => 'required',
+                'body' => 'required',
+                'start_event' => 'required'
+            ]
+        );
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
