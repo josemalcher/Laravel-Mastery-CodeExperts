@@ -39,9 +39,9 @@ class EventController extends Controller
 //            'slug' => 'titulo-adddddd-3-with-array-3'
 //        ];
         $request->validate([
-                'title' => 'required|min:30',
+                'title' =>       'required|min:30',
                 'description' => 'required',
-                'body' => 'required',
+                'body' =>        'required',
                 'start_event' => 'required'
             ]
         );
