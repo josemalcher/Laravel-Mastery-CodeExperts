@@ -2661,7 +2661,36 @@ $request->validate([
 ```
 
 - 99 - Melhorando Para Form Requests
-  
+
+```
+$ php artisan make:request EventRequest
+Request created successfully.
+
+```
+
+- [7-View-Laravel-Blade/app/Http/Requests/EventRequest.php](7-View-Laravel-Blade/app/Http/Requests/EventRequest.php)
+
+```php
+public function rules()
+    {
+        return [
+            'title' =>       'required|min:30',
+            'description' => 'required',
+            'body' =>        'required',
+            'start_event' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+     return [
+         'title.required' => 'Este campo Título é obrigatorio' ,
+         'required' => 'Este campo é Obrigatório' ,
+         'min' => 'Este campo não aninte o mínimo de caracteres permitidos. Minho = :min' ,
+     ];
+    }
+```
+
 - 100 - Validação na Edição do Evento
   
 - 101 - Conclusões

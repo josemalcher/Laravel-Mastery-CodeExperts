@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\EventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,40 +17,8 @@ class EventController extends Controller
         return view('admin.events.index', compact('events')); //admin.events.index
     }
 
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
-        // Recuperando uma instância do Request
-        // request()
-
-        // Recuperar todos os conteúdos do form enviado como array
-        //request()->all()
-
-        // Recuperar uma chave específica do envio do form
-        //request('title') || request()->get('title')
-
-        // Recuperar uma chave espefífica do envio como propriedade
-        // dd(request()->title)
-
-        //dd('chegamos no controller e no método ' . __METHOD__);
-//        $eventData = [
-//            'title' => 'Titulo add 3' . rand(1, 100),
-//            'description' => 'Descrição 3333 UPDATE MASS',
-//            'body' => 'Corpo 3 UPDATE MASS',
-//            'start_event' => date('Y-m-d H:i:s'),
-//            'slug' => 'titulo-adddddd-3-with-array-3'
-//        ];
-        $request->validate([
-                'title' =>       'required|min:30',
-                'description' => 'required',
-                'body' =>        'required',
-                'start_event' => 'required'
-            ],
-            [
-                'title.required' => 'Este campo Título é obrigatorio' ,
-                'required' => 'Este campo é Obrigatório' ,
-                'min' => 'Este campo não aninte o mínimo de caracteres permitidos. Minho = :min' ,
-            ]
-        );
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
