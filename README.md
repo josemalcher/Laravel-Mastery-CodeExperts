@@ -2611,8 +2611,22 @@ public function store(Request $request)
     }
 ```
 
-- 95 - Exibindo Todoas as Validações na View
-  
+- 95 - Exibindo Todas as Validações na View
+
+- [7-View-Laravel-Blade/resources/views/admin/events/create.blade.php](7-View-Laravel-Blade/resources/views/admin/events/create.blade.php)
+
+```blade
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+```
+
 - 96 - Exibindo Validações POr Input
   
 - 97 - Diretiva @error
