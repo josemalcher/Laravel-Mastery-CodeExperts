@@ -2631,7 +2631,7 @@ public function store(Request $request)
   
 - 97 - Diretiva @error
   
-```php
+```blade
 <div class="form-group">
     <label for="">Título do Evento</label>
     <input type="text" class="form-control @error('title') is-invalid @enderror" name="title">
@@ -2644,7 +2644,22 @@ public function store(Request $request)
 ```
 
 - 98 - Traduzindo Mensagens de Validação
-  
+
+```php
+$request->validate([
+                'title' =>       'required|min:30',
+                'description' => 'required',
+                'body' =>        'required',
+                'start_event' => 'required'
+            ],
+            [
+                'title.required' => 'Este campo Título é obrigatorio' ,
+                'required' => 'Este campo é Obrigatório' ,
+                'min' => 'Este campo não aninte o mínimo de caracteres permitidos. Minho = :min' ,
+            ]
+        );
+```
+
 - 99 - Melhorando Para Form Requests
   
 - 100 - Validação na Edição do Evento
