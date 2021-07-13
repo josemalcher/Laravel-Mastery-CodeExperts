@@ -2631,6 +2631,18 @@ public function store(Request $request)
   
 - 97 - Diretiva @error
   
+```php
+<div class="form-group">
+    <label for="">Título do Evento</label>
+    <input type="text" class="form-control @error('title') is-invalid @enderror" name="title">
+    @error('title')
+        <div class="invalid-feedback">
+            {{$message}}
+        </div>
+    @enderror
+</div>
+```
+
 - 98 - Traduzindo Mensagens de Validação
   
 - 99 - Melhorando Para Form Requests
