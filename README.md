@@ -21,8 +21,8 @@ https://codeexperts.com.br/curso/laravel-mastery
 13. [13. Melhorias Projeto Eventos](#parte134)     
 14. [14. Upload de Arquivos](#parte148)     
 15. [15. Melhorias & Encerramento Bloco 1 --atualizando](#parte163)     
-16. [16. ACL & Autorização](#parte16)     
-17. [17. Bloco 2 - Iniciando](#parte17)     
+16. [16. ACL & Autorização](#parteb16)     
+17. [17. Bloco 2 - Iniciando](#parteb17)     
 ---
 
 
@@ -2767,14 +2767,14 @@ public function rules()
 
 ---
 
-## <a name="parte16">16. ACL & Autorização</a>
+## <a name="parteb16">16. ACL & Autorização</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte17">17. Bloco 2 - Iniciando</a>
+## <a name="parteb17">17. Bloco 2 - Iniciando</a>
 
 
 [Voltar ao Índice](#indice)
