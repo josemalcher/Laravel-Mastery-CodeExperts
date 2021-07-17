@@ -7,20 +7,22 @@ https://codeexperts.com.br/curso/laravel-mastery
 ## <a name="indice">Índice</a>
 
 1. [1. Boas Vindas](#parte1)     
-5. [2. Ambiente](#parte5)     
-10. [3. Primeiros Passos Visão Geral](#parte10)     
-26. [4. Migrations, Seeders e Factories](#parte26)     
-37. [5. Eloquent](#parte37)     
-62. [6. Factories com Relacionamentos](#parte62)     
-68. [7. View: Laravel Blade](#parte68)     
-81. [8. View: Manipulação de Formulários](#parte81)     
-93. [9. Laravel Router](#parte93)     
-102. [10. Manipulando Validações](#parte102)     
-112. [11. Controllers como Recurso](#parte112)     
-123. [12. Primeiro Starter Point: Laravel UI](#parte123)     
-134. [13. Melhorias Projeto Eventos](#parte134)     
-148. [14. Upload de Arquivos](#parte148)     
-163. [15. Melhorias & Encerramento Bloco 1 --atualizando](#parte163)     
+2. [2. Ambiente](#parte5)     
+3. [3. Primeiros Passos Visão Geral](#parte10)     
+4. [4. Migrations, Seeders e Factories](#parte26)     
+5. [5. Eloquent](#parte37)     
+6. [6. Factories com Relacionamentos](#parte62)     
+7. [7. View: Laravel Blade](#parte68)     
+8. [8. View: Manipulação de Formulários](#parte81)     
+9. [9. Laravel Router](#parte93)     
+10. [10. Manipulando Validações](#parte102)     
+11. [11. Controllers como Recurso](#parte112)     
+12. [12. Primeiro Starter Point: Laravel UI](#parte123)     
+13. [13. Melhorias Projeto Eventos](#parte134)     
+14. [14. Upload de Arquivos](#parte148)     
+15. [15. Melhorias & Encerramento Bloco 1 --atualizando](#parte163)     
+16. [16. ACL & Autorização](#parte16)     
+17. [17. Bloco 2 - Iniciando](#parte17)     
 ---
 
 
@@ -2759,6 +2761,20 @@ public function rules()
 
 ## <a name="parte163">15. Melhorias & Encerramento Bloco 1 --atualizando</a>
 
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte16">16. ACL & Autorização</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte17">17. Bloco 2 - Iniciando</a>
 
 
 [Voltar ao Índice](#indice)
