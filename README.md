@@ -2799,6 +2799,17 @@ Route::resource('events', \App\Http\Controllers\Admin\EventController::class)
 
 - 109 - Registrando Vários Recursos
   
+```php
+Route::resources([
+        'events' => \App\Http\Controllers\Admin\EventController::class,
+        'events.photos' => \App\Http\Controllers\Admin\EventController::class
+    ],
+        [
+            'except' => ['destroy']
+        ]
+    );
+```
+
 - 110 - DI nos Controllers
   
 - 111 - Conclusões
