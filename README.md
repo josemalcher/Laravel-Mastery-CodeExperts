@@ -2773,6 +2773,10 @@ $ php artisan route:list
   
 - 107 - Recursos Aninhados
   
+![imgs/107-recurso-alinhado.png](imgs/107-recurso-alinhado.png)
+
+![imgs/107-recurso-alinhado-2.png](imgs/107-recurso-alinhado-2.png)
+
 - 108 - Recursos Aninhados no Projeto e Mais
   
 - 109 - Registrando Vários Recursos
