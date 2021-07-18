@@ -2709,6 +2709,10 @@ public function rules()
   
 - 103 - O que são Controllers como Recurso
   
+![imgs/103-resource-01.png](imgs/103-resource-01.png)
+
+![imgs/103-resource-02.png](imgs/103-resource-02.png)
+
 - 104 - Criando Controllers como Recurso
   
 - 105 - Controller como Recurso em Eventos
