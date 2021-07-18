@@ -38,6 +38,8 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     });
 });
 
+Route::resource('res', \App\Http\Controllers\ResController::class);
+
 // GET | POST | PUT | DELETE | OPTIONS | HEAD
 
 // any a qualquer verbo ou match

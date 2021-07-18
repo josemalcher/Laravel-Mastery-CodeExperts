@@ -17,6 +17,11 @@ class EventController extends Controller
         return view('admin.events.index', compact('events')); //admin.events.index
     }
 
+    public function show($event)
+    {
+        return 'Evento: ' . $event;
+    }
+
     public function store(EventRequest $request)
     {
         $event = $request->all();

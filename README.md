@@ -2714,7 +2714,34 @@ public function rules()
 ![imgs/103-resource-02.png](imgs/103-resource-02.png)
 
 - 104 - Criando Controllers como Recurso
-  
+
+- [7-View-Laravel-Blade/app/Http/Controllers/ResController.php](7-View-Laravel-Blade/app/Http/Controllers/ResController.php)
+
+```
+$ php artisan make:controller ResController -r
+Controller created successfully.
+
+```
+
+```
+Route::resource('res', \App\Http\Controllers\ResController::class);
+
+```
+
+$ php artisan route:list
+
+```
+|    | GET|HEAD  | res               | res.index       | App\Http\Controllers\ResController@index       | web    |
+|    | POST      | res               | res.store       | App\Http\Controllers\ResController@store       | web    |
+|    | GET|HEAD  | res/create        | res.create      | App\Http\Controllers\ResController@create      | web    |
+|    | GET|HEAD  | res/{re}          | res.show        | App\Http\Controllers\ResController@show        | web    |
+|    | PUT|PATCH | res/{re}          | res.update      | App\Http\Controllers\ResController@update      | web    |
+|    | DELETE    | res/{re}          | res.destroy     | App\Http\Controllers\ResController@destroy     | web    |
+|    | GET|HEAD  | res/{re}/edit     | res.edit        | App\Http\Controllers\ResController@edit        | web    |
++--------+-----------+------------------------------+----------------------+------------------------------------------------------+------------+
+
+```
+
 - 105 - Controller como Recurso em Eventos
   
 - 106 - Tomando Nota dos Ganhos
