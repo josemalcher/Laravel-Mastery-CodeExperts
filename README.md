@@ -2841,7 +2841,30 @@ Route::resources([
 
 ## <a name="parte123">12. Primeiro Starter Point: Laravel UI</a>
 
+112 - Intro e Obtendo Laravel UI
 
+```
+$ composer require laravel/ui
+
+```
+
+113 - Gerando Autenticação
+
+114 - Conhecendo os Arquivos do Auth
+
+115 - Adaptações do Nosso Painel
+
+116 - O Btn de Logout
+
+117 - Arquivo de Configurações Auth
+
+118 - Configurações para Dono de Evento
+
+119 - Eventos por Usuário Logado
+
+120 - O Middleware Authenticate
+
+121 - Conclusões
 
 [Voltar ao Índice](#indice)
 
