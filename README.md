@@ -2743,6 +2743,31 @@ $ php artisan route:list
 ```
 
 - 105 - Controller como Recurso em Eventos
+
+
+- [7-View-Laravel-Blade/resources/views/admin/events/index.blade.php](7-View-Laravel-Blade/resources/views/admin/events/index.blade.php)
+
+```blade
+<td class="d-flex justify-content-between">
+    <a href="{{route('admin.events.edit', ['event'=> $event->id, 'outro_param'=> $event->title])}}" class="btn btn-info">Editar</a>
+    <form method="post" action="{{route('admin.events.destroy', ['event'=> $event->id])}}">
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-danger">Remover</button>
+    </form>
+</td>
+```
+
+- [7-View-Laravel-Blade/resources/views/admin/events/edit.blade.php](7-View-Laravel-Blade/resources/views/admin/events/edit.blade.php)
+
+```blade
+ <form action="{{route('admin.events.update', ['event' => $event->id])}}" method="post">
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+
+```
+
   
 - 106 - Tomando Nota dos Ganhos
   

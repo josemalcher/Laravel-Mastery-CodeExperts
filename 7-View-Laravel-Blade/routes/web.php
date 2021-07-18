@@ -28,17 +28,17 @@ Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'sho
 //Rotas CRUD BASE para evetos...
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::prefix('events')->name('events.')->group(function () {
-        Route::get ('/',          [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
-        Route::get ('/create',         [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
-        Route::post('/store',          [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');
-        Route::get ('/{event}/edit',   [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('edit');
-        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('update');
-        Route::get ('/destroy/{event}',[\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
-    });
+//    Route::prefix('events')->name('events.')->group(function () {
+//        Route::get ('/',          [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
+//        Route::get ('/create',         [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
+//        Route::post('/store',          [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');
+//        Route::get ('/{event}/edit',   [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('edit');
+//        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('update');
+//        Route::get ('/destroy/{event}',[\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
+//    });
+    Route::resource('events', \App\Http\Controllers\Admin\EventController::class);
 });
 
-Route::resource('res', \App\Http\Controllers\ResController::class);
 
 // GET | POST | PUT | DELETE | OPTIONS | HEAD
 
