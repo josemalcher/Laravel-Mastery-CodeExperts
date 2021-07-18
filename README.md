@@ -2778,7 +2778,25 @@ $ php artisan route:list
 ![imgs/107-recurso-alinhado-2.png](imgs/107-recurso-alinhado-2.png)
 
 - 108 - Recursos Aninhados no Projeto e Mais
-  
+
+```php
+Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class);
+```
+
+```
+$ php artisan make:controller Admin/EventPhotoController -r
+Controller created successfully.
+```
+
+- [7-View-Laravel-Blade/app/Http/Controllers/Admin/EventPhotoController.php](7-View-Laravel-Blade/app/Http/Controllers/Admin/EventPhotoController.php)
+
+```
+Route::resource('events', \App\Http\Controllers\Admin\EventController::class)
+    ->except('destroy');
+    Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class)
+    ->only('index', 'show');
+```
+
 - 109 - Registrando Vários Recursos
   
 - 110 - DI nos Controllers
