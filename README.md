@@ -2811,7 +2811,26 @@ Route::resources([
 ```
 
 - 110 - DI nos Controllers
-  
+
+- [7-View-Laravel-Blade/app/Http/Controllers/Admin/EventController.php](7-View-Laravel-Blade/app/Http/Controllers/Admin/EventController.php)
+
+```php
+  private $event;
+
+    public function __construct(Event $event)
+    {
+        $this->event = $event;
+    }
+
+
+    public function index()
+    {
+        //$events = $this->event->all();
+        $events = $this->event->paginate(10);
+        return view('admin.events.index', compact('events')); //admin.events.index
+    }
+```
+
 - 111 - Conclusões
 
 
