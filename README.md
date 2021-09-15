@@ -425,6 +425,44 @@ Route::get('/queries/{event?}', function ($event){
 
 20 - O Tinker
 
+```
+$ php artisan tinker
+Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
+
+>>> $events = \App\Models\Event::all()
+
+=> Illuminate\Database\Eloquent\Collection {#4184
+     all: [
+       App\Models\Event {#4186
+         id: 2,
+         title: "Segundo Evento teste",
+         description: "desc evento 2",
+         created_at: "2021-09-15 08:46:29",
+         updated_at: null,
+       },
+       App\Models\Event {#4185
+         id: 3,
+         title: "terceiro evento",
+         description: "desc evento 3",
+         created_at: "2021-09-15 08:46:53",
+         updated_at: null,
+       },
+     ],
+   }
+>>>
+>>> \App\Models\Event::find(2);
+
+=> App\Models\Event {#4399
+     id: 2,
+     title: "Segundo Evento teste",
+     description: "desc evento 2",
+     created_at: "2021-09-15 08:46:29",
+     updated_at: null,
+   }
+>>>
+
+```
+
 21 - Assets Frontend
 
 22 - Conclusões
