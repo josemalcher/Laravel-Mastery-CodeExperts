@@ -327,6 +327,11 @@ Options:
 
 14 - Entendendo as Configurações
 
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/.env](3-Primeiros-Passos-Visao-Geral/meusEventos/.env)
+
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php](3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php)
+
+
 15 - Migrations
 
 16 - Executando Migrations
