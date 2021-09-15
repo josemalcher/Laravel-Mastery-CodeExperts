@@ -25,3 +25,7 @@ Route::get('/ola-mundo', function () {
 });
 
 //Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+
+Route::get('/hello/{name}', function ($name = null) {
+    return 'Olá, ' . $name;
+});

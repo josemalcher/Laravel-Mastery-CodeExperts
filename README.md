@@ -117,9 +117,16 @@ Route::get('/ola-mundo', function () {
 
 ```
 
-
-
 11 - Parâmetros Dinâmicos Rota
+
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
+
+```php
+Route::get('/hello/{name}', function ($name = null) {
+    return 'Olá, ' . $name;
+});
+
+```
 
 12 - Rotas & Controllers
 
