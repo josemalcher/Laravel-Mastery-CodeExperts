@@ -512,7 +512,25 @@ Done in 17.86s.
 
 ## <a name="parte4">4 - Migrations, Seeders e Factories</a>
 
+23 - Introdução
 
+24 - Seeders e Factories
+
+25 - Executando Seeds e Factories
+
+26 - Primeira Factory e Seeds
+
+27 - Comandos Fresh e Refresh
+
+28 - Comando Rollback e Reset
+
+29 - Falando Sobre Migrações
+
+30 - Uma Migração de Edição
+
+31 - Schema Dump
+
+32 - Conclusões
 
 [Voltar ao Índice](#indice)
 
