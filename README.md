@@ -334,6 +334,8 @@ Options:
 
 15 - Migrations
 
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php](3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php)
+
 16 - Executando Migrations
 
 17 - Criando Primeira Migração
