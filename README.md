@@ -465,7 +465,43 @@ Psy Shell v0.10.8 (PHP 7.4.19 — cli) by Justin Hileman
 
 21 - Assets Frontend
 
+```
+$ yarn install
+yarn install v1.22.10
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 3.82s.
 
+```
+
+```
+$ yarn run development
+yarn run v1.22.10
+$ mix
+
+* Mix █████████████████████████ emitting (95%)
+ emit
+
+* Mix █████████████████████████ done (99%) plugins
+ WebpackBar:done
+
+√ Mix
+  Compiled successfully in 2.53s
+
+                         
+   Laravel Mix v6.0.31   
+                         
+✔ Compiled Successfully in 2445ms
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬─────────┐
+│                                                                                                                                                     File │ Size    │
+├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+│                                                                                                                                               /js/app.js │ 606 KiB │
+│                                                                                                                                              css/app.css │ 1 bytes │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────┘
+webpack compiled successfully
+Done in 17.86s.
+
+```
 
 22 - Conclusões
 
