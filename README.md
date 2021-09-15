@@ -338,6 +338,29 @@ Options:
 
 16 - Executando Migrations
 
+Comando cria uma tabela no banco de dados, 'meuseventos', chamada 'migrations' 
+
+```
+$ php artisan migrate:install
+Migration table created successfully.
+
+```
+
+comando para rodar os arquivos de migrates
+
+```
+$ php artisan migrate
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (31.36ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (27.77ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (26.90ms)
+Migrating: 2019_12_14_000001_create_personal_access_tokens_table
+Migrated:  2019_12_14_000001_create_personal_access_tokens_table (36.64ms)
+```
+
+
 17 - Criando Primeira Migração
 
 18 - Os Models
