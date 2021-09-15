@@ -130,6 +130,37 @@ Route::get('/hello/{name}', function ($name = null) {
 
 12 - Rotas & Controllers
 
+```
+php artisan make:controller HelloWordController
+
+```
+
+```php
+Route::get('/hello-world', [\App\Http\Controllers\HelloWordController::class, 'helloWord']);
+
+//Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+
+Route::get('/hello/{name?}',  [\App\Http\Controllers\HelloWordController::class, 'hello']);
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/app/Http/Controllers/HelloWordController.php](3-Primeiros-Passos-Visao-Geral/meusEventos/app/Http/Controllers/HelloWordController.php)
+
+```php
+class HelloWordController extends Controller
+{
+    public function helloWord()
+    {
+        return view('ola-mundo');
+    }
+
+    public function hello($name = 'Fulano')
+    {
+        return 'Olá, ' . $name;
+    }
+}
+```
+
 13 - O Artisan
 
 14 - Entendendo as Configurações

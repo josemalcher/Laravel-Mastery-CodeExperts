@@ -20,12 +20,8 @@ Route::get('/', function () {
 /*Route::get('/ola-mundo', function () {
     return "Olá Mundo!!";
 });*/
-Route::get('/ola-mundo', function () {
-    return view('ola-mundo');
-});
+Route::get('/hello-world', [\App\Http\Controllers\HelloWordController::class, 'helloWord']);
 
 //Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
 
-Route::get('/hello/{name}', function ($name = null) {
-    return 'Olá, ' . $name;
-});
+Route::get('/hello/{name?}',  [\App\Http\Controllers\HelloWordController::class, 'hello']);
