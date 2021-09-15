@@ -96,6 +96,29 @@ php artisan serve
 
 10 - Panorama Inicial do Laravel
 
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php](3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php)
+
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
+
+```php
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+/*Route::get('/ola-mundo', function () {
+    return "Olá Mundo!!";
+});*/
+Route::get('/ola-mundo', function () {
+    return view('ola-mundo');
+});
+
+//Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+
+```
+
+
+
 11 - Parâmetros Dinâmicos Rota
 
 12 - Rotas & Controllers

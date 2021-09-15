@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Route::get('/ola-mundo', function () {
+    return "Olá Mundo!!";
+});*/
+Route::get('/ola-mundo', function () {
+    return view('ola-mundo');
+});
+
+//Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
