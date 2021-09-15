@@ -46,7 +46,7 @@ https://codeexperts.com.br/curso/laravel-mastery
 
 ## <a name="parte2">2 - Ambiente</a>
 
-04 - Formas de Iniciar Projeto
+**04 - Formas de Iniciar Projeto**
 
 - php 7.3+
 
@@ -69,7 +69,7 @@ xml
 
 06 - Laravel Installer Linux
 
-07 - Laravel Installer Windows
+**07 - Laravel Installer Windows**
 
 ```
 $ composer global require laravel/installer
@@ -88,13 +88,13 @@ php artisan serve
 
 ## <a name="parte3">3 - Primeiros Passos Visão Geral</a>
 
-08 - Iniciando Projeto
+**08 - Iniciando Projeto**
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos](3-Primeiros-Passos-Visao-Geral/meusEventos)
 
-09 - Diretórios Projeto
+**09 - Diretórios Projeto**
 
-10 - Panorama Inicial do Laravel
+**10 - Panorama Inicial do Laravel**
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php](3-Primeiros-Passos-Visao-Geral/meusEventos/resources/views/ola-mundo.blade.php)
 
@@ -117,7 +117,7 @@ Route::get('/ola-mundo', function () {
 
 ```
 
-11 - Parâmetros Dinâmicos Rota
+**11 - Parâmetros Dinâmicos Rota**
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php](3-Primeiros-Passos-Visao-Geral/meusEventos/routes/web.php)
 
@@ -128,7 +128,7 @@ Route::get('/hello/{name}', function ($name = null) {
 
 ```
 
-12 - Rotas & Controllers
+**12 - Rotas & Controllers**
 
 ```
 php artisan make:controller HelloWordController
@@ -161,7 +161,7 @@ class HelloWordController extends Controller
 }
 ```
 
-13 - O Artisan
+**13 - O Artisan**
 
 ```
 $ php artisan list
@@ -325,18 +325,18 @@ Options:
 
 ```
 
-14 - Entendendo as Configurações
+**14 - Entendendo as Configurações**
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos/.env](3-Primeiros-Passos-Visao-Geral/meusEventos/.env)
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php](3-Primeiros-Passos-Visao-Geral/meusEventos/config/database.php)
 
 
-15 - Migrations
+**15 - Migrations**
 
 - [3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php](3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2014_10_12_000000_create_users_table.php)
 
-16 - Executando Migrations
+**16 - Executando Migrations**
 
 Comando cria uma tabela no banco de dados, 'meuseventos', chamada 'migrations' 
 
@@ -361,7 +361,37 @@ Migrated:  2019_12_14_000001_create_personal_access_tokens_table (36.64ms)
 ```
 
 
-17 - Criando Primeira Migração
+**17 - Criando Primeira Migração**
+
+```
+$ php artisan make:migration create_events_table
+Created Migration: 2021_09_15_013605_create_events_table
+
+```
+
+- [3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2021_09_15_013605_create_events_table.php](3-Primeiros-Passos-Visao-Geral/meusEventos/database/migrations/2021_09_15_013605_create_events_table.php)
+
+```php
+  public function up()
+    {
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('description');
+            $table->timestamps();
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2021_09_15_013605_create_events_table
+Migrated:  2021_09_15_013605_create_events_table (24.80ms)
+
+```
+
+![img/17-table_migration_1.png](img/17-table_migration_1.png)
+
 
 18 - Os Models
 
