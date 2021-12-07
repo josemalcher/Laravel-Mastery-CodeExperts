@@ -87,7 +87,25 @@ php artisan serve
 
 
 ## <a name="parte3">3 - Primeiros Passos Visão Geral</a>
+ 
+- 08 - Iniciando Projeto
 
+- [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01)
+
+- 09 - Diretórios Projeto
+- 10 - Panorama Inicial do Laravel
+- 11 - Parâmetros Dinâmicos Rota
+- 12 - Rotas & Controllers
+- 13 - O Artisan
+- 14 - Entendendo as Configurações
+- 15 - Migrations
+- 16 - Executando Migrations
+- 17 - Criando Primeira Migração
+- 18 - Os Models
+- 19 - O Eloquent e Queries
+- 20 - O Tinker
+- 21 - Assets Frontend
+- 22 - Conclusões
 
 [Voltar ao Índice](#indice)
 
