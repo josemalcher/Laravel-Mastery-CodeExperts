@@ -111,7 +111,51 @@ Route::get('/ola-mundo', function () {
 [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources/views/ola-mundo.blade.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources/views/ola-mundo.blade.php)
 
 - 11 - Parâmetros Dinâmicos Rota
+
+```php
+Route::get('/ola/{name?}', function ($name = 'Fulano...') {
+    return 'Olá, ' . $name;
+});
+```
+
 - 12 - Rotas & Controllers
+
+```
+$ php artisan make:controller HelloWorldController
+Controller created successfully.
+
+```
+  - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Http/Controllers/HelloWorldController.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Http/Controllers/HelloWorldController.php)
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HelloWorldController extends Controller
+{
+    public function helloWorld()
+    {
+        return view('ola-mundo');
+    }
+
+    public function hello($name = 'Fulano')
+    {
+        return 'Olá, ' . $name;
+    }
+}
+
+```
+
+```php
+Route::get('/ola-mundo', [\App\Http\Controllers\HelloWorldController::class, 'helloWorld']);
+// Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+
+Route::get('/ola/{name?}', [\App\Http\Controllers\HelloWorldController::class, 'hello']);
+```
+
 - 13 - O Artisan
 - 14 - Entendendo as Configurações
 - 15 - Migrations
