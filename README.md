@@ -90,10 +90,26 @@ php artisan serve
  
 - 08 - Iniciando Projeto
 
-- [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01)
+  - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01)
 
 - 09 - Diretórios Projeto
 - 10 - Panorama Inicial do Laravel
+
+[03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/routes/web.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/routes/web.php)
+
+```php
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/ola-mundo', function () {
+    return view('ola-mundo');
+});
+// Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
+```
+
+[03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources/views/ola-mundo.blade.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources/views/ola-mundo.blade.php)
+
 - 11 - Parâmetros Dinâmicos Rota
 - 12 - Rotas & Controllers
 - 13 - O Artisan
