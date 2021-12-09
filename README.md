@@ -334,6 +334,35 @@ Migrated:  2019_12_14_000001_create_personal_access_tokens_table (410.00ms)
 ```
 
 - 17 - Criando Primeira Migração
+
+```
+$ php artisan make:migration create_events_table
+Created Migration: 2021_12_08_235820_create_events_table
+
+```
+
+[03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/database/migrations/2021_12_08_235820_create_events_table.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/database/migrations/2021_12_08_235820_create_events_table.php)
+
+```php
+public function up()
+    {
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('description');
+            $table->timestamps();
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2021_12_08_235820_create_events_table
+Migrated:  2021_12_08_235820_create_events_table (26.07ms)
+
+```
+
+
 - 18 - Os Models
 - 19 - O Eloquent e Queries
 - 20 - O Tinker
