@@ -374,8 +374,23 @@ Model created successfully.
   -[03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Models/Event.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Models/Event.php)
 
 
-
 - 19 - O Eloquent e Queries
+
+
+```php
+Route::get('/queries/{id}', function ($id) {
+    // $events = \App\Models\Event::all(); // select * from events
+    // $events = \App\Models\Event::all(['title', 'description']); // select title, description from events
+
+    // $events = \App\Models\Event::where('id', 1)->get(); // select * from events WHERE id = 1
+    // $events = \App\Models\Event::where('id', 1)->first(); // select * from events WHERE id = 1
+    $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
+
+    return $events;
+});
+
+```
+
 - 20 - O Tinker
 - 21 - Assets Frontend
 - 22 - Conclusões
