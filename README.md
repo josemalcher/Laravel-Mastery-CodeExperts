@@ -364,6 +364,17 @@ Migrated:  2021_12_08_235820_create_events_table (26.07ms)
 
 
 - 18 - Os Models
+
+```
+$ php artisan make:model Event
+Model created successfully.
+
+```
+
+  -[03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Models/Event.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/app/Models/Event.php)
+
+
+
 - 19 - O Eloquent e Queries
 - 20 - O Tinker
 - 21 - Assets Frontend
