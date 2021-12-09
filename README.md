@@ -392,7 +392,61 @@ Route::get('/queries/{id}', function ($id) {
 ```
 
 - 20 - O Tinker
+
+
+```
+$ php artisan tinker
+Psy Shell v0.10.12 (PHP 7.4.19 — cli) by Justin Hileman
+>>>   
+```
+
+```
+$ php artisan tinker
+Psy Shell v0.10.12 (PHP 7.4.19 — cli) by Justin Hileman
+>>> \App\Models\Event::all();                                                                                                                                                                              
+=> Illuminate\Database\Eloquent\Collection {#4263
+     all: [
+       App\Models\Event {#4265
+         id: 1,
+         title: "Evento Teste",
+         description: "Descrição de Teste do evento",
+         created_at: "2021-12-08 21:29:23",
+         updated_at: "2021-12-08 21:29:25",
+       },
+       App\Models\Event {#4264
+         id: 2,
+         title: "Evento Teste 2",
+         description: "Descrição 2 de Teste do evento",
+         created_at: "2021-12-07 21:29:23",
+         updated_at: "2021-12-08 21:29:25",
+       },
+     ],
+   }
+>>> \App\Models\Event::where('id', 1)->first();                                                                                                                                                            
+=> App\Models\Event {#3533
+     id: 1,
+     title: "Evento Teste",
+     description: "Descrição de Teste do evento",
+     created_at: "2021-12-08 21:29:23",
+     updated_at: "2021-12-08 21:29:25",
+   }
+>>>                                                                   
+```
+
 - 21 - Assets Frontend
+
+  - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources)
+
+```
+$ npm i
+
+$ npm run dev
+
+```
+  
+  - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/public](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/public)
+
+
 - 22 - Conclusões
 
 [Voltar ao Índice](#indice)
