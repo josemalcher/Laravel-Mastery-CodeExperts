@@ -22,6 +22,12 @@ https://codeexperts.com.br/curso/laravel-mastery
 16. [ACL & Autorização](#parte16)
 17. [Bloco 2 - Iniciando](#parte17)
 18. [Primeiros Passos com Livewire](#parte18)
+19. [Conhecendo o Tailwind](#parte19)
+20. [Iniciando Projeto de Fato](#parte20)
+21. [Upload e Processamento de Video](#parte21)
+22. [Trabalhando com Filas](#parte22)
+23. [Notificações & Player](#parte23)
+24. [Relações Polimórficas & Incrementos Projeto](#parte24)
 ---
 
 
@@ -587,3 +593,57 @@ $ npm run dev
 [Voltar ao Índice](#indice)
 
 ---
+
+## <a name="parte19">9. Conhecendo o Tailwind</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte20">20. Iniciando Projeto de Fato</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte21">21. Upload e Processamento de Video</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte22">22. Trabalhando com Filas</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte23">23. Notificações & Player</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte24">24. Relações Polimórficas & Incrementos Projeto</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
