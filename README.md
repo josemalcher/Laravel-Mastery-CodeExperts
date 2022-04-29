@@ -372,6 +372,15 @@ Migrated:  2021_12_08_235820_create_events_table (26.07ms)
 
 - 18 - Os Models
 
+- 03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Models/User.php
+
+```php
+class User extends Authenticatable
+{
+    // protected $table = 'usuarios'; // Caso use outro nome na tabela
+```
+
+
 ```
 $ php artisan make:model Event
 Model created successfully.
