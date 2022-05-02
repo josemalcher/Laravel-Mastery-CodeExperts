@@ -472,6 +472,111 @@ $ npm run dev
 
 ## <a name="parte4">4 - Migrations, Seeders e Factories</a>
 
+- 23 Introdução
+
+- 24 Seeders e Factories
+
+- 25 Executando Seeds e Factories
+
+https://github.com/fzaninotto/Faker
+
+
+- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/factories/UserFactory.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/factories/UserFactory.php)
+```php
+public function definition()
+    {
+        return [
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'remember_token' => Str::random(10),
+        ];
+    }
+```
+
+-[03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/DatabaseSeeder.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/DatabaseSeeder.php)
+
+```php
+    public function run()
+    {
+        \App\Models\User::factory(10)->create();
+    }
+```
+
+```bash
+$ php artisan db:seed
+Database seeding completed successfully.
+
+```
+
+- 26 Primeira Factory e Seeds
+
+```bash
+$ php artisan make:factory EventFactory
+Factory created successfully.
+
+```
+
+- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/factories/EventFactory.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/factories/EventFactory.php)
+
+```php
+    public function definition()
+    {
+        return [
+            'title' => $this->faker->sentence,
+            'description' => $this->faker->paragraph
+        ];
+    }
+```
+
+```php
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+        \App\Models\Event::factory(30)->create();
+    }
+}
+```
+
+```bash
+$ php artisan db:seed
+Database seeding completed successfully.
+
+```
+
+```bash
+$ php artisan make:seeder UsersTableSeeder
+Seeder created successfully.
+
+$ php artisan make:seeder EventsTableSeeder
+Seeder created successfully.
+
+```
+- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/EventsTableSeeder.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/EventsTableSeeder.php)
+- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/UsersTableSeeder.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/UsersTableSeeder.php)
+
+```bash
+$ php artisan db:seed
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (110.22ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (19.99ms)
+Database seeding completed successfully.
+
+```
+
+- 27 Comandos Fresh e Refresh
+
+- 28 Comando Rollback e Reset
+
+- 29 Falando Sobre Migrações
+
+- 30 Uma Migração de Edição
+
+- 31 Schema Dump
+
+- 32 Conclusões
 
 
 [Voltar ao Índice](#indice)
