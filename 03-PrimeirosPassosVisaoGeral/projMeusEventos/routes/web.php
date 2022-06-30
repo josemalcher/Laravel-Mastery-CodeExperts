@@ -25,14 +25,14 @@ Route::get('/ola/{name?}', function ($nameok = null) {
     return 'Olá, ' . $nameok;
 });
 
-Route::get('/queries/{event}', function ($event){
+Route::get('/queries/{event?}', function ($event = null){
 
-    // $events = \App\Models\Event::all();
+    $events = \App\Models\Event::all();
     // $events = \App\Models\Event::all(['title', 'description']);
 
     // $events = \App\Models\Event::where('id', 1)->get();
     // $events = \App\Models\Event::where('id', 1)->first();
-    $events = \App\Models\Event::find($event);
+    // $events = \App\Models\Event::find($event);
 
     return $events;
 
