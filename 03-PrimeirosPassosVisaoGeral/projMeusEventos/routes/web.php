@@ -62,7 +62,7 @@ Route::get('/queries/{event?}', function ($event = null){
     return \App\Models\Event::create($event);
     */
 
-    $eventDATA = [
+/*    $eventDATA = [
        // 'title' => 'Evento Atribuição em Massa',
         'description' => 'Descrição ATUALIZADA',
        // 'body' => 'Conteudo do Evento',
@@ -71,8 +71,11 @@ Route::get('/queries/{event?}', function ($event = null){
     ];
 
     $event = \App\Models\Event::find(9);
-    $event->update($eventDATA);
+    $event->update($eventDATA);*/
 
-    return $event;
+    // $event = \App\Models\Event::findOrFail(9);
+    // return $event->delete();
+
+    return \App\Models\Event::destroy([8,7,6]);
 
 });

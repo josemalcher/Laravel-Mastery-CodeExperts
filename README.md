@@ -894,6 +894,17 @@ Route::get('/queries/{event?}', function ($event = null){
 ```
 
 - 39 Removendo Dados
+
+```php
+    $event = \App\Models\Event::findOrFail(9);
+
+    return $event->delete(); // 1
+```
+
+```php
+return \App\Models\Event::destroy([8,7,6]); // 3
+```
+
 - 40 Organizando CRUD
 - 41 Prelúdio Relacionamentos
 - 42 Migração Tabela Perfil
