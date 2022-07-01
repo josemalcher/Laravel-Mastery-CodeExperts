@@ -33,6 +33,7 @@ Route::get('/queries/{event?}', function ($event = null){
     // $events = \App\Models\Event::where('id', 1)->get();
     // $events = \App\Models\Event::where('id', 1)->first();
     // $events = \App\Models\Event::find($event);
+    //return $events;
 
     /*$event = new \App\Models\Event();
     $event->title = 'Evento TESTE via Eloquent e AR';
@@ -42,14 +43,23 @@ Route::get('/queries/{event?}', function ($event = null){
     $event->slug = \Illuminate\Support\Str::slug($event->title);
 
     return $event->save();*/
-
+/*
     $event = \App\Models\Event::find(8);
     $event->title = 'Evento ATUALIZADO';
     $event->slug = \Illuminate\Support\Str::slug($event->title);
 
-    return $event->save();
+    return $event->save();*/
 
+    // Atribuição Massa ou Mass Assingnment
+    $event = [
+        'title' => 'Evento Atribuição em Massa',
+        'description' => 'Descrição',
+        'body' => 'Conteudo do Evento',
+        'slug' => 'evento-atribuicao-em-massa',
+        'start_event' => date('Y-m-d H:i:s')
+    ];
 
-    //return $events;
+    return \App\Models\Event::create($event);
+    return $event;
 
 });

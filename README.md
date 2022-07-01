@@ -838,6 +838,41 @@ Route::get('/queries/{event?}', function ($event = null){
 ```
 
 - 37 Mass Assignment Criação
+
+```php
+Route::get('/queries/{event?}', function ($event = null){
+
+    // Atribuição Massa ou Mass Assingnment
+    $event = [
+        'title' => 'Evento Atribuição em Massa',
+        'description' => 'Descrição',
+        'body' => 'Conteudo do Evento',
+        'slug' => 'evento-atribuicao-em-massa',
+        'start_event' => date('Y-m-d H:i:s')
+    ];
+
+    return \App\Models\Event::create($event);
+    return $event;
+
+});
+```
+
+```php
+class Event extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'body',
+        'slug',
+        'start_event'
+    ];
+}
+```
+
+
 - 38 Update em Massa
 - 39 Removendo Dados
 - 40 Organizando CRUD
