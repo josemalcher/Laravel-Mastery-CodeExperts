@@ -872,8 +872,27 @@ class Event extends Model
 }
 ```
 
-
 - 38 Update em Massa
+
+```php
+Route::get('/queries/{event?}', function ($event = null){
+
+    $eventDATA = [
+       // 'title' => 'Evento Atribuição em Massa',
+        'description' => 'Descrição ATUALIZADA',
+       // 'body' => 'Conteudo do Evento',
+       // 'slug' => 'evento-atribuicao-em-massa',
+       // 'start_event' => date('Y-m-d H:i:s')
+    ];
+
+    $event = \App\Models\Event::find(9);
+    $event->update($eventDATA);
+
+    return $event;
+
+});
+```
+
 - 39 Removendo Dados
 - 40 Organizando CRUD
 - 41 Prelúdio Relacionamentos
