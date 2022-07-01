@@ -662,10 +662,48 @@ Database seeding completed successfully.
 
 ```
 
-Pode u
-
-
 - 28 Comando Rollback e Reset
+
+```
+$ php artisan migrate:rollback
+Rolling back: 2021_12_08_235820_create_events_table
+Rolled back:  2021_12_08_235820_create_events_table (12.19ms)
+Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
+Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (5.59ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (6.01ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (5.30ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (5.28ms)
+
+```
+
+```
+$ php artisan migrate
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (25.64ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (23.68ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (22.53ms)
+Migrating: 2019_12_14_000001_create_personal_access_tokens_table
+Migrated:  2019_12_14_000001_create_personal_access_tokens_table (38.29ms)
+Migrating: 2021_12_08_235820_create_events_table
+Migrated:  2021_12_08_235820_create_events_table (13.67ms)
+
+```
+
+```
+$ php artisan migrate:rollback --step=2
+
+```
+
+```
+$ php artisan migrate:reset
+
+```
+
 
 - 29 Falando Sobre Migrações
 
