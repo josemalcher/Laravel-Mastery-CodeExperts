@@ -803,7 +803,60 @@ Database seeding completed successfully.
 
 ## <a name="parte5">5 - Eloquent</a>
 
+- 33 Introdução
+- 34 Relembrando Models
+- 35 Active Record Inserção
 
+```php
+Route::get('/queries/{event?}', function ($event = null){
+  
+    $event = new \App\Models\Event();
+    $event->title = 'Evento TESTE via Eloquent e AR';
+    $event->description = 'Evento teste';
+    $event->body = 'corpo do evento';
+    $event->start_event = date('Y-m-d H:i:s');
+    $event->slug = \Illuminate\Support\Str::slug($event->title);
+
+    return $event->save();
+
+});
+```
+
+- 36 Active Record Atualização
+
+```php
+
+Route::get('/queries/{event?}', function ($event = null){
+
+    $event = \App\Models\Event::find(8);
+    $event->title = 'Evento ATUALIZADO';
+    $event->slug = \Illuminate\Support\Str::slug($event->title);
+
+    return $event->save();
+
+});
+```
+
+- 37 Mass Assignment Criação
+- 38 Update em Massa
+- 39 Removendo Dados
+- 40 Organizando CRUD
+- 41 Prelúdio Relacionamentos
+- 42 Migração Tabela Perfil
+- 43 Mapeando 1:1 Models
+- 44 Salvando 1:1
+- 45 Recuperando 1:1
+- 46 Migração 1:N
+- 47 Mapeando 1:N Models
+- 48 Salvando 1:N
+- 49 Recuperando 1:N
+- 50 Migração N:N
+- 51 Gerando Algumas Categories
+- 52 Mapeando N:N Models
+- 53 Salvando N:N
+- 54 Recuperando N:N
+- 55 Manipulando BelongsTo
+- 56 Conclusão
 
 [Voltar ao Índice](#indice)
 
