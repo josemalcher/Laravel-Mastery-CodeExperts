@@ -955,6 +955,36 @@ Migrated:  2022_07_01_181916_create_profiles_table (143.46ms)
 ```
 
 - 43 Mapeando 1:1 Models
+
+```php
+lass User extends Authenticatable
+{
+    // (...)
+
+    // Representa a ligação entre o Model User E Model Profile
+    // e indica que USER tem um Profile
+    public function profile()
+    {
+        // automaticamente procura por esta coluna: user_id em profiles
+        return $this->hasOne(Profile::class);
+        // return $this->hasOne(Profile::class, 'usuario_id'); // outro parametro
+    }
+```
+
+```php
+class Profile extends Model
+{
+    use HasFactory;
+
+    public function user()
+    {
+        // por conta do nome do método que a coluna é user_id
+        return $this->belongsTo(User::class);
+        // return $this->belongsTo(User::class, 'usuario_id', 'codigo');
+    }
+}
+```
+
 - 44 Salvando 1:1
 - 45 Recuperando 1:1
 - 46 Migração 1:N
