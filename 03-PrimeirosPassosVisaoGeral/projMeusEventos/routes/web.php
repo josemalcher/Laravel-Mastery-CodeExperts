@@ -79,3 +79,8 @@ Route::get('/queries/{event?}', function ($event = null){
     return \App\Models\Event::destroy([8,7,6]);
 
 });
+
+Route::get('events/index', [\App\Http\Controllers\EventController::class, 'index']);
+Route::get('events/store', [\App\Http\Controllers\EventController::class, 'store']);
+Route::get('events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
+Route::get('events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);

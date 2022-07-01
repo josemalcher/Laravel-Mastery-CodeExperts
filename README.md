@@ -906,6 +906,15 @@ return \App\Models\Event::destroy([8,7,6]); // 3
 ```
 
 - 40 Organizando CRUD
+
+visão geral!
+
+```
+$ php artisan make:controller EventController
+Controller created successfully.
+
+```
+
 - 41 Prelúdio Relacionamentos
 - 42 Migração Tabela Perfil
 - 43 Mapeando 1:1 Models
