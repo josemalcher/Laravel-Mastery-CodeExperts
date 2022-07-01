@@ -917,6 +917,43 @@ Controller created successfully.
 
 - 41 Prelúdio Relacionamentos
 - 42 Migração Tabela Perfil
+
+```
+$ php artisan make:model Profile -m
+Model created successfully.
+Created Migration: 2022_07_01_181916_create_profiles_table
+
+```
+
+```php
+public function up()
+    {
+        Schema::create('profiles', function (Blueprint $table) {
+            $table->id();
+
+            // user_id (conter a chave estrangeira) && a chave estrangeira ela tem um padrão:
+            // profiles_user_id_foreign
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+
+            $table->text('about')->nullable();
+            $table->string('phone', 15)->nullable();
+            $table->text('social_networks')->nullable();
+
+            $table->timestamps();
+
+            // Definindo chave estrangeira anterior ao laravel 7
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2022_07_01_181916_create_profiles_table
+Migrated:  2022_07_01_181916_create_profiles_table (143.46ms)
+```
+
 - 43 Mapeando 1:1 Models
 - 44 Salvando 1:1
 - 45 Recuperando 1:1
