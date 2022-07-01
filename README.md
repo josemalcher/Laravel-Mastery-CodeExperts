@@ -709,6 +709,53 @@ $ php artisan migrate:reset
 
 - 30 Uma Migração de Edição
 
+```
+$ php artisan make:migration alter_events_table_add_columnslug --table=events
+Created Migration: 2022_07_01_015511_alter_events_table_add_columnslug
+
+```
+
+```php
+ public function up()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->string('slug')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2022_07_01_015511_alter_events_table_add_columnslug
+Migrated:  2022_07_01_015511_alter_events_table_add_columnslug (77.40ms)
+
+
+$ php artisan migrate:status
++------+-------------------------------------------------------+-------+
+| Ran? | Migration                                             | Batch |
++------+-------------------------------------------------------+-------+
+| Yes  | 2014_10_12_000000_create_users_table                  | 1     |
+| Yes  | 2014_10_12_100000_create_password_resets_table        | 1     |
+| Yes  | 2019_08_19_000000_create_failed_jobs_table            | 1     |
+| Yes  | 2019_12_14_000001_create_personal_access_tokens_table | 1     |
+| Yes  | 2021_12_08_235820_create_events_table                 | 1     |
+| Yes  | 2022_07_01_015511_alter_events_table_add_columnslug   | 2     |
++------+-------------------------------------------------------+-------+
+
+```
+
 - 31 Schema Dump
 
 - 32 Conclusões
