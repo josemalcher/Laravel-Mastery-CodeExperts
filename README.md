@@ -758,6 +758,41 @@ $ php artisan migrate:status
 
 - 31 Schema Dump
 
+```
+$ php artisan schema:dump
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+mysqldump: [ERROR] unknown variable 'column-statistics=0'
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+Database schema dumped successfully.
+
+```
+
+```
+$ php artisan migrate:refresh --seed
+Rolling back: 2022_07_01_015511_alter_events_table_add_columnslug
+Rolled back:  2022_07_01_015511_alter_events_table_add_columnslug (73.39ms)
+Rolling back: 2021_12_08_235820_create_events_table
+Rolled back:  2021_12_08_235820_create_events_table (5.18ms)
+Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
+Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (5.11ms)
+Rolling back: 2019_08_19_000000_create_failed_jobs_table
+Rolled back:  2019_08_19_000000_create_failed_jobs_table (6.05ms)
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table (6.25ms)
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table (6.23ms)
+Loading stored database schema: C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\03-PrimeirosPassosVisaoGeral\projMeusEventos\database\schema/mysql-schema.dump
+Loaded stored database schema. (464.68ms)
+Nothing to migrate.
+Seeding: Database\Seeders\UsersTableSeeder
+Seeded:  Database\Seeders\UsersTableSeeder (60.86ms)
+Seeding: Database\Seeders\EventsTableSeeder
+Seeded:  Database\Seeders\EventsTableSeeder (16.62ms)
+Database seeding completed successfully.
+
+```
+
+
 - 32 Conclusões
 
 
