@@ -1062,6 +1062,111 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 
 
 - 45 Recuperando 1:1
+
+```
+>>> $u = \App\Models\User::find(1);                                                                                                                                                                                     
+=> App\Models\User {#3849
+     id: 1,
+     name: "Sibyl Runolfsson",
+     email: "tmohr@example.net",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "0YP0lcIM4e",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+>>> $u->profile();                                                                                                                                                                                                      
+=> Illuminate\Database\Eloquent\Relations\HasOne {#3525}
+
+>>> $u->profile;                                                                                                                                                                                                        
+=> App\Models\Profile {#4209
+     id: 1,
+     user_id: 1,
+     about: "Sobre Mim",
+     phone: "9999999",
+     social_networks: "facebook, google, twitter",
+     created_at: "2022-07-02 01:43:02",
+     updated_at: "2022-07-02 01:43:02",
+   }
+
+>>> $u->profile()->get();                                                                                                                                                                                               
+=> Illuminate\Database\Eloquent\Collection {#4457
+     all: [
+       App\Models\Profile {#4458
+         id: 1,
+         user_id: 1,
+         about: "Sobre Mim",
+         phone: "9999999",
+         social_networks: "facebook, google, twitter",
+         created_at: "2022-07-02 01:43:02",
+         updated_at: "2022-07-02 01:43:02",
+       },
+     ],
+   }
+
+```
+
+```
+>>> $unot = \App\Models\User::find(4);                                                                                                                                                                                  
+=> App\Models\User {#4461
+     id: 4,
+     name: "Dr. Brisa Pacocha",
+     email: "znienow@example.org",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "nhEcg5geys",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+>>> $unot->profile;                                                                                                                                                                                                     
+=> null
+>>> $unot->profile()->exists();                                                                                                                                                                                         
+=> false
+
+```
+
+```
+>>> $p = \App\Models\Profile::find(1)                                                                                                                                                                                   
+=> App\Models\Profile {#3530
+     id: 1,
+     user_id: 1,
+     about: "Sobre Mim",
+     phone: "9999999",
+     social_networks: "facebook, google, twitter",
+     created_at: "2022-07-02 01:43:02",
+     updated_at: "2022-07-02 01:43:02",
+   }
+
+>>> $p->user()->first();                                                                                                                                                                                                
+=> App\Models\User {#4466
+     id: 1,
+     name: "Sibyl Runolfsson",
+     email: "tmohr@example.net",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "0YP0lcIM4e",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+
+>>> $p->user                                                                                                                                                                                                            
+=> App\Models\User {#4468
+     id: 1,
+     name: "Sibyl Runolfsson",
+     email: "tmohr@example.net",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "0YP0lcIM4e",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+
+>>> $p->user->name                                                                                                                                                                                                      
+=> "Sibyl Runolfsson"
+
+```
+
+
 - 46 Migração 1:N
 - 47 Mapeando 1:N Models
 - 48 Salvando 1:N
