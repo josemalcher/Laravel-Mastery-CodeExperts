@@ -1510,6 +1510,57 @@ class Event extends Model
 ```
 
 - 50 Migração N:N
+
+```
+$ php artisan make:model Category -m
+Model created successfully.
+Created Migration: 2022_07_02_214924_create_categories_table
+
+```
+
+```php
+public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+
+            $table->string('nome');
+            $table->string('description')->nullable();
+            $table->string('slug');
+
+            $table->timestamps();
+        });
+    }
+```
+
+```
+$ php artisan make:migration create_category_event_table
+Created Migration: 2022_07_02_215434_create_category_event_table
+
+```
+
+```php
+  public function up()
+    {
+        Schema::create('category_event', function (Blueprint $table) {
+//            $table->id();
+//            $table->timestamps();
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+
+        });
+    }
+```
+
+```
+$ php artisan migrate
+Migrating: 2022_07_02_214924_create_categories_table
+Migrated:  2022_07_02_214924_create_categories_table (14.65ms)
+Migrating: 2022_07_02_215434_create_category_event_table
+Migrated:  2022_07_02_215434_create_category_event_table (81.11ms)
+
+```
+
 - 51 Gerando Algumas Categories
 - 52 Mapeando N:N Models
 - 53 Salvando N:N
