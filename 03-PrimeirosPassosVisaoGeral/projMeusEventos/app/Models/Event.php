@@ -21,4 +21,9 @@ class Event extends Model
     {
         return $this->hasMany(Photo::class);// event_id
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

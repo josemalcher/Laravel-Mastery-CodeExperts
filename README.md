@@ -1633,6 +1633,32 @@ Factory created successfully.
 
 
 - 52 Mapeando N:N Models
+
+```php
+class Category extends Model
+{
+// (...)
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+}
+
+```
+
+```php
+class Event extends Model
+{
+// (...)
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+}
+
+```
+
 - 53 Salvando N:N
 - 54 Recuperando N:N
 - 55 Manipulando BelongsTo
