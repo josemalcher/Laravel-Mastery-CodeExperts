@@ -1168,7 +1168,66 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 
 
 - 46 Migração 1:N
+
+```
+$ php artisan make:model Photo -m
+Model created successfully.
+Created Migration: 2022_07_02_202521_create_photos_table
+
+```
+
+```php
+    public function up()
+    {
+        Schema::create('photos', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+
+            $table->string('photo');
+
+            $table->timestamps();
+        });
+    }
+```
+
+
+
 - 47 Mapeando 1:N Models
+
+```php
+class Photo extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['photo'];
+
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+}
+```
+
+```php
+class Event extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'body',
+        'slug',
+        'start_event'
+    ];
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);// event_id
+    }
+}
+```
+
 - 48 Salvando 1:N
 - 49 Recuperando 1:N
 - 50 Migração N:N
