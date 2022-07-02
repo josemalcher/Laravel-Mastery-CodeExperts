@@ -1359,6 +1359,156 @@ class Event extends Model
 
 
 - 49 Recuperando 1:N
+
+```
+>>> $event = Event::find(1);                                                                                                                                                                                            
+=> App\Models\Event {#4458
+     id: 1,
+     title: "Nisi error quia voluptas modi.",
+     description: "quibusdam a voluptates animi vel consequatur expedita",
+     body: "Sunt nam magnam tempora dicta iure enim. Soluta harum qui expedita sed repellendus. Repellat veniam hic qui asperiores ratione voluptas sint et.",
+     start_event: "2022-07-02 20:35:49",
+     created_at: "2022-07-02 20:35:49",
+     updated_at: "2022-07-02 20:35:49",
+     slug: "nisi-error-quia-voluptas-modi",
+   }
+
+>>> $event->photos                                                                                                                                                                                                      
+=> Illuminate\Database\Eloquent\Collection {#4462
+     all: [
+       App\Models\Photo {#4468
+         id: 1,
+         event_id: 1,
+         photo: "imagem.jpg",
+         created_at: "2022-07-02 20:51:54",
+         updated_at: "2022-07-02 20:51:54",
+       },
+       App\Models\Photo {#4473
+         id: 2,
+         event_id: 1,
+         photo: "imagem2.jpg",
+         created_at: "2022-07-02 20:55:52",
+         updated_at: "2022-07-02 20:55:52",
+       },
+     ],
+   }
+
+>>> $event->photos()                                                                                                                                                                                                    
+=> Illuminate\Database\Eloquent\Relations\HasMany {#4459}
+
+>>> $event->photos()->get();                                                                                                                                                                                            
+=> Illuminate\Database\Eloquent\Collection {#4472
+     all: [
+       App\Models\Photo {#4478
+         id: 1,
+         event_id: 1,
+         photo: "imagem.jpg",
+         created_at: "2022-07-02 20:51:54",
+         updated_at: "2022-07-02 20:51:54",
+       },
+       App\Models\Photo {#4481
+         id: 2,
+         event_id: 1,
+         photo: "imagem2.jpg",
+         created_at: "2022-07-02 20:55:52",
+         updated_at: "2022-07-02 20:55:52",
+       },
+     ],
+   }
+
+>>> $event->photos()->limit(1)->get();                                                                                                                                                                                  
+=> Illuminate\Database\Eloquent\Collection {#4474
+     all: [
+       App\Models\Photo {#4476
+         id: 1,
+         event_id: 1,
+         photo: "imagem.jpg",
+         created_at: "2022-07-02 20:51:54",
+         updated_at: "2022-07-02 20:51:54",
+       },
+     ],
+   }
+
+>>> $event->photos()->orderBy('id', 'desc')->get();                                                                                                                                                                     
+=> Illuminate\Database\Eloquent\Collection {#3525
+     all: [
+       App\Models\Photo {#4472
+         id: 2,
+         event_id: 1,
+         photo: "imagem2.jpg",
+         created_at: "2022-07-02 20:55:52",
+         updated_at: "2022-07-02 20:55:52",
+       },
+       App\Models\Photo {#4456
+         id: 1,
+         event_id: 1,
+         photo: "imagem.jpg",
+         created_at: "2022-07-02 20:51:54",
+         updated_at: "2022-07-02 20:51:54",
+       },
+     ],
+   }
+>>>                                          
+```
+
+```
+>>> $photos = $event->photos;                                                                                                                                                                                           
+=> Illuminate\Database\Eloquent\Collection {#4462
+     all: [
+       App\Models\Photo {#4468
+         id: 1,
+         event_id: 1,
+         photo: "imagem.jpg",
+         created_at: "2022-07-02 20:51:54",
+         updated_at: "2022-07-02 20:51:54",
+       },
+       App\Models\Photo {#4473
+         id: 2,
+         event_id: 1,
+         photo: "imagem2.jpg",
+         created_at: "2022-07-02 20:55:52",
+         updated_at: "2022-07-02 20:55:52",
+       },
+     ],
+   }
+
+>>> $photos->count();                                                                                                                                                                                                   
+=> 2
+
+>>> $photos->map(function($model) {return $model->photo;})                                                                                                                                                              
+=> Illuminate\Support\Collection {#4459
+     all: [
+       "imagem.jpg",
+       "imagem2.jpg",
+     ],
+   }
+
+
+```
+
+```
+>>> Photo::find(1)                                                                                                                                                                                                      
+=> App\Models\Photo {#4481
+     id: 1,
+     event_id: 1,
+     photo: "imagem.jpg",
+     created_at: "2022-07-02 20:51:54",
+     updated_at: "2022-07-02 20:51:54",
+   }
+>>> Photo::find(1)->event;                                                                                                                                                                                              
+=> App\Models\Event {#4476
+     id: 1,
+     title: "Nisi error quia voluptas modi.",
+     description: "quibusdam a voluptates animi vel consequatur expedita",
+     body: "Sunt nam magnam tempora dicta iure enim. Soluta harum qui expedita sed repellendus. Repellat veniam hic qui asperiores ratione voluptas sint et.",
+     start_event: "2022-07-02 20:35:49",
+     created_at: "2022-07-02 20:35:49",
+     updated_at: "2022-07-02 20:35:49",
+     slug: "nisi-error-quia-voluptas-modi",
+   }
+
+```
+
 - 50 Migração N:N
 - 51 Gerando Algumas Categories
 - 52 Mapeando N:N Models
