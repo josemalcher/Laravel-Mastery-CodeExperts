@@ -1229,6 +1229,135 @@ class Event extends Model
 ```
 
 - 48 Salvando 1:N
+
+```
+>>> $photo = ['photo'=> 'imagem.jpg'];                                                                                                                                                                                  
+=> [
+     "photo" => "imagem.jpg",
+   ]
+>>> \App\Models\Event::find(1);                                                                                                                                                                                         
+=> App\Models\Event {#3847
+     id: 1,
+     title: "Nisi error quia voluptas modi.",
+     description: "quibusdam a voluptates animi vel consequatur expedita",
+     body: "Sunt nam magnam tempora dicta iure enim. Soluta harum qui expedita sed repellendus. Repellat veniam hic qui asperiores ratione voluptas sint et.",
+     start_event: "2022-07-02 20:35:49",
+     created_at: "2022-07-02 20:35:49",
+     updated_at: "2022-07-02 20:35:49",
+     slug: "nisi-error-quia-voluptas-modi",
+   }
+
+>>> \App\Models\Event::find(1)->photos()->create($photo);                                                                                                                                                               
+=> App\Models\Photo {#4454
+     photo: "imagem.jpg",
+     event_id: 1,
+     updated_at: "2022-07-02 20:51:54",
+     created_at: "2022-07-02 20:51:54",
+     id: 1,
+   }
+
+```
+
+```
+>>> $photo = new \App\Models\Photo();                                                                                                                                                                                   
+=> App\Models\Photo {#4457}
+
+>>> $photo->photo = 'imagem2.jpg';                                                                                                                                                                                      
+=> "imagem2.jpg"
+
+>>> \App\Models\Event::find(1)->photos()->save($photo);                                                                                                                                                                 
+=> App\Models\Photo {#4457
+     photo: "imagem2.jpg",
+     event_id: 1,
+     updated_at: "2022-07-02 20:55:52",
+     created_at: "2022-07-02 20:55:52",
+     id: 2,
+   }
+
+```
+
+```
+>>> namespace App\Models                                                                                                                                                                                                
+>>> $photo1 = new Photo();                                                                                                                                                                                              
+=> App\Models\Photo {#4458}
+>>> $photo1->photo = 'exemplo-1.jpg'                                                                                                                                                                                    
+=> "exemplo-1.jpg"
+>>> $photo2 = new Photo();                                                                                                                                                                                              
+=> App\Models\Photo {#4456}
+>>> $photo2->photo = 'exemplo-2.jpg'                                                                                                                                                                                    
+=> "exemplo-2.jpg"
+>>> $photos = [$photo1, $photo2];                                                                                                                                                                                       
+=> [
+     App\Models\Photo {#4458
+       photo: "exemplo-1.jpg",
+     },
+     App\Models\Photo {#4456
+       photo: "exemplo-2.jpg",
+     },
+   ]
+
+>>> Event::find(2)->photos()->saveMany($photos);                                                                                                                                                                        
+=> [
+     App\Models\Photo {#4458
+       photo: "exemplo-1.jpg",
+       event_id: 2,
+       updated_at: "2022-07-02 21:00:57",
+       created_at: "2022-07-02 21:00:57",
+       id: 3,
+     },
+     App\Models\Photo {#4456
+       photo: "exemplo-2.jpg",
+       event_id: 2,
+       updated_at: "2022-07-02 21:00:57",
+       created_at: "2022-07-02 21:00:57",
+       id: 4,
+     },
+   ]
+
+```
+
+```
+>>> $photo1 = ['photo' => 'foto-ok-01.jpg'];                                                                                                                                                                            
+=> [
+     "photo" => "foto-ok-01.jpg",
+   ]
+>>> $photo2 = ['photo' => 'foto-ok-02.jpg'];                                                                                                                                                                            
+=> [
+     "photo" => "foto-ok-02.jpg",
+   ]
+>>> $photos = [$photo1, $photo2];                                                                                                                                                                                       
+=> [
+     [
+       "photo" => "foto-ok-01.jpg",
+     ],
+     [
+       "photo" => "foto-ok-02.jpg",
+     ],
+   ]
+
+>>> Event::find(3)->photos()->createMany($photos);                                                                                                                                                                      
+=> Illuminate\Database\Eloquent\Collection {#4459
+     all: [
+       App\Models\Photo {#4466
+         photo: "foto-ok-01.jpg",
+         event_id: 3,
+         updated_at: "2022-07-02 21:18:22",
+         created_at: "2022-07-02 21:18:22",
+         id: 5,
+       },
+       App\Models\Photo {#4462
+         photo: "foto-ok-02.jpg",
+         event_id: 3,
+         updated_at: "2022-07-02 21:18:22",
+         created_at: "2022-07-02 21:18:22",
+         id: 6,
+       },
+     ],
+   }
+                                               
+```
+
+
 - 49 Recuperando 1:N
 - 50 Migração N:N
 - 51 Gerando Algumas Categories
