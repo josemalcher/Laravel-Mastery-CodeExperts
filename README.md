@@ -986,6 +986,81 @@ class Profile extends Model
 ```
 
 - 44 Salvando 1:1
+
+```
+>>> $profile2 = new \App\Models\Profile();                                                                                                                                                                              
+=> App\Models\Profile {#4458}
+>>> $profile2->about = 'Sobre Mim'                                                                                                                                                                                      
+=> "Sobre Mim"
+>>> $profile2->social_networks = 'faceboo';                                                                                                                                                                             
+=> "faceboo"
+>>> $profile2->phone = '9999999';                                                                                                                                                                                       
+=> "9999999"
+
+>>> $user = \App\Models\User::find(2);                                                                                                                                                                                  
+=> App\Models\User {#3535
+     id: 2,
+     name: "Lizeth Rodriguez",
+     email: "carol.roob@example.net",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "2Pr0peZR1v",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+>>> $user->profile()->save($profile2)                                                                                                                                                                                   
+=> App\Models\Profile {#4458
+     about: "Sobre Mim",
+     social_networks: "faceboo",
+     phone: "9999999",
+     user_id: 2,
+     updated_at: "2022-07-02 01:47:02",
+     created_at: "2022-07-02 01:47:02",
+     id: 2,
+   }
+
+```
+
+```
+>>> $user = \App\Models\User::find(3)                                                                                                                                                                                   
+=> App\Models\User {#3847
+     id: 3,
+     name: "Miss Dessie Green DVM",
+     email: "ntromp@example.com",
+     email_verified_at: "2022-07-01 02:06:50",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "5RHM4dp9Q8",
+     created_at: "2022-07-01 02:06:50",
+     updated_at: "2022-07-01 02:06:50",
+   }
+>>> $p = [ 'about'=>'sobre mim', 'phone'=>'8888', 'social_networks'=>'twitter' ];                                                                                                                                       
+=> [
+     "about" => "sobre mim",
+     "phone" => "8888",
+     "social_networks" => "twitter",
+   ]
+(cont...)
+```
+
+```php
+protected $fillable = ['about', 'phone' , 'social_networks'];
+```
+
+```
+>>> $user->profile()->create($p);                                                                                                                                                                                       
+=> App\Models\Profile {#4458
+     about: "sobre mim",
+     phone: "8888",
+     social_networks: "twitter",
+     user_id: 3,
+     updated_at: "2022-07-02 01:54:24",
+     created_at: "2022-07-02 01:54:24",
+     id: 3,
+   }
+
+```
+
+
 - 45 Recuperando 1:1
 - 46 Migração 1:N
 - 47 Mapeando 1:N Models
