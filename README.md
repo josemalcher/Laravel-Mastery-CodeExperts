@@ -1562,6 +1562,76 @@ Migrated:  2022_07_02_215434_create_category_event_table (81.11ms)
 ```
 
 - 51 Gerando Algumas Categories
+
+```
+$ php artisan make:factory CategoryFactory
+Factory created successfully.
+
+```
+
+```php
+ public function definition()
+    {
+        $categoryName = $this->faker->word;
+        return [
+            'name' => $categoryName,
+            'description' => $this->faker->sentence,
+            'slug' => Str::slug($categoryName),
+            
+        ];
+    }
+```
+
+```
+>>> \App\Models\Category::factory(5)->create();                                                                                                                                                                         
+=> Illuminate\Database\Eloquent\Collection {#3557
+     all: [
+       App\Models\Category {#3560
+         nome: "ipsum",
+         description: "Commodi mollitia voluptatem nihil sit est nihil perferendis id.",
+         slug: "ipsum",
+         updated_at: "2022-07-02 22:05:23",
+         created_at: "2022-07-02 22:05:23",
+         id: 1,
+       },
+       App\Models\Category {#3561
+         nome: "alias",
+         description: "Similique ducimus neque at suscipit aut.",
+         slug: "alias",
+         updated_at: "2022-07-02 22:05:23",
+         created_at: "2022-07-02 22:05:23",
+         id: 2,
+       },
+       App\Models\Category {#3562
+         nome: "error",
+         description: "Quam ex vitae commodi quia accusantium.",
+         slug: "error",
+         updated_at: "2022-07-02 22:05:23",
+         created_at: "2022-07-02 22:05:23",
+         id: 3,
+       },
+       App\Models\Category {#3563
+         nome: "cum",
+         description: "Sed ut eius ut velit nemo sapiente ut autem.",
+         slug: "cum",
+         updated_at: "2022-07-02 22:05:23",
+         created_at: "2022-07-02 22:05:23",
+         id: 4,
+       },
+       App\Models\Category {#3564
+         nome: "ipsa",
+         description: "Eum et non quam ex blanditiis.",
+         slug: "ipsa",
+         updated_at: "2022-07-02 22:05:23",
+         created_at: "2022-07-02 22:05:23",
+         id: 5,
+       },
+     ],
+   }
+
+```
+
+
 - 52 Mapeando N:N Models
 - 53 Salvando N:N
 - 54 Recuperando N:N
