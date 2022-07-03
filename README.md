@@ -1759,6 +1759,148 @@ class Event extends Model
 ```
 
 - 54 Recuperando N:N
+
+```
+>>> $e->categories                                                                                                                                                                                                      
+=> Illuminate\Database\Eloquent\Collection {#4475
+     all: [
+       App\Models\Category {#4477
+         id: 4,
+         nome: "cum",
+         description: "Sed ut eius ut velit nemo sapiente ut autem.",
+         slug: "cum",
+         created_at: "2022-07-02 22:05:23",
+         updated_at: "2022-07-02 22:05:23",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#3521
+           event_id: 1,
+           category_id: 4,
+         },
+       },
+     ],
+   }
+
+>>> $e->categories->count();                                                                                                                                                                                            
+=> 1
+
+>>> $e->categories();                                                                                                                                                                                                   
+=> Illuminate\Database\Eloquent\Relations\BelongsToMany {#4492
+     +withTimestamps: false,
+   }
+
+```
+
+```
+>>> $cat = Category::find(4);                                                                                                                                                                                           
+=> App\Models\Category {#4314
+     id: 4,
+     nome: "cum",
+     description: "Sed ut eius ut velit nemo sapiente ut autem.",
+     slug: "cum",
+     created_at: "2022-07-02 22:05:23",
+     updated_at: "2022-07-02 22:05:23",
+   }
+
+>>> $cat->events                                                                                                                                                                                                        
+=> Illuminate\Database\Eloquent\Collection {#4488
+     all: [
+       App\Models\Event {#4480
+         id: 1,
+         title: "Nisi error quia voluptas modi.",
+         description: "quibusdam a voluptates animi vel consequatur expedita",
+         body: "Sunt nam magnam tempora dicta iure enim. Soluta harum qui expedita sed repellendus. Repellat veniam hic qui asperiores ratione voluptas sint et.",
+         start_event: "2022-07-02 20:35:49",
+         created_at: "2022-07-02 20:35:49",
+         updated_at: "2022-07-02 20:35:49",
+         slug: "nisi-error-quia-voluptas-modi",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4470
+           category_id: 4,
+           event_id: 1,
+         },
+       },
+     ],
+   }
+
+>>> $cat->events()->toggle([1,2,3,4]);                                                                                                                                                                                  
+=> [
+     "attached" => [
+       2,
+       3,
+       4,
+     ],
+     "detached" => [
+       1,
+     ],
+   ]
+
+>>> $cat->events()->count();                                                                                                                                                                                            
+=> 3
+
+>>> $cat = Category::find(4);                                                                                                                                                                                           
+=> App\Models\Category {#4498
+     id: 4,
+     nome: "cum",
+     description: "Sed ut eius ut velit nemo sapiente ut autem.",
+     slug: "cum",
+     created_at: "2022-07-02 22:05:23",
+     updated_at: "2022-07-02 22:05:23",
+   }
+
+>>> $cat->events                                                                                                                                                                                                        
+=> Illuminate\Database\Eloquent\Collection {#4500
+     all: [
+       App\Models\Event {#3533
+         id: 2,
+         title: "A consequatur laboriosam numquam doloribus harum molestiae.",
+         description: "quam quidem quasi provident rem ea animi",
+         body: "Magni vel amet nam dolorem. Molestiae autem laudantium illum et nihil odio. Cumque rem sed expedita dignissimos aliquam distinctio. Minus consectetur minima quisquam dicta amet ut.",
+         start_event: "2022-07-02 20:35:49",
+         created_at: "2022-07-02 20:35:49",
+         updated_at: "2022-07-02 20:35:49",
+         slug: "a-consequatur-laboriosam-numquam-doloribus-harum-molestiae",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4491
+           category_id: 4,
+           event_id: 2,
+         },
+       },
+       App\Models\Event {#4478
+         id: 3,
+         title: "Similique porro modi dolorem qui quia quibusdam molestias officia.",
+         description: "laudantium enim esse et cupiditate ex fugit",
+         body: "Similique sed occaecati quasi aut sit illo incidunt qui. Aliquam ea et neque dolor ut accusamus nulla hic. Natus reprehenderit quia sed tempore optio quo pariatur.",
+         start_event: "2022-07-02 20:35:49",
+         created_at: "2022-07-02 20:35:49",
+         updated_at: "2022-07-02 20:35:49",
+         slug: "similique-porro-modi-dolorem-qui-quia-quibusdam-molestias-officia",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4492
+           category_id: 4,
+           event_id: 3,
+         },
+       },
+       App\Models\Event {#4503
+         id: 4,
+         title: "Dicta id nulla aut omnis ut praesentium aspernatur.",
+         description: "ipsum qui ut optio rerum possimus voluptate",
+         body: "Velit debitis quae aut iure harum ut. Atque temporibus minima velit dolorem velit. Cum enim cumque et distinctio sequi. Atque quia qui asperiores natus vel accusamus fugiat.",
+         start_event: "2022-07-02 20:35:49",
+         created_at: "2022-07-02 20:35:49",
+         updated_at: "2022-07-02 20:35:49",
+         slug: "dicta-id-nulla-aut-omnis-ut-praesentium-aspernatur",
+         pivot: Illuminate\Database\Eloquent\Relations\Pivot {#3520
+           category_id: 4,
+           event_id: 4,
+         },
+       },
+     ],
+   }
+
+>>> $e->categories()->count()                                                                                                                                                                                           
+=> 0
+>>> $cat->events()->count();                                                                                                                                                                                            
+=> 3
+
+```
+
+
 - 55 Manipulando BelongsTo
 - 56 Conclusão
 
