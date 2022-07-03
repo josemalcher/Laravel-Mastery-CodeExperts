@@ -1660,6 +1660,104 @@ class Event extends Model
 ```
 
 - 53 Salvando N:N
+
+```
+>>> namespace App\Models;                                                                                                                                                                                               
+>>> $e = Event::find(1);                                                                                                                                                                                                
+=> App\Models\Event {#3850
+     id: 1,
+     title: "Nisi error quia voluptas modi.",
+     description: "quibusdam a voluptates animi vel consequatur expedita",
+     body: "Sunt nam magnam tempora dicta iure enim. Soluta harum qui expedita sed repellendus. Repellat veniam hic qui asperiores ratione voluptas sint et.",
+     start_event: "2022-07-02 20:35:49",
+     created_at: "2022-07-02 20:35:49",
+     updated_at: "2022-07-02 20:35:49",
+     slug: "nisi-error-quia-voluptas-modi",
+   }
+
+>>> $e->categories()->attach([1,2,3]);                                                                                                                                                                                  
+=> null
+
+>>> $e->categories()->attach([4]);                                                                                                                                                                                      
+=> null
+
+>>> $e->categories()->detach([1,3]);                                                                                                                                                                                    
+=> 2
+
+```
+
+```
+>>> $e->categories()->sync([2]);                                                                                                                                                                                        
+=> [
+     "attached" => [],
+     "detached" => [
+       1 => 4,
+     ],
+     "updated" => [],
+   ]
+
+>>> $e->categories()->sync([1,3,5]);                                                                                                                                                                                    
+=> [
+     "attached" => [
+       5,
+     ],
+     "detached" => [],
+     "updated" => [],
+   ]
+
+```
+
+```
+>>> $e->categories()->toggle([1,3,5]);                                                                                                                                                                                  
+=> [
+     "attached" => [],
+     "detached" => [
+       1,
+       3,
+       5,
+     ],
+   ]
+
+>>> $e->categories()->toggle([1,3,5]);                                                                                                                                                                                  
+=> [
+     "attached" => [
+       1,
+       3,
+       5,
+     ],
+     "detached" => [],
+   ]
+
+>>> $e->categories()->toggle([2]);                                                                                                                                                                                      
+=> [
+     "attached" => [
+       2,
+     ],
+     "detached" => [],
+   ]
+>>> $e->categories()->toggle([2]);                                                                                                                                                                                      
+=> [
+     "attached" => [],
+     "detached" => [
+       2,
+     ],
+   ]
+
+>>> $e->categories()->sync([4]);                                                                                                                                                                                        
+=> [
+     "attached" => [
+       4,
+     ],
+     "detached" => [
+       1,
+       3,
+       5,
+     ],
+     "updated" => [],
+   ]
+
+```
+
 - 54 Recuperando N:N
 - 55 Manipulando BelongsTo
 - 56 Conclusão
@@ -1671,7 +1769,11 @@ class Event extends Model
 
 ## <a name="parte6">6 - Factories com Relacionamentos</a>
 
-
+- 57 Iniciando Factories: Profile e Photo
+- 58 Factories com Relacionamento HasMany
+- 59 Factories com Relacionamento HasOne
+- 60 Factories com BelongsTo
+- 61 Executando as Factories via Seed
 
 [Voltar ao Índice](#indice)
 
@@ -1680,7 +1782,17 @@ class Event extends Model
 
 ## <a name="parte7">7 - View: Laravel Blade</a>
 
-
+- 74 Introdução
+- 75 Organizando Rotas Painel Eventos
+- 76 Listagem de Eventos
+- 77 Paginando Dados
+- 78 Tela de Criação de Evento
+- 79 Entendendo CSRF no Laravel
+- 80 Manipulando Dados da Request
+- 81 Editando Eventos
+- 82 Linkando Edição e Remoção de Evento
+- 83 Melhorias Manipulação de Request
+- 84 Conclusões
 
 [Voltar ao Índice](#indice)
 
