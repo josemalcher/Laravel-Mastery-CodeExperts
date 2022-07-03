@@ -1902,6 +1902,53 @@ class Event extends Model
 
 
 - 55 Manipulando BelongsTo
+
+```
+>>> $profile = \App\Models\Profile::find(1)                                                                                                                                                                             
+=> App\Models\Profile {#4468
+     id: 1,
+     user_id: 2,
+     about: "Sobre Mim",
+     phone: "9999999",
+     social_networks: "faceboo",
+     created_at: "2022-07-03 11:50:54",
+     updated_at: "2022-07-03 11:50:54",
+   }
+
+>>> $profile->user()->dissociate()                                                                                                                                                                                      
+=> App\Models\Profile {#4468
+     id: 1,
+     user_id: null,
+     about: "Sobre Mim",
+     phone: "9999999",
+     social_networks: "faceboo",
+     created_at: "2022-07-03 11:50:54",
+     updated_at: "2022-07-03 11:50:54",
+     user: null,
+   }
+
+>>> $profile->save();                                                                                                                                                                                                   
+Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null (SQL: update `profiles` set `user_id` = ?, `profiles`.`updated_at` = 2022-07-03 11:55:44 where `id` = 1)'     
+```
+
+```
+>>> $profile->user()->associate(3)                                                                                                                                                                                      
+=> App\Models\Profile {#4468
+     id: 1,
+     user_id: 3,
+     about: "Sobre Mim",
+     phone: "9999999",
+     social_networks: "faceboo",
+     created_at: "2022-07-03 11:50:54",
+     updated_at: "2022-07-03 11:55:44",
+   }
+
+>>> $profile->save();                                                                                                                                                                                                   
+=> true
+                                                
+
+```
+
 - 56 Conclusão
 
 [Voltar ao Índice](#indice)
