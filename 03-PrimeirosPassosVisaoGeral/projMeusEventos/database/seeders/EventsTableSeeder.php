@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+use App\Models\Event;
+
 class EventsTableSeeder extends Seeder
 {
     /**
@@ -14,6 +16,9 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Event::factory(6)->create();
+        Event::factory(6)
+            ->hasPhotos(4)
+            ->hasCategories(3)
+            ->create();
     }
 }
