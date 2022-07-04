@@ -1959,6 +1959,16 @@ Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity cons
 ## <a name="parte6">6 - Factories com Relacionamentos</a>
 
 - 57 Iniciando Factories: Profile e Photo
+
+```
+$ php artisan make:factory PhotoFactory
+Factory created successfully.
+
+$ php artisan make:factory ProfileFactory
+Factory created successfully.
+
+```
+
 - 58 Factories com Relacionamento HasMany
 - 59 Factories com Relacionamento HasOne
 - 60 Factories com BelongsTo
