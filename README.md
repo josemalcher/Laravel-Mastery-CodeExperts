@@ -2070,6 +2070,32 @@ Model Populado não executado:
 ```
 
 - 60 Factories com BelongsTo
+
+```
+>>> Profile::factory()->for(user::factory())->create();                                                                                                                                                                 
+=> App\Models\Profile {#3577
+     about: "Reiciendis eos sapiente praesentium optio debitis sunt hic. Neque suscipit excepturi quia iusto tenetur officia excepturi. Error sit neque corrupti quia impedit.",
+     phone: "(44) 32964-1512",
+     social_networks: "facebook-twitter",
+     user_id: 18,
+     updated_at: "2022-07-04 19:49:46",
+     created_at: "2022-07-04 19:49:46",
+     id: 10,
+   }
+
+>>> Profile::factory()->forUser()->create();                                                                                                                                                                            
+=> App\Models\Profile {#3575
+     about: "Ut quod consequatur nostrum. Earum exercitationem quibusdam et vel rerum. Ducimus voluptatum inventore asperiores sunt qui modi velit. Quis facilis dicta molestiae dolores.",
+     phone: "(76) 88288-7048",
+     social_networks: "facebook-twitter",
+     user_id: 19,
+     updated_at: "2022-07-04 19:50:30",
+     created_at: "2022-07-04 19:50:30",
+     id: 11,
+   }
+
+```
+
 - 61 Executando as Factories via Seed
 
 [Voltar ao Índice](#indice)
