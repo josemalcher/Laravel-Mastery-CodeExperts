@@ -2023,6 +2023,52 @@ Model Populado não executado:
 ```
 
 - 59 Factories com Relacionamento HasOne
+
+```
+>>> User::factory()->has(Profile::factory())->create();                                                                                                                                                                 
+=> App\Models\User {#3889
+     name: "Ms. Anais Ankunding MD",
+     email: "erika35@example.com",
+     email_verified_at: "2022-07-04 19:02:47",
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "ZbEtne4DrJ",
+     updated_at: "2022-07-04 19:02:47",
+     created_at: "2022-07-04 19:02:47",
+     id: 11,
+   }
+
+>>> User::factory(3)->has(Profile::factory())->create();                                                                                                                                                                
+=> Illuminate\Database\Eloquent\Collection {#3524
+     all: [
+       App\Models\User {#4286
+         name: "Destinee Bahringer",
+         email: "julie.krajcik@example.com",
+         email_verified_at: "2022-07-04 19:09:21",
+         #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+         #remember_token: "uo45KbLosf",
+         updated_at: "2022-07-04 19:09:21",
+         created_at: "2022-07-04 19:09:21",
+         id: 12,
+       },
+  // (....)
+  
+  >>> User::factory(3)->hasProfile()->create();                                                                                                                                                                           
+=> Illuminate\Database\Eloquent\Collection {#4511
+     all: [
+       App\Models\User {#4520
+         name: "Kianna Ankunding",
+         email: "vkemmer@example.net",
+         email_verified_at: "2022-07-04 19:10:58",
+         #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+         #remember_token: "6N7z6RBXWa",
+         updated_at: "2022-07-04 19:10:58",
+         created_at: "2022-07-04 19:10:58",
+         id: 15,
+       },
+  / (....)
+  
+```
+
 - 60 Factories com BelongsTo
 - 61 Executando as Factories via Seed
 

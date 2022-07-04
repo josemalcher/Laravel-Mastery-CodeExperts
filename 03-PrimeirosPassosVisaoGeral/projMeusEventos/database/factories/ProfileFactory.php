@@ -18,7 +18,7 @@ class ProfileFactory extends Factory
     {
         return [
             'about' => $this->faker->paragraph,
-            'phone' => $this->faker->phoneNumber(),
+            'phone' => $this->faker->randomNumber(15),
             'social_networks' => 'facebook-twitter'
         ];
     }
