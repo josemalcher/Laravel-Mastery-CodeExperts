@@ -1970,6 +1970,58 @@ Factory created successfully.
 ```
 
 - 58 Factories com Relacionamento HasMany
+
+Model Populado não executado:
+
+```
+>>> \App\Models\Event::factory(5)->make()                                                                                                                                                                               
+=> Illuminate\Database\Eloquent\Collection {#3557
+     all: [
+       App\Models\Event {#3561
+         title: "Nesciunt et doloribus temporibus iure qui soluta fugiat.",
+         description: "facere laudantium et quos fugiat corrupti omnis",
+         body: "Voluptatem eos unde dolor. Ab ut omnis doloribus eos officiis tenetur omnis. Hic quo officia dolore qui. Doloribus eius rerum non. Sed non odit cumque omnis eos quam.",
+         start_event: Illuminate\Support\Carbon @1656959674 {#3560
+           date: 2022-07-04 18:34:34.271960 UTC (+00:00),
+         },
+         slug: "nesciunt-et-doloribus-temporibus-iure-qui-soluta-fugiat",
+       },
+
+>>> namespace App\Models;                                                                                                                                                                                               
+
+>>> Photo::factory()->make();                                                                                                                                                                                           
+=> App\Models\Photo {#3555
+     photo: "https://via.placeholder.com/640x480.png/0088ff?text=sint",
+   }
+
+>>> Event::factory()->has(Photo::factory(3))->create();                                                                                                                                                                 
+=> App\Models\Event {#4287
+     title: "Aut quos delectus cupiditate qui sed et omnis.",
+     description: "temporibus accusantium ex magni expedita enim velit",
+     body: "Rerum culpa qui blanditiis et iure culpa. Distinctio placeat nihil est nihil atque et eius et.",
+     start_event: Illuminate\Support\Carbon @1656959996 {#4288
+       date: 2022-07-04 18:39:56.615143 UTC (+00:00),
+     },
+     slug: "aut-quos-delectus-cupiditate-qui-sed-et-omnis",
+     updated_at: "2022-07-04 18:39:56",
+     created_at: "2022-07-04 18:39:56",
+     id: 7,
+   }
+
+>>> Event::factory(3)->hasPhotos(3)->create();                                                                                                                                                                          
+=> Illuminate\Database\Eloquent\Collection {#3560
+     all: [
+       App\Models\Event {#4509
+         title: "Voluptatibus mollitia aspernatur omnis ut dicta velit expedita.",
+         description: "ut repellat sapiente doloremque dicta error itaque",
+         body: "Aspernatur quas assumenda at molestias eaque occaecati ex eius. Ipsa ab numquam aspernatur ducimus excepturi totam aspernatur. Unde laborum et dolorum quis soluta et.",
+         start_event: Illuminate\Support\Carbon @1656960134 {#4504
+           date: 2022-07-04 18:42:14.627647 UTC (+00:00),
+         },
+
+
+```
+
 - 59 Factories com Relacionamento HasOne
 - 60 Factories com BelongsTo
 - 61 Executando as Factories via Seed
