@@ -5,24 +5,31 @@
 @endsection
 
 @section('content')
-    <h2>Eventos</h2>
-    <hr>
-    <ul>
-        @forelse($events as $event)
-            <li>{{$event->title}}</li>
-        @empty
-            <h3>Nenhum evento encontrado neste site....</h3>
-        @endforelse
-    </ul>
 
-    <hr>
-    @if(count($events))
-        <ul>
-            @foreach($events as $event)
-                <li>{{$event->title}}</li>
-            @endforeach
-    @else
-                <h3>Nenhum evento cadastrado</h3>
-    @endif
-        </ul>
+    <div class="row">
+        <div class="col-12">
+            <h2>Eventos</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row mb-4">
+        @forelse($events as $event)
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/640x280.png/009955?text=consequuntur" alt="">
+                    <div class="card-body">
+                        <h5> {{$event->title}}</h5>
+                        <strong>Acontece em: {{$event->start_event}}</strong>
+                        <p class="card-text">{{$event->description}}</p>
+                    </div>
+                </div>
+            </div>
+            @if(($loop->iteration % 3) == 0) </div><div class="row mb-4"> @endif
+        @empty
+            <div class="col-12">
+                <div class="alert alert-warning">Nenhum Evento Cadastrado</div>
+            </div>
+        @endforelse
+    </div>
+
 @endsection
