@@ -2300,6 +2300,9 @@ Evento - {{$event->title}}
 - 70 Compondo View Single Evento
 - 71 Exibindo Fotos Evento se Existirem
 - 72 Organizando com HomeController
+
+[03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Http/Controllers/HomerController.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Http/Controllers/HomerController.php)
+
 - 73 Conclusões
 
 

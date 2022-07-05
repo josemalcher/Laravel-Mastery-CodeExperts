@@ -12,13 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [\App\Http\Controllers\HomerController::class, 'index']);
 
-Route::get('/', function () {
-    $events = \App\Models\Event::all();
-    // $events = [];
-    //return view('welcome', ['events'=> $events]);
-    return view('welcome', compact('events'));
-});
 
 Route::get('/ola-mundo', function (){
     return view('ola-mundo');
@@ -90,10 +85,4 @@ Route::get('events/destroy/{event}', [\App\Http\Controllers\EventController::cla
 
 // Route::get('view-teste', fn() => view('teste.index') );
 
-Route::get('/eventos/{slug}', function ($slug){
-
-    // $event = \App\Models\Event::where('slug', $slug)->first();
-    $event = \App\Models\Event::whereSlug($slug)->first();
-
-    return view('event', compact('event'));
-});
+Route::get('/eventos/{slug}',  [\App\Http\Controllers\HomerController::class, 'show']);
