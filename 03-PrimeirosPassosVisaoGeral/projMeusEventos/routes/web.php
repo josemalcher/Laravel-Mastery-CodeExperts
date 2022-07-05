@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $events = \App\Models\Event::all();
+
+    //return view('welcome', ['events'=> $events]);
+    return view('welcome', compact('events'));
 });
 
 Route::get('/ola-mundo', function (){
@@ -85,4 +88,6 @@ Route::get('events/store', [\App\Http\Controllers\EventController::class, 'store
 Route::get('events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);
 
-Route::get('view-teste', fn() => view('teste.index') );
+// Route::get('view-teste', fn() => view('teste.index') );
+
+

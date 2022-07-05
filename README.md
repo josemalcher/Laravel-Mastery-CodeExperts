@@ -2159,6 +2159,25 @@ Database seeding completed successfully.
 - 62 Introdução
 - 63 Relembrando as Views
 - 64 Loop e Passagem de Dados View
+
+```php
+Route::get('/', function () {
+    $events = \App\Models\Event::all();
+    
+    //return view('welcome', ['events'=> $events]);
+    return view('welcome', compact('events'));
+});
+```
+
+```php
+<ul>
+    @foreach($events as $event)
+        <li>{{$event->title}}</li>
+    @endforeach
+</ul>
+```
+
+
 - 65 Diretiva ForElse
 - 66 O print do Blade
 - 67 Herança de Templates
