@@ -2179,6 +2179,30 @@ Route::get('/', function () {
 
 
 - 65 Diretiva ForElse
+
+```php
+<ul>
+@forelse($events as $event)
+    <li>{{$event->title}}</li>
+@empty
+    <h3>Nenhum evento encontrado neste site....</h3>
+@endforelse
+</ul>
+
+<hr>
+@if(count($events))
+<ul>
+    @foreach($events as $event)
+        <li>{{$event->title}}</li>
+    @endforeach
+@else
+    <h3>Nenhum evento cadastrado</h3>
+@endif
+</ul>
+
+
+```
+
 - 66 O print do Blade
 - 67 Herança de Templates
 - 68 Incrementando Views de Eventos
