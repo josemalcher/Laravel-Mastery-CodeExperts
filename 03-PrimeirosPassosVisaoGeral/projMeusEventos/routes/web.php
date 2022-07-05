@@ -90,4 +90,10 @@ Route::get('events/destroy/{event}', [\App\Http\Controllers\EventController::cla
 
 // Route::get('view-teste', fn() => view('teste.index') );
 
+Route::get('/eventos/{slug}', function ($slug){
 
+    // $event = \App\Models\Event::where('slug', $slug)->first();
+    $event = \App\Models\Event::whereSlug($slug)->first();
+
+    return view('event', compact('event'));
+});

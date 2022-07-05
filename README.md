@@ -2256,6 +2256,47 @@ Route::get('/', function () {
 
 - 68 Incrementando Views de Eventos
 - 69 Melhorias Home e Inicio de Single
+
+```php
+<strong>Acontece em: {{$event->start_event->format('d/m/Y H:i:s')}}</strong>
+```
+
+```php
+class Event extends Model
+{
+    protected $dates = ['start_event']; // CARBON 
+```
+
+```php
+Route::get('/eventos/{slug}', function ($slug){
+
+    // $event = \App\Models\Event::where('slug', $slug)->first();
+    $event = \App\Models\Event::whereSlug($slug)->first();
+
+    return view('event', compact('event'));
+});
+```
+
+```php
+// 03-PrimeirosPassosVisaoGeral/projMeusEventos/resources/views/event.blade.php
+@extends('layouts.site')
+
+@section('title')
+Evento - {{$event->title}}
+@endsection
+
+@section('content')
+
+    <div class="row">
+        <div class="col-12">
+            Evento: {{$event->title}}
+        </div>
+    </div>
+
+@endsection
+
+```
+
 - 70 Compondo View Single Evento
 - 71 Exibindo Fotos Evento se Existirem
 - 72 Organizando com HomeController

@@ -19,8 +19,9 @@
                     <img src="https://via.placeholder.com/640x280.png/009955?text=consequuntur" alt="">
                     <div class="card-body">
                         <h5> {{$event->title}}</h5>
-                        <strong>Acontece em: {{$event->start_event}}</strong>
+                        <strong>Acontece em: {{$event->start_event->format('d/m/Y H:i:s')}}</strong>
                         <p class="card-text">{{$event->description}}</p>
+                        <a href="/eventos/{{$event->slug}}" class="btn btn-default">Ver Evento</a>
                     </div>
                 </div>
             </div>
