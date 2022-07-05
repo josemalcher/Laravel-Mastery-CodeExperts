@@ -2204,7 +2204,56 @@ Route::get('/', function () {
 ```
 
 - 66 O print do Blade
+
+```
+{!! //sem escape !!}
+{{ //com escape }}
+```
+
 - 67 Herança de Templates
+
+```php
+    <title>@yield('title') Eventos Event</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    @yield('content'){{--Todas as views que extender, colocaram seu conteudo nestas área--}}
+
+```
+
+```php
+@extends('layouts.site')
+
+@section('title')
+    Principais Eventos
+@endsection
+
+@section('content')
+    <h2>Eventos</h2>
+    <hr>
+    <ul>
+        @forelse($events as $event)
+            <li>{{$event->title}}</li>
+        @empty
+            <h3>Nenhum evento encontrado neste site....</h3>
+        @endforelse
+    </ul>
+
+    <hr>
+    @if(count($events))
+        <ul>
+            @foreach($events as $event)
+                <li>{{$event->title}}</li>
+            @endforeach
+    @else
+                <h3>Nenhum evento cadastrado</h3>
+    @endif
+        </ul>
+@endsection
+
+```
+
 - 68 Incrementando Views de Eventos
 - 69 Melhorias Home e Inicio de Single
 - 70 Compondo View Single Evento
