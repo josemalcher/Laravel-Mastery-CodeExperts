@@ -2156,6 +2156,27 @@ Database seeding completed successfully.
 
 ## <a name="parte7">7 - View: Laravel Blade</a>
 
+- 62 Introdução
+- 63 Relembrando as Views
+- 64 Loop e Passagem de Dados View
+- 65 Diretiva ForElse
+- 66 O print do Blade
+- 67 Herança de Templates
+- 68 Incrementando Views de Eventos
+- 69 Melhorias Home e Inicio de Single
+- 70 Compondo View Single Evento
+- 71 Exibindo Fotos Evento se Existirem
+- 72 Organizando com HomeController
+- 73 Conclusões
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte8">8 - View: Manipulação de Formulários</a>
+
 - 74 Introdução
 - 75 Organizando Rotas Painel Eventos
 - 76 Listagem de Eventos
@@ -2167,15 +2188,6 @@ Database seeding completed successfully.
 - 82 Linkando Edição e Remoção de Evento
 - 83 Melhorias Manipulação de Request
 - 84 Conclusões
-
-[Voltar ao Índice](#indice)
-
----
-
-
-## <a name="parte8">8 - View: Manipulação de Formulários</a>
-
-
 
 [Voltar ao Índice](#indice)
 
