@@ -2317,6 +2317,37 @@ Evento - {{$event->title}}
 - 75 Organizando Rotas Painel Eventos
 - 76 Listagem de Eventos
 - 77 Paginando Dados
+
+```php
+ public function index()
+    {
+        $events = Event::paginate(3);
+
+        return view('admin.events.index', compact('events'));
+    }
+```
+
+```php
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        Paginator::useBootstrap();
+    }
+
+```
+
+```html
+            </table>
+            {{$events->links()}}
+        </div>
+```
+
 - 78 Tela de Criação de Evento
 - 79 Entendendo CSRF no Laravel
 - 80 Manipulando Dados da Request
