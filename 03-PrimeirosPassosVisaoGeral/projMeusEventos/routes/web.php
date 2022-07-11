@@ -78,10 +78,10 @@ Route::get('/queries/{event?}', function ($event = null){
 
 });
 
-Route::get('events/index', [\App\Http\Controllers\EventController::class, 'index']);
-Route::get('events/store', [\App\Http\Controllers\EventController::class, 'store']);
-Route::get('events/update/{event}', [\App\Http\Controllers\EventController::class, 'update']);
-Route::get('events/destroy/{event}', [\App\Http\Controllers\EventController::class, 'destroy']);
+Route::get('admin/events/index', [\App\Http\Controllers\Admin\EventController::class, 'index']);
+Route::get('admin/events/store', [\App\Http\Controllers\Admin\EventController::class, 'store']);
+Route::get('admin/events/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update']);
+Route::get('admin/events/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
 
 // Route::get('view-teste', fn() => view('teste.index') );
 
