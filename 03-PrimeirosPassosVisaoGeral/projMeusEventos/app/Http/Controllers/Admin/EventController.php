@@ -43,15 +43,22 @@ class EventController extends Controller
         return redirect()->to('/admin/events/index');
     }
 
+    public function edit($event)
+    {
+        $event = Event::findOrFail($event);
+        return view('admin.events.edit', compact('event'));
+    }
+
     public function update($event)
     {
-        $eventDATA = [
+/*        $eventDATA = [
             'title' => 'Evento Atribuição em Massa ' . rand(1,1000),
-        ];
+        ];*/
 
-        $event = Event::find($event);
-        $event->update($eventDATA);
-        return $event;
+        $event = Event::findOrFail($event);
+        $event->update(request()->all());
+
+        return redirect()->back();
     }
 
     public function destroy($event)
