@@ -2351,6 +2351,22 @@ class AppServiceProvider extends ServiceProvider
 - 78 Tela de Criação de Evento
 - 79 Entendendo CSRF no Laravel
 - 80 Manipulando Dados da Request
+
+```php
+
+// Recuperar uma instancia do request
+request()
+
+// Recuperar todo conteudo do form enviado como arrau associativo
+dd(\request()->all());
+
+// Recuperar uma chave especifica do envio do form 
+request('title') || request()->get('title')
+
+// E recuperar uma chave especifica do envio como propriedade
+dd(request()->title())
+```
+
 - 81 Editando Eventos
 - 82 Linkando Edição e Remoção de Evento
 - 83 Melhorias Manipulação de Request

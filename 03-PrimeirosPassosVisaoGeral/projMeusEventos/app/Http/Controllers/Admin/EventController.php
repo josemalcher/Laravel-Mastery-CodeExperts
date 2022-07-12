@@ -6,6 +6,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -23,6 +24,7 @@ class EventController extends Controller
 
     public function store()
     {
+        /*dd(\request()->all());
         $event = [
             'title' => 'Evento Atribuição em Massa ' . rand(1,100),
             'description' => 'Descrição',
@@ -31,7 +33,14 @@ class EventController extends Controller
             'start_event' => date('Y-m-d H:i:s')
         ];
 
-        return Event::create($event);
+        return Event::create($event);*/
+
+        $event = request()->all();
+        $event['slug'] = Str::slug($event['title']);
+
+        Event::create($event);
+
+        return redirect()->to('/admin/events/index');
     }
 
     public function update($event)
