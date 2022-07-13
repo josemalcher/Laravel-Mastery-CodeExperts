@@ -91,3 +91,11 @@ Route::get('admin/events/destroy/{event}', [\App\Http\Controllers\Admin\EventCon
 // Route::get('view-teste', fn() => view('teste.index') );
 
 Route::get('/eventos/{slug}',  [\App\Http\Controllers\HomerController::class, 'show']);
+
+// GET | POST | PUT | DELETE | OPTIONS | HEAD
+// Route::get(), ...
+
+// any a qualquer verbo ou match
+Route::any('/teste-any', fn()=> 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
+// para fazer match com post ou put
+Route::match(['post', 'put'], '/teste-match', fn() => 'Rota Match');
