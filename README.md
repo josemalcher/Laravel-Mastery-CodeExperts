@@ -2569,6 +2569,56 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 
 - 99 Melhorando Para Form Requests
+
+```
+$ php artisan make:request EventRequest
+Request created successfully.
+
+```
+
+```php
+class EventRequest extends FormRequest
+{
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Este campo de Títuilo é obrigatório',
+
+            'required' => 'Este campo é obrigatório',
+            'min' => 'Este campo requer mais caracteres. Mínimo é de :min'
+        ];
+    }
+}
+```
+
+```php
+public function store(EventRequest $request)
+    {
+        $event = $request->all();
+        $event['slug'] = Str::slug($event['title']);
+
+        Event::create($event);
+
+        return redirect()->route('admin.events.index');
+    }
+```
+
+
 - 100 Validação na Edição do Evento
 - 101 Conclusões
 

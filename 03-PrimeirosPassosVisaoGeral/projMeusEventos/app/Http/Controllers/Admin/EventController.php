@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\EventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
@@ -22,31 +23,8 @@ class EventController extends Controller
         return view('admin.events.create');
     }
 
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
-        /*dd(\request()->all());
-        $event = [
-            'title' => 'Evento Atribuição em Massa ' . rand(1,100),
-            'description' => 'Descrição',
-            'body' => 'Conteudo do Evento',
-            'slug' => 'evento-atribuicao-em-massa',
-            'start_event' => date('Y-m-d H:i:s')
-        ];
-
-        return Event::create($event);*/
-
-        $request->validate([
-            'title' => 'required|min:30',
-            'description' => 'required',
-            'body' => 'required',
-            'start_event' => 'required',
-        ],
-        [
-            'title.required' => 'Este campo de Títuilo é obrigatório',
-
-            'required' => 'Este campo é obrigatório',
-            'min' => 'Este campo requer mais caracteres. Mínimo é de :min'
-        ]);
 
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
