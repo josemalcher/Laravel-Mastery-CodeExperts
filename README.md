@@ -2551,6 +2551,23 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 
 - 98 Traduzindo Mensagens de Validação
+
+```php
+ $request->validate([
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+        ],
+        [
+            'title.required' => 'Este campo de Títuilo é obrigatório',
+
+            'required' => 'Este campo é obrigatório',
+            'min' => 'Este campo requer mais caracteres. Mínimo é de :min'
+        ]);
+
+```
+
 - 99 Melhorando Para Form Requests
 - 100 Validação na Edição do Evento
 - 101 Conclusões
