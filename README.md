@@ -2393,6 +2393,26 @@ Route::match(['post', 'put'], '/teste-match', fn() => 'Rota Match');
 ```
 
 - 87 Organizando Rotas com Prefixo e Grupo
+
+```php
+
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/events')->group(function () {
+        Route::get('/index', [\App\Http\Controllers\Admin\EventController::class, 'index']);
+
+        Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create']);
+        Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store']);
+
+        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit']);
+        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update']);
+
+        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
+
+    });
+});
+
+```
+
 - 88 Usando Apelido de Rotas
 - 89 Refatorando Links nas Views
 - 90 Refatorando Redirecionamentos

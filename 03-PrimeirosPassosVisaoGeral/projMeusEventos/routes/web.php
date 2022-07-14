@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomerController::class, 'index']);
 
 
-Route::get('/ola-mundo', function (){
+Route::get('/ola-mundo', function () {
     return view('ola-mundo');
 });
 
@@ -23,7 +23,7 @@ Route::get('/ola/{name?}', function ($nameok = null) {
     return 'Olá, ' . $nameok;
 });
 
-Route::get('/queries/{event?}', function ($event = null){
+Route::get('/queries/{event?}', function ($event = null) {
 
     // $events = \App\Models\Event::all();
     // $events = \App\Models\Event::all(['title', 'description']);
@@ -41,61 +41,68 @@ Route::get('/queries/{event?}', function ($event = null){
     $event->slug = \Illuminate\Support\Str::slug($event->title);
 
     return $event->save();*/
-/*
-    $event = \App\Models\Event::find(8);
-    $event->title = 'Evento ATUALIZADO';
-    $event->slug = \Illuminate\Support\Str::slug($event->title);
+    /*
+        $event = \App\Models\Event::find(8);
+        $event->title = 'Evento ATUALIZADO';
+        $event->slug = \Illuminate\Support\Str::slug($event->title);
 
-    return $event->save();*/
-/*
-    // Atribuição Massa ou Mass Assingnment
-    $event = [
-        'title' => 'Evento Atribuição em Massa',
-        'description' => 'Descrição',
-        'body' => 'Conteudo do Evento',
-        'slug' => 'evento-atribuicao-em-massa',
-        'start_event' => date('Y-m-d H:i:s')
-    ];
+        return $event->save();*/
+    /*
+        // Atribuição Massa ou Mass Assingnment
+        $event = [
+            'title' => 'Evento Atribuição em Massa',
+            'description' => 'Descrição',
+            'body' => 'Conteudo do Evento',
+            'slug' => 'evento-atribuicao-em-massa',
+            'start_event' => date('Y-m-d H:i:s')
+        ];
 
-    return \App\Models\Event::create($event);
-    */
+        return \App\Models\Event::create($event);
+        */
 
-/*    $eventDATA = [
-       // 'title' => 'Evento Atribuição em Massa',
-        'description' => 'Descrição ATUALIZADA',
-       // 'body' => 'Conteudo do Evento',
-       // 'slug' => 'evento-atribuicao-em-massa',
-       // 'start_event' => date('Y-m-d H:i:s')
-    ];
+    /*    $eventDATA = [
+           // 'title' => 'Evento Atribuição em Massa',
+            'description' => 'Descrição ATUALIZADA',
+           // 'body' => 'Conteudo do Evento',
+           // 'slug' => 'evento-atribuicao-em-massa',
+           // 'start_event' => date('Y-m-d H:i:s')
+        ];
 
-    $event = \App\Models\Event::find(9);
-    $event->update($eventDATA);*/
+        $event = \App\Models\Event::find(9);
+        $event->update($eventDATA);*/
 
     // $event = \App\Models\Event::findOrFail(9);
     // return $event->delete();
 
-    return \App\Models\Event::destroy([8,7,6]);
+    return \App\Models\Event::destroy([8, 7, 6]);
 
 });
 
-Route::get('admin/events/index', [\App\Http\Controllers\Admin\EventController::class, 'index']);
 
-Route::get('admin/events/create', [\App\Http\Controllers\Admin\EventController::class, 'create']);
-Route::post('admin/events/store', [\App\Http\Controllers\Admin\EventController::class, 'store']);
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/events')->group(function () {
+        Route::get('/index', [\App\Http\Controllers\Admin\EventController::class, 'index']);
 
-Route::get('admin/events/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit']);
-Route::post('admin/events/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update']);
+        Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create']);
+        Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store']);
 
-Route::get('admin/events/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
+        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit']);
+        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update']);
+
+        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
+
+    });
+});
+
 
 // Route::get('view-teste', fn() => view('teste.index') );
 
-Route::get('/eventos/{slug}',  [\App\Http\Controllers\HomerController::class, 'show']);
+Route::get('/eventos/{slug}', [\App\Http\Controllers\HomerController::class, 'show']);
 
 // GET | POST | PUT | DELETE | OPTIONS | HEAD
 // Route::get(), ...
 
 // any a qualquer verbo ou match
-Route::any('/teste-any', fn()=> 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
+Route::any('/teste-any', fn() => 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
 // para fazer match com post ou put
 Route::match(['post', 'put'], '/teste-match', fn() => 'Rota Match');
