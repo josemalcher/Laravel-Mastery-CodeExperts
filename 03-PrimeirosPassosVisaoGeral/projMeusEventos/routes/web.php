@@ -79,17 +79,17 @@ Route::get('/queries/{event?}', function ($event = null) {
 });
 
 
-Route::prefix('/admin')->group(function () {
-    Route::prefix('/events')->group(function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\EventController::class, 'index']);
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::prefix('/events')->name('events')->group(function () {
+        Route::get('/index', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
 
-        Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create']);
-        Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store']);
+        Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
+        Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');
 
-        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit']);
-        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update']);
+        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('edit');
+        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('update');
 
-        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy']);
+        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
 
     });
 });
