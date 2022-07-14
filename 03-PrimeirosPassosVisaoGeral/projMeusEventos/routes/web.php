@@ -80,8 +80,8 @@ Route::get('/queries/{event?}', function ($event = null) {
 
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::prefix('/events')->name('events')->group(function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
+    Route::prefix('/events')->name('events.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
 
         Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
         Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');

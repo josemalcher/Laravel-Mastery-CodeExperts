@@ -2435,6 +2435,33 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 
 - 89 Refatorando Links nas Views
+
+```php
+     <a href="{{route('admin.events.create')}}" class="btn btn-success">Criar Evento</a>
+        </div>
+
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Evento</th>
+                    <th scope="col">Criando em</th>
+                    <th scope="col">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                @forelse($events as $event)
+                    <tr>
+                        <th scope="row">{{$event->id}}</th>
+                        <td>{{$event->title}}</td>
+                        <td>{{$event->created_at->format('d/m/Y H:i:s')}}</td>
+                        <td>
+                            <a href="{{ route('admin.events.edit', ['event'=> $event->id]) }}" class="btn btn-info">Editar</a>
+                            <a href="{{ route('admin.events.destroy', ['event'=> $event->id]) }}" class="btn btn-danger">Remover</a>
+                        </td>
+```
+
 - 90 Refatorando Redirecionamentos
 - 91 Dando um Tapa no Painel de Eventos
 - 92 Conclusões
