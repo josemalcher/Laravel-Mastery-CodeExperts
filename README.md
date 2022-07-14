@@ -2526,6 +2526,30 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 
 - 97 Diretiva @error
+
+```php
+<form action="{{ route('admin.events.store')}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <label>Título Evento</label>
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" name="title">
+                    @error('title')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label>Descrição Rápida Evento</label>
+                    <input type="text" class="form-control @error('description') is-invalid @enderror" name="description">
+                    @error('description')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                    @enderror
+                </div>
+```
+
 - 98 Traduzindo Mensagens de Validação
 - 99 Melhorando Para Form Requests
 - 100 Validação na Edição do Evento
