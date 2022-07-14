@@ -2473,7 +2473,29 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
 ## <a name="parte10">10 - Manipulando Validações</a>
 
+- 93 Introdução
+- 94 Usando Validação Controller
 
+  - [https://laravel.com/docs/8.x/validation#available-validation-rules](https://laravel.com/docs/8.x/validation#available-validation-rules)
+
+```php
+ public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+        ]);
+```
+
+- 95 Exibindo Todas as Validações na View
+- 96 Exibindo Validações POr Input
+- 97 Diretiva @error
+- 98 Traduzindo Mensagens de Validação
+- 99 Melhorando Para Form Requests
+- 100 Validação na Edição do Evento
+- 101 Conclusões
 
 [Voltar ao Índice](#indice)
 
