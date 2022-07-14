@@ -2508,6 +2508,23 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 
 - 96 Exibindo Validações POr Input
+
+```php
+<form action="{{ route('admin.events.store')}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <label>Título Evento</label>
+                    <input type="text" class="form-control @if($errors->has('title')) is-invalid @endif" name="title">
+                    @if($errors->has('title'))
+                        <div class="invalid-feedback">
+                            @foreach($errors->get('title') as $error)
+                                {{$error}}
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
+```
+
 - 97 Diretiva @error
 - 98 Traduzindo Mensagens de Validação
 - 99 Melhorando Para Form Requests
