@@ -40,7 +40,7 @@ class EventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event, Request $request)
+    public function update($event, EventRequest $request)
     {
 /*        $eventDATA = [
             'title' => 'Evento Atribuição em Massa ' . rand(1,1000),
