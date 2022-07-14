@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [\App\Http\Controllers\HomerController::class, 'index']);
+
 
 
 Route::get('/ola-mundo', function () {
@@ -77,6 +77,9 @@ Route::get('/queries/{event?}', function ($event = null) {
     return \App\Models\Event::destroy([8, 7, 6]);
 
 });
+// Route::get('view-teste', fn() => view('teste.index') );
+Route::get('/',               [\App\Http\Controllers\HomerController::class, 'index']);
+Route::get('/eventos/{slug}', [\App\Http\Controllers\HomerController::class, 'show'])->name('event.single');
 
 
 Route::prefix('/admin')->name('admin.')->group(function () {
@@ -95,9 +98,6 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 });
 
 
-// Route::get('view-teste', fn() => view('teste.index') );
-
-Route::get('/eventos/{slug}', [\App\Http\Controllers\HomerController::class, 'show']);
 
 // GET | POST | PUT | DELETE | OPTIONS | HEAD
 // Route::get(), ...
