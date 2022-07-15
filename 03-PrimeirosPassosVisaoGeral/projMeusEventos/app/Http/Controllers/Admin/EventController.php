@@ -18,6 +18,11 @@ class EventController extends Controller
         return view('admin.events.index', compact('events'));
     }
 
+    public function show($event)
+    {
+        return 'Evento: ' .$event ;
+    }
+
     public function create()
     {
         return view('admin.events.create');

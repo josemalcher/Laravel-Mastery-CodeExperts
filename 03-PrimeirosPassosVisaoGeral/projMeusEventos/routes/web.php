@@ -106,3 +106,5 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 Route::any('/teste-any', fn() => 'Rota Any'); // Match com qualquer verbo, sendo um dos verbos permitidos acima
 // para fazer match com post ou put
 Route::match(['post', 'put'], '/teste-match', fn() => 'Rota Match');
+
+Route::resource('res', \App\Http\Controllers\ResController::class);

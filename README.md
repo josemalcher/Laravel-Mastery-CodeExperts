@@ -2630,13 +2630,60 @@ public function store(EventRequest $request)
 ## <a name="parte11">11 - Controllers como Recurso</a>
 
 - 102 Introdução
-- 103 O que são Controllers como Recurso
+-  
 
 ![resource](/img/103-resource-01.png)
 
 ![resource](/img/103-resource-02.png)
 
 - 104 Criando Controllers como Recurso
+
+```
+$ php artisan make:controller ResController --resource
+Controller created successfully.
+
+// OU
+
+$ php artisan make:controller ResController -r
+
+```
+
+```php
+Route::resource('res', \App\Http\Controllers\ResController::class);
+```
+
+```
+$ php artisan route:list
+
+  GET|HEAD        / ........................................................................................... HomerController@index
+  POST            _ignition/execute-solution .......... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
+  GET|HEAD        _ignition/health-check ...................... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+  POST            _ignition/update-config ................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+  GET|HEAD        admin/events ..................................................... admin.events.index › Admin\EventController@index
+  GET|HEAD        admin/events/create ............................................ admin.events.create › Admin\EventController@create
+  GET|HEAD        admin/events/destroy/{event} ................................. admin.events.destroy › Admin\EventController@destroy
+  POST            admin/events/store ............................................... admin.events.store › Admin\EventController@store
+  POST            admin/events/update/{event} .................................... admin.events.update › Admin\EventController@update
+  GET|HEAD        admin/events/{event}/edit .......................................... admin.events.edit › Admin\EventController@edit
+  GET|HEAD        api/user ..........................................................................................................
+  GET|HEAD        eventos/{slug} ................................................................ event.single › HomerController@show
+  GET|HEAD        ola-mundo .........................................................................................................
+  GET|HEAD        ola/{name?} .......................................................................................................
+  GET|HEAD        queries/{event?} ..................................................................................................
+  GET|HEAD        res ............................................................................... res.index › ResController@index
+  POST            res ............................................................................... res.store › ResController@store
+  GET|HEAD        res/create ...................................................................... res.create › ResController@create
+  GET|HEAD        res/{re} ............................................................................ res.show › ResController@show
+  PUT|PATCH       res/{re} ........................................................................ res.update › ResController@update
+  DELETE          res/{re} ...................................................................... res.destroy › ResController@destroy
+  GET|HEAD        res/{re}/edit ....................................................................... res.edit › ResController@edit
+  GET|HEAD        sanctum/csrf-cookie ................................................... Laravel\Sanctum › CsrfCookieController@show
+  ANY             teste-any .........................................................................................................
+  POST|PUT        teste-match .......................................................................................................
+
+
+```
+
 - 105 Controller como Recurso em Eventos
 - 106 Tomando Nota dos Ganhos
 - 107 Recursos Aninhados
