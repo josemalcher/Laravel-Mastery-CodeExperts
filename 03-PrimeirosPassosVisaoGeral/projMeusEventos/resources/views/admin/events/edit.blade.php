@@ -15,7 +15,7 @@
 
             <form action="{{route('admin.events.update', ['event' => $event->id])}}" method="post">
                 @csrf
-
+                @method('PUT')
                 <div class="form-group">
 
                     <label>Título Evento</label>

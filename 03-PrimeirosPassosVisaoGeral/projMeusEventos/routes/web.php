@@ -83,7 +83,7 @@ Route::get('/eventos/{slug}', [\App\Http\Controllers\HomerController::class, 'sh
 
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::prefix('/events')->name('events.')->group(function () {
+/*    Route::prefix('/events')->name('events.')->group(function () {
         Route::get('/', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
 
         Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
@@ -93,8 +93,8 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('update');
 
         Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
-
-    });
+    });*/
+    Route::resource('events', \App\Http\Controllers\Admin\EventController::class);
 });
 
 

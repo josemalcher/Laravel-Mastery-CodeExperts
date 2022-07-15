@@ -2685,6 +2685,75 @@ $ php artisan route:list
 ```
 
 - 105 Controller como Recurso em Eventos
+
+```
+$ php artisan route:list --name=events
+
+  GET|HEAD   admin/events ................................... admin.events.index › Admin\EventController@index
+  GET|HEAD   admin/events/create ............................ admin.events.create › Admin\EventController@create  
+  GET|HEAD   admin/events/destroy/{event} ................... admin.events.destroy › Admin\EventController@destroy  
+  POST       admin/events/store ............................. admin.events.store › Admin\EventController@store  
+  POST       admin/events/update/{event} .................... admin.events.update › Admin\EventController@update  
+  GET|HEAD   admin/events/{event}/edit ...................... admin.events.edit › Admin\EventController@edit  
+
+```
+
+```php
+Route::prefix('/admin')->name('admin.')->group(function () {
+/*    Route::prefix('/events')->name('events.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
+
+        Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
+        Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');
+
+        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('edit');
+        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('update');
+
+        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
+    });*/
+    Route::resource('events', \App\Http\Controllers\Admin\EventController::class);
+});
+```
+
+```
+$ php artisan route:list --name=events
+
+  GET|HEAD        admin/events ............................ admin.events.index › Admin\EventController@index
+  POST            admin/events ............................ admin.events.store › Admin\EventController@store  
+  GET|HEAD        admin/events/create ................... admin.events.create › Admin\EventController@create  
+  GET|HEAD        admin/events/{event} ...................... admin.events.show › Admin\EventController@show  
+  PUT|PATCH       admin/events/{event} .................. admin.events.update › Admin\EventController@update  
+  DELETE          admin/events/{event} ................ admin.events.destroy › Admin\EventController@destroy  
+  GET|HEAD        admin/events/{event}/edit ................. admin.events.edit › Admin\EventController@edit  
+
+```
+
+```php
+<form action="{{route('admin.events.update', ['event' => $event->id])}}" method="post">
+                @csrf
+                @method('PUT')
+```
+
+```php
+          @forelse($events as $event)
+                    <tr>
+                        <th scope="row">{{$event->id}}</th>
+                        <td>{{$event->title}}</td>
+                        <td>{{$event->created_at->format('d/m/Y H:i:s')}}</td>
+                        <td class="d-flex justify-content-between">
+                            <a href="{{ route('admin.events.edit', ['event'=> $event->id]) }}" class="btn btn-info">Editar</a>
+
+                            <form action="{{ route('admin.events.destroy', ['event'=> $event->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">Remover</button>
+                            </form>
+                        </td>
+                    </tr>
+                @empty
+```
+
+
 - 106 Tomando Nota dos Ganhos
 - 107 Recursos Aninhados
 - 108 Recursos Aninhados no Projeto e Mais
