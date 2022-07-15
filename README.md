@@ -2629,7 +2629,21 @@ public function store(EventRequest $request)
 
 ## <a name="parte11">11 - Controllers como Recurso</a>
 
+- 102 Introdução
+- 103 O que são Controllers como Recurso
 
+![resource](/img/103-resource-01.png)
+
+![resource](/img/103-resource-02.png)
+
+- 104 Criando Controllers como Recurso
+- 105 Controller como Recurso em Eventos
+- 106 Tomando Nota dos Ganhos
+- 107 Recursos Aninhados
+- 108 Recursos Aninhados no Projeto e Mais
+- 109 Registrando Vários Recursos
+- 110 DI nos Controllers
+- 111 Conclusões
 
 [Voltar ao Índice](#indice)
 
