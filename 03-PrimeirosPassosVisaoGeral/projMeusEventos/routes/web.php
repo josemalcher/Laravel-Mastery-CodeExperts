@@ -95,6 +95,8 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('destroy');
     });*/
     Route::resource('events', \App\Http\Controllers\Admin\EventController::class);
+    Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class)
+    ->only('destroy');
 });
 
 

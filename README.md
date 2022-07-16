@@ -2762,6 +2762,48 @@ $ php artisan route:list --name=events
 ![](img/107-recurso-alinhado-2.png)
 
 - 108 Recursos Aninhados no Projeto e Mais
+
+```php
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::resource('events', \App\Http\Controllers\Admin\EventController::class);
+    Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class);
+});
+```
+
+```
+$ php artisan make:controller Admin/EventPhotoController -r
+Controller created successfully.
+
+```
+
+```
+$ php artisan route:list --name=events.photos
+
+  GET|HEAD        admin/events/{event}/photos ....................... admin.events.photos.index › Admin\EventPhotoController@index
+  POST            admin/events/{event}/photos ....................... admin.events.photos.store › Admin\EventPhotoController@store  
+  GET|HEAD        admin/events/{event}/photos/create .............. admin.events.photos.create › Admin\EventPhotoController@create  
+  GET|HEAD        admin/events/{event}/photos/{photo} ................. admin.events.photos.show › Admin\EventPhotoController@show  
+  PUT|PATCH       admin/events/{event}/photos/{photo} ............. admin.events.photos.update › Admin\EventPhotoController@update  
+  DELETE          admin/events/{event}/photos/{photo} ........... admin.events.photos.destroy › Admin\EventPhotoController@destroy  
+  GET|HEAD        admin/events/{event}/photos/{photo}/edit ............ admin.events.photos.edit › Admin\EventPhotoController@edit  
+```
+
+```php
+Route::resource('events', \App\Http\Controllers\Admin\EventController::class)
+    ->except('destroy');
+
+Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class)
+    ->only('index', 'show');
+```
+
+```
+$ php artisan route:list --name=events.photos
+
+  GET|HEAD       admin/events/{event}/photos ................ admin.events.photos.index › Admin\EventPhotoController@index
+  GET|HEAD       admin/events/{event}/photos/{photo} .......... admin.events.photos.show › Admin\EventPhotoController@show  
+```
+
+
 - 109 Registrando Vários Recursos
 - 110 DI nos Controllers
 - 111 Conclusões
