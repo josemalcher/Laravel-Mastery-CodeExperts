@@ -11,9 +11,17 @@ use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
+    private $event;
+
+    public function __construct(Event $event)
+    {
+        $this->event = $event;
+    }
+
+
     public function index()
     {
-        $events = Event::paginate(3);
+        $events = $this->event->paginate(3);
 
         return view('admin.events.index', compact('events'));
     }
@@ -34,14 +42,14 @@ class EventController extends Controller
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
-        Event::create($event);
+        $this->event->create($event);
 
         return redirect()->route('admin.events.index');
     }
 
     public function edit($event)
     {
-        $event = Event::findOrFail($event);
+        $event = $this->event->findOrFail($event);
         return view('admin.events.edit', compact('event'));
     }
 
@@ -51,7 +59,7 @@ class EventController extends Controller
             'title' => 'Evento Atribuição em Massa ' . rand(1,1000),
         ];*/
 
-        $event = Event::findOrFail($event);
+        $event = $this->event->findOrFail($event);
         $event->update($request->all());
 
         return redirect()->back();
@@ -59,7 +67,7 @@ class EventController extends Controller
 
     public function destroy($event)
     {
-        $event = Event::findOrFail($event);
+        $event = $this->event->findOrFail($event);
         $event->delete();
 
         return redirect()->route('admin.events.index');

@@ -2818,6 +2818,25 @@ $ php artisan route:list --name=events.photos
 
 
 - 110 DI nos Controllers
+
+```php
+class EventController extends Controller
+{
+    private $event;
+
+    public function __construct(Event $event)
+    {
+        $this->event = $event;
+    }
+
+    public function index()
+    {
+        $events = $this->event->paginate(3);
+
+        return view('admin.events.index', compact('events'));
+    }
+```
+
 - 111 Conclusões
 
 [Voltar ao Índice](#indice)
