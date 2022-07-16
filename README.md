@@ -2756,6 +2756,11 @@ $ php artisan route:list --name=events
 
 - 106 Tomando Nota dos Ganhos
 - 107 Recursos Aninhados
+
+![](img/107-recurso-alinhado.png)
+
+![](img/107-recurso-alinhado-2.png)
+
 - 108 Recursos Aninhados no Projeto e Mais
 - 109 Registrando Vários Recursos
 - 110 DI nos Controllers
