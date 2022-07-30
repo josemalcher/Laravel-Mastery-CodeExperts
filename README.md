@@ -2846,7 +2846,39 @@ class EventController extends Controller
 
 ## <a name="parte12">12 - Primeiro Starter Point: Laravel UI</a>
 
+- 112 Intro e Obtendo Laravel UI
 
+```
+$ composer require laravel/ui:^3.2
+./composer.json has been updated
+Running composer update laravel/ui
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking laravel/ui (v3.4.6)
+
+```
+
+```
+$ php artisan | grep -i "ui"
+  -q, --quiet           Do not output any message
+  ui                    Swap the front-end scaffolding for the application
+  package:discover      Rebuild the cached package manifest
+ ui
+  ui:auth               Scaffold basic login and registration views and routes
+  ui:controllers        Scaffold the authentication controllers
+
+```
+
+- 113 Gerando Autenticação
+- 114 Conhecendo os Arquivos do Auth
+- 115 Adaptações do Nosso Painel
+- 116 O Btn de Logout
+- 117 Arquivo de Configurações Auth
+- 118 Configurações para Dono de Evento
+- 119 Eventos por Usuário Logado
+- 120 O Middleware Authenticate
+- 121 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -2855,7 +2887,19 @@ class EventController extends Controller
 
 ## <a name="parte13">13 - Melhorias Projeto Eventos</a>
 
-
+- 122 Introdução
+- 123 Entendendo Eloquent Accessors
+- 124 Entendendo Eloquent Mutators
+- 125 Máscara de Data Evento
+- 126 Formatando Data para o Banco
+- 127 Nosso primeiro Middleware
+- 128 Usuário: Bloqueando Acesso A Outros Eventos
+- 129 Melhorias Home de Eventos
+- 130 Busca de Eventos
+- 131 Filtro Por Categorias
+- 132 View Share e Composer
+- 133 Melhorando View Composer
+- 134 Eventos Que Vão Acontecer e Concluindo
 
 [Voltar ao Índice](#indice)
 
@@ -2864,7 +2908,20 @@ class EventController extends Controller
 
 ## <a name="parte14">14 - Upload de Arquivos</a>
 
-
+- 135 Introdução
+- 136 Iniciando Upload
+- 137 Configurações de Upload
+- 138 Upload e Save no Banco
+- 139 Validando Upload de Imagens
+- 140 Iniciando Upload na Edição
+- 141 Concluindo Upload na Edição
+- 142 Upload de Múltiplos Arquivos
+- 143 Salvando Referencias no Banco Upload Múltiplo
+- 144 Validando Múltiplos Arquivos
+- 145 Deletando Fotos do Evento
+- 146 Falando Mais Sobre Route Model Bind
+- 147 Jogando o Upload para Trait
+- 148 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -2873,7 +2930,33 @@ class EventController extends Controller
 
 ## <a name="parte15">15 - Melhorias & Encerramento Bloco 1</a>
 
-
+- 149 Introdução
+- 150 Mapeando Relação Inscrição
+- 151 Entendendo M-M com Dados Extras
+- 152 Iniciando Processo de Inscrição
+- 153 Tela de Confirmação de Inscrição
+- 154 Concluindo Processo de Inscrição
+- 155 Melhorias Processo de Inscrição
+- 156 Classe Mailable
+- 157 Configurações e Envio de E-mail
+- 158 Evento: Uma Inscrição Por Usuário
+- 159 Categorias Na Criação e Edição de Eventos
+- 160 Processando Associação de Categorias e Eventos
+- 161 Melhorias Painel
+- 162 Iniciando Perfil do Usuário
+- 163 Processando Atualização de Perfil
+- 164 Validações na Atualização do Perfil
+- 165 O Validador Unique no Update
+- 166 Concluindo Perfil
+- 167 Iniciando Mensagens de Feedback
+- 168 Exibindo Mensagens de Feedback
+- 169 Mensagens de Feedback Painel
+- 170 Laravel Sluggable e Dicas
+- 171 Utilizando Laravel Sluggable
+- 172 Iniciando Verificação de Conta
+- 173 Entendendo Mais a Fundo Verificaçãod e Conta
+- 174 Traduzindo Emails: Verificação e Resete Senha
+- 175 Considerações Finais Bloco
 
 [Voltar ao Índice](#indice)
 
@@ -2882,7 +2965,20 @@ class EventController extends Controller
 
 ## <a name="parte16">16 - ACL & Autorização</a>
 
-
+- 176 Introdução
+- 177 O que é ACL?
+- 178 Gates e Policies Laravel
+- 179 Entendendo Projeto ACL
+- 180 Praticando Gate
+- 181 Usuário Autenticado Para Autorização
+- 182 Parametros Extras & Método Before
+- 183 Gate Denies e Allow
+- 184 As Policies
+- 185 Diretivas Blade Autorização
+- 186 Uma Abordagem Dinâmica Gates
+- 187 Controle Global via Middleware
+- 188 Mais Métodos de Controle
+- 189 Conclusões
 
 [Voltar ao Índice](#indice)
 
