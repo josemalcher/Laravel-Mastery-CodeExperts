@@ -28,6 +28,15 @@ https://codeexperts.com.br/curso/laravel-mastery
 22. [Trabalhando com Filas](#parte22)
 23. [Notificações & Player](#parte23)
 24. [Relações Polimórficas & Incrementos Projeto](#parte24)
+25. [Assinatura com Laravel Cashier Stripe](#parte25)
+26. [Melhorias e Finalizando Bloco 2](#parte26)
+27. [Iniciando Bloco 3](#parte27)
+28. [Nossa Primeira API REST](#parte28)
+29. [Recursos para API](#parte29)
+30. [Sanctum: API Tokens Backend](#parte30)
+31. [Testes de Software Laravel](#parte31)
+32. [Front com VueJS - Autenticação](#parte32)
+33. [Gerenciando Estado com Pinia](#parte33)
 ---
 
 
@@ -3053,5 +3062,78 @@ $ php artisan | grep -i "ui"
 [Voltar ao Índice](#indice)
 
 ---
+
+## <a name="parte25">25. Assinatura com Laravel Cashier Stripe</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte26">26. Melhorias e Finalizando Bloco 2</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte27">27. Iniciando Bloco 3</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte28">28. Nossa Primeira API REST</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte29">29. Recursos para API</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte30">30. Sanctum: API Tokens Backend</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte31">31. Testes de Software Laravel</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte32">32. Front com VueJS - Autenticação</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte33">33. Gerenciando Estado com Pinia</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
+
 
 
