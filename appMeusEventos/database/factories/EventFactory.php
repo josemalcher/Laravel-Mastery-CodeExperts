@@ -17,7 +17,9 @@ class EventFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph
+            'description' => $this->faker->word(7, true),
+            'body' => $this->faker->paragraph,
+            'start_event' => now()
         ];
     }
 }
