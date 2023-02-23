@@ -48,10 +48,23 @@ Route::get('/queries/{event?}', function ($event = null){
 
     return $event->save();
 */
-    $event = \App\Models\Event::find(1);
+
+    /*  $event = \App\Models\Event::find(1);
     $event->title = 'Evento ATUALIZADO';
     $event->slug = \Illuminate\Support\Str::slug($event->title);
 
     return $event->save();
+*/
+    // Atribuição Massa ou Mass Assingnment
+    $event = [
+        'title' => 'Evento Atribuição em Massa',
+        'description' => 'Descrição',
+        'body' => 'Conteudo do Evento',
+        'slug' => 'evento-atribuicao-em-massa',
+        'start_event' => date('Y-m-d H:i:s')
+    ];
+
+    return \App\Models\Event::create($event);
+    return $event;
 
 });
