@@ -768,6 +768,8 @@ $ php artisan migrate:status
 
 - 31 Schema Dump
 
+Carrega primeiro o Dump, depois ele parte para migrations.
+
 ```
 $ php artisan schema:dump
 mysqldump: [Warning] Using a password on the command line interface can be insecure.
