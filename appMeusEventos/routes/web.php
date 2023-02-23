@@ -39,11 +39,17 @@ Route::get('/ola/{name?}', function ($name = 'Fulano...') {
 
 Route::get('/queries/{event?}', function ($event = null){
 
-    $event = new \App\Models\Event();
+/*  $event = new \App\Models\Event();
     $event->title = 'Evento TESTE via Eloquent e AR';
     $event->description = 'Evento teste';
     $event->body = 'corpo do evento';
     $event->start_event = date('Y-m-d H:i:s');
+    $event->slug = \Illuminate\Support\Str::slug($event->title);
+
+    return $event->save();
+*/
+    $event = \App\Models\Event::find(1);
+    $event->title = 'Evento ATUALIZADO';
     $event->slug = \Illuminate\Support\Str::slug($event->title);
 
     return $event->save();
