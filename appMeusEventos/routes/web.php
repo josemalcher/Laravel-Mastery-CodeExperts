@@ -26,13 +26,26 @@ Route::get('/ola/{name?}', function ($name = 'Fulano...') {
     return 'Olá, ' . $name;
 });
 
-Route::get('/queries/{id}', function ($id) {
-    // $events = \App\Models\Event::all(); // select * from events
-    // $events = \App\Models\Event::all(['title', 'description']); // select title, description from events
+//Route::get('/queries/{id}', function ($id) {
+//    // $events = \App\Models\Event::all(); // select * from events
+//    // $events = \App\Models\Event::all(['title', 'description']); // select title, description from events
+//
+//    // $events = \App\Models\Event::where('id', 1)->get(); // select * from events WHERE id = 1
+//    // $events = \App\Models\Event::where('id', 1)->first(); // select * from events WHERE id = 1
+//    $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
+//
+//    return $events;
+//});
 
-    // $events = \App\Models\Event::where('id', 1)->get(); // select * from events WHERE id = 1
-    // $events = \App\Models\Event::where('id', 1)->first(); // select * from events WHERE id = 1
-    $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
+Route::get('/queries/{event?}', function ($event = null){
 
-    return $events;
+    $event = new \App\Models\Event();
+    $event->title = 'Evento TESTE via Eloquent e AR';
+    $event->description = 'Evento teste';
+    $event->body = 'corpo do evento';
+    $event->start_event = date('Y-m-d H:i:s');
+    $event->slug = \Illuminate\Support\Str::slug($event->title);
+
+    return $event->save();
+
 });
