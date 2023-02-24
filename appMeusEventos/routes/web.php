@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,17 +38,17 @@ Route::get('/ola/{name?}', function ($name = 'Fulano...') {
 //    return $events;
 //});
 
-Route::get('/queries/{event?}', function ($event = null){
+Route::get('/queries/{event?}', function ($event = null) {
 
-/*  $event = new \App\Models\Event();
-    $event->title = 'Evento TESTE via Eloquent e AR';
-    $event->description = 'Evento teste';
-    $event->body = 'corpo do evento';
-    $event->start_event = date('Y-m-d H:i:s');
-    $event->slug = \Illuminate\Support\Str::slug($event->title);
+    /*  $event = new \App\Models\Event();
+        $event->title = 'Evento TESTE via Eloquent e AR';
+        $event->description = 'Evento teste';
+        $event->body = 'corpo do evento';
+        $event->start_event = date('Y-m-d H:i:s');
+        $event->slug = \Illuminate\Support\Str::slug($event->title);
 
-    return $event->save();
-*/
+        return $event->save();
+    */
 
     /*  $event = \App\Models\Event::find(1);
     $event->title = 'Evento ATUALIZADO';
@@ -56,16 +57,16 @@ Route::get('/queries/{event?}', function ($event = null){
     return $event->save();
 */
     // Atribuição Massa ou Mass Assingnment
-/*    $event = [
-        'title' => 'Evento Atribuição em Massa',
-        'description' => 'Descrição',
-        'body' => 'Conteudo do Evento',
-        'slug' => 'evento-atribuicao-em-massa',
-        'start_event' => date('Y-m-d H:i:s')
-    ];
+    /*    $event = [
+            'title' => 'Evento Atribuição em Massa',
+            'description' => 'Descrição',
+            'body' => 'Conteudo do Evento',
+            'slug' => 'evento-atribuicao-em-massa',
+            'start_event' => date('Y-m-d H:i:s')
+        ];
 
-    return \App\Models\Event::create($event);
-*/
+        return \App\Models\Event::create($event);
+    */
     /*
     $eventDATA = [
         // 'title' => 'UPDATE Atribuição em Massa',
@@ -83,7 +84,13 @@ Route::get('/queries/{event?}', function ($event = null){
 
     // $event = \App\Models\Event::findOrFail(3);
     // return $event->delete(); // 1
-    return \App\Models\Event::destroy([10,11,12]); // 3
+    return \App\Models\Event::destroy([10, 11, 12]); // 3
 
 
 });
+
+//Rotas CRUD da base para eventos - inicial...
+Route::get('events/index', [EventController::class, 'index']);
+Route::get('events/store', [EventController::class, 'store']);
+Route::get('events/update/{event}', [EventController::class, 'update']);
+Route::get('events/destroy/{event}', [EventController::class, 'destroy']);
