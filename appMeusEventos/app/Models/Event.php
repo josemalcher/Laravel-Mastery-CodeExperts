@@ -15,4 +15,9 @@ class Event extends Model
         'slug',
         'start_event'
     ];
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);// event_id
+    }
 }
