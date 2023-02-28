@@ -999,7 +999,7 @@ class Profile extends Model
 
 - 44 Salvando 1:1
 
-```
+```php
 >>> $profile2 = new \App\Models\Profile();                                                                                                                                                                              
 => App\Models\Profile {#4458}
 >>> $profile2->about = 'Sobre Mim'                                                                                                                                                                                      
@@ -1033,7 +1033,7 @@ class Profile extends Model
 
 ```
 
-```
+```php
 >>> $user = \App\Models\User::find(3)                                                                                                                                                                                   
 => App\Models\User {#3847
      id: 3,
@@ -1058,7 +1058,7 @@ class Profile extends Model
 protected $fillable = ['about', 'phone' , 'social_networks'];
 ```
 
-```
+```php
 >>> $user->profile()->create($p);                                                                                                                                                                                       
 => App\Models\Profile {#4458
      about: "sobre mim",
@@ -1075,7 +1075,7 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 
 - 45 Recuperando 1:1
 
-```
+```php
 >>> $u = \App\Models\User::find(1);                                                                                                                                                                                     
 => App\Models\User {#3849
      id: 1,
@@ -1118,7 +1118,7 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 
 ```
 
-```
+```php
 >>> $unot = \App\Models\User::find(4);                                                                                                                                                                                  
 => App\Models\User {#4461
      id: 4,
@@ -1137,7 +1137,7 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 
 ```
 
-```
+```php
 >>> $p = \App\Models\Profile::find(1)                                                                                                                                                                                   
 => App\Models\Profile {#3530
      id: 1,
@@ -1242,7 +1242,7 @@ class Event extends Model
 
 - 48 Salvando 1:N
 
-```
+```php
 >>> $photo = ['photo'=> 'imagem.jpg'];                                                                                                                                                                                  
 => [
      "photo" => "imagem.jpg",
@@ -1288,7 +1288,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> namespace App\Models                                                                                                                                                                                                
 >>> $photo1 = new Photo();                                                                                                                                                                                              
 => App\Models\Photo {#4458}
@@ -1328,7 +1328,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> $photo1 = ['photo' => 'foto-ok-01.jpg'];                                                                                                                                                                            
 => [
      "photo" => "foto-ok-01.jpg",
@@ -1372,7 +1372,7 @@ class Event extends Model
 
 - 49 Recuperando 1:N
 
-```
+```php
 >>> $event = Event::find(1);                                                                                                                                                                                            
 => App\Models\Event {#4458
      id: 1,
@@ -1463,7 +1463,7 @@ class Event extends Model
 >>>                                          
 ```
 
-```
+```php
 >>> $photos = $event->photos;                                                                                                                                                                                           
 => Illuminate\Database\Eloquent\Collection {#4462
      all: [
@@ -1498,7 +1498,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> Photo::find(1)                                                                                                                                                                                                      
 => App\Models\Photo {#4481
      id: 1,
@@ -1594,7 +1594,7 @@ Factory created successfully.
     }
 ```
 
-```
+```php
 >>> \App\Models\Category::factory(5)->create();                                                                                                                                                                         
 => Illuminate\Database\Eloquent\Collection {#3557
      all: [
@@ -1673,7 +1673,7 @@ class Event extends Model
 
 - 53 Salvando N:N
 
-```
+```php
 >>> namespace App\Models;                                                                                                                                                                                               
 >>> $e = Event::find(1);                                                                                                                                                                                                
 => App\Models\Event {#3850
@@ -1698,7 +1698,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> $e->categories()->sync([2]);                                                                                                                                                                                        
 => [
      "attached" => [],
@@ -1719,7 +1719,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> $e->categories()->toggle([1,3,5]);                                                                                                                                                                                  
 => [
      "attached" => [],
@@ -1772,7 +1772,7 @@ class Event extends Model
 
 - 54 Recuperando N:N
 
-```
+```php
 >>> $e->categories                                                                                                                                                                                                      
 => Illuminate\Database\Eloquent\Collection {#4475
      all: [
@@ -1801,7 +1801,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> $cat = Category::find(4);                                                                                                                                                                                           
 => App\Models\Category {#4314
      id: 4,
@@ -1915,7 +1915,7 @@ class Event extends Model
 
 - 55 Manipulando BelongsTo
 
-```
+```php
 >>> $profile = \App\Models\Profile::find(1)                                                                                                                                                                             
 => App\Models\Profile {#4468
      id: 1,
@@ -1943,7 +1943,7 @@ class Event extends Model
 Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null (SQL: update `profiles` set `user_id` = ?, `profiles`.`updated_at` = 2022-07-03 11:55:44 where `id` = 1)'     
 ```
 
-```
+```php
 >>> $profile->user()->associate(3)                                                                                                                                                                                      
 => App\Models\Profile {#4468
      id: 1,
@@ -1985,7 +1985,7 @@ Factory created successfully.
 
 Model Populado não executado:
 
-```
+```php
 >>> \App\Models\Event::factory(5)->make()                                                                                                                                                                               
 => Illuminate\Database\Eloquent\Collection {#3557
      all: [
@@ -2036,7 +2036,7 @@ Model Populado não executado:
 
 - 59 Factories com Relacionamento HasOne
 
-```
+```php
 >>> User::factory()->has(Profile::factory())->create();                                                                                                                                                                 
 => App\Models\User {#3889
      name: "Ms. Anais Ankunding MD",
@@ -2083,7 +2083,7 @@ Model Populado não executado:
 
 - 60 Factories com BelongsTo
 
-```
+```php
 >>> Profile::factory()->for(user::factory())->create();                                                                                                                                                                 
 => App\Models\Profile {#3577
      about: "Reiciendis eos sapiente praesentium optio debitis sunt hic. Neque suscipit excepturi quia iusto tenetur officia excepturi. Error sit neque corrupti quia impedit.",
