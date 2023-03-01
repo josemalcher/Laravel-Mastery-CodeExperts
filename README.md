@@ -2217,7 +2217,7 @@ Route::get('/', function () {
 
 - 66 O print do Blade
 
-```
+```php
 {!! //sem escape !!}
 {{ //com escape }}
 ```
