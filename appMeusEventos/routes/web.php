@@ -21,6 +21,13 @@ Route::get('/', function () {
     return view('welcome', compact('events'));
 });
 
+Route::get('/eventos/{slug}', function ($slug){
+
+    $event = \App\Models\Event::where('slug', $slug)->first();
+
+    return view('event', compact('event'));
+});
+
 Route::get('/ola-mundo', function () {
     return view('ola-mundo');
 });
