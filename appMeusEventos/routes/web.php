@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,7 +93,7 @@ Route::get('/queries/{event?}', function ($event = null) {
 });
 
 //Rotas CRUD da base para eventos - inicial...
-Route::get('events/index', [EventController::class, 'index']);
-Route::get('events/store', [EventController::class, 'store']);
-Route::get('events/update/{event}', [EventController::class, 'update']);
-Route::get('events/destroy/{event}', [EventController::class, 'destroy']);
+Route::get('admin/events/index', [EventController::class, 'index']);
+Route::get('admin/events/store', [EventController::class, 'store']);
+Route::get('admin/events/update/{event}', [EventController::class, 'update']);
+Route::get('admin/events/destroy/{event}', [EventController::class, 'destroy']);
