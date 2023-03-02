@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $events = \App\Models\Event::all();
+Route::get('/', [HomeController::class, 'index']);
 
-    //return view('welcome', ['events'=> $events]);
-    return view('welcome', compact('events'));
-});
+Route::get('/eventos/{slug}',  [HomeController::class, 'show']);
 
-Route::get('/eventos/{slug}', function ($slug){
-
-    $event = \App\Models\Event::where('slug', $slug)->first();
-
-    return view('event', compact('event'));
-});
 
 Route::get('/ola-mundo', function () {
     return view('ola-mundo');
