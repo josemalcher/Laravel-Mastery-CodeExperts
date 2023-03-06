@@ -96,5 +96,6 @@ Route::get('/queries/{event?}', function ($event = null) {
 Route::get('/admin/events/index', [EventController::class, 'index']);
 Route::get('/admin/events/create', [EventController::class, 'create']);
 Route::post('/admin/events/store', [EventController::class, 'store']);
-Route::get('/admin/events/update/{event}', [EventController::class, 'update']);
+Route::get('/admin/events/{event}/edit', [EventController::class, 'edit']);
+Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
 Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);

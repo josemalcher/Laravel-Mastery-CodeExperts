@@ -37,20 +37,28 @@ class EventController extends Controller
         return redirect()->to('/admin/events/index');
     }
 
+    public function edit($event)
+    {
+
+        $event = Event::findOrFail($event);
+
+        return view('admin.events.edit', compact('event'));
+    }
+
     public function update($event)
     {
-        $eventDATA = [
-            // 'title' => 'UPDATE Atribuição em Massa',
-            'description' => 'ATUALIZADA ' . rand(1,1000),
-            // 'body' => 'Conteudo do Evento',
-            // 'slug' => 'update-atribuicao-em-massa',
-            // 'start_event' => date('Y-m-d H:i:s')
-        ];
+//        $eventDATA = [
+//            // 'title' => 'UPDATE Atribuição em Massa',
+//            'description' => 'ATUALIZADA ' . rand(1,1000),
+//            // 'body' => 'Conteudo do Evento',
+//            // 'slug' => 'update-atribuicao-em-massa',
+//            // 'start_event' => date('Y-m-d H:i:s')
+//        ];
 
-        $event = Event::find($event);
-        $event->update($eventDATA);
+        $event = Event::findorFail($event);
+        $event->update(request()->all());
 
-        return $event;
+        return redirect()->back();
     }
 
     public function destroy($event)
