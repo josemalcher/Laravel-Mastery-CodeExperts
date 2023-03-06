@@ -99,9 +99,9 @@ Route::get('/queries/{event?}', function ($event = null) {
 //Route::get('/admin/events/{event}/edit', [EventController::class, 'edit']);
 //Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
 //Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);
-Route::prefix('/admin')->name('admin')->group(function () {
-    Route::prefix('/events')->name('events')->group(function () {
-        Route::get('/index', [EventController::class, 'index'])->name('index');
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::prefix('/events')->name('events.')->group(function () {
+        Route::get('/', [EventController::class, 'index'])->name('index');
 
         Route::get('/create', [EventController::class, 'create'])->name('create');
         Route::post('/store', [EventController::class, 'store'])->name('store');
