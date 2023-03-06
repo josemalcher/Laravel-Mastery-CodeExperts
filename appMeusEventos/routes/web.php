@@ -93,9 +93,23 @@ Route::get('/queries/{event?}', function ($event = null) {
 });
 
 //Rotas CRUD da base para eventos - inicial...
-Route::get('/admin/events/index', [EventController::class, 'index']);
-Route::get('/admin/events/create', [EventController::class, 'create']);
-Route::post('/admin/events/store', [EventController::class, 'store']);
-Route::get('/admin/events/{event}/edit', [EventController::class, 'edit']);
-Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
-Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);
+//Route::get('/admin/events/index', [EventController::class, 'index']);
+//Route::get('/admin/events/create', [EventController::class, 'create']);
+//Route::post('/admin/events/store', [EventController::class, 'store']);
+//Route::get('/admin/events/{event}/edit', [EventController::class, 'edit']);
+//Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
+//Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/events')->group(function () {
+        Route::get('/index', [EventController::class, 'index']);
+
+        Route::get('/create', [EventController::class, 'create']);
+        Route::post('/store', [EventController::class, 'store']);
+
+        Route::get('/{event}/edit', [EventController::class, 'edit']);
+        Route::post('/update/{event}', [EventController::class, 'update']);
+
+        Route::get('/destroy/{event}', [EventController::class, 'destroy']);
+
+    });
+});
