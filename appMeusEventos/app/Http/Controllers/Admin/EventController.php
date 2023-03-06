@@ -4,6 +4,7 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -21,15 +22,19 @@ class EventController extends Controller
 
     public function store()
     {
-        $event = [
-            'title' => 'Evento Atribuição ' . rand(1,100),
-            'description' => 'Descrição',
-            'body' => 'Conteudo do Evento',
-            'slug' => 'evento-atribuicao-em-massa',
-            'start_event' => date('Y-m-d H:i:s')
-        ];
+//        $event = [
+//            'title' => 'Evento Atribuição ' . rand(1,100),
+//            'description' => 'Descrição',
+//            'body' => 'Conteudo do Evento',
+//            'slug' => 'evento-atribuicao-em-massa',
+//            'start_event' => date('Y-m-d H:i:s')
+//        ];
+        $event = request()->all();
+        $event['slug'] = Str::slug($event['title']);
 
-        return Event::create($event);
+        Event::create($event);
+
+        return redirect()->to('/admin/events/index');
     }
 
     public function update($event)

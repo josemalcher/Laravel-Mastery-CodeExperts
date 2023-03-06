@@ -13,6 +13,9 @@
     <div class="row">
         <div class="col-12">
             <form action="/admin/events/store" method="post">
+
+                @csrf
+
                 <div class="form-group">
                     <label>Título do Evento</label>
                     <input type="text" class="form-control" name="title">
