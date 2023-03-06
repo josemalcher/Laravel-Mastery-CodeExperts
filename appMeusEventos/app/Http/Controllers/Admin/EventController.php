@@ -4,6 +4,7 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class EventController extends Controller
@@ -20,16 +21,9 @@ class EventController extends Controller
         return view('admin.events.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-//        $event = [
-//            'title' => 'Evento Atribuição ' . rand(1,100),
-//            'description' => 'Descrição',
-//            'body' => 'Conteudo do Evento',
-//            'slug' => 'evento-atribuicao-em-massa',
-//            'start_event' => date('Y-m-d H:i:s')
-//        ];
-        $event = request()->all();
+        $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
         Event::create($event);
@@ -45,18 +39,10 @@ class EventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event)
+    public function update($event, Request $request)
     {
-//        $eventDATA = [
-//            // 'title' => 'UPDATE Atribuição em Massa',
-//            'description' => 'ATUALIZADA ' . rand(1,1000),
-//            // 'body' => 'Conteudo do Evento',
-//            // 'slug' => 'update-atribuicao-em-massa',
-//            // 'start_event' => date('Y-m-d H:i:s')
-//        ];
-
         $event = Event::findorFail($event);
-        $event->update(request()->all());
+        $event->update($request->all());
 
         return redirect()->back();
     }
