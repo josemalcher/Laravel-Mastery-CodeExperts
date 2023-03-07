@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\EventController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/eventos/{slug}',  [HomeController::class, 'show']);
+Route::get('/eventos/{slug}',  [HomeController::class, 'show'])->name('event.single');
 
 
 Route::get('/ola-mundo', function () {

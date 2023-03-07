@@ -22,7 +22,7 @@
                       <strong>Acontece em {{ $event->start_event->format('d/m/Y H:i') }}</strong>
                       <p class="card-text">{{$event->description}}</p>
 
-                      <a href="/eventos/{{$event->slug}}" class="btn btn-primary">Ver Evento</a>
+                      <a href="{{ route('event.single', ['slug'=> $event->slug])}}" class="btn btn-primary">Ver Evento</a>
                   </div>
                </div>
             </div>

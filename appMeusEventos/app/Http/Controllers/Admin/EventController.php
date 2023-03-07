@@ -28,7 +28,7 @@ class EventController extends Controller
 
         Event::create($event);
 
-        return redirect()->to('/admin/events/index');
+        return redirect()->route('admin.events.index');
     }
 
     public function edit($event)
@@ -53,6 +53,6 @@ class EventController extends Controller
         $event->delete(); // 1
         // return \App\Models\Event::destroy([10,11,12]); // 3
 
-        return redirect()->to('/admin/events/index');
+        return redirect()->route('admin.events.index');
     }
 }
