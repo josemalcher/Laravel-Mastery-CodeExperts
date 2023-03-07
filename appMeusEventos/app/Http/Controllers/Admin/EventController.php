@@ -23,6 +23,13 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+        ]);
+
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
