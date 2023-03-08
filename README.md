@@ -2695,17 +2695,17 @@ $ php artisan route:list
 
 ```
 
-- 105 Controller como Recurso em Eventos
+<!-- - 105 Controller como Recurso em Eventos -->
 
 ```
 $ php artisan route:list --name=events
 
-  GET|HEAD   admin/events ................................... admin.events.index › Admin\EventController@index
-  GET|HEAD   admin/events/create ............................ admin.events.create › Admin\EventController@create  
-  GET|HEAD   admin/events/destroy/{event} ................... admin.events.destroy › Admin\EventController@destroy  
-  POST       admin/events/store ............................. admin.events.store › Admin\EventController@store  
-  POST       admin/events/update/{event} .................... admin.events.update › Admin\EventController@update  
-  GET|HEAD   admin/events/{event}/edit ...................... admin.events.edit › Admin\EventController@edit  
+  GET|HEAD   admin/events ....................... admin.events.index › Admin\EventController@index
+  GET|HEAD   admin/events/create ................ admin.events.create › Admin\EventController@create  
+  GET|HEAD   admin/events/destroy/{event} ....... admin.events.destroy › Admin\EventController@destroy  
+  POST       admin/events/store ................. admin.events.store › Admin\EventController@store  
+  POST       admin/events/update/{event} ........ admin.events.update › Admin\EventController@update  
+  GET|HEAD   admin/events/{event}/edit .......... admin.events.edit › Admin\EventController@edit  
 
 ```
 

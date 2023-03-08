@@ -22,6 +22,11 @@ class EventController extends Controller
         return view('admin.events.create');
     }
 
+    public function show($event)
+    {
+        return 'Evento: ' . $event;
+    }
+
     public function store(EventRequest $request)
     {
         // $request->validate([
