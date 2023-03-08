@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\{EventController, EventPhotoController};
 
 /*
 |--------------------------------------------------------------------------
@@ -113,10 +113,15 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         // Route::get('/destroy/{event}', [EventController::class, 'destroy'])->name('destroy');
 
     // });
+
+
+    /* Route::resources([
+        'events' => EventController::class,
+        'events.photos' => EventPhotoController::class
+    ]); */
+
     Route::resource('events', EventController::class);
-
-    Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class);
-
-
+    Route::resource('events.photos', EventPhotoController::class);
+    
 });
 
