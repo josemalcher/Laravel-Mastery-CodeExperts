@@ -54,7 +54,7 @@ class EventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event, Request $request)
+    public function update($event, EventRequest $request)
     {
         $event = Event::findorFail($event);
         $event->update($request->all());
