@@ -10,9 +10,16 @@ use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
+    private $event;
+
+    public function __construct(Event $event)
+    {
+        $this->event = $event;
+    }
+
     public function index()
     {
-        $events = Event::paginate(3);
+         $events = $this->event->paginate(3);
 
         return view('admin.events.index', compact('events'));
     }
@@ -46,7 +53,7 @@ class EventController extends Controller
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
-        Event::create($event);
+        $this->event->create($event);
 
         return redirect()->route('admin.events.index');
     }
@@ -54,14 +61,14 @@ class EventController extends Controller
     public function edit($event)
     {
 
-        $event = Event::findOrFail($event);
+        $event = $this->event->findOrFail($event);
 
         return view('admin.events.edit', compact('event'));
     }
 
     public function update($event, EventRequest $request)
     {
-        $event = Event::findorFail($event);
+        $event = $this->event->findorFail($event);
         $event->update($request->all());
 
         return redirect()->back();
@@ -69,7 +76,7 @@ class EventController extends Controller
 
     public function destroy($event)
     {
-        $event = Event::findOrFail($event);
+        $event = $this->event->findOrFail($event);
         $event->delete(); // 1
         // return \App\Models\Event::destroy([10,11,12]); // 3
 
