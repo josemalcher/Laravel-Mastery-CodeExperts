@@ -114,5 +114,9 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
     // });
     Route::resource('events', EventController::class);
+
+    Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoController::class);
+
+
 });
 
