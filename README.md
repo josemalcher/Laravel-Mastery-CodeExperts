@@ -2667,31 +2667,30 @@ Route::resource('res', \App\Http\Controllers\ResController::class);
 ```
 $ php artisan route:list
 
-  GET|HEAD        / ........................................................................................... HomerController@index
-  POST            _ignition/execute-solution .......... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
-  GET|HEAD        _ignition/health-check ...................... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
-  POST            _ignition/update-config ................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
-  GET|HEAD        admin/events ..................................................... admin.events.index › Admin\EventController@index
-  GET|HEAD        admin/events/create ............................................ admin.events.create › Admin\EventController@create
-  GET|HEAD        admin/events/destroy/{event} ................................. admin.events.destroy › Admin\EventController@destroy
-  POST            admin/events/store ............................................... admin.events.store › Admin\EventController@store
-  POST            admin/events/update/{event} .................................... admin.events.update › Admin\EventController@update
-  GET|HEAD        admin/events/{event}/edit .......................................... admin.events.edit › Admin\EventController@edit
-  GET|HEAD        api/user ..........................................................................................................
-  GET|HEAD        eventos/{slug} ................................................................ event.single › HomerController@show
-  GET|HEAD        ola-mundo .........................................................................................................
-  GET|HEAD        ola/{name?} .......................................................................................................
-  GET|HEAD        queries/{event?} ..................................................................................................
-  GET|HEAD        res ............................................................................... res.index › ResController@index
-  POST            res ............................................................................... res.store › ResController@store
-  GET|HEAD        res/create ...................................................................... res.create › ResController@create
-  GET|HEAD        res/{re} ............................................................................ res.show › ResController@show
-  PUT|PATCH       res/{re} ........................................................................ res.update › ResController@update
-  DELETE          res/{re} ...................................................................... res.destroy › ResController@destroy
-  GET|HEAD        res/{re}/edit ....................................................................... res.edit › ResController@edit
-  GET|HEAD        sanctum/csrf-cookie ................................................... Laravel\Sanctum › CsrfCookieController@show
-  ANY             teste-any .........................................................................................................
-  POST|PUT        teste-match .......................................................................................................
+  GET|HEAD  / .......................... HomerController@index
+  POST      _ignition/execute-solution .......... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
+  GET|HEAD  _ignition/health-check .......... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+  POST      _ignition/update-config ......... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+  GET|HEAD  admin/events ........................ admin.events.index › Admin\EventController@index
+  GET|HEAD  admin/events/create ................. admin.events.create › Admin\EventController@create
+  GET|HEAD  admin/events/destroy/{event} ........ admin.events.destroy › Admin\EventController@destroy........................... admin.events.store › Admin\EventController@store
+  POST       admin/events/update/{event} ................ admin.events.update › Admin\EventController@update
+  GET|HEAD   admin/events/{event}/edit .......................... admin.events.edit › Admin\EventController@edit
+  GET|HEAD   api/user ....................
+  GET|HEAD   eventos/{slug} ......................................... event.single › HomerController@show
+  GET|HEAD   ola-mundo ...................
+  GET|HEAD   ola/{name?} ....................................
+  GET|HEAD   queries/{event?} ...............................................
+  GET|HEAD   res ............................. res.index › ResController@index
+  POST       res ................................. res.store › ResController@store
+  GET|HEAD   res/create ............................. res.create › ResController@create
+  GET|HEAD   res/{re} ............................... res.show › ResController@show
+  PUT|PATCH  res/{re} ....................................... res.update › ResController@update
+  DELETE     res/{re} ................... res.destroy › ResController@destroy
+  GET|HEAD   res/{re}/edit .............................. res.edit › ResController@edit
+  GET|HEAD   sanctum/csrf-cookie .................. Laravel\Sanctum › CsrfCookieController@show
+  ANY        teste-any ......................................
+  POST|PUT   teste-match ................................................
 
 
 ```
@@ -2730,13 +2729,13 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 ```
 $ php artisan route:list --name=events
 
-  GET|HEAD        admin/events ............................ admin.events.index › Admin\EventController@index
-  POST            admin/events ............................ admin.events.store › Admin\EventController@store  
-  GET|HEAD        admin/events/create ................... admin.events.create › Admin\EventController@create  
-  GET|HEAD        admin/events/{event} ...................... admin.events.show › Admin\EventController@show  
-  PUT|PATCH       admin/events/{event} .................. admin.events.update › Admin\EventController@update  
-  DELETE          admin/events/{event} ................ admin.events.destroy › Admin\EventController@destroy  
-  GET|HEAD        admin/events/{event}/edit ................. admin.events.edit › Admin\EventController@edit  
+  GET|HEAD      admin/events ....................... admin.events.index › Admin\EventController@index
+  POST          admin/events ....................... admin.events.store › Admin\EventController@store  
+  GET|HEAD      admin/events/create .............. admin.events.create › Admin\EventController@create  
+  GET|HEAD      admin/events/{event} ................. admin.events.show › Admin\EventController@show  
+  PUT|PATCH     admin/events/{event} ............. admin.events.update › Admin\EventController@update  
+  DELETE        admin/events/{event} ........... admin.events.destroy › Admin\EventController@destroy  
+  GET|HEAD      admin/events/{event}/edit ............ admin.events.edit › Admin\EventController@edit  
 
 ```
 
@@ -2791,13 +2790,13 @@ Controller created successfully.
 ```
 $ php artisan route:list --name=events.photos
 
-  GET|HEAD        admin/events/{event}/photos ....................... admin.events.photos.index › Admin\EventPhotoController@index
-  POST            admin/events/{event}/photos ....................... admin.events.photos.store › Admin\EventPhotoController@store  
-  GET|HEAD        admin/events/{event}/photos/create .............. admin.events.photos.create › Admin\EventPhotoController@create  
-  GET|HEAD        admin/events/{event}/photos/{photo} ................. admin.events.photos.show › Admin\EventPhotoController@show  
-  PUT|PATCH       admin/events/{event}/photos/{photo} ............. admin.events.photos.update › Admin\EventPhotoController@update  
-  DELETE          admin/events/{event}/photos/{photo} ........... admin.events.photos.destroy › Admin\EventPhotoController@destroy  
-  GET|HEAD        admin/events/{event}/photos/{photo}/edit ............ admin.events.photos.edit › Admin\EventPhotoController@edit  
+  GET|HEAD   admin/events/{event}/photos ............. admin.events.photos.index › Admin\EventPhotoController@index
+  POST       admin/events/{event}/photos ............. admin.events.photos.store › Admin\EventPhotoController@store  
+  GET|HEAD   admin/events/{event}/photos/create ...... admin.events.photos.create › Admin\EventPhotoController@create  
+  GET|HEAD   admin/events/{event}/photos/{photo} ..... admin.events.photos.show › Admin\EventPhotoController@show  
+  PUT|PATCH  admin/events/{event}/photos/{photo} ..... admin.events.photos.update › Admin\EventPhotoController@update  
+  DELETE     admin/events/{event}/photos/{photo} ..... admin.events.photos.destroy › Admin\EventPhotoController@destroy  
+  GET|HEAD   admin/events/{event}/photos/{photo}/edit .. admin.events.photos.edit › Admin\EventPhotoController@edit  
 ```
 
 ```php
@@ -2811,8 +2810,8 @@ Route::resource('events.photos', \App\Http\Controllers\Admin\EventPhotoControlle
 ```
 $ php artisan route:list --name=events.photos
 
-  GET|HEAD       admin/events/{event}/photos ................ admin.events.photos.index › Admin\EventPhotoController@index
-  GET|HEAD       admin/events/{event}/photos/{photo} .......... admin.events.photos.show › Admin\EventPhotoController@show  
+  GET|HEAD       admin/events/{event}/photos ........... admin.events.photos.index › Admin\EventPhotoController@index
+  GET|HEAD       admin/events/{event}/photos/{photo} ..... admin.events.photos.show › Admin\EventPhotoController@show  
 ```
 
 
