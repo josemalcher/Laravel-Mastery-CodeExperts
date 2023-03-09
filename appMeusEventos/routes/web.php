@@ -100,7 +100,7 @@ Route::get('/queries/{event?}', function ($event = null) {
 //Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
 //Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);
 
-Route::prefix('/admin')->name('admin.')->group(function () {
+Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
     // Route::prefix('/events')->name('events.')->group(function () {
         // Route::get('/', [EventController::class, 'index'])->name('index');
 
@@ -122,7 +122,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
     Route::resource('events', EventController::class);
     Route::resource('events.photos', EventPhotoController::class);
-    
+
 });
 
 

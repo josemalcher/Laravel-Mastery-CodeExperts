@@ -2942,7 +2942,7 @@ $ npm run dev
 
 
 - 114 Conhecendo os Arquivos do Auth
-- 115 Adaptações do Nosso Painel
+<!-- - 115 Adaptações do Nosso Painel -->
 - 116 O Btn de Logout
 - 117 Arquivo de Configurações Auth
 - 118 Configurações para Dono de Evento
