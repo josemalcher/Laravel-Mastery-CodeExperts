@@ -2882,6 +2882,65 @@ $ php artisan | grep -i "ui"
 ```
 
 - 113 Gerando Autenticação
+
+```
+$ php artisan ui bootstrap --auth
+Bootstrap scaffolding installed successfully.
+Please run "npm install && npm run dev" to compile your fresh scaffolding.
+
+ The [layouts/app.blade.php] view already exists. Do you want to replace it? (yes/no) [no]:
+ > no
+
+ The [HomeController.php] file already exists. Do you want to replace it? (yes/no) [no]:
+ > no
+
+Authentication scaffolding generated successfully.
+```
+
+```
+$ npm i
+....
+added 741 packages, and audited 742 packages in 41s
+
+77 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+```
+
+```
+$ npm run dev
+
+> dev
+> npm run development
+
+
+> development
+> mix
+
+        Additional dependencies must be installed. This will only take a moment.
+ 
+        Running: npm install resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
+
+        Finished. Please run Mix again.
+ 
+
+josem@josemalcher MINGW64 ~/Documents/workspaces/Laravel-Mastery-CodeExperts/appMeusEventos (master)      
+$ npm run dev
+
+> dev
+> npm run development
+
+
+> development
+> mix
+
+
+● Mix █████████████████████████ building (10%) 0/2 entries 3/3 dependencies 0/3 modules 3 active
+ babel-loader › res
+```
+
+
 - 114 Conhecendo os Arquivos do Auth
 - 115 Adaptações do Nosso Painel
 - 116 O Btn de Logout
