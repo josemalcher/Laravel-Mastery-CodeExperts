@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Event::factory(30)->create();
 
         $this->call(UsersTableSeeder::class);
-        $this->call(EventsTableSeeder::class);
+        // $this->call(EventsTableSeeder::class);
     }
 }

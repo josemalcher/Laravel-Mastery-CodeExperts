@@ -27,4 +27,10 @@ class Event extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+
+    }
 }

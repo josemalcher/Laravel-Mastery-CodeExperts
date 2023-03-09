@@ -19,7 +19,7 @@ class EventController extends Controller
 
     public function index()
     {
-         $events = $this->event->paginate(3);
+         $events = $this->event->paginate(10);
 
         return view('admin.events.index', compact('events'));
     }

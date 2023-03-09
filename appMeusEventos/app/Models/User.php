@@ -49,4 +49,9 @@ class User extends Authenticatable
         // return $this->hasOne(Profile::class, 'usuario_id'); // ex com nome diferente
         return $this->hasOne(Profile::class);
     }
+
+    public function events()
+    {
+            return $this->hasMany(Event::class, 'owner_id');
+    }
 }

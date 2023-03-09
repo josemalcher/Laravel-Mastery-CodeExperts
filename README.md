@@ -2946,6 +2946,66 @@ $ npm run dev
 - 116 O Btn de Logout
 - 117 Arquivo de Configurações Auth
 - 118 Configurações para Dono de Evento
+
+```
+$ php artisan make:migration alter_table_events_add_column_owner_id --table=events
+Created Migration: 2023_03_09_190205_alter_table_events_add_column_owner_id
+```
+
+```php
+class AlterTableEventsAddColumnOwnerId extends Migration
+{
+
+    public function up()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->foreignId('owner_id')
+            ->nullable()
+            ->constrained('users')
+            ->cascadeOnDelete();
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->dropForeign('events_owner_id_foreign');
+            $table->dropColumn('owner_id');
+        });
+    }
+```
+
+```
+$ php artisan migrate
+
+```
+
+```php
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        User::factory(50)
+            ->has(
+                Event::factory(30)
+                ->hasPhotos(4)
+                ->hasCategories(3)
+            )
+            ->hasProfile()
+            ->create();
+    }
+}
+```
+
+```
+$ php artisan migrate:refresh --seed
+```
+
 - 119 Eventos por Usuário Logado
 - 120 O Middleware Authenticate
 - 121 Conclusões
