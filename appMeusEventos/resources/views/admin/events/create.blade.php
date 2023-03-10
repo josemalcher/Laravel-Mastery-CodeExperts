@@ -29,7 +29,7 @@ Criar Evento
             @csrf
             <div class="form-group">
                 <label>Título Evento</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}">
                 @error('title')
                     <div class="invalid-feedback">
                         {{$message}}
@@ -38,7 +38,7 @@ Criar Evento
             </div>
             <div class="form-group">
                 <label>Descrição Rápida Evento</label>
-                <input type="text" class="form-control @error('description') is-invalid @enderror" name="description">
+                <input type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}">
                 @error('description')
                     <div class="invalid-feedback">
                         {{$message}}
@@ -48,7 +48,7 @@ Criar Evento
 
             <div class="form-group">
                 <label>Fale Mais sobre</label>
-                <textarea name="body" id="" cols="30" rows="10" class="form-control @error('body') is-invalid @enderror"></textarea>
+                <textarea name="body" id="" cols="30" rows="10" class="form-control @error('body') is-invalid @enderror">{{ old('body') }}</textarea>
                 @error('body')
                     <div class="invalid-feedback">
                         {{$message}}
@@ -58,7 +58,7 @@ Criar Evento
 
             <div class="form-group">
                 <label>Quando Ocorrerá</label>
-                <input type="text" class="form-control @error('start_event') is-invalid @enderror" name="start_event">
+                <input type="text" class="form-control @error('start_event') is-invalid @enderror" name="start_event" value="{{ old('start_event') }}">
                 @error('start_event')
                     <div class="invalid-feedback">
                         {{$message}}
