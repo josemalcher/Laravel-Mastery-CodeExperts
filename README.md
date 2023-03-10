@@ -3008,11 +3008,16 @@ $ php artisan migrate:refresh --seed
 
 - 119 Eventos por Usuário Logado
 
-```php
-   public function index()
-    {
-        dd(auth()->user()->events);
 
+```php
+public function index()
+    {
+        // dd(auth()->user()->events);
+
+         $events = auth()->user()->events()->paginate(10);
+
+        return view('admin.events.index', compact('events'));
+    }
 ```
 
 ```php
