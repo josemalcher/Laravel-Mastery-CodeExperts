@@ -25,7 +25,7 @@
                     <tr>
                         <td>{{ $event->id }}</td>
                         <td>{{ $event->title }}</td>
-                        <td>{{ $event->created_at->format('d/m/Y H:i') }}</td>
+                        <td>{{ $event->start_event->format('d/m/Y H:i') }}</td>
                         <td class="d-flex justify-content-between">
                             <a href="{{route('admin.events.edit', $event->id)}}" class="btn btn-info">Editar</a>
                             <form action="{{ route('admin.events.destroy', ['event'=> $event->id]) }}" method="post">

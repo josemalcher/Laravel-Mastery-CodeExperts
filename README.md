@@ -3106,6 +3106,35 @@ public function store(EventRequest $request)
 
 
 - 125 Máscara de Data Evento
+
+```
+$ npm i inputmask -D
+
+$ npm run dev
+```
+
+- [appMeusEventos/resources/js/bootstrap.js](appMeusEventos/resources/js/bootstrap.js)
+```js
+var Inputmask = require('inputmask');
+```
+
+```php
+@section('scripts')
+    <script>
+
+        let el = document.querySelector('input[name=start_event]');
+        console.log(el);
+        let im = new Inputmask('99/99/9999 99:99:99');
+        console.log(im);
+
+        im.mask(el);
+
+    </script>
+@endsection
+```
+
+
+
 - 126 Formatando Data para o Banco
 - 127 Nosso primeiro Middleware
 - 128 Usuário: Bloqueando Acesso A Outros Eventos
