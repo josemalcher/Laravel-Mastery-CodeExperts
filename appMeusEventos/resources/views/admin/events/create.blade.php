@@ -77,7 +77,7 @@ Criar Evento
 
         let el = document.querySelector('input[name=start_event]');
         console.log(el);
-        let im = new Inputmask('99/99/9999 99:99:99');
+        let im = new Inputmask('99/99/9999 99:99');
         console.log(im);
 
         im.mask(el);

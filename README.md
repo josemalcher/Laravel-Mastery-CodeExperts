@@ -3133,9 +3133,16 @@ var Inputmask = require('inputmask');
 @endsection
 ```
 
-
-
 - 126 Formatando Data para o Banco
+
+```php
+    public function setStartEventAttribute($value)
+    {
+        $this->attributes['start_event'] = (\DateTime::createFromFormat('d/m/Y H:i', $value)
+            ->format('Y-m-d H:i'));
+    }
+```
+
 - 127 Nosso primeiro Middleware
 - 128 Usuário: Bloqueando Acesso A Outros Eventos
 - 129 Melhorias Home de Eventos
