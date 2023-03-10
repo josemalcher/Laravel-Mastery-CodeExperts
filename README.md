@@ -3076,6 +3076,35 @@ class Event extends Model
 ```
 
 - 124 Entendendo Eloquent Mutators
+
+```php
+class Event extends Model
+{
+   public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+
+        $this->attributes['slug'] = Str::slug($value);
+    }
+```
+
+```php
+public function store(EventRequest $request)
+    {
+        $event = $request->all();
+
+        // $event['slug'] = Str::slug($event['title']);
+
+        $event = $this->event->create($event);
+        $event->owner()->associate(auth()->user());
+        $event->save();
+
+        return redirect()->route('admin.events.index');
+    }
+```
+
+
+
 - 125 Máscara de Data Evento
 - 126 Formatando Data para o Banco
 - 127 Nosso primeiro Middleware

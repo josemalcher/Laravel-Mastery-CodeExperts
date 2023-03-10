@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Event extends Model
 {
@@ -32,6 +33,18 @@ class Event extends Model
     {
         return !$this->owner() ? 'Organizador Não encontrado' : $this->owner->name;
     }
+
+    /*
+     * Mutators
+     *
+     */
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+
+        $this->attributes['slug'] = Str::slug($value);
+    }
+
 
     public function photos()
     {

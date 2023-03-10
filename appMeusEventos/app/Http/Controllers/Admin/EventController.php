@@ -40,7 +40,8 @@ class EventController extends Controller
     {
 
         $event = $request->all();
-        $event['slug'] = Str::slug($event['title']);
+
+        // $event['slug'] = Str::slug($event['title']);
 
         $event = $this->event->create($event);
         $event->owner()->associate(auth()->user());
