@@ -18,6 +18,21 @@ class Event extends Model
 
     protected $dates = ['start_event'];
 
+    public function getTitleAttribute()
+    {
+        return 'Evento: ' . $this->attributes['title'];
+    }
+
+//    public function getStartEventAttribute() // coluna: start_event
+//    {
+//        // return 'Evento: ' . $this->attributes['title'];
+//    }
+
+    public function getOwnerNameAttribute()
+    {
+        return !$this->owner() ? 'Organizador Não encontrado' : $this->owner->name;
+    }
+
     public function photos()
     {
         return $this->hasMany(Photo::class);// event_id

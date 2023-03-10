@@ -18,9 +18,12 @@
                <div class="card">
                    <img src="https://via.placeholder.com/640x480.png/00dd99?text=omnis" alt="" class="card-img-top">
                   <div class="card-body">
+
                       <h5 class="card-title">{{$event->title}}</h5>
                       <strong>Acontece em {{ $event->start_event->format('d/m/Y H:i') }}</strong>
                       <p class="card-text">{{$event->description}}</p>
+
+                      <p>Organizado por: {{ $event->owner_name }}</p>
 
                       <a href="{{ route('event.single', ['slug'=> $event->slug])}}" class="btn btn-primary">Ver Evento</a>
                   </div>

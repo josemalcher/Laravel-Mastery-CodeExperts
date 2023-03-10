@@ -3048,6 +3048,33 @@ public function index()
 
 - 122 Introdução
 - 123 Entendendo Eloquent Accessors
+
+```php
+class Event extends Model
+{
+    public function getTitleAttribute()
+    {
+        return 'Evento: ' . $this->attributes['title'];
+    }
+
+//    public function getStartEventAttribute() // coluna: start_event
+//    {
+//        // return 'Evento: ' . $this->attributes['title'];
+//    }
+
+    public function getOwnerNameAttribute()
+    {
+        return !$this->owner() ? 'Organizador Não encontrado' : $this->owner->name;
+    }
+
+```
+
+```php
+        @forelse($events as $event)
+
+             <p>Organizado por: {{ $event->owner_name }}</p>
+```
+
 - 124 Entendendo Eloquent Mutators
 - 125 Máscara de Data Evento
 - 126 Formatando Data para o Banco
