@@ -3007,6 +3007,30 @@ $ php artisan migrate:refresh --seed
 ```
 
 - 119 Eventos por Usuário Logado
+
+```php
+   public function index()
+    {
+        dd(auth()->user()->events);
+
+```
+
+```php
+ public function store(EventRequest $request)
+    {
+
+        $event = $request->all();
+        $event['slug'] = Str::slug($event['title']);
+
+        $event = $this->event->create($event);
+        $event->owner()->associate(auth()->user());
+        $event->save();
+
+        return redirect()->route('admin.events.index');
+    }
+
+```
+
 - 120 O Middleware Authenticate
 - 121 Conclusões
 

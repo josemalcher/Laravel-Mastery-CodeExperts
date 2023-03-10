@@ -19,7 +19,9 @@ class EventController extends Controller
 
     public function index()
     {
-         $events = $this->event->paginate(10);
+        // dd(auth()->user()->events);
+
+         $events = auth()->user()->events()->paginate(10);
 
         return view('admin.events.index', compact('events'));
     }
@@ -36,24 +38,13 @@ class EventController extends Controller
 
     public function store(EventRequest $request)
     {
-        // $request->validate([
-        //     'title' => 'required|min:30',
-        //     'description' => 'required',
-        //     'body' => 'required',
-        //     'start_event' => 'required',
-        // ],
-
-        // [
-        //     'title.required' => 'Este campo de Títuilo é obrigatório',
-
-        //     'required' => 'Este campo é obrigatório',
-        //     'min' => 'Este campo requer mais caracteres. Mínimo é de :min'
-        // ]);
 
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
-        $this->event->create($event);
+        $event = $this->event->create($event);
+        $event->owner()->associate(auth()->user());
+        $event->save();
 
         return redirect()->route('admin.events.index');
     }
