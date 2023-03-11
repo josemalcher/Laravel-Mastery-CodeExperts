@@ -3459,7 +3459,12 @@ class Event extends Model
 
 ## <a name="parte17">17 - Bloco 2 - Iniciando</a>
 
-
+- 190 Introdução ao Bloco
+- 191 Instalando o Breeze
+- 192 Os Arquivos do Breeze
+- 193 As Views do Breeze
+- 194 O Tailwind no Breeze
+- 195 Testando Painel e Concluindo
 
 [Voltar ao Índice](#indice)
 
@@ -3468,7 +3473,20 @@ class Event extends Model
 
 ## <a name="parte18">18 - Primeiros Passos com Livewire</a>
 
-
+- 196 Instalando Livewire
+- 197 DataBiding Livewire
+- 198 Nuances Wire Model
+- 199 Manipulando Ações
+- 200 Mensagens de Feedback
+- 201 Validações
+- 202 Exemplo com Banco de Dados
+- 203 Paginação sem Reload
+- 204 Componentes Aninhados
+- 205 Organizando Componentes
+- 206 Componente de Edição
+- 207 Editando Conteúdo
+- 208 Removendo Conteúdo
+- 209 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3476,7 +3494,15 @@ class Event extends Model
 
 ## <a name="parte19">9. Conhecendo o Tailwind</a>
 
-
+- 210 Introdução
+- 211 Utility First
+- 212 Relembrando Configs do Tailwind
+- 213 Tailwind & Design Responsivo
+- 214 Estados e Trabalhando Button
+- 215 Diretiva Apply
+- 216 Estilizando e Melhorando Listagem de Conteúdos
+- 217 Melhorando Forms
+- 218 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3485,7 +3511,16 @@ class Event extends Model
 
 ## <a name="parte20">20. Iniciando Projeto de Fato</a>
 
-
+- 219 Introdução
+- 220 Incrementando Tabela de Conteúdos
+- 221 Tabela de Videos
+- 222 Relacionamento Videos e Conteudo
+- 223 Incrementos das Telas de Conteúdo
+- 224 Realizando Upload
+- 225 Prévia de Imagens Upload
+- 226 Validações Upload
+- 227 Upload na Edição
+- 228 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3493,7 +3528,16 @@ class Event extends Model
 
 ## <a name="parte21">21. Upload e Processamento de Video</a>
 
-
+- 229 Introdução
+- 230 Componente Create Video
+- 231 AlpineJS no Progresso Upload
+- 232 Configurações Upload de Vídeo
+- 233 Upload Múltiplo Videos
+- 234 Pacote Para Processamento de Video
+- 235 FFMpeg Linux
+- 236 FFMpeg OS X
+- 237 Processando Vídeo Teste
+- 238 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3502,7 +3546,21 @@ class Event extends Model
 
 ## <a name="parte22">22. Trabalhando com Filas</a>
 
-
+- 239 Introdução
+- 240 A Job Class
+- 241 Configurações de Filas
+- 242 Disparando Job
+- 243 Jobs Assíncronos
+- 244 Retentativas de Processamento
+- 245 Jobs Falhos via Terminal
+- 246 Modificações para Tabela Vídeos
+- 247 Testes e Fix Vídeo
+- 248 Job para Processamento de Vídeo
+- 249 Processando Vídeo via Job
+- 250 Job para Thumb de Vídeo
+- 251 Categorizando Jobs por Fila
+- 252 Mais opções do comando work
+- 253 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3511,7 +3569,22 @@ class Event extends Model
 
 ## <a name="parte23">23. Notificações & Player</a>
 
-
+- 254 Introdução
+- 255 Tabela Notificação
+- 256 Classe de Notificação
+- 257 Traits de Notificação
+- 258 Disparando Notificações
+- 259 Manipulando Notificações
+- 260 Notificações no Processo do Job
+- 261 Notificações no Sucesso e Erro dos Jobs
+- 262 Ícone de Notificações Admin
+- 263 Exibindo Notificações Admin
+- 264 Fix Ícone de Notificações
+- 265 Criando Player
+- 266 Tela de Vídeos Conteúdo
+- 267 Organizando Área de Upload Vídeo
+- 268 Tela de Edição Vídeo
+- 269 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3520,7 +3593,21 @@ class Event extends Model
 
 ## <a name="parte24">24. Relações Polimórficas & Incrementos Projeto</a>
 
-
+- 270 Introdução
+- 271 Um pra Um Polimórfico
+- 272 Trabalhando com Um pra Um
+- 273 Um pra Muitos Polimórfico
+- 274 Muitos pra Muitos Polimórfico
+- 275 Trabalhando com Muitos pra Muitos
+- 276 Criando Conteúdos pro Usuário
+- 277 Modifições no Player do Projeto
+- 278 Componente Criar Comentários
+- 279 Iniciando Save de Comentário
+- 280 Atualizando Propriedades Componente via JS
+- 281 Eventos Entre Componentes
+- 282 Listando Comentários
+- 283 Quebrando Comentários em Componentes Menores
+- 284 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3528,7 +3615,16 @@ class Event extends Model
 
 ## <a name="parte25">25. Assinatura com Laravel Cashier Stripe</a>
 
-
+- 285 Introdução
+- 286 Instalando e Configurando Cashier
+- 287 Preparando User
+- 288 Componente Checkout
+- 289 Entendendo a cobrança da assinatura
+- 290 Realizando Cobrança
+- 291 Caminho Correto para Assinaturas Stripe
+- 292 Usuário Autenticado e Controle Assinatura
+- 293 Testando Acesso Válido Assinatura
+- 294 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3536,7 +3632,31 @@ class Event extends Model
 
 ## <a name="parte26">26. Melhorias e Finalizando Bloco 2</a>
 
-
+- 295 Introdução
+- 296 Iniciando Componente Favoritar
+- 297 Favoritando Conteúdo
+- 298 Favoritando Vídeos
+- 299 Referência Video Correto Componente
+- 300 Usando Cover Real Conteúdo
+- 301 Adicionando Link Videos Conteúdo
+- 302 Atualizando Componente Icone Notificações
+- 303 Falando sobre Wire Poll
+- 304 Componente Progresso Vídeo Processando
+- 305 Aplicando Controle ao Admin
+- 306 Removendo Vídeo Pós Processamento
+- 307 Notificando Admins do Processamento Vídeo
+- 308 Usando Query Scopes
+- 309 Responsividade na Listagem
+- 310 Agrupando Filmes e Séries
+- 311 Fila em Cadeia
+- 312 Fila em Lotes
+- 313 Mais Sobre Lotes em Filas
+- 314 Correção no Progresso do Processamento Vídeo
+- 315 Mais Sobre Ecoding de Vídeo
+- 316 Área Minha Assinatura
+- 317 Cancelando Assinatura
+- 318 Detalhes na Dashboard Admin
+- 319 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3544,7 +3664,14 @@ class Event extends Model
 
 ## <a name="parte27">27. Iniciando Bloco 3</a>
 
-
+- 320 Introdução
+- 321 O Que Veremos no Bloco
+- 322 API X WebService
+- 323 Recursos, Endpoints e Mais
+- 324 Visão do Esquema API
+- 325 Como será o trabalho no Bloco
+- 326 Ambientando Sail
+- 327 Conslusões
 
 [Voltar ao Índice](#indice)
 
@@ -3552,7 +3679,14 @@ class Event extends Model
 
 ## <a name="parte28">28. Nossa Primeira API REST</a>
 
-
+- 328 Iniciando Projeto
+- 329 Explorando Arquivos API
+- 330 Iniciando API REST
+- 331 Criando Recursos
+- 332 Atualizando Recursos
+- 333 Apagando Recursos
+- 334 Interagindo com os Endpoints
+- 335 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3560,7 +3694,18 @@ class Event extends Model
 
 ## <a name="parte29">29. Recursos para API</a>
 
-
+- 336 Introdução
+- 337 Entendendo Lógica de Serialização
+- 338 Modificando e Apendando Atributos Model
+- 339 Hidden e Visible Atributos
+- 340 Serializando Datas e Formatando
+- 341 Relação Produtos e Categorias
+- 342 REST Dados Relacionados
+- 343 Eager Loading Global Model
+- 344 API Resources
+- 345 API Resources Collections
+- 346 API Errors Handler
+- 347 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3568,7 +3713,13 @@ class Event extends Model
 
 ## <a name="parte30">30. Sanctum: API Tokens Backend</a>
 
-
+- 348 Introdução
+- 349 Configs Sanctum
+- 350 Autenticando Usuários
+- 351 Autorização nos Endpoints
+- 352 Removendo Tokens
+- 353 Permissões nos Tokens
+- 354 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3576,7 +3727,29 @@ class Event extends Model
 
 ## <a name="parte31">31. Testes de Software Laravel</a>
 
-
+- 355 Introdução
+- 356 Testes no Laravel
+- 357 Nossa Primeira Classe de Teste
+- 358 Testando Endpoint GET /products
+- 359 Mais Assertions JSON
+- 360 Testando GET /products/id
+- 361 Testando Não Autorizado POST /products
+- 362 Testando Criação de Produtos
+- 363 Testando Endpoint PUT /products/id
+- 364 Testando Endpoint DELETE /products/id
+- 365 Testando Validação no POST
+- 366 Asserts para Conteúdo da Validação
+- 367 Testando Validação no PUT Produto
+- 368 Testes Upload Fotos Produto
+- 369 Testes Fotos Associadas a Produto
+- 370 Testes Validação Fotos
+- 371 Continuando Validação Imagens
+- 372 Autorização Endpoint Fotos
+- 373 Testando Listagem Fotos Produto
+- 374 Testando Remoção Foto Produto
+- 375 Testando Categorias Produto Endpoint
+- 376 Testando Paginação Produtos
+- 377 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3584,7 +3757,26 @@ class Event extends Model
 
 ## <a name="parte32">32. Front com VueJS - Autenticação</a>
 
-
+- 378 Introdução
+- 379 Iniciando Projeto Vue
+- 380 Configurando VS Code para Vue
+- 381 Conhecendo Estrutura Projeto
+- 382 Instalando TailwindCSS
+- 383 Instalando AXIOS HTTP
+- 384 Criando Componente Login
+- 385 Componente Login 2
+- 386 Trabalhando com Dados Componente Vue
+- 387 Realizando Autenticação API
+- 388 Chamada a Endpoints sob Auth
+- 389 Serviço para HTTP Client
+- 390 Persistindo Token
+- 391 Logout e Mais
+- 392 Before Route Enter - Router
+- 393 Ponderações VueJS
+- 394 Config Backend Sanctum SPA
+- 395 Config Frontend Sanctum SPA
+- 396 Ponderações Token & SPAs
+- 397 Conclusões
 
 [Voltar ao Índice](#indice)
 
@@ -3592,7 +3784,14 @@ class Event extends Model
 
 ## <a name="parte33">33. Gerenciando Estado com Pinia</a>
 
-
+- 398 Introdução
+- 399 O Pinia
+- 400 Melhorias HttpClient
+- 401 Store: Auth
+- 402 Usando Auth Store
+- 403 Persistindo Estado do Pinia
+- 404 Adicionando Interceptors HttpClient
+- 405 Conclusões
 
 [Voltar ao Índice](#indice)
 
