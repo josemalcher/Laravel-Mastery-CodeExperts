@@ -14,7 +14,8 @@ class Event extends Model
         'description',
         'body',
         'slug',
-        'start_event'
+        'start_event',
+        'banner'
     ];
 
     protected $dates = ['start_event'];
