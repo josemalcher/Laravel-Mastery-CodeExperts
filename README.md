@@ -3302,6 +3302,54 @@ class AppServiceProvider extends ServiceProvider
 ```
 
 - 133 Melhorando View Composer
+
+```php
+class CategoiesViewComposer
+{
+    private $category;
+
+    public function __construct(Category $category)
+    {
+        $this->category = $category;
+    }
+
+    public function composer($view)
+    {
+        return $view->with('categories', $this->category->all(['nome', 'slug']));
+    }
+}
+```
+
+```
+$ php artisan make:provider ViewComposerServiceProvider
+Provider created successfully.
+
+```
+
+```php
+class ViewComposerServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        view()->composer('layouts.site', 'App\Http\Views\Composer\CategoiesViewComposer@composer');
+    }
+}
+
+```
+
+```php
+// appMeusEventos/config/app.php
+
+ 'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+        App\Providers\ViewComposerServiceProvider::class,
+
+    ],
+```
+
 - 134 Eventos Que Vão Acontecer e Concluindo
 
 [Voltar ao Índice](#indice)
