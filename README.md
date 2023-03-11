@@ -3187,6 +3187,22 @@ class EventController extends Controller
 
 
 - 128 Usuário: Bloqueando Acesso A Outros Eventos
+
+```php 
+class CheckUserHasCanAccessEventToEditMiddleware
+{
+    public function handle(Request $request, Closure $next)
+    {
+        $event = Event::find($request->route()->parameter('event'));
+
+        if( !auth()->user()->events->contains($event)){
+            abort(403);
+        }
+
+        return $next($request);
+    }
+```
+
 - 129 Melhorias Home de Eventos
 - 130 Busca de Eventos
 - 131 Filtro Por Categorias

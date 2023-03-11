@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Event;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,12 @@ class CheckUserHasCanAccessEventToEditMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        $event = Event::find($request->route()->parameter('event'));
+
+        if( !auth()->user()->events->contains($event)){
+            abort(403);
+        }
+
         return $next($request);
     }
 }
