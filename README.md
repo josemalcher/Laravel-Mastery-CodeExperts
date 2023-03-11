@@ -3381,6 +3381,30 @@ class Event extends Model
 ## <a name="parte14">14 - Upload de Arquivos</a>
 
 - 135 Introdução
+
+```
+$ php artisan make:migration alter_events_table_add_banner_collumn --table=events
+Created Migration: 2023_03_11_201925_alter_events_table_add_banner_collumn
+
+```
+
+```php
+class AlterEventsTableAddBannerCollumn extends Migration
+{
+    public function up()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->string('banner')->nullable();
+        });
+    }
+    public function down()
+    {
+        Schema::table('events', function (Blueprint $table) {
+            $table->dropColumn('banner');
+        });
+    }
+```
+
 - 136 Iniciando Upload
 - 137 Configurações de Upload
 - 138 Upload e Save no Banco
