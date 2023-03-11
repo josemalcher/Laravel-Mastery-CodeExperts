@@ -3144,6 +3144,48 @@ var Inputmask = require('inputmask');
 ```
 
 - 127 Nosso primeiro Middleware
+
+```
+$ php artisan make:middleware CheckUserHasCanAccessEventToEditMiddleware
+Middleware created successfully.
+
+```
+
+```php
+// appMeusEventos/app/Http/Kernel.php
+
+    protected $routeMiddleware = [
+
+        'user.can.edit.event' => \App\Http\Middleware\CheckUserHasCanAccessEventToEditMiddleware::class,
+    ];
+```
+
+```php
+// "MALABARISMO"
+    Route::resource('events', EventController::class)
+        ->except(['edit', 'updade']);
+
+    Route::resource('events', EventController::class)
+    ->only(['edit', 'update'])
+    ->middleware('user.can.edit.event');
+    // ->middleware(App\Http\Middleware\CheckUserHasCanAccessEventToEditMiddleware::class);
+```
+
+```php
+class EventController extends Controller
+{
+    private $event;
+
+    public function __construct(Event $event)
+    {
+        $this->event = $event;
+
+        $this->middleware('user.can.edit.event') // Edit e Update
+        ->only('edit', 'update');
+    }
+```
+
+
 - 128 Usuário: Bloqueando Acesso A Outros Eventos
 - 129 Melhorias Home de Eventos
 - 130 Busca de Eventos

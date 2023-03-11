@@ -120,7 +120,19 @@ Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
         'events.photos' => EventPhotoController::class
     ]); */
 
+
+    // "MALABARISMO"
+/*
+    Route::resource('events', EventController::class)
+        ->except(['edit', 'updade']);
+
+    Route::resource('events', EventController::class)
+    ->only(['edit', 'update'])
+    ->middleware('user.can.edit.event');
+    // ->middleware(App\Http\Middleware\CheckUserHasCanAccessEventToEditMiddleware::class);
+*/
     Route::resource('events', EventController::class);
+
     Route::resource('events.photos', EventPhotoController::class);
 
 });
