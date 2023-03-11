@@ -3286,6 +3286,21 @@ class HomeController extends Controller
 ```
 
 - 132 View Share e Composer
+
+```php
+class AppServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        // view()->share('categories', \App\Models\Category::all(['name', 'slug']));
+
+        view()->composer('layouts.site', function ($view) {
+            $view->with('categories', \App\Models\Category::all(['nome', 'slug']));
+        });
+    }
+}
+```
+
 - 133 Melhorando View Composer
 - 134 Eventos Que Vão Acontecer e Concluindo
 
