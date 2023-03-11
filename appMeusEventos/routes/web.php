@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\{EventController, EventPhotoController};
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/eventos/{slug}',  [HomeController::class, 'show'])->name('event.single');
 
@@ -140,4 +140,4 @@ Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
