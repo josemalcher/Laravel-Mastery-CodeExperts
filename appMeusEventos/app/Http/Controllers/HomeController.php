@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\{Event, Category};
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,19 +19,24 @@ class HomeController extends Controller
 
     public function index()
     {
-        $events = $this->event->orderBy('start_event', 'DESC');
+        $byCategory = request()->has('category')
+            ? Category::whereSlug(request()->get('category'))->first()->events()
+            : null ;
+
+
+        // $events = $this->event->orderBy('start_event', 'DESC');
 
 //        if( $query = request()->query('s')){
 //            $events->where('title', 'LIKE', '%' . $query . '%');
 //        }
 
-        $events->when($search = request()->query('s'), function ($queryBuilder) use ($search){
-            return $queryBuilder->where('title', 'LIKE', '%' . $search . '%');
-        });
+        $events = $this->event->getEventsHome($byCategory)->paginate(12);
 
-        $events = $events->paginate(12);
+        // $events = $events->paginate(12);
 
-        return view('home', compact('events'));
+        $categories = Category::all(['nome', 'slug']);
+
+        return view('home', compact('events', 'categories'));
     }
 
     public function show($slug)

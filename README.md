@@ -3240,6 +3240,51 @@ class HomeController extends Controller
 ```
 
 - 131 Filtro Por Categorias
+
+```php
+class Event extends Model
+{
+    /* Outros methods */
+    public function getEventsHome($byCategory = null)
+    {
+        $events = $byCategory ? $byCategory : $this->orderBy('start_event', 'DESC');
+
+        $events->when($search = request()->query('s'), function ($queryBuilder) use ($search){
+            return $queryBuilder->where('title', 'LIKE', '%' . $search . '%');
+        });
+
+        return $events;
+    }
+}
+```
+
+```php
+class HomeController extends Controller
+{
+    public function index()
+    {
+        $byCategory = request()->has('category')
+            ? Category::whereSlug(request()->get('category'))->first()->events()
+            : null ;
+
+        $events = $this->event->getEventsHome($byCategory)->paginate(12);
+
+        $categories = Category::all(['nome', 'slug']);
+
+        return view('home', compact('events', 'categories'));
+    }
+```
+
+```php
+  <div class="dropdown-menu">
+      @foreach($categories as $category)
+          <a class="dropdown-item" href="{{ route('home', ['category'=> $category->slug]) }}">
+              {{ $category->nome }}
+          </a>
+      @endforeach
+  </div>
+```
+
 - 132 View Share e Composer
 - 133 Melhorando View Composer
 - 134 Eventos Que Vão Acontecer e Concluindo
