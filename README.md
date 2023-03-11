@@ -3205,6 +3205,40 @@ class CheckUserHasCanAccessEventToEditMiddleware
 
 - 129 Melhorias Home de Eventos
 - 130 Busca de Eventos
+
+```php
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        $events = $this->event->orderBy('start_event', 'DESC');
+
+//        if( $query = request()->query('s')){
+//            $events->where('title', 'LIKE', '%' . $query . '%');
+//        }
+
+        $events->when($search = request()->query('s'), function ($queryBuilder) use ($search){
+            return $queryBuilder->where('title', 'LIKE', '%' . $search . '%');
+        });
+
+        $events = $events->paginate(12);
+
+        return view('home', compact('events'));
+    }
+```
+
+```php
+  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search"
+             placeholder="Buscar Evento" aria-label="Search"
+             name="s"
+             value="{{ request()->query('s') }}"
+              >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+```
+
 - 131 Filtro Por Categorias
 - 132 View Share e Composer
 - 133 Melhorando View Composer
