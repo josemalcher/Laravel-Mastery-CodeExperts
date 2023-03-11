@@ -3352,6 +3352,27 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 - 134 Eventos Que Vão Acontecer e Concluindo
 
+```php
+class Event extends Model
+{
+    /* Outros methods */
+    public function getEventsHome($byCategory = null)
+    {
+        $events = $byCategory ? $byCategory : $this->orderBy('start_event', 'DESC');
+
+        $events->when($search = request()->query('s'), function ($queryBuilder) use ($search){
+            return $queryBuilder->where('title', 'LIKE', '%' . $search . '%');
+        });
+
+        // $events->whereRaw('DATE(start_event) >= DATE(NOW())'); // pode dar problemas com outros bancos..etc!
+
+        $events->whereDate('start_event', '>=', now());
+
+        return $events;
+    }
+}
+```
+
 [Voltar ao Índice](#indice)
 
 ---

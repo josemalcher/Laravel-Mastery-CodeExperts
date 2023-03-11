@@ -78,6 +78,10 @@ class Event extends Model
             return $queryBuilder->where('title', 'LIKE', '%' . $search . '%');
         });
 
+        // $events->whereRaw('DATE(start_event) >= DATE(NOW())'); // pode dar problemas com outros bancos..etc!
+
+        $events->whereDate('start_event', '>=', now());
+
         return $events;
     }
 }
