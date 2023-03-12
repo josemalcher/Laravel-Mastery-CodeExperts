@@ -3438,6 +3438,44 @@ class AlterEventsTableAddBannerCollumn extends Migration
 ```
 
 - 139 Validando Upload de Imagens
+
+```php
+    public function store(EventRequest $request)
+    {
+        // $banner = $request->file('banner');
+
+        $event = $request->all();
+
+        if ($banner = $request->file('banner')) {
+            $event['banner'] = $banner->store('banner', 'public');
+        }
+
+```
+
+```php
+    public function rules()
+    {
+        return [
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+            'banner' => 'required|image'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Este campo de Títuilo é obrigatório',
+
+            'required' => 'Este campo é obrigatório',
+            'min' => 'Este campo requer mais caracteres. Mínimo é de :min',
+            'image' => 'Arquivo de Imagem invalido'
+        ];
+    }
+```
+
 - 140 Iniciando Upload na Edição
 - 141 Concluindo Upload na Edição
 - 142 Upload de Múltiplos Arquivos

@@ -24,7 +24,7 @@ class EventController extends Controller
     {
         // dd(auth()->user()->events);
 
-         $events = auth()->user()->events()->paginate(10);
+        $events = auth()->user()->events()->paginate(10);
 
         return view('admin.events.index', compact('events'));
     }
@@ -46,7 +46,9 @@ class EventController extends Controller
 
         $event = $request->all();
 
-        $event['banner'] = ($request->file('banner'))->store('banner', 'public');
+        if ($banner = $request->file('banner')) {
+            $event['banner'] = $banner->store('banner', 'public');
+        }
 
         // $event['slug'] = Str::slug($event['title']);
 

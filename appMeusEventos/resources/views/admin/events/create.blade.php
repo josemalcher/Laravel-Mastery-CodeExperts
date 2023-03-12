@@ -68,7 +68,12 @@ Criar Evento
 
             <div class="form-group">
                 <label>Carregar um Banner para o Evento</label>
-                <input type="file" name="banner" id="banner" class="form-control">
+                <input type="file" name="banner" id="banner" class="form-control @error('banner') is-invalid @enderror">
+                @error('banner')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+                @enderror
             </div>
 
             <button type="submit" class="btn btn-lg btn-success">Criar Evento</button>
