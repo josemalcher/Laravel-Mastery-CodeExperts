@@ -36,15 +36,17 @@ class EventController extends Controller
 
     public function show($event)
     {
+        dd($this->event->find($event));
         return 'Evento: ' . $event;
     }
 
     public function store(EventRequest $request)
     {
-        $banner = $request->file('banner');
-        dd($banner->store('banner', 'public'));
+        // $banner = $request->file('banner');
 
         $event = $request->all();
+
+        $event['banner'] = ($request->file('banner'))->store('banner', 'public');
 
         // $event['slug'] = Str::slug($event['title']);
 
