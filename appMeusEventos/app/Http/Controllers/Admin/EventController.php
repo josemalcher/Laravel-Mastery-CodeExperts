@@ -42,7 +42,7 @@ class EventController extends Controller
     public function store(EventRequest $request)
     {
         $banner = $request->file('banner');
-        dd($banner->store('banner'));
+        dd($banner->store('banner', 'public'));
 
         $event = $request->all();
 
