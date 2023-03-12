@@ -3406,6 +3406,15 @@ class AlterEventsTableAddBannerCollumn extends Migration
 ```
 
 - 136 Iniciando Upload
+
+```php
+   public function store(EventRequest $request)
+    {
+        $banner = $request->file('banner');
+        dd($banner->store('banner'));
+
+```
+
 - 137 Configurações de Upload
 - 138 Upload e Save no Banco
 - 139 Validando Upload de Imagens
