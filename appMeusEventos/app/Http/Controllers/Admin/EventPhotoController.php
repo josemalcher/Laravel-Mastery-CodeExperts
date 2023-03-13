@@ -14,7 +14,7 @@ class EventPhotoController extends Controller
      */
     public function index($event)
     {
-
+        $event = \App\Models\Event::find($event);
         return view('admin.events.photos', compact('event'));
     }
 
@@ -34,9 +34,20 @@ class EventPhotoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $event)
     {
-        dd($request->file('photos'));
+        $uploadPhotos = [];
+
+        // iterar nestas fotos e realizar o upload
+        foreach ($request->file('photos') as $photo) {
+            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
+        }
+
+        // salvar as referencias para o evento em questão
+        $event = \App\Models\Event::find($event);
+        $event->photos()->createMany($uploadPhotos);
+
+        return redirect()->back();
     }
 
     /**

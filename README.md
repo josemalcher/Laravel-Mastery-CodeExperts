@@ -3554,6 +3554,25 @@ class EventPhotoController extends Controller
 ```
 
 - 143 Salvando Referencias no Banco Upload Múltiplo
+
+```php
+    public function store(Request $request, $event)
+    {
+        $uploadPhotos = [];
+
+        // iterar nestas fotos e realizar o upload
+        foreach ($request->file('photos') as $photo) {
+            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
+        }
+
+        // salvar as referencias para o evento em questão
+        $event = \App\Models\Event::find($event);
+        $event->photos()->createMany($uploadPhotos);
+
+        return redirect()->back();
+    }
+```
+
 - 144 Validando Múltiplos Arquivos
 - 145 Deletando Fotos do Evento
 - 146 Falando Mais Sobre Route Model Bind

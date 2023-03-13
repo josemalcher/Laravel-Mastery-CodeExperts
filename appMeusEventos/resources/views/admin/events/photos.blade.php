@@ -12,7 +12,7 @@
                 <button class="btn btn-success">Enviar fotos do Evento</button>
             </form>
             <hr>
-
+            @dump($event->photos)
         </div>
     </div>
 @endsection
