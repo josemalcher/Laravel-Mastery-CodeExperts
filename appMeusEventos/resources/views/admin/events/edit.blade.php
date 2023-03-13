@@ -71,6 +71,31 @@
 
                 </div>
 
+                <div class="form-group my-5">
+                    <div class="row">
+                        <div class="col-12">
+                            Banner Evento
+                            <hr>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('storage/'. $event->banner) }}" alt="Banner do Evento {{$event->title}}"
+                                 class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <label>Carregar um Banner para o Evento</label>
+                            <input type="file" name="banner" id="banner" class="form-control @error('banner') is-invalid @enderror">
+                            @error('banner')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+
                 <button type="submit" class="btn btn-lg btn-success">Atualizar Evento</button>
 
             </form>

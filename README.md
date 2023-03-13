@@ -3477,6 +3477,23 @@ class AlterEventsTableAddBannerCollumn extends Migration
 ```
 
 - 140 Iniciando Upload na Edição
+
+```php
+ <div class="col-4">
+                            <img src="{{ asset('storage/'. $event->banner) }}" alt="Banner do Evento {{$event->title}}"
+                                 class="img-fluid">
+                        </div>
+
+```
+
+```
+$ php artisan storage:link
+The [......\workspaces\Laravel-Mastery-CodeExperts\appMeusEventos\public\storage] 
+link has been connected to [......\workspaces\Laravel-Mastery-CodeExperts\appMeusEventos\storage\app/public].
+The links have been created.
+
+```
+
 - 141 Concluindo Upload na Edição
 - 142 Upload de Múltiplos Arquivos
 - 143 Salvando Referencias no Banco Upload Múltiplo
