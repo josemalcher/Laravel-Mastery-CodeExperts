@@ -39,9 +39,9 @@ class HomeController extends Controller
         return view('home', compact('events', 'categories'));
     }
 
-    public function show($slug)
+    public function show(Event $event)
     {
-        $event = $this->event->where('slug', $slug)->first();
+        // $event = $this->event->where('slug', $event)->first();
 
         return view('event', compact('event'));
     }

@@ -3671,6 +3671,22 @@ class EventPhotoRequest extends FormRequest
 ```
 
 - 146 Falando Mais Sobre Route Model Bind
+
+```php
+class HomeController extends Controller
+{
+    public function show(Event $event)
+    {
+        // $event = $this->event->where('slug', $event)->first();
+
+        return view('event', compact('event'));
+    }
+```
+
+```php
+Route::get('/eventos/{event:slug}',  [HomeController::class, 'show'])->name('event.single');
+```
+
 - 147 Jogando o Upload para Trait
 - 148 Conclusões
 

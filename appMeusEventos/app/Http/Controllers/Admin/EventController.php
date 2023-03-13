@@ -60,17 +60,17 @@ class EventController extends Controller
         return redirect()->route('admin.events.index');
     }
 
-    public function edit($event)
+    public function edit(Event $event)
     {
 
-        $event = $this->event->findOrFail($event);
+        // $event = $this->event->findOrFail($event);
 
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event, EventRequest $request)
+    public function update(Event $event, EventRequest $request)
     {
-        $event = $this->event->findOrFail($event);
+        // $event = $this->event->findOrFail($event);
 
         $eventData = $request->all();
 
@@ -88,9 +88,9 @@ class EventController extends Controller
         return redirect()->back();
     }
 
-    public function destroy($event)
+    public function destroy(Event $event)
     {
-        $event = $this->event->findOrFail($event);
+        // $event = $this->event->findOrFail($event);
         $event->delete(); // 1
         // return \App\Models\Event::destroy([10,11,12]); // 3
 

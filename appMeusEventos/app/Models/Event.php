@@ -20,10 +20,10 @@ class Event extends Model
 
     protected $dates = ['start_event'];
 
-    public function getTitleAttribute()
+   /* public function getTitleAttribute()
     {
         return 'Evento: ' . $this->attributes['title'];
-    }
+    }*/
 
 //    public function getStartEventAttribute() // coluna: start_event
 //    {

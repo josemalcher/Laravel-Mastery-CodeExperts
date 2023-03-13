@@ -15,9 +15,9 @@ class EventPhotoController extends Controller
      *
      * @return \Illuminate\Http\Response|string
      */
-    public function index($event)
+    public function index(Event $event)
     {
-        $event = \App\Models\Event::find($event);
+        // $event = \App\Models\Event::find($event);
         return view('admin.events.photos', compact('event'));
     }
 
@@ -37,7 +37,7 @@ class EventPhotoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EventPhotoRequest $request, $event)
+    public function store(EventPhotoRequest $request, Event $event)
     {
         $uploadPhotos = [];
 
@@ -47,7 +47,8 @@ class EventPhotoController extends Controller
         }
 
         // salvar as referências para o evento em questão
-        $event = \App\Models\Event::find($event);
+        // $event = \App\Models\Event::find($event);
+
         $event->photos()->createMany($uploadPhotos);
 
         return redirect()->back();

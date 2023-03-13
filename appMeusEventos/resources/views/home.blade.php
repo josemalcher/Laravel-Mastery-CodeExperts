@@ -25,7 +25,7 @@
 
                       <p>Organizado por: {{ $event->owner_name }}</p>
 
-                      <a href="{{ route('event.single', ['slug'=> $event->slug])}}" class="btn btn-primary">Ver Evento</a>
+                      <a href="{{ route('event.single', ['event'=> $event->slug])}}" class="btn btn-primary">Ver Evento</a>
                   </div>
                </div>
             </div>

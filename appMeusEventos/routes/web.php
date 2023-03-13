@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\{EventController, EventPhotoController};
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/eventos/{slug}',  [HomeController::class, 'show'])->name('event.single');
+Route::get('/eventos/{event:slug}',  [HomeController::class, 'show'])->name('event.single');
 
 
 Route::get('/ola-mundo', function () {
