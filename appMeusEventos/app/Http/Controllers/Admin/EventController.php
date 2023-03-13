@@ -5,12 +5,15 @@ namespace app\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EventRequest;
 use App\Models\Event;
+use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
+    use UploadTrait;
+
     private $event;
 
     public function __construct(Event $event)
@@ -48,7 +51,8 @@ class EventController extends Controller
         $event = $request->all();
 
         if ($banner = $request->file('banner')) {
-            $event['banner'] = $banner->store('banner', 'public');
+            //$event['banner'] = $banner->store('banner', 'public');
+            $event['banner'] = $this->upload($banner, 'events/banner');
         }
 
         // $event['slug'] = Str::slug($event['title']);
@@ -80,7 +84,8 @@ class EventController extends Controller
                 Storage::disk('public')->delete($event->banner);
             }
 
-            $eventData['banner'] = $banner->store('banner', 'public');
+            // $eventData['banner'] = $banner->store('banner', 'public');
+            $eventData['banner'] = $this->upload($banner, 'events/banner');
         }
 
         $event->update($eventData);

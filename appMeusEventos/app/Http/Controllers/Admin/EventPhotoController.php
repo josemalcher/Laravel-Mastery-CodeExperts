@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EventPhotoRequest;
 use App\Models\Event;
+use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class EventPhotoController extends Controller
 {
+    use UploadTrait;
     /**
      * Display a listing of the resource.
      *
@@ -39,12 +41,13 @@ class EventPhotoController extends Controller
      */
     public function store(EventPhotoRequest $request, Event $event)
     {
-        $uploadPhotos = [];
+        // $uploadPhotos = [];
 
         // iterar nestas fotos e realizar o upload
-        foreach ($request->file('photos') as $photo) {
-            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
-        }
+//        foreach ($request->file('photos') as $photo) {
+//            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
+//        }
+        $uploadPhotos = $this->multipleFilesUpload($request->file('photos'), 'events/photos','photo');
 
         // salvar as referências para o evento em questão
         // $event = \App\Models\Event::find($event);

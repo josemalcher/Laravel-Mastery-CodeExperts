@@ -3688,6 +3688,69 @@ Route::get('/eventos/{event:slug}',  [HomeController::class, 'show'])->name('eve
 ```
 
 - 147 Jogando o Upload para Trait
+
+```php
+trait UploadTrait
+{
+    public function multipleFilesUpload(array $files, string $folder, string $column)
+    {
+        $uploadFiles = [];
+
+        foreach ($files as $file) {
+            $uploadFiles[] = [$column => $this->upload($file, $folder)];
+        }
+        return $uploadFiles;
+    }
+    public function upload(UploadedFile $file, string $folder)
+    {
+        return $file->store($folder, 'public');
+    }
+}
+```
+
+```php
+    public function store(EventRequest $request)
+    {
+        // $banner = $request->file('banner');
+
+        $event = $request->all();
+
+        if ($banner = $request->file('banner')) {
+            //$event['banner'] = $banner->store('banner', 'public');
+            $event['banner'] = $this->upload($banner, 'events/banner');
+        }
+
+        // $event['slug'] = Str::slug($event['title']);
+
+        $event = $this->event->create($event);
+        $event->owner()->associate(auth()->user());
+        $event->save();
+
+        return redirect()->route('admin.events.index');
+    }
+```
+
+```php
+public function store(EventPhotoRequest $request, Event $event)
+    {
+        // $uploadPhotos = [];
+
+        // iterar nestas fotos e realizar o upload
+//        foreach ($request->file('photos') as $photo) {
+//            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
+//        }
+        $uploadPhotos = $this->multipleFilesUpload($request->file('photos'), 'events/photos','photo');
+
+        // salvar as referências para o evento em questão
+        // $event = \App\Models\Event::find($event);
+
+        $event->photos()->createMany($uploadPhotos);
+
+        return redirect()->back();
+    }
+```
+
+
 - 148 Conclusões
 
 [Voltar ao Índice](#indice)
