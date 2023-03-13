@@ -19,7 +19,25 @@
                 <button class="btn btn-success">Enviar fotos do Evento</button>
             </form>
             <hr>
-            @dump($event->photos)
+            {{--@dump($event->photos)--}}
         </div>
+    </div>
+    <div class="row">
+        @forelse($event->photos as $photo)
+        <div class="col-4 mb-4 text-center">
+            <img src="{{ asset('storage/'.$photo->photo) }}" alt="Fotos do evento {{ $event->title }}" class="img-fluid">
+            <form action="{{ route('admin.events.photos.destroy', [$event, $photo]) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger mt-1">Deletar Foto</button>
+            </form>
+        </div>
+        @empty
+        <div class="col-12">
+            <div class="alert alert-warning">
+                Nenhuma Fotos Postada
+            </div>
+        </div>
+        @endforelse
     </div>
 @endsection

@@ -3629,6 +3629,47 @@ class EventPhotoRequest extends FormRequest
 ```
 
 - 145 Deletando Fotos do Evento
+
+```php
+    public function destroy(Event $event, $photo)
+    {
+        $photo = $event->photos()->find($photo);
+
+        if (!$photo) {
+            return redirect()->route('admin.events.index');
+        }
+
+        if (Storage::disk('public')->exists($photo->photo)){
+            Storage::disk('public')->delete($photo->photo);
+        }
+        // Remover da base e remover do diretorio
+        $photo->delete();
+
+        return redirect()->back();
+    }
+```
+
+```php
+    <div class="row">
+        @forelse($event->photos as $photo)
+        <div class="col-4 mb-4 text-center">
+            <img src="{{ asset('storage/'.$photo->photo) }}" alt="Fotos do evento {{ $event->title }}" class="img-fluid">
+            <form action="{{ route('admin.events.photos.destroy', [$event, $photo]) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger mt-1">Deletar Foto</button>
+            </form>
+        </div>
+        @empty
+        <div class="col-12">
+            <div class="alert alert-warning">
+                Nenhuma Fotos Postada
+            </div>
+        </div>
+        @endforelse
+    </div>
+```
+
 - 146 Falando Mais Sobre Route Model Bind
 - 147 Jogando o Upload para Trait
 - 148 Conclusões

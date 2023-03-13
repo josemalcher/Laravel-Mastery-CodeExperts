@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EventPhotoRequest;
+use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventPhotoController extends Controller
 {
@@ -91,8 +93,20 @@ class EventPhotoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Event $event, $photo)
     {
-        //
+        $photo = $event->photos()->find($photo);
+
+        if (!$photo) {
+            return redirect()->route('admin.events.index');
+        }
+
+        if (Storage::disk('public')->exists($photo->photo)){
+            Storage::disk('public')->delete($photo->photo);
+        }
+        // Remover da base e remover do diretorio
+        $photo->delete();
+
+        return redirect()->back();
     }
 }
