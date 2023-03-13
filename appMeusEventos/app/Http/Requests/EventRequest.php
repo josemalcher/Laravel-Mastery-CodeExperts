@@ -28,7 +28,7 @@ class EventRequest extends FormRequest
             'description' => 'required',
             'body' => 'required',
             'start_event' => 'required',
-            'banner' => 'required|image'
+            'banner' => 'image'
         ];
     }
 

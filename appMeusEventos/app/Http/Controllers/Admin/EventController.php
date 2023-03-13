@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class EventController extends Controller
@@ -69,8 +70,20 @@ class EventController extends Controller
 
     public function update($event, EventRequest $request)
     {
-        $event = $this->event->findorFail($event);
-        $event->update($request->all());
+        $event = $this->event->findOrFail($event);
+
+        $eventData = $request->all();
+
+        if ($banner = $request->file('banner')) {
+
+            if(Storage::disk('public')->exists($event->banner)){
+                Storage::disk('public')->delete($event->banner);
+            }
+
+            $eventData['banner'] = $banner->store('banner', 'public');
+        }
+
+        $event->update($eventData);
 
         return redirect()->back();
     }

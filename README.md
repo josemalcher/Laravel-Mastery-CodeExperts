@@ -3495,6 +3495,29 @@ The links have been created.
 ```
 
 - 141 Concluindo Upload na Edição
+
+```php
+    public function update($event, EventRequest $request)
+    {
+        $event = $this->event->findOrFail($event);
+
+        $eventData = $request->all();
+
+        if ($banner = $request->file('banner')) {
+
+            if(Storage::disk('public')->exists($event->banner)){
+                Storage::disk('public')->delete($event->banner);
+            }
+
+            $eventData['banner'] = $banner->store('banner', 'public');
+        }
+
+        $event->update($eventData);
+
+        return redirect()->back();
+    }
+```
+
 - 142 Upload de Múltiplos Arquivos
 - 143 Salvando Referencias no Banco Upload Múltiplo
 - 144 Validando Múltiplos Arquivos
