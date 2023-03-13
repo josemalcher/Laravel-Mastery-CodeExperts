@@ -7,7 +7,14 @@
                 @csrf
                 <div class="form-group">
                     <label>Enviar Fotos do Evento</label>
-                    <input type="file" class="form-control" multiple name="photos[]">
+                    <input type="file"
+                           class="form-control @error('photos.*') is-invalid @enderror"
+                           multiple name="photos[]">
+                    @error('photos.*')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
                 <button class="btn btn-success">Enviar fotos do Evento</button>
             </form>

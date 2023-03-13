@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EventPhotoRequest;
 use Illuminate\Http\Request;
 
 class EventPhotoController extends Controller
@@ -34,7 +35,7 @@ class EventPhotoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $event)
+    public function store(EventPhotoRequest $request, $event)
     {
         $uploadPhotos = [];
 
@@ -43,7 +44,7 @@ class EventPhotoController extends Controller
             $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
         }
 
-        // salvar as referencias para o evento em questão
+        // salvar as referências para o evento em questão
         $event = \App\Models\Event::find($event);
         $event->photos()->createMany($uploadPhotos);
 

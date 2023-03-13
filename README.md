@@ -3574,6 +3574,60 @@ class EventPhotoController extends Controller
 ```
 
 - 144 Validando Múltiplos Arquivos
+
+```php
+$ php artisan make:request EventPhotoRequest
+Request created successfully.
+
+```
+
+```php
+class EventPhotoRequest extends FormRequest
+{
+    public function rules()
+    {
+        return [
+            'photos.*' => 'image'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'image' => 'Um ou mais arquivos de imagem inválidos'
+        ];
+    }
+```
+
+```php
+    public function store(EventPhotoRequest $request, $event)
+    {
+        $uploadPhotos = [];
+
+        // iterar nestas fotos e realizar o upload
+        foreach ($request->file('photos') as $photo) {
+            $uploadPhotos[] = ['photo'=> $photo->store('events/photos', 'public')];
+        }
+
+        // salvar as referências para o evento em questão
+        $event = \App\Models\Event::find($event);
+        $event->photos()->createMany($uploadPhotos);
+
+        return redirect()->back();
+    }
+```
+
+```php
+  <input type="file"
+         class="form-control @error('photos.*') is-invalid @enderror"
+         multiple name="photos[]">
+  @error('photos.*')
+  <div class="invalid-feedback">
+      {{$message}}
+  </div>
+  @enderror
+```
+
 - 145 Deletando Fotos do Evento
 - 146 Falando Mais Sobre Route Model Bind
 - 147 Jogando o Upload para Trait
