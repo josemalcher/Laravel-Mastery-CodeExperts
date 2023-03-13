@@ -17,7 +17,7 @@
                     <th>#</th>
                     <th>Evento</th>
                     <th>Criado em</th>
-                    <th width="20%">Ações</th>
+                    <th width="22%">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,6 +27,7 @@
                         <td>{{ $event->title }}</td>
                         <td>{{ $event->start_event->format('d/m/Y H:i') }}</td>
                         <td class="d-flex justify-content-between">
+                            <a href="{{route('admin.events.photos.index', $event->id)}}" class="btn btn-info">Fotos</a>
                             <a href="{{route('admin.events.edit', $event->id)}}" class="btn btn-info">Editar</a>
                             <form action="{{ route('admin.events.destroy', ['event'=> $event->id]) }}" method="post">
                                 @csrf

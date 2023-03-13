@@ -133,7 +133,8 @@ Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
 */
     Route::resource('events', EventController::class);
 
-    Route::resource('events.photos', EventPhotoController::class);
+    Route::resource('events.photos', EventPhotoController::class)
+    ->only(['index', 'store', 'destroy']);
 
 });
 

@@ -10,11 +10,12 @@ class EventPhotoController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response|string
      */
-    public function index()
+    public function index($event)
     {
-        //
+
+        return view('admin.events.photos', compact('event'));
     }
 
     /**
@@ -35,7 +36,7 @@ class EventPhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->file('photos'));
     }
 
     /**

@@ -3519,6 +3519,40 @@ The links have been created.
 ```
 
 - 142 Upload de Múltiplos Arquivos
+
+```php
+    Route::resource('events.photos', EventPhotoController::class)
+    ->only(['index', 'store', 'destroy']);
+```
+
+```php
+class EventPhotoController extends Controller
+{
+    public function index($event)
+    {
+        return view('admin.events.photos', compact('event'));
+    }
+```
+
+```php
+@section('content')
+    <div class="row mt-5">
+        <div class="col-12">
+            <form action="{{ route('admin.events.photos.store', $event) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label>Enviar Fotos do Evento</label>
+                    <input type="file" class="form-control" multiple name="photos[]">
+                </div>
+                <button class="btn btn-success">Enviar fotos do Evento</button>
+            </form>
+            <hr>
+
+        </div>
+    </div>
+@endsection
+```
+
 - 143 Salvando Referencias no Banco Upload Múltiplo
 - 144 Validando Múltiplos Arquivos
 - 145 Deletando Fotos do Evento
