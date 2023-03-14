@@ -3961,6 +3961,34 @@ public function tickets()
 ```
 
 - 152 Iniciando Processo de Inscrição
+
+```php
+
+```
+
+```
+$ php artisan make:controller EnrollmentController
+Controller created successfully.
+
+```
+
+```php
+class EnrollmentController extends Controller
+{
+    public function start(Event $event)
+    {
+        session()->put('enrollement', $event->id);
+
+        return redirect()->route('enrollement.confirm');
+    }
+
+    public function confirm()
+    {
+        // se o ususário não estiver autenticado...
+    }
+}
+```
+
 - 153 Tela de Confirmação de Inscrição
 - 154 Concluindo Processo de Inscrição
 - 155 Melhorias Processo de Inscrição
