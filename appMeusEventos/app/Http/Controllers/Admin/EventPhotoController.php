@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Storage;
 class EventPhotoController extends Controller
 {
     use UploadTrait;
+
+    public function __construct()
+    {
+        $this->middleware('user.can.event.edit');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
