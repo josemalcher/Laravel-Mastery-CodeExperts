@@ -3792,7 +3792,7 @@ $ php artisan migrate
 ```php
 class Event extends Model
 {
-    public function subscribers() // Users
+    public function enrolleds() // Users
     {
         return $this->belongsToMany(User::class);
     }
@@ -3801,13 +3801,165 @@ class Event extends Model
 ```php
 class User extends Authenticatable
 {
-    public function subscriptions()
+    public function tickets()
     {
         return $this->belongsToMany(Event::class);
     }
 ```
 
 - 151 Entendendo M-M com Dados Extras
+
+```
+> $e = \App\Models\Event::first();                                                                                                                                            
+= App\Models\Event {#4589
+    id: 1,
+    title: "editado Hic adipisci consequatur nostrum voluptas est sapiente ratione.",
+    description: "excepturi",
+    body: "Et necessitatibus impedit saepe quas. Officia deleniti aut iusto quidem non. ",
+    start_event: "2023-03-09 19:27:00",
+    created_at: "2023-03-09 19:27:43",
+    updated_at: "2023-03-13 23:55:49",
+    slug: "editado-hic-adipisci-consequatur-nostrum-voluptas-est-sapiente-ratione",
+    owner_id: 1,
+    banner: "events/banner/q0zdPf2U2yFkdPjBn5fUOTmyh1tBxHsYma4rY3EW.jpg",
+  }
+
+> $e->enrolleds;                                                                                                                                                              
+= Illuminate\Database\Eloquent\Collection {#4594
+    all: [],
+  }
+
+> $e->enrolleds()->sync([1,2]);                                                                                                                                               
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 
+   1364 Field 'reference' doesn't have a default value (SQL: insert into `event_user` (`event_id`, `user_id`) values (1, 1)).
+
+
+> $e->enrolleds()->sync([
+      1 => ['reference'=>'blablabla', 'status'=>'ACTIVE'], 
+      2 => ['reference'=> 'bla', 'status'=>'CANCELED']]);                                              
+= [
+    "attached" => [
+      1,
+      2,
+    ],
+    "detached" => [],
+    "updated" => [],
+  ]
+
+> $e->enrolleds                                                                                                                                                               
+= Illuminate\Database\Eloquent\Collection {#4594
+    all: [
+      App\Models\User {#4593
+        id: 1,
+        name: "Janet Conn",
+        email: "umckenzie@example.org",
+        email_verified_at: "2023-03-09 19:27:43",
+        #password: "$2y$10$92IXUNpkjO0byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+        #remember_token: "tBdASC3wGEMLktrJy9uHG5Ps16LAupvgEZDlvqigMeZDz8yZThwl5Z",
+        created_at: "2023-03-09 19:27:43",
+        updated_at: "2023-03-09 19:27:43",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4582
+          event_id: 1,
+          user_id: 1,
+        },
+      },
+      App\Models\User {#4584
+        id: 2,
+        name: "Annetta Lueilwitz",
+        email: "ubaldo.waters@example.org",
+        email_verified_at: "2023-03-09 19:27:43",
+        #password: "$2y$10$92IXUNpkjO0rOQ5bi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+        #remember_token: "WlrlOkkT",
+        created_at: "2023-03-09 19:27:43",
+        updated_at: "2023-03-09 19:27:43",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4598
+          event_id: 1,
+          user_id: 2,
+        },
+      },
+    ],
+  }
+
+
+```
+
+```php
+  public function tickets()
+    {
+        return $this->belongsToMany(Event::class)
+            ->withPivot('reference', 'status');
+    }
+```
+
+```php
+public function enrolleds() // Users
+    {
+        return $this->belongsToMany(User::class)
+            ->withPivot('reference', 'status');
+    }
+```
+
+```
+> $e->enrolleds                                                                                                                                                               
+= Illuminate\Database\Eloquent\Collection {#4593
+    all: [
+      App\Models\User {#4582
+        id: 1,
+        name: "Janet Conn",
+        email: "umckenzie@example.org",
+        email_verified_at: "2023-03-09 19:27:43",
+        #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+        #remember_token: "tBdASC3wGEMLZ6IktrJy9uHG5Ps16LrQ2AupvgEZDlvqigMeZDz8yZThwl5Z",
+        created_at: "2023-03-09 19:27:43",
+        updated_at: "2023-03-09 19:27:43",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4594
+          event_id: 1,
+          user_id: 1,
+          reference: "blablabla",
+          status: "ACTIVE",
+        },
+      },
+      App\Models\User {#4590
+        id: 2,
+        name: "Annetta Lueilwitz",
+        email: "ubaldo.waters@example.org",
+        email_verified_at: "2023-03-09 19:27:43",
+        #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+        #remember_token: "WlrlOkMVkT",
+        created_at: "2023-03-09 19:27:43",
+        updated_at: "2023-03-09 19:27:43",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#4595
+          event_id: 1,
+          user_id: 2,
+          reference: "bla",
+          status: "CANCELED",
+        },
+      },
+    ],
+  }
+
+
+> $e->enrolleds->first()->pivot                                                                                                                                               
+= Illuminate\Database\Eloquent\Relations\Pivot {#4594
+    event_id: 1,
+    user_id: 1,
+    reference: "blablabla",
+    status: "ACTIVE",
+  }
+
+
+```
+
+```php
+public function tickets()
+    {
+        return $this->belongsToMany(Event::class)
+            // ->as('tickets') // mudar o nome da chave pivot - Representa a tabela intermediaria
+            ->withPivot('reference', 'status');
+    }
+```
+
 - 152 Iniciando Processo de Inscrição
 - 153 Tela de Confirmação de Inscrição
 - 154 Concluindo Processo de Inscrição

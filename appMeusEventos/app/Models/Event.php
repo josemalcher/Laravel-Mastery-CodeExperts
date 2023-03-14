@@ -68,9 +68,10 @@ class Event extends Model
         return $this->belongsTo(User::class);
 
     }
-    public function subscribers() // Users
+    public function enrolleds() // Users
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)
+            ->withPivot('reference', 'status');
     }
 
 
