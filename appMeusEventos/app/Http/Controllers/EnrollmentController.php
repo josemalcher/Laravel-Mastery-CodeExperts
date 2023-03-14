@@ -9,13 +9,24 @@ class EnrollmentController extends Controller
 {
     public function start(Event $event)
     {
-        session()->put('enrollement', $event->id);
+        session()->put('enrollment', $event->id);
 
-        return redirect()->route('enrollement.confirm');
+        return redirect()->route('enrollment.confirm');
     }
 
     public function confirm()
     {
-        // se o ususário não estiver autenticado...
+        if (!session()->has('enrollment')) {
+            return redirect()->route('home');
+        }
+        $event = Event::find(session('enrollment'));
+
+        return view('enrollment-confirm', compact('event'));
+
+    }
+
+    public function proccess()
+    {
+        dd('Confirmando...');
     }
 }

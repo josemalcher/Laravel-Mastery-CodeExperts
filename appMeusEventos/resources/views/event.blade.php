@@ -20,7 +20,7 @@
                 <p>Ocorrerá em: {{ $event->start_event->format('d/m/Y H:i') }}</p>
             </div>
             <div>
-                <a href="" class="btn btn-success">Inscrever-se</a>
+                <a href="{{ route('enrollment.start', $event->slug) }}" class="btn btn-success">Inscrever-se</a>
             </div>
         </div>
     </div>

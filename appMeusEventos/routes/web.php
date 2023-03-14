@@ -20,6 +20,21 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/eventos/{event:slug}',  [HomeController::class, 'show'])->name('event.single');
 
+// Enrollment
+
+Route::prefix('/enrollment')->name('enrollment.')->group(function (){
+
+    Route::get('/start/{event:slug}', [App\Http\Controllers\EnrollmentController::class, 'start'])
+        ->name('start');
+
+    Route::get('/confirm', [App\Http\Controllers\EnrollmentController::class, 'confirm'])
+    ->name('confirm')->middleware('auth');
+     Route::get('/process', [App\Http\Controllers\EnrollmentController::class, 'proccess'])->name('proccess')
+        ->middleware('auth');
+
+});
+
+
 
 Route::get('/ola-mundo', function () {
     return view('ola-mundo');

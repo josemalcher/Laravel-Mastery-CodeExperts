@@ -3990,6 +3990,47 @@ class EnrollmentController extends Controller
 ```
 
 - 153 Tela de Confirmação de Inscrição
+
+```php
+Route::prefix('/enrollment')->name('enrollment.')->group(function (){
+
+    Route::get('/start/{event:slug}', [App\Http\Controllers\EnrollmentController::class, 'start'])
+        ->name('start');
+
+    Route::get('/confirm', [App\Http\Controllers\EnrollmentController::class, 'confirm'])
+    ->name('confirm')->middleware('auth');
+     Route::get('/process', [App\Http\Controllers\EnrollmentController::class, 'proccess'])->name('proccess')
+        ->middleware('auth');
+});
+```
+
+```php
+class EnrollmentController extends Controller
+{
+    public function start(Event $event)
+    {
+        session()->put('enrollment', $event->id);
+
+        return redirect()->route('enrollment.confirm');
+    }
+
+    public function confirm()
+    {
+        if (!session()->has('enrollment')) {
+            return redirect()->route('home');
+        }
+        $event = Event::find(session('enrollment'));
+
+        return view('enrollment-confirm', compact('event'));
+    }
+
+    public function proccess()
+    {
+        dd('Confirmando...');
+    }
+}
+```
+
 - 154 Concluindo Processo de Inscrição
 - 155 Melhorias Processo de Inscrição
 - 156 Classe Mailable
