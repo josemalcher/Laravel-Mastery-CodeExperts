@@ -3762,6 +3762,51 @@ public function store(EventPhotoRequest $request, Event $event)
 
 - 149 Introdução
 - 150 Mapeando Relação Inscrição
+
+```
+$ php artisan make:migration create_event_user_table
+Created Migration: 2023_03_14_000351_create_event_user_table
+
+```
+
+```php
+    public function up()
+    {
+        Schema::create('event_user', function (Blueprint $table) {
+
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+
+            $table->string('reference');
+            $table->string('status');
+
+        });
+    }
+```
+
+```
+$ php artisan migrate
+
+```
+
+```php
+class Event extends Model
+{
+    public function subscribers() // Users
+    {
+        return $this->belongsToMany(User::class);
+    }
+```
+
+```php
+class User extends Authenticatable
+{
+    public function subscriptions()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+```
+
 - 151 Entendendo M-M com Dados Extras
 - 152 Iniciando Processo de Inscrição
 - 153 Tela de Confirmação de Inscrição
