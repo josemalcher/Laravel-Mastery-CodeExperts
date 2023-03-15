@@ -4032,6 +4032,27 @@ class EnrollmentController extends Controller
 ```
 
 - 154 Concluindo Processo de Inscrição
+
+```php
+    public function proccess()
+    {
+        if (!session()->has('enrollment')) {
+            return redirect()->route('home');
+        }
+
+        $event = Event::find(session('enrollment'));
+        $event->enrolleds()->attach([
+            auth()->id() => [
+                'reference'=> uniqid(),
+                'status' => 'ACTIVE'
+            ]
+        ]);
+        session()->forget('enrollment');
+
+        return redirect()->route('event.single', $event->slug);
+    }
+```
+
 - 155 Melhorias Processo de Inscrição
 - 156 Classe Mailable
 - 157 Configurações e Envio de E-mail
