@@ -4054,6 +4054,31 @@ class EnrollmentController extends Controller
 ```
 
 - 155 Melhorias Processo de Inscrição
+
+```php
+class RegisterController extends Controller
+{
+    protected function registered(Request $request, $user)
+    {
+        if(session()->has('enrollment')){
+            return redirect()->route('enrollment.confirm');
+        }
+    }
+```
+
+```php
+class LoginController extends Controller
+{
+    protected function authenticated(Request $request, $user)
+    {
+        if(session()->has('enrollment')){
+            return redirect()->route('enrollment.confirm');
+        }
+    }
+}
+```
+
+
 - 156 Classe Mailable
 - 157 Configurações e Envio de E-mail
 - 158 Evento: Uma Inscrição Por Usuário
