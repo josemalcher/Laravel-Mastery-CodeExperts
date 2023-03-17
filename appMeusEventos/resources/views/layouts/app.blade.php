@@ -156,7 +156,7 @@
                 {{ auth()->user()->name }}
             </a>
             <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">Meu Perfil</a>
+                <a href="{{ route('admin.profile.edit') }}" class="dropdown-item">Meu Perfil</a>
 
                 <a class="dropdown-item" href="#" onclick="
                 event.preventDefault();

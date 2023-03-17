@@ -2,154 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\{EventController, EventPhotoController};
+use App\Http\Controllers\{HomeController, EnrollmentController};
+use App\Http\Controllers\Admin\{EventController, EventPhotoController, ProfileController};
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/eventos/{event:slug}',  [HomeController::class, 'show'])->name('event.single');
 
-// Enrollment
-
 Route::prefix('/enrollment')->name('enrollment.')->group(function (){
-
-    Route::get('/start/{event:slug}', [App\Http\Controllers\EnrollmentController::class, 'start'])
-        ->name('start');
-
-    Route::get('/confirm', [App\Http\Controllers\EnrollmentController::class, 'confirm'])
-    ->name('confirm')->middleware('auth');
-     Route::get('/process', [App\Http\Controllers\EnrollmentController::class, 'proccess'])->name('proccess')
-        ->middleware('auth');
-
+    Route::get('/start/{event:slug}', [EnrollmentController::class, 'start'])->name('start');
+    Route::get('/confirm', [EnrollmentController::class, 'confirm'])->name('confirm')->middleware('auth');
+    Route::get('/process', [EnrollmentController::class, 'proccess'])->name('proccess')->middleware('auth');
 });
-
-
-
-Route::get('/ola-mundo', function () {
-    return view('ola-mundo');
-});
-// Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
-
-Route::get('/ola/{name?}', function ($name = 'Fulano...') {
-    return 'Olá, ' . $name;
-});
-
-//Route::get('/queries/{id}', function ($id) {
-//    // $events = \App\Models\Event::all(); // select * from events
-//    // $events = \App\Models\Event::all(['title', 'description']); // select title, description from events
-//
-//    // $events = \App\Models\Event::where('id', 1)->get(); // select * from events WHERE id = 1
-//    // $events = \App\Models\Event::where('id', 1)->first(); // select * from events WHERE id = 1
-//    $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
-//
-//    return $events;
-//});
-
-Route::get('/queries/{event?}', function ($event = null) {
-
-    /*  $event = new \App\Models\Event();
-        $event->title = 'Evento TESTE via Eloquent e AR';
-        $event->description = 'Evento teste';
-        $event->body = 'corpo do evento';
-        $event->start_event = date('Y-m-d H:i:s');
-        $event->slug = \Illuminate\Support\Str::slug($event->title);
-
-        return $event->save();
-    */
-
-    /*  $event = \App\Models\Event::find(1);
-    $event->title = 'Evento ATUALIZADO';
-    $event->slug = \Illuminate\Support\Str::slug($event->title);
-
-    return $event->save();
-*/
-    // Atribuição Massa ou Mass Assingnment
-    /*    $event = [
-            'title' => 'Evento Atribuição em Massa',
-            'description' => 'Descrição',
-            'body' => 'Conteudo do Evento',
-            'slug' => 'evento-atribuicao-em-massa',
-            'start_event' => date('Y-m-d H:i:s')
-        ];
-
-        return \App\Models\Event::create($event);
-    */
-    /*
-    $eventDATA = [
-        // 'title' => 'UPDATE Atribuição em Massa',
-        'description' => 'Descrição ATUALIZADA',
-        // 'body' => 'Conteudo do Evento',
-        // 'slug' => 'update-atribuicao-em-massa',
-        // 'start_event' => date('Y-m-d H:i:s')
-    ];
-
-    $event = \App\Models\Event::find(1);
-    $event->update($eventDATA);
-
-    return $event;
-    */
-
-    // $event = \App\Models\Event::findOrFail(3);
-    // return $event->delete(); // 1
-    return \App\Models\Event::destroy([10, 11, 12]); // 3
-
-
-});
-
-//Rotas CRUD da base para eventos - inicial...
-//Route::get('/admin/events/index', [EventController::class, 'index']);
-//Route::get('/admin/events/create', [EventController::class, 'create']);
-//Route::post('/admin/events/store', [EventController::class, 'store']);
-//Route::get('/admin/events/{event}/edit', [EventController::class, 'edit']);
-//Route::post('/admin/events/update/{event}', [EventController::class, 'update']);
-//Route::get('/admin/events/destroy/{event}', [EventController::class, 'destroy']);
 
 Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
-    // Route::prefix('/events')->name('events.')->group(function () {
-        // Route::get('/', [EventController::class, 'index'])->name('index');
-
-        // Route::get('/create', [EventController::class, 'create'])->name('create');
-        // Route::post('/store', [EventController::class, 'store'])->name('store');
-
-        // Route::get('/{event}/edit', [EventController::class, 'edit'])->name('edit');
-        // Route::post('/update/{event}', [EventController::class, 'update'])->name('update');
-
-        // Route::get('/destroy/{event}', [EventController::class, 'destroy'])->name('destroy');
-
-    // });
-
-
-    /* Route::resources([
-        'events' => EventController::class,
-        'events.photos' => EventPhotoController::class
-    ]); */
-
-
-    // "MALABARISMO"
-/*
-    Route::resource('events', EventController::class)
-        ->except(['edit', 'updade']);
-
-    Route::resource('events', EventController::class)
-    ->only(['edit', 'update'])
-    ->middleware('user.can.edit.event');
-    // ->middleware(App\Http\Middleware\CheckUserHasCanAccessEventToEditMiddleware::class);
-*/
     Route::resource('events', EventController::class);
+    Route::resource('events.photos', EventPhotoController::class)->only(['index', 'store', 'destroy']);
 
-    Route::resource('events.photos', EventPhotoController::class)
-    ->only(['index', 'store', 'destroy']);
+    Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
 
 });
 
