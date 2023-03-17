@@ -4080,6 +4080,62 @@ class LoginController extends Controller
 
 
 - 156 Classe Mailable
+
+```
+$ php artisan make:mail UserEnrollmentMail
+Mail created successfully.
+
+```
+
+```php
+class UserEnrollmentMail extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $user;
+    public $event;
+
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct($user, $event)
+    {
+        $this->user = $user;
+        $this->event = $event;
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this
+            ->subject('Confirmação de Inscrição')
+            // ->replyTo()
+            ->view('emails.enrollment-user');
+    }
+}
+```
+
+```php
+<div>
+    <p>
+        Olá <strong>{{ $user->name }}</strong>!
+        <br><br>
+        Sua inscrição no evento <strong>{{$event->title}}</strong> foi realizada com sucesso!
+        <br><br>
+        Obrigado pela Inscrição
+    </p>
+    <hr>
+    Email Enviado em {{ date('d/m/Y H:i') }}
+</div>
+```
+
 - 157 Configurações e Envio de E-mail
 - 158 Evento: Uma Inscrição Por Usuário
 - 159 Categorias Na Criação e Edição de Eventos
