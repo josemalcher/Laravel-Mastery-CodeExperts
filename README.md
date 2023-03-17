@@ -4168,6 +4168,19 @@ class EnrollmentController extends Controller
 - 159 Categorias Na Criação e Edição de Eventos
 - 160 Processando Associação de Categorias e Eventos
 - 161 Melhorias Painel
+
+```php
+      @auth()
+      <li class="nav-item">
+          <a href="{{route('admin.events.index')}}" class="nav-link">Meu Painel</a>
+      </li>
+      @else
+      <li class="nav-item">
+          <a href="{{route('login')}}" class="nav-link">Login</a>
+      </li>
+      @endauth
+```
+
 - 162 Iniciando Perfil do Usuário
 - 163 Processando Atualização de Perfil
 - 164 Validações na Atualização do Perfil

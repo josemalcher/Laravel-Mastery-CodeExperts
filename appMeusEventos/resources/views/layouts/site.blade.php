@@ -44,6 +44,19 @@
                     >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
+
+        <ul class="navbar-nav">
+            @auth()
+            <li class="nav-item">
+                <a href="{{route('admin.events.index')}}" class="nav-link">Meu Painel</a>
+            </li>
+            @else
+            <li class="nav-item">
+                <a href="{{route('login')}}" class="nav-link">Login</a>
+            </li>
+            @endauth
+        </ul>
+
     </div>
 </nav>
 
