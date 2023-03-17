@@ -4137,6 +4137,33 @@ class UserEnrollmentMail extends Mailable
 ```
 
 - 157 Configurações e Envio de E-mail
+
+```php
+class EnrollmentController extends Controller
+{
+    public function proccess()
+    {
+        if (!session()->has('enrollment')) {
+            return redirect()->route('home');
+        }
+
+        $event = Event::find(session('enrollment'));
+        $event->enrolleds()->attach([
+            auth()->id() => [
+                'reference'=> uniqid(),
+                'status' => 'ACTIVE'
+            ]
+        ]);
+        session()->forget('enrollment');
+
+        $user = auth()->user();
+
+        Mail::to($user)->send(new UserEnrollmentMail($user, $event));
+
+        return redirect()->route('event.single', $event->slug);
+    }
+```
+
 - 158 Evento: Uma Inscrição Por Usuário
 - 159 Categorias Na Criação e Edição de Eventos
 - 160 Processando Associação de Categorias e Eventos

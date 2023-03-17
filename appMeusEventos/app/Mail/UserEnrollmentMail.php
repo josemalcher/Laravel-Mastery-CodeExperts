@@ -36,6 +36,6 @@ class UserEnrollmentMail extends Mailable
         return $this
             ->subject('Confirmação de Inscrição')
             // ->replyTo()
-            ->view('emails.enrollment-user');
+            ->view('emails.erollment-user');
     }
 }
