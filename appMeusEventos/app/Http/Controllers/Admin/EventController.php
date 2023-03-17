@@ -4,6 +4,7 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EventRequest;
+use App\Models\Category;
 use App\Models\Event;
 use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
@@ -35,7 +36,8 @@ class EventController extends Controller
 
     public function create()
     {
-        return view('admin.events.create');
+        $categories = Category::all(['id', 'nome']);
+        return view('admin.events.create', compact('categories'));
     }
 
     public function show($event)
@@ -69,7 +71,8 @@ class EventController extends Controller
 
         // $event = $this->event->findOrFail($event);
 
-        return view('admin.events.edit', compact('event'));
+        $categories = Category::all(['id', 'nome']);
+        return view('admin.events.edit', compact('event', 'categories'));
     }
 
     public function update(Event $event, EventRequest $request)

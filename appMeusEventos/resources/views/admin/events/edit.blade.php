@@ -97,6 +97,19 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label>Quais Categorias o Evento Pertence</label>
+                    <select class="form-control" name="categories[]" id="categories">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}"
+                                    @if($event->categories->contains($category))
+                                        selected
+                                    @endif
+                            >{{$category->nome}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
                 <button type="submit" class="btn btn-lg btn-success">Atualizar Evento</button>
 
             </form>
