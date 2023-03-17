@@ -99,7 +99,7 @@
 
                 <div class="form-group">
                     <label>Quais Categorias o Evento Pertence</label>
-                    <select class="form-control" name="categories[]" id="categories">
+                    <select class="form-control" multiple name="categories[]" id="categories">
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}"
                                     @if($event->categories->contains($category))

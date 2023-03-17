@@ -63,6 +63,11 @@ class EventController extends Controller
         $event->owner()->associate(auth()->user());
         $event->save();
 
+        if ($categories = $request->get('categories')) {
+            $event->categories()->sync($categories);
+        }
+
+
         return redirect()->route('admin.events.index');
     }
 
@@ -92,6 +97,10 @@ class EventController extends Controller
         }
 
         $event->update($eventData);
+
+        if ($categories = $request->get('categories')) {
+            $event->categories()->sync($categories);
+        }
 
         return redirect()->back();
     }
