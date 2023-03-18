@@ -4183,6 +4183,31 @@ class EnrollmentController extends Controller
 
 - 162 Iniciando Perfil do Usuário
 - 163 Processando Atualização de Perfil
+
+```php
+class ProfileController extends Controller
+{
+    public function update()
+    {
+        $userData = request()->get('user');
+        $profile = request()->get('profile');
+
+        if($userData['password']){
+            $userData['password'] = bcrypt($userData['password']);
+        }else{
+            unset($userData['password']);
+        }
+
+        $user = auth()->user();
+        $user->update($userData);
+
+        $user->profile()->update($profile);
+
+        return redirect()->route('admin.profile.edit');
+    }
+}
+```
+
 - 164 Validações na Atualização do Perfil
 - 165 O Validador Unique no Update
 - 166 Concluindo Perfil

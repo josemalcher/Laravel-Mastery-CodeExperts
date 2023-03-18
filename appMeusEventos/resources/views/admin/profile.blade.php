@@ -26,12 +26,12 @@
                 </div>
                 <div class="form-group">
                     <label>Senha</label>
-                    <input type="text" class="form-control" name="user[password]">
+                    <input type="password" class="form-control" name="user[password]" placeholder="Atualizar senha">
                 </div>
 
                 <div class="form-group">
                     <label>Confirmar Senha</label>
-                    <input type="text" class="form-control" name="user[password_confirm]">
+                    <input type="password" class="form-control" name="user[password_confirm]" placeholder="Atualizar senha">
                 </div>
 
                 @if($user->profile)
