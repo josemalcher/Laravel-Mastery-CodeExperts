@@ -4210,6 +4210,35 @@ class ProfileController extends Controller
 
 - 164 Validações na Atualização do Perfil
 - 165 O Validador Unique no Update
+
+```php
+class ProfimeRequest extends FormRequest
+{
+    public function rules()
+    {
+        $rules = [
+                'user.name' => 'required',
+                'user.email' => 'required|email|unique:users,email,' . auth()->id(),
+        ];
+        if ($this->request->get('user')['password']) {
+            $rules['user.password'] = 'string|min:8|confirmed';
+        }
+
+        return $rules;
+    }
+
+    public function messages()
+    {
+        return [
+            'required' => 'Estes campos são obrigatórios',
+            'min' => 'A sena deve ter no mínimo 8 caracteres',
+            'confirmed' => 'A senha e a confirmação da senha não são iguais',
+            'unique' => 'Este email já está sendo usado por outro usuário'
+        ];
+    }
+
+```
+
 - 166 Concluindo Perfil
 - 167 Iniciando Mensagens de Feedback
 - 168 Exibindo Mensagens de Feedback

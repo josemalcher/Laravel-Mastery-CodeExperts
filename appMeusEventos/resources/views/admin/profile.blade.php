@@ -17,21 +17,30 @@
 
                 <div class="form-group">
                     <label>Nome Completo</label>
-                    <input type="text" class="form-control" name="user[name]" value="{{ $user->name }}">
+                    <input type="text" class="form-control @error('user.name') is-invalid @enderror" name="user[name]" value="{{ $user->name }}">
+                    @error('user.name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label>EMail</label>
-                    <input type="text" class="form-control" name="user[email]" value="{{ $user->email }}">
+                    <input type="text" class="form-control @error('user.email') is-invalid @enderror" name="user[email]" value="{{ $user->email }}">
+                    @error('user.email')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label>Senha</label>
-                    <input type="password" class="form-control" name="user[password]" placeholder="Atualizar senha">
+                    <input type="password" class="form-control @error('user.password') is-invalid @enderror" name="user[password]" placeholder="Atualizar senha">
+                    @error('user.password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label>Confirmar Senha</label>
-                    <input type="password" class="form-control" name="user[password_confirm]" placeholder="Atualizar senha">
+                    <input type="password" class="form-control" name="user[password_confirmation]" placeholder="Atualizar senha">
                 </div>
 
                 @if($user->profile)
