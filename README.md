@@ -4240,6 +4240,19 @@ class ProfimeRequest extends FormRequest
 ```
 
 - 166 Concluindo Perfil
+
+```php
+class Profile extends Model
+{
+    protected $fillable = ['about', 'phone' , 'social_networks'];
+
+    public function getSocialNetworksAttribute()
+    {
+        return $this->attributes['social_networks'] ?
+            json_decode($this->attributes['social_networks'], true) : [];
+    }
+```
+
 - 167 Iniciando Mensagens de Feedback
 - 168 Exibindo Mensagens de Feedback
 - 169 Mensagens de Feedback Painel
