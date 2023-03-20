@@ -4296,6 +4296,11 @@ class Category extends Model
 ```
 
 - 172 Iniciando Verificação de Conta
+
+- [https://gist.github.com/NandoKstroNet/b659f2bb652e1288038f720ce8619586](https://gist.github.com/NandoKstroNet/b659f2bb652e1288038f720ce8619586)
+
+
+
 - 173 Entendendo Mais a Fundo Verificaçãod e Conta
 - 174 Traduzindo Emails: Verificação e Resete Senha
 - 175 Considerações Finais Bloco
