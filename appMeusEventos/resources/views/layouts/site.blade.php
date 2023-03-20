@@ -61,6 +61,11 @@
 </nav>
 
 <div class="container">
+    <div class="row my-5">
+        <div class="col-12">
+            @include('messages.bootstrap.messages')
+        </div>
+    </div>
     @yield('content') <!--todas as views quie extenderem desta colocaram seu conteudo nesta área-->
 </div>
 

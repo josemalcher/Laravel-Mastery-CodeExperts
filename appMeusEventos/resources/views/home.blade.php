@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
-    @dump(session()->all())
+    {{--@dump(session()->all())--}}
+    @include('messages.bootstrap.messages')
+
     <div class="row">
         <div class="col-12">
             <h2>Eventos</h2>

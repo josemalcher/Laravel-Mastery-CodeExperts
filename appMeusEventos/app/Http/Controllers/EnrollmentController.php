@@ -54,6 +54,8 @@ class EnrollmentController extends Controller
 
         Mail::to($user)->send(new UserEnrollmentMail($user, $event));
 
+        \App\Services\MessageService::addFlash('success', 'Inscrição Confirmada com sucesso');
+
         return redirect()->route('event.single', $event->slug);
     }
 }
