@@ -4257,6 +4257,13 @@ class Profile extends Model
 - 168 Exibindo Mensagens de Feedback
 - 169 Mensagens de Feedback Painel
 - 170 Laravel Sluggable e Dicas
+
+- [https://github.com/spatie/laravel-sluggable](https://github.com/spatie/laravel-sluggable)
+
+```php
+composer require spatie/laravel-sluggable
+```
+
 - 171 Utilizando Laravel Sluggable
 - 172 Iniciando Verificação de Conta
 - 173 Entendendo Mais a Fundo Verificaçãod e Conta
