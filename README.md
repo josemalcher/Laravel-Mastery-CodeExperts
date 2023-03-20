@@ -4321,6 +4321,9 @@ class Category extends Model
 ![img/178-polices.png](img/178-polices.png)
 
 - 179 Entendendo Projeto ACL
+
+- [laravel-mastery-modulo-ponte-acl](laravel-mastery-modulo-ponte-acl)
+
 - 180 Praticando Gate
 - 181 Usuário Autenticado Para Autorização
 - 182 Parametros Extras & Método Before
