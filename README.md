@@ -4360,6 +4360,68 @@ class PostController extends Controller
 - 181 Usuário Autenticado Para Autorização
 - 182 Parametros Extras & Método Before
 - 183 Gate Denies e Allow
+
+```php
+class AuthServiceProvider extends ServiceProvider
+{
+   public function boot()
+    {
+        $this->registerPolicies();
+
+        Gate::before(function ($user) {
+            if ($result = $user->isAdmin()) {
+                return $result;
+            }
+        });
+
+        Gate::define('user-can-access', function ($user) {
+            return false;
+        });
+
+        Gate::define('user-can-edit', function ($user, $post) {
+
+            return $user->posts->contains($post);
+
+            // return $post->user->id == $user->id;
+            // dd($post);
+            // return $user->isAdmin();
+        });
+    }
+}
+```
+
+```php
+class PostController extends Controller
+{
+    public function index()
+    {
+        $this->authorize('user-can-access');
+        return "POSTs";
+    }
+
+    public function edit($id)
+    {
+        $post = \App\Models\Post::find($id);
+
+        // Este metodo verifica o controle/ability/permissao e dispara uma exception
+        // causando um 403 Unauthorized
+        // $this->authorize('user-can-edit', $post);
+
+        //true se o usuário NAO é permitido
+        // Gate::denies('user-can-edit', $post);
+
+        // true se o usuário é permitido
+        // Gate::allows('user-can-edit', $post);
+
+        if (!Gate::allows('user-can-edit', $post)) {
+            die('VOcê não tem permissão para acessar');
+        }
+
+        return "EDIT POSTs.....";
+    }
+}
+```
+
 - 184 As Policies
 - 185 Diretivas Blade Autorização
 - 186 Uma Abordagem Dinâmica Gates
