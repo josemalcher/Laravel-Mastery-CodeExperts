@@ -42,7 +42,7 @@ class HomeController extends Controller
     public function show(Event $event)
     {
         // $event = $this->event->where('slug', $event)->first();
-
+        \App\Services\MessageService::addFlash('success', 'Página listada com sucesso...');
         return view('event', compact('event'));
     }
 }
