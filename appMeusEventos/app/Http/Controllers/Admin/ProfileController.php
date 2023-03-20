@@ -37,6 +37,8 @@ class ProfileController extends Controller
 
         $user->profile()->update($profile);
 
+        \App\Services\MessageService::addFlash('success', 'Perfil Atualizado com sucesso');
+
         return redirect()->route('admin.profile.edit');
 
     }
