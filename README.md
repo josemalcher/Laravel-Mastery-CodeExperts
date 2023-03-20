@@ -4265,6 +4265,36 @@ composer require spatie/laravel-sluggable
 ```
 
 - 171 Utilizando Laravel Sluggable
+
+```php
+
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
+
+class Category extends Model
+{
+    use HasFactory, HasSlug;
+
+    protected $fillable = ['name', 'description', 'slug'];
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name')
+            ->saveSlugsTo('slug');
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+}
+
+```
+
 - 172 Iniciando Verificação de Conta
 - 173 Entendendo Mais a Fundo Verificaçãod e Conta
 - 174 Traduzindo Emails: Verificação e Resete Senha

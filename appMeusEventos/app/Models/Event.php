@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
+
 class Event extends Model
 {
-    use HasFactory;
+    use HasFactory, HasSlug;
     protected $fillable = [
         'title',
         'description',
@@ -17,6 +20,16 @@ class Event extends Model
         'start_event',
         'banner'
     ];
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
+    }
 
     protected $dates = ['start_event'];
 
@@ -39,12 +52,12 @@ class Event extends Model
      * Mutators
      *
      */
-    public function setTitleAttribute($value)
+/*    public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;
 
         $this->attributes['slug'] = Str::slug($value);
-    }
+    }*/
 
     public function setStartEventAttribute($value)
     {
