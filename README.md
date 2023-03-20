@@ -4315,6 +4315,11 @@ class Category extends Model
 - 176 Introdução
 - 177 O que é ACL?
 - 178 Gates e Policies Laravel
+
+![img/178-gates.png](img/178-gates.png)
+
+![img/178-polices.png](img/178-polices.png)
+
 - 179 Entendendo Projeto ACL
 - 180 Praticando Gate
 - 181 Usuário Autenticado Para Autorização
