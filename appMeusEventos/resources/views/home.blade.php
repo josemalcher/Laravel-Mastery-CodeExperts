@@ -19,7 +19,7 @@
         @forelse($events as $event)
             <div class="col-4">
                <div class="card">
-                   <img src="https://via.placeholder.com/640x480.png/00dd99?text=omnis" alt="" class="card-img-top">
+                   <img src="{{$event->banner ? asset('storage/'.$event->banner) : 'https://via.placeholder.com/640x480.png/00dd99?text=omnis'}}" alt="" class="card-img-top">
                   <div class="card-body">
 
                       <h5 class="card-title">{{$event->title}}</h5>
