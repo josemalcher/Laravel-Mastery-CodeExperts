@@ -4325,6 +4325,38 @@ class Category extends Model
 - [laravel-mastery-modulo-ponte-acl](laravel-mastery-modulo-ponte-acl)
 
 - 180 Praticando Gate
+
+```php
+class AuthServiceProvider extends ServiceProvider
+{
+   public function boot()
+    {
+        $this->registerPolicies();
+
+        //
+        Gate::define('user-can-access', function () {
+            return false;
+        });
+
+        Gate::define('user-can-edit', function () {
+            return false;
+        });
+    }
+}
+```
+
+```php
+class PostController extends Controller
+{
+    public function index()
+    {
+        $this->authorize('user-can-access');
+        return "POSTs";
+    }
+}
+
+```
+
 - 181 Usuário Autenticado Para Autorização
 - 182 Parametros Extras & Método Before
 - 183 Gate Denies e Allow
