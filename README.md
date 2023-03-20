@@ -4423,6 +4423,13 @@ class PostController extends Controller
 ```
 
 - 184 As Policies
+
+```
+$ php artisan make:policy PostPolicy --model=Post
+Policy created successfully.
+
+```
+
 - 185 Diretivas Blade Autorização
 - 186 Uma Abordagem Dinâmica Gates
 - 187 Controle Global via Middleware
