@@ -4444,6 +4444,37 @@ Policy created successfully.
 ```
 
 - 186 Uma Abordagem Dinâmica Gates
+
+```php
+class AuthServiceProvider extends ServiceProvider
+{
+    protected $policies = [
+        'App\Models\Post' => 'App\Policies\PostPolicy',
+    ];
+
+    public function boot()
+    {
+        $this->registerPolicies();
+        Gate::before(function ($user) {
+            if ($result = $user->isAdmin()) {
+                return $result;
+            }
+        });
+
+        foreach (\App\Models\Permission::all() as $permission) {
+
+            Gate::define($permission->permission, function ($user) use ($permission){
+                if (!$user->role) {
+                    return false;
+                }
+
+                return $user->role->permissions->contains($permission);
+            });
+        }
+    }
+}
+```
+
 - 187 Controle Global via Middleware
 - 188 Mais Métodos de Controle
 - 189 Conclusões
