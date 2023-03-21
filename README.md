@@ -4431,6 +4431,18 @@ Policy created successfully.
 ```
 
 - 185 Diretivas Blade Autorização
+
+```php
+<ul>
+    @foreach($posts as $post)
+        <li>
+            {{ $post->title  }} - @can('update', $post) <a href="{{ route('post.edit', $post) }}">Editar</a>@endcan
+        </li>
+    @endforeach
+</ul>
+
+```
+
 - 186 Uma Abordagem Dinâmica Gates
 - 187 Controle Global via Middleware
 - 188 Mais Métodos de Controle
