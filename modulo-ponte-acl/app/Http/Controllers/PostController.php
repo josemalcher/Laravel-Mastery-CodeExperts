@@ -34,11 +34,18 @@ class PostController extends Controller
         // true se o usuário é permitido
         // Gate::allows('user-can-edit', $post);
 
-        if (!Gate::allows('update', $post)) {
-            //die('VOcê não tem permissão para acessar');
-            abort(403, 'Não tens autorização');
-        }
+//        if (!Gate::allows('update', $post)) {
+//            //die('VOcê não tem permissão para acessar');
+//            abort(403, 'Não tens autorização');
+//        }
         // dd(Gate::allows('update', auth()->user()));
+
+        // $user = auth()->user();
+        // dd($user->can('update', $post));
+        // dd($user->cannot('update', $post));
+
+        // dd(Gate::any(['update', 'delete'], $post));
+        dd(Gate::check(['update', 'delete'], $post));
 
         return "EDIT POSTs.....";
     }
