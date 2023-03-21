@@ -4476,6 +4476,66 @@ class AuthServiceProvider extends ServiceProvider
 ```
 
 - 187 Controle Global via Middleware
+
+```
+$ php artisan make:middleware AccessControlMiddleware
+Middleware created successfully.
+
+```
+
+```php
+class AccessControlMiddleware
+{
+    use AuthorizesRequests;
+
+    public function handle(Request $request, Closure $next)
+    {
+        // dd($request->route()->getName());
+
+        $ignoreRoutes = config('acl.ignore');
+        // dd($ignoreRoutes);
+
+        if (!in_array($request->route()->getName(), $ignoreRoutes)) {
+
+            $this->authorize($request->route()->getName());
+        }
+
+        return $next($request);
+    }
+}
+```
+
+```php
+class AuthServiceProvider extends ServiceProvider
+{
+
+    public function boot()
+    {
+        $this->registerPolicies();
+
+        Gate::before(function ($user) {
+            if ($result = $user->isAdmin()) {
+                return $result;
+            }
+        });
+
+
+        if(!Schema::hasTable('permissions')) return null;
+
+        foreach (\App\Models\Permission::all() as $permission) {
+
+            Gate::define($permission->permission, function ($user) use ($permission){
+                if (!$user->role) {
+                    return false;
+                }
+
+                return $user->role->permissions->contains($permission);
+            });
+        }
+    }
+}
+```
+
 - 188 Mais Métodos de Controle
 - 189 Conclusões
 

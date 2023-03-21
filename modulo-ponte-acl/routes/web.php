@@ -17,18 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/login', function () {
-    \Illuminate\Support\Facades\Auth::loginUsingId(1);
+Route::middleware(App\Http\Middleware\AccessControlMiddleware::class)->group(function () {
 
-    return redirect()->route('home');
+    Route::get('/login', function () {
+        \Illuminate\Support\Facades\Auth::loginUsingId(1);
+            return redirect()->route('home');
+    })->name('login');
+
+    Route::get('/logout', function () {
+        \Illuminate\Support\Facades\Auth::logout();
+            return redirect()->route('home');
+    })->name('logout');
+
+
+    Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+    Route::get('/post/edit/{id}', [\App\Http\Controllers\PostController::class, 'edit'])->name('post.edit');
 });
-
-Route::get('/logout', function () {
-    \Illuminate\Support\Facades\Auth::logout();
-
-    return redirect()->route('home');
-});
-
-
-Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post');
-Route::get('/post/edit/{id}', [\App\Http\Controllers\PostController::class, 'edit'])->name('post.edit');
