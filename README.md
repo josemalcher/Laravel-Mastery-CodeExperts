@@ -4550,9 +4550,9 @@ class AuthServiceProvider extends ServiceProvider
 - 191 Instalando o Breeze
 
 ```
-$ composer create-project laravel/laravel:^8.5.22 videoFlix
+$ composer create-project laravel/laravel:8.5.22 videoFlix
 
-$ composer require laravel/breeze:^1.3 --dev
+$ composer require laravel/breeze:1.3 --dev
 
 $ php artisan breeze:install
 
