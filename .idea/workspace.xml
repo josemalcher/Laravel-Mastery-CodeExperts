@@ -6,136 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/ConfirmablePasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/EmailVerificationPromptController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/NewPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/PasswordResetLinkController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Auth/VerifyEmailController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Requests/Auth/LoginRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/View/Components/AppLayout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/View/Components/GuestLayout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/sanctum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/mix-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/confirm-password.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/forgot-password.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/reset-password.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/auth/verify-email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/application-logo.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/auth-card.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/auth-session-status.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/auth-validation-errors.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/button.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/dropdown-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/dropdown.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/input.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/label.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/nav-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/components/responsive-nav-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/dashboard.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/layouts/guest.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/layouts/navigation.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/Auth/RegistrationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/webpack.mix.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +197,7 @@
       <updated>1679446982101</updated>
       <workItem from="1679446982106" duration="394000" />
       <workItem from="1679447420105" duration="3465000" />
-      <workItem from="1679483704728" duration="1702000" />
+      <workItem from="1679483704728" duration="5181000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -336,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679448756712</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="191 Instalando o Breeze - Ajuste Versões">
+      <created>1679485743905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679485743906</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +234,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="191 Instalando o Breeze" />
-    <option name="LAST_COMMIT_MESSAGE" value="191 Instalando o Breeze" />
+    <MESSAGE value="191 Instalando o Breeze - Ajuste Versões" />
+    <option name="LAST_COMMIT_MESSAGE" value="191 Instalando o Breeze - Ajuste Versões" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
