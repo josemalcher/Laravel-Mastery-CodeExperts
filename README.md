@@ -4548,6 +4548,17 @@ class AuthServiceProvider extends ServiceProvider
 
 - 190 Introdução ao Bloco
 - 191 Instalando o Breeze
+
+```
+$ composer create-project laravel/laravel:^8.5.22 videoFlix
+
+$ composer require laravel/breeze:^1.3 --dev
+
+$ php artisan breeze:install
+
+$ npm install && npm run dev
+```
+
 - 192 Os Arquivos do Breeze
 - 193 As Views do Breeze
 - 194 O Tailwind no Breeze
