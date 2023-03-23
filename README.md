@@ -4579,6 +4579,48 @@ $ composer require livewire/livewire:2.5.5
 ```
 
 - 197 DataBiding Livewire
+
+```
+$ php artisan livewire:make Test
+ COMPONENT CREATED  🤙
+
+CLASS: app/Http/Livewire//Test.php
+
+```
+
+```php
+class Test extends Component
+{
+    public $title;
+    public function render()
+    {
+        return view('livewire.test');
+    }
+}
+```
+
+```php
+<div>
+    {{-- Nothing in the world is as soft and yielding as water. --}}
+    <h1>Exemplo componente LiveWire</h1>
+    <br>
+    <h2>{{$title}}</h2>
+    <input type="text" wire:model="title">
+</div>
+
+```
+
+```php
+  <div class="p-6 bg-white border-b border-gray-200">
+      You're logged in!
+      <br>
+      <livewire:test></livewire:test>
+      <br>
+      @livewire('test')
+
+  </div>
+```
+
 - 198 Nuances Wire Model
 - 199 Manipulando Ações
 - 200 Mensagens de Feedback
