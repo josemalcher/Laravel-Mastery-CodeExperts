@@ -4636,6 +4636,52 @@ class Test extends Component
 ```
 
 - 199 Manipulando Ações
+
+
+```php
+class Test extends Component
+{
+    public $title;
+    public $content;
+
+    public function saveContent()
+    {
+        dd($this->title, $this->content);
+
+        // salvar os dados... COntent::create(...)
+        // retornar mensagem de sucesso
+    }
+```
+
+
+```php
+  <form action="" >
+      <div class="mb-5">
+          <label class="block">Título</label>
+          <input type="text" wire:model.defer="title">
+      </div>
+
+      <div class="mb-5">
+          <label class="block">Conteúdo</label>
+          <input type="text" wire:model="content">
+      </div>
+
+      <button class="border border-green-500 px-5 py-2 rounded" wire:click.prevent="saveContent">Enviar dados</button>
+  </form>
+```
+
+```php
+<form action="" wire:submit.prevent="saveContent">
+
+  <button class="border border-green-500 px-5 py-2 rounded">Enviar dados</button>
+</form>
+```
+
+```php
+    <input type="text" wire:model="content" wire:keydown.enter.prevent="saveContent">
+</div>
+```
+
 - 200 Mensagens de Feedback
 - 201 Validações
 - 202 Exemplo com Banco de Dados
