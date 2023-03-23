@@ -4572,6 +4572,12 @@ $ npm install && npm run dev
 ## <a name="parte18">18 - Primeiros Passos com Livewire</a>
 
 - 196 Instalando Livewire
+
+```
+$ composer require livewire/livewire:2.5.5
+
+```
+
 - 197 DataBiding Livewire
 - 198 Nuances Wire Model
 - 199 Manipulando Ações
