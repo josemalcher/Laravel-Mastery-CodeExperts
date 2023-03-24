@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/videoFlix/app/Models/Content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlix/database/factories/ContentFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlix/database/migrations/2023_03_24_143737_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/test.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +209,7 @@
       <workItem from="1679447420105" duration="3465000" />
       <workItem from="1679483704728" duration="9702000" />
       <workItem from="1679598393931" duration="1710000" />
-      <workItem from="1679665466023" duration="2432000" />
+      <workItem from="1679665466023" duration="3314000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -261,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679667016447</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="201 Validações">
+      <created>1679668615666</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679668615666</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +302,8 @@
     <MESSAGE value="198 Nuances Wire Model" />
     <MESSAGE value="199 Manipulando Ações" />
     <MESSAGE value="200 Mensagens de Feedback" />
-    <option name="LAST_COMMIT_MESSAGE" value="200 Mensagens de Feedback" />
+    <MESSAGE value="201 Validações" />
+    <option name="LAST_COMMIT_MESSAGE" value="201 Validações" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

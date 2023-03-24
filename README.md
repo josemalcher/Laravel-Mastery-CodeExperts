@@ -4725,6 +4725,42 @@ class Test extends Component
 ```
 
 - 202 Exemplo com Banco de Dados
+
+```php
+$ php artisan make:model Content -mf
+Model created successfully.
+Factory created successfully.
+Created Migration: 2023_03_24_143737_create_contents_table
+
+```
+
+```php
+  Schema::create('contents', function (Blueprint $table) {
+      $table->id();
+
+      $table->string('title');
+      $table->string('body');
+
+      $table->timestamps();
+  });
+```
+
+```php
+    public function saveContent()
+    {
+        $this->validate();
+
+        \App\Models\Content::create([
+            'title' => $this->title,
+            'body' => $this->body
+        ]);
+
+        $this->reset('title', 'body');// limpar os campos
+
+        session()->flash('success', 'O conteudo foi salvo com sucesso');
+    }
+```
+
 - 203 Paginação sem Reload
 - 204 Componentes Aninhados
 - 205 Organizando Componentes

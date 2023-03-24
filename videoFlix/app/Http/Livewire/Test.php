@@ -7,11 +7,11 @@ use Livewire\Component;
 class Test extends Component
 {
     public $title;
-    public $content;
+    public $body;
 
     protected $rules = [
         'title' => 'required',
-        'content' => 'required|min:10'
+        'body' => 'required|min:10'
     ];
 
     public function saveContent()
@@ -23,7 +23,12 @@ class Test extends Component
 
         $this->validate();
 
-        $this->reset('title', 'content');// limpar os campos
+        \App\Models\Content::create([
+            'title' => $this->title,
+            'body' => $this->body
+        ]);
+
+        $this->reset('title', 'body');// limpar os campos
 
         session()->flash('success', 'O conteudo foi salvo com sucesso');
     }

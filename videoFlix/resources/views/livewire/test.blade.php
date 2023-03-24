@@ -19,12 +19,12 @@
 
         <div class="mb-5">
             <label class="block">Conteúdo</label>
-            <input type="text" wire:model.defer="content">
-            @error('content')
+            <input type="text" wire:model.defer="body">
+            @error('body')
             <strong>{{$message}}</strong>
             @enderror
         </div>
 
-        <button class="border border-green-500 px-5 py-2 rounded" >Enviar dados</button>
+        <button class="border border-green-500 px-5 py-2 rounded" >Salvar dados</button>
     </form>
 </div>

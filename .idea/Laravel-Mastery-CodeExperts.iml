@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/dragonmantank/cron-expression" />
