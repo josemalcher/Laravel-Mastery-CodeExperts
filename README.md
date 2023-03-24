@@ -4700,6 +4700,30 @@ class Test extends Component
 ```
 
 - 201 Validações
+
+```php
+    protected $rules = [
+        'title' => 'required',
+        'content' => 'required|min:10'
+    ];
+
+    public function saveContent()
+    {
+        $this->validate();
+
+        $this->reset('title', 'content');// limpar os campos
+
+        session()->flash('success', 'O conteudo foi salvo com sucesso');
+    }
+```
+
+```php
+    <input type="text" wire:model.defer="title">
+    @error('title')
+        <strong>{{$message}}</strong>
+    @enderror
+```
+
 - 202 Exemplo com Banco de Dados
 - 203 Paginação sem Reload
 - 204 Componentes Aninhados

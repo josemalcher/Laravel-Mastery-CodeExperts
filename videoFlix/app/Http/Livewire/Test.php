@@ -9,6 +9,11 @@ class Test extends Component
     public $title;
     public $content;
 
+    protected $rules = [
+        'title' => 'required',
+        'content' => 'required|min:10'
+    ];
+
     public function saveContent()
     {
         // dd($this->title, $this->content);
@@ -16,8 +21,11 @@ class Test extends Component
         // salvar os dados... COntent::create(...)
         // retornar mensagem de sucesso
 
-        session()->flash('success', 'O conteudo foi salvo com sucesso');
+        $this->validate();
 
+        $this->reset('title', 'content');// limpar os campos
+
+        session()->flash('success', 'O conteudo foi salvo com sucesso');
     }
 
     public function render()
