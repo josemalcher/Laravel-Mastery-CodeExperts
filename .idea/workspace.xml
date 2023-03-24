@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/test.blade.php" afterDir="false" />
     </list>
@@ -140,6 +141,8 @@
       <path value="$PROJECT_DIR$/videoFlix/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/psr/container" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/composer" />
+      <path value="$PROJECT_DIR$/videoFlix/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/videoFlix/vendor/fideloper/proxy" />
     </include_path>
   </component>
   <component name="ProjectId" id="2NLcmPeWDsxH4D7zphMIiph3r3V" />
@@ -147,21 +150,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/bin/php/php-8.2.1-nts-Win32-vs16-x64/php.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/bin/php/php-8.2.1-nts-Win32-vs16-x64/php.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/videoFlix/package.json" />
@@ -200,7 +203,9 @@
       <updated>1679446982101</updated>
       <workItem from="1679446982106" duration="394000" />
       <workItem from="1679447420105" duration="3465000" />
-      <workItem from="1679483704728" duration="9429000" />
+      <workItem from="1679483704728" duration="9702000" />
+      <workItem from="1679598393931" duration="1710000" />
+      <workItem from="1679665466023" duration="1364000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -244,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679532164034</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="199 Manipulando Ações">
+      <created>1679572037336</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679572037336</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +282,8 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="198 Nuances Wire Model" />
+    <MESSAGE value="199 Manipulando Ações" />
+    <option name="LAST_COMMIT_MESSAGE" value="199 Manipulando Ações" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

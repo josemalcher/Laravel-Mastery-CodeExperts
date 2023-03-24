@@ -4683,6 +4683,22 @@ class Test extends Component
 ```
 
 - 200 Mensagens de Feedback
+
+```php
+ public function saveContent()
+    {
+        session()->flash('success', 'O conteudo foi salvo com sucesso');
+    }
+```
+
+```php
+    @if(session()->has('success'))
+        <div class="w-full px-2 py-4 border border-green-500 bg-green-400 text-white rounded">
+            {{session('success')}}
+        </div>
+    @endif
+```
+
 - 201 Validações
 - 202 Exemplo com Banco de Dados
 - 203 Paginação sem Reload

@@ -116,6 +116,8 @@
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/fideloper/proxy" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -120,9 +120,11 @@
       <path value="$PROJECT_DIR$/videoFlix/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/psr/container" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/composer" />
+      <path value="$PROJECT_DIR$/videoFlix/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/videoFlix/vendor/fideloper/proxy" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
