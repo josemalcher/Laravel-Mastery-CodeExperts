@@ -12,6 +12,8 @@
                     You're logged in!
                     <br>
                     @livewire('test')
+                    <hr class="my-4">
+                    @livewire('content.index')
 
                 </div>
             </div>

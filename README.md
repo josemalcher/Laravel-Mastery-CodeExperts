@@ -4762,6 +4762,42 @@ Created Migration: 2023_03_24_143737_create_contents_table
 ```
 
 - 203 Paginação sem Reload
+
+```
+$ php artisan make:livewire Content/Index
+ COMPONENT CREATED  🤙
+
+CLASS: app/Http/Livewire//Content/Index.php
+
+```
+
+```php
+use Livewire\WithPagination;
+
+class Index extends Component
+{
+    use WithPagination;
+    public function render()
+    {
+        $contents = \App\Models\Content::paginate(5);
+
+        return view('livewire.content.index', compact('contents'));
+    }
+}
+```
+
+```php
+<div>
+    @foreach($contents as $content)
+        <div class="block">{{$content->title}}</div>
+    @endforeach
+
+    {{$contents->links()}}
+
+</div>
+
+```
+
 - 204 Componentes Aninhados
 - 205 Organizando Componentes
 - 206 Componente de Edição
