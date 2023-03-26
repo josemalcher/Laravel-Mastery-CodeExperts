@@ -4799,6 +4799,57 @@ class Index extends Component
 ```
 
 - 204 Componentes Aninhados
+
+```
+$ php artisan make:livewire Content/Content
+ COMPONENT CREATED  🤙
+
+CLASS: app/Http/Livewire//Content/Content.php
+VIEW: \videoFlix\resources\views/livewire/content\content.blade.php
+
+```
+
+```php
+use \App\Models\Content as ContentModel;
+class Content extends Component
+{
+    public $content;
+
+    public function mount(ContentModel $content)
+    {
+        $this->content = $content;
+    }
+    public function render()
+    {
+        return view('livewire.content.content');
+    }
+}
+```
+
+```php
+/* content.blade.php */
+<div>
+    <div class="block">{{ $content->title }}</div>
+</div>
+
+```
+
+```php
+/* index.blade.php */
+<div>
+
+
+    @foreach($contents as $content)
+    {{-- @livewire('content.content', ['content'=>$content], key($content->id)) --}}
+        <livewire:content.content :content="$content" :key="$content->id"></livewire:content.content>
+    @endforeach
+
+    {{$contents->links()}}
+
+</div>
+```
+
+
 - 205 Organizando Componentes
 - 206 Componente de Edição
 - 207 Editando Conteúdo
