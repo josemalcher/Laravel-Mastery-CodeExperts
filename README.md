@@ -4851,6 +4851,31 @@ class Content extends Component
 
 
 - 205 Organizando Componentes
+
+```php
+Route::prefix('/content')->name('content.')->group(function (){
+
+    Route::get('/',       \App\Http\Livewire\Content\Index::class)->name('index');
+    Route::get('/create', \App\Http\Livewire\Content\Create::class)->name('create');
+
+});
+```
+
+```php
+<div>
+
+    <x-slot name="header">Conteudos Cadastrados</x-slot>
+
+    @foreach($contents as $content)
+    {{-- @livewire('content.content', ['content'=>$content], key($content->id)) --}}
+        <livewire:content.content :content="$content" :key="$content->id"></livewire:content.content>
+    @endforeach
+
+    {{$contents->links()}}
+
+</div>
+```
+
 - 206 Componente de Edição
 - 207 Editando Conteúdo
 - 208 Removendo Conteúdo

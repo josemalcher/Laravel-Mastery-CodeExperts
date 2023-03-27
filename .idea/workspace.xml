@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Content/Content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Content/Create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +166,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\videoFlix\resources\views\livewire\content" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/videoFlix/package.json" />
@@ -208,7 +214,7 @@
       <workItem from="1679665466023" duration="5202000" />
       <workItem from="1679754338275" duration="4750000" />
       <workItem from="1679855843067" duration="1428000" />
-      <workItem from="1679858752790" duration="1360000" />
+      <workItem from="1679858752790" duration="5586000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -287,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679772946142</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="204 Componentes Aninhados">
+      <created>1679860243090</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679860243091</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +331,8 @@
     <MESSAGE value="201 Validações" />
     <MESSAGE value="202 Exemplo com Banco de Dados" />
     <MESSAGE value="203 Paginação sem Reload" />
-    <option name="LAST_COMMIT_MESSAGE" value="203 Paginação sem Reload" />
+    <MESSAGE value="204 Componentes Aninhados" />
+    <option name="LAST_COMMIT_MESSAGE" value="204 Componentes Aninhados" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

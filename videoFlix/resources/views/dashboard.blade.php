@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
                     <br>
-                    @livewire('test')
+                    @livewire('content.create')
                     <hr class="my-4">
                     @livewire('content.index')
 
