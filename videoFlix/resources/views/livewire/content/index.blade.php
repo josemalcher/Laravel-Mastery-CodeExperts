@@ -2,7 +2,12 @@
 
     <x-slot name="header">Conteudos Cadastrados</x-slot>
 
-    <a href="{{route('content.create')}}">Criar Conteúdo</a>
+
+    <div class="w-full py-4 flex justify-end">
+        <a class="py-3 px-3 bg-green-800 hover:bg-green-500 text-white font-bold rounded"
+            href="{{route('content.create')}}">Criar Conteúdo</a>
+    </div>
+
 
     @if(session()->has('success'))
         <div class="w-full px-2 py-4 border border-green-500 bg-green-400 text-white rounded">
