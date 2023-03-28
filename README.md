@@ -3229,13 +3229,13 @@ class HomeController extends Controller
 ```
 
 ```php
-  <form class="form-inline my-2 my-lg-0">
+  <form class="my-2 form-inline my-lg-0">
       <input class="form-control mr-sm-2" type="search"
              placeholder="Buscar Evento" aria-label="Search"
              name="s"
              value="{{ request()->query('s') }}"
               >
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      <button class="my-2 btn btn-outline-success my-sm-0" type="submit">Buscar</button>
   </form>
 ```
 
@@ -3536,7 +3536,7 @@ class EventPhotoController extends Controller
 
 ```php
 @section('content')
-    <div class="row mt-5">
+    <div class="mt-5 row">
         <div class="col-12">
             <form action="{{ route('admin.events.photos.store', $event) }}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -3652,12 +3652,12 @@ class EventPhotoRequest extends FormRequest
 ```php
     <div class="row">
         @forelse($event->photos as $photo)
-        <div class="col-4 mb-4 text-center">
+        <div class="mb-4 text-center col-4">
             <img src="{{ asset('storage/'.$photo->photo) }}" alt="Fotos do evento {{ $event->title }}" class="img-fluid">
             <form action="{{ route('admin.events.photos.destroy', [$event, $photo]) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger mt-1">Deletar Foto</button>
+                <button class="mt-1 btn btn-danger">Deletar Foto</button>
             </form>
         </div>
         @empty
@@ -4666,14 +4666,14 @@ class Test extends Component
           <input type="text" wire:model="content">
       </div>
 
-      <button class="border border-green-500 px-5 py-2 rounded" wire:click.prevent="saveContent">Enviar dados</button>
+      <button class="px-5 py-2 border border-green-500 rounded" wire:click.prevent="saveContent">Enviar dados</button>
   </form>
 ```
 
 ```php
 <form action="" wire:submit.prevent="saveContent">
 
-  <button class="border border-green-500 px-5 py-2 rounded">Enviar dados</button>
+  <button class="px-5 py-2 border border-green-500 rounded">Enviar dados</button>
 </form>
 ```
 
@@ -4693,7 +4693,7 @@ class Test extends Component
 
 ```php
     @if(session()->has('success'))
-        <div class="w-full px-2 py-4 border border-green-500 bg-green-400 text-white rounded">
+        <div class="w-full px-2 py-4 text-white bg-green-400 border border-green-500 rounded">
             {{session('success')}}
         </div>
     @endif
@@ -4877,6 +4877,16 @@ Route::prefix('/content')->name('content.')->group(function (){
 ```
 
 - 206 Componente de Edição
+
+```
+$ php artisan make:livewire Content/Edit
+ COMPONENT CREATED  🤙
+
+CLASS: app/Http/Livewire//Content/Edit.php
+VIEW:  \videoFlix\resources\views/livewire/content\edit.blade.php
+
+```
+
 - 207 Editando Conteúdo
 - 208 Removendo Conteúdo
 - 209 Conclusões
