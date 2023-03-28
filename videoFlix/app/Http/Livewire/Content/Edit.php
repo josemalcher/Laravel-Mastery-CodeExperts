@@ -11,7 +11,7 @@ class Edit extends Component
 
     public $rules = [
         'content.title' => 'required',
-        'content.body' => 'required'
+        'content.body' => 'required|min:10'
     ];
 
     public function mount(Content $content)
@@ -27,6 +27,12 @@ class Edit extends Component
 
     public function editContent()
     {
-        dd($this->content);
+        $this->validate();
+
+        if (!$this->content->save()) {
+            session()->flash('error', 'Erro ao salvar o conteudo');
+        }
+
+        session()->flash('success', 'Salvo com sucesso');
     }
 }

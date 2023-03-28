@@ -23,6 +23,6 @@
             @enderror
         </div>
 
-        <button class="border border-green-500 px-5 py-2 rounded" >Salvar dados</button>
+        <button class="border border-green-500 px-5 py-2 rounded" >Atualizar dados</button>
     </form>
 </div>
