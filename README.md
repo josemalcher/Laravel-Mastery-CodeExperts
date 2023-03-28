@@ -4957,6 +4957,67 @@ class Edit extends Component
 
 
 - 208 Removendo Conteúdo
+
+```
+$ php artisan make:livewire Content/Delete
+ COMPONENT CREATED  
+
+CLASS: app/Http/Livewire//Content/Delete.php
+VIEW:  \videoFlix\resources\views/livew
+ire/content\delete.blade.php
+```
+
+```php
+class Delete extends Component
+{
+    public $content;
+
+    public function mount(Content $content)
+    {
+        $this->content = $content;
+    }
+
+    public function render()
+    {
+        return view('livewire.content.delete');
+    }
+
+    public function deleteContent()
+    {
+        if(!$this->content->delete()){
+            session()->flash('error', 'Erro ao remover');
+        }
+
+        session()->flash('success', 'Conteudo Removido com sucesso');
+        return redirect()->route('content.index');
+    }
+}
+```
+
+```php
+<div class="my-2">
+    <div class="flex">
+        {{ $content->id }} - {{ $content->title }} -
+        <a href="{{route('content.edit', $content)}}" class="px-2 py-1 mr-2 border border-blue-600 rounded">Editar</a>
+
+        <livewire:content.delete :content="$content"></livewire:content.delete>
+
+    </div>
+</div>
+
+```
+
+```php
+<div>
+
+    <a href="" class="px-2 py-1 text-white bg-red-600 rounded"
+    wire:click.prevent="deleteContent"
+    >Remover</a>
+
+</div>
+
+```
+
 - 209 Conclusões
 
 [Voltar ao Índice](#indice)

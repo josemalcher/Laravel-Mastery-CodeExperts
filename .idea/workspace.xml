@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Content/Delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Content/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/app/Http/Livewire/Content/Edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +217,8 @@
       <workItem from="1679855843067" duration="1428000" />
       <workItem from="1679858752790" duration="10095000" />
       <workItem from="1680008807550" duration="1099000" />
-      <workItem from="1680012226662" duration="2123000" />
+      <workItem from="1680012226662" duration="3338000" />
+      <workItem from="1680026056728" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -313,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680013515206</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="207 Editando Conteúdo">
+      <created>1680014555251</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680014555251</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +359,8 @@
     <MESSAGE value="204 Componentes Aninhados" />
     <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
-    <option name="LAST_COMMIT_MESSAGE" value="206 Componente de Edição" />
+    <MESSAGE value="207 Editando Conteúdo" />
+    <option name="LAST_COMMIT_MESSAGE" value="207 Editando Conteúdo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
