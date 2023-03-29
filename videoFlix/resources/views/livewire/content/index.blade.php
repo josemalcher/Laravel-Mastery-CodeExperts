@@ -4,8 +4,12 @@
 
 
     <div class="w-full py-4 flex justify-end">
-        <a class="py-3 px-3 bg-green-800 hover:bg-green-500 text-white font-bold rounded"
+        <a class="btn btn-success"
             href="{{route('content.create')}}">Criar Conteúdo</a>
+
+        <a class="btn btn-danger"
+           href="{{route('content.create')}}">Criar Conteúdo</a>
+
     </div>
 
 

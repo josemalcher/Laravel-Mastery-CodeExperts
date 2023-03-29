@@ -5032,6 +5032,30 @@ class Delete extends Component
 - 213 Tailwind & Design Responsivo
 - 214 Estados e Trabalhando Button
 - 215 Diretiva Apply
+
+```css
+.btn{
+    @apply py-3 px-3 text-white font-bold rounded;
+}
+
+.btn-success{
+    @apply bg-green-800 hover:bg-green-500
+}
+
+.btn-danger{
+    @apply bg-red-800 hover:bg-red-500
+}
+
+```
+
+```php
+        <a class="btn btn-success"
+            href="{{route('content.create')}}">Criar Conteúdo</a>
+
+        <a class="btn btn-danger"
+           href="{{route('content.create')}}">Criar Conteúdo</a>
+```
+
 - 216 Estilizando e Melhorando Listagem de Conteúdos
 - 217 Melhorando Forms
 - 218 Conclusões
