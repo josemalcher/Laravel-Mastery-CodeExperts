@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/delete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +215,7 @@
       <workItem from="1679858752790" duration="10095000" />
       <workItem from="1680008807550" duration="1099000" />
       <workItem from="1680012226662" duration="3338000" />
-      <workItem from="1680026056728" duration="6695000" />
+      <workItem from="1680026056728" duration="9773000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -344,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680032125139</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="215 Diretiva Apply">
+      <created>1680120601788</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680120601788</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +388,8 @@
     <MESSAGE value="208 Removendo Conteúdo" />
     <MESSAGE value="209 Conclusões" />
     <MESSAGE value="214 Estados e Trabalhando Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="214 Estados e Trabalhando Button" />
+    <MESSAGE value="215 Diretiva Apply" />
+    <option name="LAST_COMMIT_MESSAGE" value="215 Diretiva Apply" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
