@@ -5,17 +5,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/ValidateSignature.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/resources/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoFlixSail/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/resources/views/livewire/content/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlix/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlix/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoFlix/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/videoFlixSail/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/appMeusEventos/composer.json" />
+      <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/composer.json" />
+      <option value="$PROJECT_DIR$/modulo-ponte-acl/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/videoFlix/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -30,7 +117,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2.1">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/videoFlix/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/graham-campbell/result-type" />
@@ -153,7 +240,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/laragon/bin/php/php-8.2.1-nts-Win32-vs16-x64/php.exe&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -164,6 +253,30 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Space Code Reviews" />
+      <window_info id="Bookmarks" side_tool="true" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" />
+      <window_info id="Robo tasks" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23122066" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32975745" />
+      <window_info anchor="bottom" id="Problems View" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.27192163" />
+      <window_info anchor="bottom" id="Services" order="3" />
+      <window_info anchor="right" id="make" side_tool="true" />
+      <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="Database" order="1" weight="0.25" />
+    </layout>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\videoFlix\resources\views\livewire\content" />
@@ -216,6 +329,8 @@
       <workItem from="1680008807550" duration="1099000" />
       <workItem from="1680012226662" duration="3338000" />
       <workItem from="1680026056728" duration="10923000" />
+      <workItem from="1680801668002" duration="1356000" />
+      <workItem from="1680803654457" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
