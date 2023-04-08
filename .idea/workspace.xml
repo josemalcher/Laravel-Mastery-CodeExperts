@@ -4,156 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="Usando SAIL - antes de instalar o liveware">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a4026329-152b-42e6-bb35-098eb73798f4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a4026329-152b-42e6-bb35-098eb73798f4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a4026329-152b-42e6-bb35-098eb73798f4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/dropdown-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/primary-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/responsive-nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/secondary-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/text-input.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/ConfirmablePasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/ConfirmablePasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/EmailVerificationPromptController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/EmailVerificationPromptController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/NewPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/NewPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/PasswordResetLinkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/PasswordResetLinkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Auth/VerifyEmailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Auth/VerifyEmailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/ValidateSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/ValidateSignature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Requests/Auth/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Http/Requests/ProfileUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Requests/ProfileUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Models/Content.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/View/Components/AppLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/View/Components/AppLayout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/app/View/Components/GuestLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/View/Components/GuestLayout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/bootstrap/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/sanctum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/factories/ContentFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/migrations/2023_03_24_143737_create_contents_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/confirm-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/confirm-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/forgot-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/reset-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/auth/verify-email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/auth/verify-email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/application-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/application-logo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/auth-session-status.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/auth-session-status.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/danger-button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/danger-button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/dropdown-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/input-error.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/input-error.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/input-label.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/input-label.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/components/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/nav-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/primary-button.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/responsive-nav-link.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/secondary-button.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/components/text-input.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/profile/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/profile/partials/delete-user-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/profile/partials/delete-user-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/profile/partials/update-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/profile/partials/update-password-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/profile/partials/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/profile/partials/update-profile-information-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/Auth/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/Auth/RegistrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoFlixSail/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,15 +188,15 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Robo tasks" side_tool="true" />
-      <window_info id="Commit" order="1" weight="0.25" />
-      <window_info id="Structure" order="2" weight="0.25" />
+      <window_info id="Commit" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.28810975" />
       <window_info anchor="bottom" id="Problems View" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.34522706" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.16464552" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
@@ -416,6 +271,7 @@
       <workItem from="1680953077766" duration="1096000" />
       <workItem from="1680982058450" duration="1243000" />
       <workItem from="1680983518368" duration="372000" />
+      <workItem from="1680983916536" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -564,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680808373946</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="liveware instalado - limpo">
+      <created>1680984029969</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680984029969</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +468,8 @@
     <MESSAGE value="215 Diretiva Apply" />
     <MESSAGE value="- 216 Estilizando e Melhorando Listagem de Conteúdos" />
     <MESSAGE value="Usando SAIL - antes de instalar o liveware" />
-    <option name="LAST_COMMIT_MESSAGE" value="Usando SAIL - antes de instalar o liveware" />
+    <MESSAGE value="liveware instalado - limpo" />
+    <option name="LAST_COMMIT_MESSAGE" value="liveware instalado - limpo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
