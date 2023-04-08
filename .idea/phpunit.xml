@@ -4,9 +4,9 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests" />
-        <option value="$PROJECT_DIR$/modulo-ponte-acl/tests" />
-        <option value="$PROJECT_DIR$/appMeusEventos/tests" />
         <option value="$PROJECT_DIR$/videoFlix/tests" />
+        <option value="$PROJECT_DIR$/appMeusEventos/tests" />
+        <option value="$PROJECT_DIR$/modulo-ponte-acl/tests" />
       </list>
     </option>
   </component>
