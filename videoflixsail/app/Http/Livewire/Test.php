@@ -2,23 +2,29 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Content;
 use Livewire\Component;
 
 class Test extends Component
 {
     public $title;
-    public $content;
+    public $body;
 
     protected $rules = [
         'title' => 'required',
-        'content' => 'required|min:10'
+        'body' => 'required|min:10'
     ];
 
     public function saveContent()
     {
         $this->validate();
 
-        $this->reset('title', 'content');// limpar os campos
+        Content::create([
+            'title' => $this->title,
+            'body' => $this->body
+        ]);
+
+        $this->reset('title', 'body');// limpar os campos
 
         session()->flash('success', 'O conteudo foi salvo com sucesso');
     }

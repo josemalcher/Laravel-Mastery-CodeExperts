@@ -20,8 +20,8 @@
 
         <div class="mb-5">
             <label class="block">Conteúdo</label>
-            <input type="text" wire:model.defer="title">
-            @error('title')
+            <input type="text" wire:model.defer="body">
+            @error('body')
             <strong>{{$message}}</strong>
             @enderror
         </div>
