@@ -18,6 +18,10 @@
 
                     @livewire('test')
 
+                    <br>
+
+                    @livewire('content.index')
+
                 </div>
             </div>
         </div>
