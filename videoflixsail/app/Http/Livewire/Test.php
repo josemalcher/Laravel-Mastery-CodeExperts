@@ -11,10 +11,11 @@ class Test extends Component
 
     public function saveContent()
     {
-        dd($this->title, $this->content);
+        // dd($this->title, $this->content);
 
         // salvar os dados... COntent::create(...)
         // retornar mensagem de sucesso
+        session()->flash('success', 'O conteudo foi salvo com sucesso');
     }
 
     public function render()

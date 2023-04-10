@@ -1,5 +1,11 @@
 <div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
+
+    @if(session()->has('success'))
+        <div class="w-full px-2 py-4 text-black bg-green-400 border border-green-500 rounded">
+            {{session('success')}}
+        </div>
+    @endif
+
     <h1>Exemplo componente LiveWire</h1>
     <br>
     <h2>{{$title}}</h2>
