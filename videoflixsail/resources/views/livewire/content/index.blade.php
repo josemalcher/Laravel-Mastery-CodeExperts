@@ -1,6 +1,8 @@
 <div>
     @foreach($contents as $content)
-        <div class="block">{{$content->title}}</div>
+{{--        @livewire('content.content', ['content'=> $content], key($content->id))--}}
+        <livewire:content.content :content="$content" :key="$content->id"></livewire:content.content>
+
     @endforeach
 
     {{$contents->links()}}

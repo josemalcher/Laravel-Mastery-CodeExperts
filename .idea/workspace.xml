@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +274,7 @@
       <workItem from="1680983916536" duration="1360000" />
       <workItem from="1681130901821" duration="85000" />
       <workItem from="1681140159605" duration="1193000" />
-      <workItem from="1681152568273" duration="2163000" />
+      <workItem from="1681152568273" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -457,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681153761133</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="203 Paginação sem Reload">
+      <created>1681154931343</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681154931343</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +491,6 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <MESSAGE value="203 Paginação sem Reload" />
     <MESSAGE value="204 Componentes Aninhados" />
     <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
@@ -499,7 +506,8 @@
     <MESSAGE value="200 Mensagens de Feedback" />
     <MESSAGE value="201 Validações" />
     <MESSAGE value="202 Exemplo com Banco de Dados" />
-    <option name="LAST_COMMIT_MESSAGE" value="202 Exemplo com Banco de Dados" />
+    <MESSAGE value="203 Paginação sem Reload" />
+    <option name="LAST_COMMIT_MESSAGE" value="203 Paginação sem Reload" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
