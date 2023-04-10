@@ -9,12 +9,17 @@ class Test extends Component
     public $title;
     public $content;
 
+    protected $rules = [
+        'title' => 'required',
+        'content' => 'required|min:10'
+    ];
+
     public function saveContent()
     {
-        // dd($this->title, $this->content);
+        $this->validate();
 
-        // salvar os dados... COntent::create(...)
-        // retornar mensagem de sucesso
+        $this->reset('title', 'content');// limpar os campos
+
         session()->flash('success', 'O conteudo foi salvo com sucesso');
     }
 

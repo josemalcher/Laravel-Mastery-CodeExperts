@@ -28,6 +28,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="contato@josemalcher.net" />
         <option value="Jose Malcher Jr &lt;contato@josemalcher.net&gt;" />
       </list>
     </option>
@@ -272,7 +273,7 @@
       <workItem from="1680983518368" duration="372000" />
       <workItem from="1680983916536" duration="1360000" />
       <workItem from="1681130901821" duration="85000" />
-      <workItem from="1681140159605" duration="593000" />
+      <workItem from="1681140159605" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -435,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680987916258</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="200 Mensagens de Feedback">
+      <created>1681148767510</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681148767510</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +469,6 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <MESSAGE value="200 Mensagens de Feedback" />
     <MESSAGE value="201 Validações" />
     <MESSAGE value="202 Exemplo com Banco de Dados" />
     <MESSAGE value="203 Paginação sem Reload" />
@@ -477,7 +484,8 @@
     <MESSAGE value="Usando SAIL - antes de instalar o liveware" />
     <MESSAGE value="liveware instalado - limpo" />
     <MESSAGE value="199 Manipulando Ações" />
-    <option name="LAST_COMMIT_MESSAGE" value="199 Manipulando Ações" />
+    <MESSAGE value="200 Mensagens de Feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="200 Mensagens de Feedback" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
