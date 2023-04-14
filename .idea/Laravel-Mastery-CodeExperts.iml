@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/appMeusEventos/tests/Unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/videoflixsail" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/dragonmantank/cron-expression" />

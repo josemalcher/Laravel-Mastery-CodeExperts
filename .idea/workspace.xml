@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,19 +195,19 @@
       <window_info id="Robo tasks" side_tool="true" />
       <window_info id="Commit" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.22574335" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.28810975" />
       <window_info anchor="bottom" id="Problems View" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.28591287" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.19138092" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="Database" order="1" weight="0.24843505" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="2" visible="true" weight="0.24843505" />
     </layout>
   </component>
   <component name="RecentsManager">
@@ -214,6 +219,7 @@
       <recent name="$PROJECT_DIR$/videoFlixSail/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content" />
       <recent name="C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\videoFlix\resources\views\livewire\content" />
     </key>
   </component>
@@ -274,7 +280,11 @@
       <workItem from="1680983916536" duration="1360000" />
       <workItem from="1681130901821" duration="85000" />
       <workItem from="1681140159605" duration="1193000" />
-      <workItem from="1681152568273" duration="2846000" />
+      <workItem from="1681152568273" duration="3467000" />
+      <workItem from="1681307095537" duration="597000" />
+      <workItem from="1681321527857" duration="1475000" />
+      <workItem from="1681478951957" duration="597000" />
+      <workItem from="1681512010829" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -465,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681154931343</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="204 Componentes Aninhados">
+      <created>1681156007349</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681156007350</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +508,6 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <MESSAGE value="204 Componentes Aninhados" />
     <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="207 Editando Conteúdo" />
@@ -507,7 +523,8 @@
     <MESSAGE value="201 Validações" />
     <MESSAGE value="202 Exemplo com Banco de Dados" />
     <MESSAGE value="203 Paginação sem Reload" />
-    <option name="LAST_COMMIT_MESSAGE" value="203 Paginação sem Reload" />
+    <MESSAGE value="204 Componentes Aninhados" />
+    <option name="LAST_COMMIT_MESSAGE" value="204 Componentes Aninhados" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,7 +16,7 @@
                     You're logged in!
                     <br>
 
-                    @livewire('test')
+                    @livewire('content.create')
 
                     <br>
 

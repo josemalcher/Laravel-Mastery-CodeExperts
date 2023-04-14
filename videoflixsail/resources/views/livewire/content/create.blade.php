@@ -1,4 +1,5 @@
 <div>
+    <x-slot name="header">Criar novo conteudos</x-slot>
 
     @if(session()->has('success'))
         <div class="w-full px-2 py-4 text-black bg-green-400 border border-green-500 rounded">

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Content;
 
 use App\Models\Content;
 use Livewire\Component;
 
-class Test extends Component
+class Create extends Component
 {
     public $title;
     public $body;
@@ -31,6 +31,6 @@ class Test extends Component
 
     public function render()
     {
-        return view('livewire.test');
+        return view('livewire.content.create');
     }
 }

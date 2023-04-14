@@ -12,6 +12,7 @@ class Index extends Component
     {
         $contents = \App\Models\Content::paginate(5);
 
-        return view('livewire.content.index', compact('contents'));
+        return view('livewire.content.index', compact('contents'))
+            ->layout('layouts.app');
     }
 }
