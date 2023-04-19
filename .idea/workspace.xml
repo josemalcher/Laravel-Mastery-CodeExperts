@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videoflixsail/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,14 +194,14 @@
       <window_info id="Robo tasks" side_tool="true" />
       <window_info id="Commit" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.22574335" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14358371" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.28810975" />
-      <window_info anchor="bottom" id="Problems View" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.19138092" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.21222015" />
+      <window_info anchor="bottom" id="Problems View" order="1" weight="0.21222015" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.17490672" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
@@ -284,7 +283,14 @@
       <workItem from="1681307095537" duration="597000" />
       <workItem from="1681321527857" duration="1475000" />
       <workItem from="1681478951957" duration="597000" />
-      <workItem from="1681512010829" duration="595000" />
+      <workItem from="1681512010829" duration="1203000" />
+      <workItem from="1681649954352" duration="596000" />
+      <workItem from="1681674577329" duration="596000" />
+      <workItem from="1681737253992" duration="594000" />
+      <workItem from="1681752120107" duration="595000" />
+      <workItem from="1681759080242" duration="594000" />
+      <workItem from="1681839234440" duration="597000" />
+      <workItem from="1681922188481" duration="1343000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -482,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681156007350</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="205 Organizando Componentes">
+      <created>1681514009680</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681514009680</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +521,6 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="207 Editando Conteúdo" />
     <MESSAGE value="208 Removendo Conteúdo" />
@@ -524,7 +536,8 @@
     <MESSAGE value="202 Exemplo com Banco de Dados" />
     <MESSAGE value="203 Paginação sem Reload" />
     <MESSAGE value="204 Componentes Aninhados" />
-    <option name="LAST_COMMIT_MESSAGE" value="204 Componentes Aninhados" />
+    <MESSAGE value="205 Organizando Componentes" />
+    <option name="LAST_COMMIT_MESSAGE" value="205 Organizando Componentes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

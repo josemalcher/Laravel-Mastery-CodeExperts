@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Content\Create;
 use App\Http\Livewire\Content\Index;
+use App\Http\Livewire\Content\Edit;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,10 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('/content')->name('content.')->group(function (){
+Route::prefix('/content')->middleware(['auth', 'verified'])->name('content.')->group(function (){
 
     Route::get('/',       Index::class)->name('index');
     Route::get('/create', Create::class)->name('create');
+    Route::get('/{content}', Edit::class)->name('edit');
 
 });
 
