@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videoflixsail/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/app/Http/Livewire/Content/Edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +191,14 @@
       <window_info id="Robo tasks" side_tool="true" />
       <window_info id="Commit" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14358371" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14087018" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.21222015" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.173772" />
       <window_info anchor="bottom" id="Problems View" order="1" weight="0.21222015" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.17490672" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.17397389" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
@@ -290,7 +287,8 @@
       <workItem from="1681752120107" duration="595000" />
       <workItem from="1681759080242" duration="594000" />
       <workItem from="1681839234440" duration="597000" />
-      <workItem from="1681922188481" duration="1343000" />
+      <workItem from="1681922188481" duration="3479000" />
+      <workItem from="1682011776156" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -495,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681514009680</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="206 Componente de Edição">
+      <created>1681937111607</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681937111608</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +526,6 @@
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
-    <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="207 Editando Conteúdo" />
     <MESSAGE value="208 Removendo Conteúdo" />
     <MESSAGE value="209 Conclusões" />
@@ -537,7 +541,8 @@
     <MESSAGE value="203 Paginação sem Reload" />
     <MESSAGE value="204 Componentes Aninhados" />
     <MESSAGE value="205 Organizando Componentes" />
-    <option name="LAST_COMMIT_MESSAGE" value="205 Organizando Componentes" />
+    <MESSAGE value="206 Componente de Edição" />
+    <option name="LAST_COMMIT_MESSAGE" value="206 Componente de Edição" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

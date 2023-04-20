@@ -23,7 +23,11 @@ class Edit extends Component
 
     public function editContent()
     {
-        dd($this->content);
+        $this->validate();
+        if (!$this->content->save()) {
+            session()->flash('error', 'Erro ao editar o conteúdo!');
+        }
+        session()->flash('success', 'Salvo Com Sucesso');
     }
 
     public function render()
