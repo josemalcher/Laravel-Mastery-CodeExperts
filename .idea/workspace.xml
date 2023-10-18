@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/ola-mundo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,13 @@
   <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/videoFlix/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Blade File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -292,7 +300,8 @@
       <workItem from="1681922188481" duration="3479000" />
       <workItem from="1682011776156" duration="596000" />
       <workItem from="1697634332885" duration="1695000" />
-      <workItem from="1697636080876" duration="1572000" />
+      <workItem from="1697636080876" duration="2389000" />
+      <workItem from="1697641128177" duration="3543000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -512,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697636252673</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[REV] 09 - Diretórios Projeto">
+      <option name="closed" value="true" />
+      <created>1697637703704</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1697637703704</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +572,8 @@
     <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="[REV] 08 - Iniciando Projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 08 - Iniciando Projeto" />
+    <MESSAGE value="[REV] 09 - Diretórios Projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 09 - Diretórios Projeto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
