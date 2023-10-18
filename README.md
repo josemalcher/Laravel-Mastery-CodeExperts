@@ -111,6 +111,48 @@ php artisan serve
   - [app2meuseventos](app2meuseventos)
 
 - 09 - Diretórios Projeto
+
+IA BING:
+
+Aqui está um resumo das funções de cada pasta na estrutura de pastas do Laravel 10:
+
+- **app**: Contém o código principal do seu aplicativo, incluindo controladores, middleware, solicitações e provedores¹.
+- **bootstrap**: Contém o arquivo app.php que inicializa o framework. Este diretório também contém um diretório de cache que contém arquivos gerados pelo framework para otimização de desempenho¹.
+- **config**: Como o nome indica, contém todos os arquivos de configuração do seu aplicativo¹.
+- **database**: Contém suas migrações de banco de dados, fábricas de modelos e sementes¹.
+- **public**: Contém o arquivo index.php, que é o ponto de entrada para todas as solicitações que entram no seu aplicativo e configura a autocarga. Este diretório também contém seus ativos, como imagens, JavaScript e CSS¹.
+- **resources**: Contém suas visualizações, bem como seus ativos brutos e não compilados, como CSS ou JavaScript¹.
+- **routes**: Contém todas as definições de rota para o seu aplicativo¹.
+- **storage**: Contém seus logs, templates Blade compilados, sessões baseadas em arquivos, caches de arquivos e outros arquivos gerados pelo framework. Este diretório é segregado em diretórios de aplicativos, estrutura e logs¹.
+- **tests**: (Não mencionado nos resultados da pesquisa)
+- **vendor**: (Não mencionado nos resultados da pesquisa)
+
+Origem: conversa com o Bing, 18/10/2023
+(1) Directory Structure - Laravel 10.x - The PHP Framework For Web Artisans. https://laravel.com/docs/10.x/structure.
+(2) File Storage - Laravel 10.x - The PHP Framework For Web Artisans. https://laravel.com/docs/10.x/filesystem.
+(3) Laravel 10 Directory Structure in 2 minutes - AK. https://ashutosh.dev/laravel-10-directory-structure-in-2-minutes/.
+
+
+A pasta `App` no Laravel é onde são armazenados os arquivos e classes que compõem a aplicação Laravel, que segue o padrão MVC (Model-View-Controller). Ou seja, nela estarão os modelos, views (layouts) e controles que darão forma ao projeto². Em grande parte do desenvolvimentos estaremos trabalhando em tais arquivos, que representam a maior parcela de nosso código².
+
+Infelizmente, não consegui encontrar informações específicas sobre a estrutura da pasta `App` no Laravel 10. No entanto, a estrutura geralmente inclui as seguintes pastas e arquivos:
+
+- `Http`: Esta pasta contém os controladores, middleware e solicitações de formulário. É um componente essencial na manipulação de solicitações HTTP e respostas no Laravel.
+- `Providers`: Esta pasta contém todos os provedores de serviços do aplicativo. Os provedores de serviços são a configuração central do aplicativo Laravel.
+- `Console`: Esta pasta contém todos os comandos Artisan gerados pelo usuário.
+- `Exceptions`: Esta pasta contém o manipulador de exceções do aplicativo.
+- `Jobs`: Esta pasta contém as filas do aplicativo.
+- `Listeners`: Esta pasta contém os manipuladores de eventos do aplicativo.
+- `Policies`: Esta pasta contém as políticas de autorização do aplicativo.
+
+Por favor, verifique a documentação oficial do Laravel para obter informações mais detalhadas sobre a estrutura da pasta `App`.
+
+Origem: conversa com o Bing, 18/10/2023
+(1) Laravel – Estrutura de Pastas (Projeto) - MGC Consulting. https://mgcconsulting.com.br/laravel-estrutura-de-pastas-projeto/.
+(2) O que faz a pasta storage no laravel? - Stack Overflow em Português. https://pt.stackoverflow.com/questions/462537/o-que-faz-a-pasta-storage-no-laravel.
+(3) Laravel Tutorial: Introdução ao Laravel Framework PHP - DevMedia. https://www.devmedia.com.br/laravel-tutorial/33173.
+(4) undefined. http://laravel.com/docs/structure.
+
 - 10 - Panorama Inicial do Laravel
 
 [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/routes/web.php](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/routes/web.php)
