@@ -3,9 +3,12 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/appMeusEventos/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/appMeusEventos/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/appMeusEventos/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/appMeusEventos/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
@@ -14,6 +17,19 @@
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/tests/Unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/videoflixsail" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/videoFlix/vendor/dragonmantank/cron-expression" />

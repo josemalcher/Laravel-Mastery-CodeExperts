@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="videoflixsail@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
-    <root id="1">
-      <DefaultCasing>exact</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>testing%|schema||sail||ALTER|G
-testing%|schema||sail||ALTER ROUTINE|G
-testing%|schema||sail||CREATE|G
-testing%|schema||sail||CREATE ROUTINE|G
-testing%|schema||sail||CREATE TEMPORARY TABLES|G
-testing%|schema||sail||CREATE VIEW|G
-testing%|schema||sail||DELETE|G
-testing%|schema||sail||DROP|G
-testing%|schema||sail||EVENT|G
-testing%|schema||sail||EXECUTE|G
-testing%|schema||sail||INDEX|G
-testing%|schema||sail||INSERT|G
-testing%|schema||sail||LOCK TABLES|G
-testing%|schema||sail||REFERENCES|G
-testing%|schema||sail||SELECT|G
-testing%|schema||sail||SHOW VIEW|G
-testing%|schema||sail||TRIGGER|G
-testing%|schema||sail||UPDATE|G
-videoflixsail|schema||sail||ALTER|G
-videoflixsail|schema||sail||ALTER ROUTINE|G
-videoflixsail|schema||sail||CREATE|G
-videoflixsail|schema||sail||CREATE ROUTINE|G
-videoflixsail|schema||sail||CREATE TEMPORARY TABLES|G
-videoflixsail|schema||sail||CREATE VIEW|G
-videoflixsail|schema||sail||DELETE|G
-videoflixsail|schema||sail||DROP|G
-videoflixsail|schema||sail||EVENT|G
-videoflixsail|schema||sail||EXECUTE|G
-videoflixsail|schema||sail||INDEX|G
-videoflixsail|schema||sail||INSERT|G
-videoflixsail|schema||sail||LOCK TABLES|G
-videoflixsail|schema||sail||REFERENCES|G
-videoflixsail|schema||sail||SELECT|G
-videoflixsail|schema||sail||SHOW VIEW|G
-videoflixsail|schema||sail||TRIGGER|G
-videoflixsail|schema||sail||UPDATE|G</Grants>
-      <ServerVersion>8.0.32</ServerVersion>
-    </root>
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>

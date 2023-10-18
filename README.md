@@ -108,6 +108,7 @@ php artisan serve
   - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01)
   - [03-PrimeirosPassosVisaoGeral/projMeusEventos](03-PrimeirosPassosVisaoGeral/projMeusEventos)
   - [appMeusEventos](appMeusEventos)
+  - [app2meuseventos](app2meuseventos)
 
 - 09 - Diretórios Projeto
 - 10 - Panorama Inicial do Laravel
