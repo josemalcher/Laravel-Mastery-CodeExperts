@@ -481,7 +481,7 @@ $ sail php artisan migrate
 
 - 18 - Os Models
 
-- 03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Models/User.php
+- app2meuseventos/app/Models/User.php
 
 ```php
 class User extends Authenticatable
@@ -491,8 +491,11 @@ class User extends Authenticatable
 
 
 ```
-$ php artisan make:model Event
-Model created successfully.
+$ sail php artisan make:model Event
+
+   INFO  Model [app/Models/Event.php] created successfully.
+
+
 
 ```
 

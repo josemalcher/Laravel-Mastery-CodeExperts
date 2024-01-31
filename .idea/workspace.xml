@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -36,9 +37,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Jose Malcher Jr &lt;contato@josemalcher.net&gt;" />
         <option value="José Malcher Jr &lt;contato@josemalcher.net&gt;" />
         <option value="contato@josemalcher.net" />
-        <option value="Jose Malcher Jr &lt;contato@josemalcher.net&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="1c77b263-0e3e-4071-a73f-ad77c13c79aa" />
+        <option name="accountId" value="81ca1c7c-3114-46ac-a854-26f3aa555288" />
         <option name="url" value="git@github.com:josemalcher/Laravel-Mastery-CodeExperts.git" />
       </UrlAndAccount>
     </option>
@@ -273,7 +274,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
       </set>
     </attachedChunks>
   </component>
@@ -328,7 +329,8 @@
       <workItem from="1703867984360" duration="623000" />
       <workItem from="1703872556822" duration="3041000" />
       <workItem from="1704484071614" duration="2371000" />
-      <workItem from="1704489290309" duration="581000" />
+      <workItem from="1704489290309" duration="2210000" />
+      <workItem from="1706699636024" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -564,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697658869259</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[REV] 17 - Criando Primeira Migração">
+      <option name="closed" value="true" />
+      <created>1704490096826</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704490096826</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +594,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="191 Instalando o Breeze" />
     <MESSAGE value="191 Instalando o Breeze - Ajuste Versões" />
     <MESSAGE value="195 Testando Painel e Concluindo" />
     <MESSAGE value="196 Instalando Livewire" />
@@ -609,7 +618,8 @@
     <MESSAGE value="[REV] 08 - Iniciando Projeto" />
     <MESSAGE value="[REV] 09 - Diretórios Projeto" />
     <MESSAGE value="[REV] 10 - Panorama Inicial do Laravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 10 - Panorama Inicial do Laravel" />
+    <MESSAGE value="[REV] 17 - Criando Primeira Migração" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 17 - Criando Primeira Migração" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
