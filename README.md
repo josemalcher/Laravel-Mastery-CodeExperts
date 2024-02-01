@@ -523,7 +523,7 @@ Route::get('/queries/{id}', function ($id) {
 
 
 ```
-$ php artisan tinker
+$ sail php artisan tinker
 Psy Shell v0.10.12 (PHP 7.4.19 — cli) by Justin Hileman
 >>>   
 ```
@@ -566,9 +566,9 @@ Psy Shell v0.10.12 (PHP 7.4.19 — cli) by Justin Hileman
   - [03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources](03-PrimeirosPassosVisaoGeral/proj-meuseventos-03-01/resources)
 
 ```
-$ npm i
+$ sail npm i
 
-$ npm run dev
+$ sail npm run dev
 
 ```
   
@@ -617,15 +617,17 @@ public function definition()
 ```
 
 ```bash
-$ php artisan db:seed
-Database seeding completed successfully.
+$ sail php artisan db:seed
+
+   INFO  Seeding database.
+
 
 ```
 
 - 26 Primeira Factory e Seeds
 
 ```bash
-$ php artisan make:factory EventFactory
+$ sail php artisan make:factory EventFactory
 Factory created successfully.
 
 ```
@@ -637,7 +639,8 @@ Factory created successfully.
     {
         return [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph
+            'description' => $this->faker->words(7, true),
+
         ];
     }
 ```
@@ -651,125 +654,189 @@ Factory created successfully.
 }
 ```
 
-```bash
-$ php artisan db:seed
-Database seeding completed successfully.
+```
+$ sail php artisan db:seed
+
+   INFO  Seeding database.
 
 ```
 
-```bash
-$ php artisan make:seeder UsersTableSeeder
-Seeder created successfully.
+```
+$ sail php artisan make:seeder UsersTableSeeder
 
-$ php artisan make:seeder EventsTableSeeder
-Seeder created successfully.
+   INFO  Seeder [database/seeders/UsersTableSeeder.php] created successfully.
+
+
+
+$ sail php artisan make:seeder EventsTableSeeder
+
+   INFO  Seeder [database/seeders/EventsTableSeeder.php] created successfully.
 
 ```
-- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/EventsTableSeeder.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/EventsTableSeeder.php)
-- [03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/UsersTableSeeder.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/database/seeders/UsersTableSeeder.php)
+ 
+- [app2meuseventos/database/seeders/EventsTableSeeder.php](app2meuseventos/database/seeders/EventsTableSeeder.php)
+- [app2meuseventos/database/seeders/UsersTableSeeder.php](app2meuseventos/database/seeders/UsersTableSeeder.php)
 
-```bash
-$ php artisan db:seed
-Seeding: Database\Seeders\UsersTableSeeder
-Seeded:  Database\Seeders\UsersTableSeeder (110.22ms)
-Seeding: Database\Seeders\EventsTableSeeder
-Seeded:  Database\Seeders\EventsTableSeeder (19.99ms)
-Database seeding completed successfully.
+
+```php
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\Event::factory(30)->create();
+
+        $this->call(UsersTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
+
+    }
+}
+```
+
+```php
+class EventsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        \App\Models\Event::factory(30)->create();
+    }
+}
+```
+
+```
+$ sail php artisan db:seed
+
+   INFO  Seeding database.
+
+  Database\Seeders\UsersTableSeeder ...................... RUNNING
+  Database\Seeders\UsersTableSeeder ................ 83.20 ms DONE  
+
+  Database\Seeders\EventsTableSeeder ..................... RUNNING
+  Database\Seeders\EventsTableSeeder .............. 122.09 ms DONE  
+
 
 ```
 
 - 27 Comandos Fresh e Refresh
 
 ```
-$ php artisan migrate:status
-+------+-------------------------------------------------------+-------+
-| Ran? | Migration                                             | Batch |
-+------+-------------------------------------------------------+-------+
-| Yes  | 2014_10_12_000000_create_users_table                  | 1     |
-| Yes  | 2014_10_12_100000_create_password_resets_table        | 1     |
-| Yes  | 2019_08_19_000000_create_failed_jobs_table            | 1     |
-| Yes  | 2019_12_14_000001_create_personal_access_tokens_table | 1     |
-| Yes  | 2021_12_08_235820_create_events_table                 | 1     |
-+------+-------------------------------------------------------+-------+
+$ sail php artisan migrate:status     
+
+  Migration name ........................................................ Batch / Status
+  2014_10_12_000000_create_users_table ......................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table ......................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ................................... [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ........................ [1] Ran
+  2024_01_05_212259_create_events_table ........................................ [2] Ran
+
 
 ```
 
+
 ```
-$ php artisan migrate:refresh
-Rolling back: 2021_12_08_235820_create_events_table
-Rolled back:  2021_12_08_235820_create_events_table (9.16ms)
-Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
-Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (6.07ms)
-Rolling back: 2019_08_19_000000_create_failed_jobs_table
-Rolled back:  2019_08_19_000000_create_failed_jobs_table (7.42ms)
-Rolling back: 2014_10_12_100000_create_password_resets_table
-Rolled back:  2014_10_12_100000_create_password_resets_table (5.46ms)
-Rolling back: 2014_10_12_000000_create_users_table
-Rolled back:  2014_10_12_000000_create_users_table (5.38ms)
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (24.02ms)
-Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (23.45ms)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (23.16ms)
-Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (44.39ms)
-Migrating: 2021_12_08_235820_create_events_table
-Migrated:  2021_12_08_235820_create_events_table (14.45ms)
+$ sail php artisan migrate:refresh                          
+
+   INFO  Rolling back migrations.
+
+  2024_01_05_212259_create_events_table ...................................... 19ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ...................... 14ms DONE
+  2019_08_19_000000_create_failed_jobs_table ................................. 10ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ....................... 11ms DONE
+  2014_10_12_000000_create_users_table ....................................... 11ms DONE
+
+
+   INFO  Running migrations.
+
+  2014_10_12_000000_create_users_table ........................................... 36ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ........................... 50ms DONE
+  2019_08_19_000000_create_failed_jobs_table ..................................... 37ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .......................... 54ms DONE
+  2024_01_05_212259_create_events_table .......................................... 23ms DONE
+
+
+$ sail php artisan migrate:status 
+
+  Migration name .................................................... Batch / Status  
+  2014_10_12_000000_create_users_table ..................................... [1] Ran  
+  2014_10_12_100000_create_password_reset_tokens_table ..................... [1] Ran  
+  2019_08_19_000000_create_failed_jobs_table ............................... [1] Ran  
+  2019_12_14_000001_create_personal_access_tokens_table .................... [1] Ran  
+  2024_01_05_212259_create_events_table .................................... [1] Ran  
+
 
 ```
 
+**migrate:refresh** - Desfaz tudo que está descrito nas migrations 
+
 ```
-$ php artisan migrate:refresh --seed
-Rolling back: 2021_12_08_235820_create_events_table
-Rolled back:  2021_12_08_235820_create_events_table (11.78ms)
-Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
-Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (6.56ms)
-Rolling back: 2019_08_19_000000_create_failed_jobs_table
-Rolled back:  2019_08_19_000000_create_failed_jobs_table (7.85ms)
-Rolling back: 2014_10_12_100000_create_password_resets_table
-Rolled back:  2014_10_12_100000_create_password_resets_table (7.31ms)
-Rolling back: 2014_10_12_000000_create_users_table
-Rolled back:  2014_10_12_000000_create_users_table (6.81ms)
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (31.31ms)
-Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (27.99ms)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (29.84ms)
-Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (45.24ms)
-Migrating: 2021_12_08_235820_create_events_table
-Migrated:  2021_12_08_235820_create_events_table (16.64ms)
-Seeding: Database\Seeders\UsersTableSeeder
-Seeded:  Database\Seeders\UsersTableSeeder (675.62ms)
-Seeding: Database\Seeders\EventsTableSeeder
-Seeded:  Database\Seeders\EventsTableSeeder (81.61ms)
-Database seeding completed successfully.
+$ sail php artisan migrate:refresh --seed                          
+
+   INFO  Rolling back migrations.
+
+  2024_01_05_212259_create_events_table .................................... 15ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................... 15ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................... 11ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ..................... 14ms DONE
+  2014_10_12_000000_create_users_table ..................................... 12ms DONE
+
+
+   INFO  Running migrations.
+
+  2014_10_12_000000_create_users_table ................................. 38ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ................. 50ms DONE
+  2019_08_19_000000_create_failed_jobs_table ........................... 35ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ................ 48ms DONE
+  2024_01_05_212259_create_events_table ................................ 21ms DONE
+
+
+   INFO  Seeding database.
+
+  Database\Seeders\UsersTableSeeder .............................. RUNNING
+  Database\Seeders\UsersTableSeeder ........................ 80.81 ms DONE  
+
+  Database\Seeders\EventsTableSeeder ........................ RUNNING
+  Database\Seeders\EventsTableSeeder ................. 118.96 ms DONE  
+
+
 
 ```
 
-- Apaga todo o banco e refaz. Apaga outras tabelas que não estão na migrations.
+- **migrate:fresh - Apaga todo o banco** e refaz. Apaga outras tabelas que não estão na migrations.
 
 ```
-$ php artisan migrate:fresh --seed
-Dropped all tables successfully.
-Migration table created successfully.
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (45.61ms)
-Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (33.54ms)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (36.86ms)
-Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (47.11ms)
-Migrating: 2021_12_08_235820_create_events_table
-Migrated:  2021_12_08_235820_create_events_table (18.63ms)
-Seeding: Database\Seeders\UsersTableSeeder
-Seeded:  Database\Seeders\UsersTableSeeder (99.36ms)
-Seeding: Database\Seeders\EventsTableSeeder
-Seeded:  Database\Seeders\EventsTableSeeder (21.74ms)
-Database seeding completed successfully.
+$ sail php artisan migrate:fresh --seed                                  
+
+  Dropping all tables ................................... 56ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................. 37ms DONE
+
+   INFO  Running migrations.
+
+  2014_10_12_000000_create_users_table .................................... 40ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table .................... 51ms DONE
+  2019_08_19_000000_create_failed_jobs_table .............................. 39ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ................... 55ms DONE
+  2024_01_05_212259_create_events_table ................................... 23ms DONE
+
+
+   INFO  Seeding database.
+
+  Database\Seeders\UsersTableSeeder .................................... RUNNING
+  Database\Seeders\UsersTableSeeder .............................. 57.50 ms DONE  
+
+  Database\Seeders\EventsTableSeeder .................... RUNNING
+  Database\Seeders\EventsTableSeeder ............. 109.59 ms DONE  
+
+
 
 
 ```
@@ -777,42 +844,132 @@ Database seeding completed successfully.
 - 28 Comando Rollback e Reset
 
 ```
-$ php artisan migrate:rollback
-Rolling back: 2021_12_08_235820_create_events_table
-Rolled back:  2021_12_08_235820_create_events_table (12.19ms)
-Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
-Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (5.59ms)
-Rolling back: 2019_08_19_000000_create_failed_jobs_table
-Rolled back:  2019_08_19_000000_create_failed_jobs_table (6.01ms)
-Rolling back: 2014_10_12_100000_create_password_resets_table
-Rolled back:  2014_10_12_100000_create_password_resets_table (5.30ms)
-Rolling back: 2014_10_12_000000_create_users_table
-Rolled back:  2014_10_12_000000_create_users_table (5.28ms)
+$ sail php artisan migrate:status
+
+  Migration name ........................................................... Batch / Status
+  2014_10_12_000000_create_users_table ............................................ [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table ............................ [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ...................................... [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ........................... [1] Ran  
+  2024_01_05_212259_create_events_table ........................................... [1] Ran
+
+
+
+$ sail php artisan migrate:rollback
+
+   INFO  Rolling back migrations.
+
+  2024_01_05_212259_create_events_table .................................... 17ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................... 12ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................... 12ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ..................... 12ms DONE
+  2014_10_12_000000_create_users_table ..................................... 13ms DONE
+
+$ sail php artisan migrate:status  
+
+  Migration name ...................................................... Batch / Status
+  2014_10_12_000000_create_users_table ....................................... Pending
+  2014_10_12_100000_create_password_reset_tokens_table ....................... Pending
+  2019_08_19_000000_create_failed_jobs_table ................................. Pending
+  2019_12_14_000001_create_personal_access_tokens_table ...................... Pending
+  2024_01_05_212259_create_events_table ...................................... Pending
 
 ```
 
 ```
-$ php artisan migrate
-Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (25.64ms)
-Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (23.68ms)
-Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (22.53ms)
-Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (38.29ms)
-Migrating: 2021_12_08_235820_create_events_table
-Migrated:  2021_12_08_235820_create_events_table (13.67ms)
+$ sail php artisan migrate   
+(...)
+
+
+$ sail php artisan migrate:status
+
+  Migration name ......................................................... Batch / Status
+  2014_10_12_000000_create_users_table .......................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table .......................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table .................................... [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ......................... [1] Ran
+  2024_01_05_212259_create_events_table ......................................... [2] Ran
+
+
+$ sail php artisan migrate:rollback
+
+   INFO  Rolling back migrations.
+
+  2024_01_05_212259_create_events_table ............ 16ms DONE
+
+
+$ sail php artisan migrate:status  
+
+  Migration name ...................................................... Batch / Status
+  2014_10_12_000000_create_users_table ....................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table ....................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ................................. [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ...................... [1] Ran
+  2024_01_05_212259_create_events_table ...................................... Pending
+
+
+$ sail php artisan migrate       
+
+   INFO  Running migrations.
+
+  2024_01_05_212259_create_events_table ......................... 22ms DONE
+
 
 ```
 
 ```
-$ php artisan migrate:rollback --step=2
+$ sail php artisan migrate:status
+
+  Migration name ...................................................... Batch / Status
+  2014_10_12_000000_create_users_table ....................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table ....................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ................................. [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ...................... [1] Ran
+  2024_01_05_212259_create_events_table ...................................... [2] Ran
+
+
+
+$ sail php artisan migrate:rollback --step=2                          
+
+   INFO  Rolling back migrations.
+
+  2024_01_05_212259_create_events_table .................................................................................................. 14ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................................................................................. 10ms DONE
+
+
+
+$ sail php artisan migrate:status           
+
+  Migration name ................................................. Batch / Status
+  2014_10_12_000000_create_users_table .................................. [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table .................. [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ............................ [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ................. Pending
+  2024_01_05_212259_create_events_table ................................. Pending
+
 
 ```
 
 ```
-$ php artisan migrate:reset
+$ sail php artisan migrate:reset                          
+
+   INFO  Rolling back migrations.
+
+  2019_08_19_000000_create_failed_jobs_table .................................. 16ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ......................... 9ms DONE
+  2014_10_12_000000_create_users_table ........................................ 12ms DONE
+
+
+$ sail php artisan migrate:status
+
+  Migration name ......................................................... Batch / Status
+  2014_10_12_000000_create_users_table .......................................... Pending
+  2014_10_12_100000_create_password_reset_tokens_table .......................... Pending
+  2019_08_19_000000_create_failed_jobs_table .................................... Pending
+  2019_12_14_000001_create_personal_access_tokens_table ......................... Pending
+  2024_01_05_212259_create_events_table ......................................... Pending
+
+
 
 ```
 
