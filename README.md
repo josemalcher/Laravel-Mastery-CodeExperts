@@ -979,8 +979,9 @@ $ sail php artisan migrate:status
 - 30 Uma Migração de Edição
 
 ```
-$ php artisan make:migration alter_events_table_add_columnslug --table=events
-Created Migration: 2022_07_01_015511_alter_events_table_add_columnslug
+$ sail php artisan make:migration alter_events_table_add_columnslug --table=events                                
+
+   INFO  Migration [database/migrations/2024_02_01_144727_alter_events_table_add_columnslug.php] created successfully.
 
 ```
 
@@ -1005,23 +1006,39 @@ Created Migration: 2022_07_01_015511_alter_events_table_add_columnslug
     }
 ```
 
+-[https://laravel.com/docs/8.x/migrations#available-column-types](https://laravel.com/docs/8.x/migrations#available-column-types)
+
 ```
-$ php artisan migrate
-Migrating: 2022_07_01_015511_alter_events_table_add_columnslug
-Migrated:  2022_07_01_015511_alter_events_table_add_columnslug (77.40ms)
+$ sail php artisan migrate:status                                                 
+
+  Migration name .................................................. Batch / Status
+  2014_10_12_000000_create_users_table ................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table ................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table ............................. [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table .................. [1] Ran
+  2024_01_05_212259_create_events_table .................................. [1] Ran
+  2024_02_01_144727_alter_events_table_add_columnslug .................... Pending
 
 
-$ php artisan migrate:status
-+------+-------------------------------------------------------+-------+
-| Ran? | Migration                                             | Batch |
-+------+-------------------------------------------------------+-------+
-| Yes  | 2014_10_12_000000_create_users_table                  | 1     |
-| Yes  | 2014_10_12_100000_create_password_resets_table        | 1     |
-| Yes  | 2019_08_19_000000_create_failed_jobs_table            | 1     |
-| Yes  | 2019_12_14_000001_create_personal_access_tokens_table | 1     |
-| Yes  | 2021_12_08_235820_create_events_table                 | 1     |
-| Yes  | 2022_07_01_015511_alter_events_table_add_columnslug   | 2     |
-+------+-------------------------------------------------------+-------+
+$ sail php artisan migrate       
+
+   INFO  Running migrations.
+
+  2024_02_01_144727_alter_events_table_add_columnslug ................. 18ms DONE
+
+
+
+$ sail php artisan migrate:status
+
+  Migration name ................................................... Batch / Status
+  2014_10_12_000000_create_users_table .................................... [1] Ran
+  2014_10_12_100000_create_password_reset_tokens_table .................... [1] Ran
+  2019_08_19_000000_create_failed_jobs_table .............................. [1] Ran
+  2019_12_14_000001_create_personal_access_tokens_table ................... [1] Ran
+  2024_01_05_212259_create_events_table ................................... [1] Ran
+  2024_02_01_144727_alter_events_table_add_columnslug ..................... [2] Ran
+
+
 
 ```
 

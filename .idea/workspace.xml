@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/database/factories/EventFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/database/seeders/EventsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/database/seeders/UsersTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2meuseventos/database/migrations/2024_02_01_144727_alter_events_table_add_columnslug.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/migrations/2024_01_05_212259_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/migrations/2024_01_05_212259_create_events_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/factories/EventFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/factories/EventFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +331,7 @@
       <workItem from="1704489290309" duration="2210000" />
       <workItem from="1706699636024" duration="7529000" />
       <workItem from="1706793510532" duration="336000" />
-      <workItem from="1706793872155" duration="1925000" />
+      <workItem from="1706793872155" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -590,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706701226695</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="[REV] 29 Falando Sobre Migrações">
+      <option name="closed" value="true" />
+      <created>1706797693359</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1706797693359</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +611,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="195 Testando Painel e Concluindo" />
     <MESSAGE value="196 Instalando Livewire" />
     <MESSAGE value="197 DataBiding Livewire" />
     <MESSAGE value="198 Nuances Wire Model" />
@@ -635,7 +635,8 @@
     <MESSAGE value="[REV] 10 - Panorama Inicial do Laravel" />
     <MESSAGE value="[REV] 17 - Criando Primeira Migração" />
     <MESSAGE value="[REV] 18 - Os Models" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 18 - Os Models" />
+    <MESSAGE value="[REV] 29 Falando Sobre Migrações" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 29 Falando Sobre Migrações" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
