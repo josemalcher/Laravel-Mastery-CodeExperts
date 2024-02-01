@@ -1047,36 +1047,52 @@ $ sail php artisan migrate:status
 Carrega primeiro o Dump, depois ele parte para migrations.
 
 ```
-$ php artisan schema:dump
+$ sail php artisan schema:dump                                  
 mysqldump: [Warning] Using a password on the command line interface can be insecure.
-mysqldump: [ERROR] unknown variable 'column-statistics=0'
-mysqldump: [Warning] Using a password on the command line interface can be insecure.
-Database schema dumped successfully.
+
+   INFO  Database schema dumped successfully.
+
+
 
 ```
 
+**REMOVER** todas as migrações:
+
 ```
-$ php artisan migrate:refresh --seed
-Rolling back: 2022_07_01_015511_alter_events_table_add_columnslug
-Rolled back:  2022_07_01_015511_alter_events_table_add_columnslug (73.39ms)
-Rolling back: 2021_12_08_235820_create_events_table
-Rolled back:  2021_12_08_235820_create_events_table (5.18ms)
-Rolling back: 2019_12_14_000001_create_personal_access_tokens_table
-Rolled back:  2019_12_14_000001_create_personal_access_tokens_table (5.11ms)
-Rolling back: 2019_08_19_000000_create_failed_jobs_table
-Rolled back:  2019_08_19_000000_create_failed_jobs_table (6.05ms)
-Rolling back: 2014_10_12_100000_create_password_resets_table
-Rolled back:  2014_10_12_100000_create_password_resets_table (6.25ms)
-Rolling back: 2014_10_12_000000_create_users_table
-Rolled back:  2014_10_12_000000_create_users_table (6.23ms)
-Loading stored database schema: C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\03-PrimeirosPassosVisaoGeral\projMeusEventos\database\schema/mysql-schema.dump
-Loaded stored database schema. (464.68ms)
-Nothing to migrate.
-Seeding: Database\Seeders\UsersTableSeeder
-Seeded:  Database\Seeders\UsersTableSeeder (60.86ms)
-Seeding: Database\Seeders\EventsTableSeeder
-Seeded:  Database\Seeders\EventsTableSeeder (16.62ms)
-Database seeding completed successfully.
+$ sail php artisan schema:dump --prune
+
+```
+
+**Preferencialmente** o Laravel usa o schema para montar o banco:
+
+```
+$ sail php artisan migrate:refresh --seed                       
+
+   INFO  Rolling back migrations.
+
+  2024_02_01_144727_alter_events_table_add_columnslug .............. 17ms DONE
+  2024_01_05_212259_create_events_table ............................ 11ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ............ 13ms DONE
+  2019_08_19_000000_create_failed_jobs_table ....................... 11ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ............. 11ms DONE
+  2014_10_12_000000_create_users_table ............................. 10ms DONE
+
+
+   INFO  Loading stored database schemas.
+
+  database/schema/mysql-schema.sql .................................... 203ms DONE
+
+   INFO  Nothing to migrate.
+
+   INFO  Seeding database.
+
+  Database\Seeders\UsersTableSeeder ............................................. RUNNING
+  Database\Seeders\UsersTableSeeder ....................................... 58.65 ms DONE  
+
+  Database\Seeders\EventsTableSeeder .............................. RUNNING
+  Database\Seeders\EventsTableSeeder ....................... 118.02 ms DONE  
+
+
 
 ```
 
