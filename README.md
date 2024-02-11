@@ -1301,6 +1301,7 @@ class Profile extends Model
 ```php
 >>> $profile2 = new \App\Models\Profile();                                                                                                                                                                              
 => App\Models\Profile {#4458}
+
 >>> $profile2->about = 'Sobre Mim'                                                                                                                                                                                      
 => "Sobre Mim"
 >>> $profile2->social_networks = 'faceboo';                                                                                                                                                                             
@@ -1319,6 +1320,7 @@ class Profile extends Model
      created_at: "2022-07-01 02:06:50",
      updated_at: "2022-07-01 02:06:50",
    }
+
 >>> $user->profile()->save($profile2)                                                                                                                                                                                   
 => App\Models\Profile {#4458
      about: "Sobre Mim",
@@ -1329,7 +1331,6 @@ class Profile extends Model
      created_at: "2022-07-02 01:47:02",
      id: 2,
    }
-
 ```
 
 ```php
@@ -1344,6 +1345,7 @@ class Profile extends Model
      created_at: "2022-07-01 02:06:50",
      updated_at: "2022-07-01 02:06:50",
    }
+
 >>> $p = [ 'about'=>'sobre mim', 'phone'=>'8888', 'social_networks'=>'twitter' ];                                                                                                                                       
 => [
      "about" => "sobre mim",
@@ -1354,20 +1356,31 @@ class Profile extends Model
 ```
 
 ```php
-protected $fillable = ['about', 'phone' , 'social_networks'];
+class Profile extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['about', 'phone' , 'social_networks'];
+    public function user()
+    {
+        // por conta do nome do método que a coluna é user_id
+        return $this->belongsTo(User::class);
+        // return $this->belongsTo(User::class, 'usuario_id', 'codigo');
+    }
+}
 ```
 
-```php
->>> $user->profile()->create($p);                                                                                                                                                                                       
-=> App\Models\Profile {#4458
-     about: "sobre mim",
-     phone: "8888",
-     social_networks: "twitter",
-     user_id: 3,
-     updated_at: "2022-07-02 01:54:24",
-     created_at: "2022-07-02 01:54:24",
-     id: 3,
-   }
+```
+> $user->profile()->create($p);
+= App\Models\Profile {#7224
+    about: "sobre mim",
+    phone: "8888",
+    social_networks: "twitter",
+    user_id: 2,
+    updated_at: "2024-02-11 21:35:42",
+    created_at: "2024-02-11 21:35:42",
+    id: 2,
+  }
 
 ```
 
@@ -1429,8 +1442,10 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
      created_at: "2022-07-01 02:06:50",
      updated_at: "2022-07-01 02:06:50",
    }
+
 >>> $unot->profile;                                                                                                                                                                                                     
 => null
+
 >>> $unot->profile()->exists();                                                                                                                                                                                         
 => false
 
@@ -1481,9 +1496,12 @@ protected $fillable = ['about', 'phone' , 'social_networks'];
 - 46 Migração 1:N
 
 ```
-$ php artisan make:model Photo -m
-Model created successfully.
-Created Migration: 2022_07_02_202521_create_photos_table
+$ sail php artisan make:model Photo -m
+
+   INFO  Model [app/Models/Photo.php] created successfully.
+
+   INFO  Migration [database/migrations/2024_02_11_215818_create_photos_table.php] created successfully.
+
 
 ```
 

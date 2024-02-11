@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['about', 'phone' , 'social_networks'];
+    public function user()
+    {
+        // por conta do nome do método que a coluna é user_id
+        return $this->belongsTo(User::class);
+        // return $this->belongsTo(User::class, 'usuario_id', 'codigo');
+    }
 }
