@@ -1156,7 +1156,6 @@ Route::get('/queries/{event?}', function ($event = null){
     ];
 
     return \App\Models\Event::create($event);
-    return $event;
 
 });
 ```

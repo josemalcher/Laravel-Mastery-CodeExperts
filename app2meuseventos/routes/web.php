@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,16 +18,60 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/queries', function () {
+Route::get('/queries/{event?}', function ($event = null) {
 
     // $events = \App\Models\Event::all(); // select * from events
     // $events = \App\Models\Event::all(['title', 'description']); // select title, description from events
 
     // $events = \App\Models\Event::where('id', 1)->get(); // select * from events WHERE id = 1
     // $events = \App\Models\Event::where('id', 1)->first(); // select * from events WHERE id = 1
-    $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
+    // $events = \App\Models\Event::find($id); // select * from events WHERE id = 1
 
-    return $events;
+
+    // insert into events(title, description, body, start_event) values(?,?,?,?);
+    // Active Record
+
+    /*    $event = new \App\Models\Event();
+        $event->title = 'Evento TESTE via Eloquent e AR';
+        $event->description = 'Evento teste';
+        $event->body = 'corpo do evento';
+        $event->start_event = date('Y-m-d H:i:s');
+        $event->slug = \Illuminate\Support\Str::slug($event->title);
+    */
+
+    // update events set title = ?, description = ?, start_event = ?, slug = ? where id = ?
+//    $event = \App\Models\Event::find(8);
+//    $event->title = 'Evento ATUALIZADO';
+//    $event->slug = \Illuminate\Support\Str::slug($event->title);
+//
+//    return $event->save(); //
+
+    // Atribuição Massa ou Mass Assingnment
+//    $event = [
+//        'title' => 'Evento Atribuição em Massa',
+//        'description' => 'Descrição',
+//        'body' => 'Conteudo do Evento',
+//        'slug' => 'evento-atribuicao-em-massa',
+//        'start_event' => date('Y-m-d H:i:s')
+//    ];
+//    return \App\Models\Event::create($event);
+//
+//    $eventDATA = [
+//        'title' => 'ATUALIZADA Evento Atribuição em Massa',
+//        'description' => 'Descrição ATUALIZADA',
+//        // 'body' => 'Conteudo do Evento',
+//        // 'slug' => 'evento-atribuicao-em-massa',
+//        // 'start_event' => date('Y-m-d H:i:s')
+//    ];
+//
+//    $event = \App\Models\Event::find(32);
+//    $event->update($eventDATA);
+//
+//    return $event;
+//
+    $event = Event::findOrFail(32);
+
+    return $event->delete(); // 1
 });
 
 Route::get('/ola-mundo', [\App\Http\Controllers\HellowWordController::class, 'helloWorld']);
