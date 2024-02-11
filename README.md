@@ -1223,9 +1223,12 @@ $ sail php artisan make:controller EventController
 - 42 Migração Tabela Perfil
 
 ```
-$ php artisan make:model Profile -m
-Model created successfully.
-Created Migration: 2022_07_01_181916_create_profiles_table
+$ sail php artisan make:model Profile -m
+
+   INFO  Model [app/Models/Profile.php] created successfully.
+
+   INFO  Migration [database/migrations/2024_02_11_204449_create_profiles_table.php] created successfully.
+
 
 ```
 
@@ -1253,9 +1256,13 @@ public function up()
 ```
 
 ```
-$ php artisan migrate
-Migrating: 2022_07_01_181916_create_profiles_table
-Migrated:  2022_07_01_181916_create_profiles_table (143.46ms)
+$ sail php artisan migrate
+
+   INFO  Running migrations.
+
+  2024_02_11_204449_create_profiles_table ............... 115ms DONE
+
+
 ```
 
 - 43 Mapeando 1:1 Models
