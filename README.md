@@ -1213,8 +1213,9 @@ return \App\Models\Event::destroy([8,7,6]); // 3
 visão geral!
 
 ```
-$ php artisan make:controller EventController
-Controller created successfully.
+$ sail php artisan make:controller EventController
+
+   INFO  Controller [app/Http/Controllers/EventController.php] created successfully.
 
 ```
 

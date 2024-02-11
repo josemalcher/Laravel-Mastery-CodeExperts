@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
@@ -78,3 +79,8 @@ Route::get('/ola-mundo', [\App\Http\Controllers\HellowWordController::class, 'he
 // Verbos HTTP: GET, POST, PUT, PATCH, DELETE e Options
 
 Route::get('/ola/{name?}', [\App\Http\Controllers\HellowWordController::class, 'hello']);
+
+Route::get('/event/index',            [EventController::class, 'index']);
+Route::get('/event/store',            [EventController::class, 'store']);
+Route::get('/event/update/{event}',   [EventController::class, 'update']);
+Route::get('/event/destroy/{event}',  [EventController::class, 'destroy']);
