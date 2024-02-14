@@ -1587,7 +1587,7 @@ class Event extends Model
 
 ```
 
-```
+```php
 >>> $photo = new \App\Models\Photo();                                                                                                                                                                                   
 => App\Models\Photo {#4457}
 
@@ -1609,12 +1609,16 @@ class Event extends Model
 >>> namespace App\Models                                                                                                                                                                                                
 >>> $photo1 = new Photo();                                                                                                                                                                                              
 => App\Models\Photo {#4458}
+
 >>> $photo1->photo = 'exemplo-1.jpg'                                                                                                                                                                                    
 => "exemplo-1.jpg"
+
 >>> $photo2 = new Photo();                                                                                                                                                                                              
 => App\Models\Photo {#4456}
+
 >>> $photo2->photo = 'exemplo-2.jpg'                                                                                                                                                                                    
 => "exemplo-2.jpg"
+
 >>> $photos = [$photo1, $photo2];                                                                                                                                                                                       
 => [
      App\Models\Photo {#4458
@@ -1841,9 +1845,12 @@ class Event extends Model
 - 50 Migração N:N
 
 ```
-$ php artisan make:model Category -m
-Model created successfully.
-Created Migration: 2022_07_02_214924_create_categories_table
+$ sail php artisan make:model Category -m
+
+   INFO  Model [app/Models/Category.php] created successfully.
+
+   INFO  Migration [database/migrations/2024_02_14_182632_create_categories_table.php] created successfully.
+
 
 ```
 
@@ -1863,8 +1870,9 @@ public function up()
 ```
 
 ```
-$ php artisan make:migration create_category_event_table
-Created Migration: 2022_07_02_215434_create_category_event_table
+$ sail php artisan make:migration create_category_event_table
+
+   INFO  Migration [database/migrations/2024_02_14_182945_create_category_event_table.php] created successfully.
 
 ```
 
@@ -1882,11 +1890,13 @@ Created Migration: 2022_07_02_215434_create_category_event_table
 ```
 
 ```
-$ php artisan migrate
-Migrating: 2022_07_02_214924_create_categories_table
-Migrated:  2022_07_02_214924_create_categories_table (14.65ms)
-Migrating: 2022_07_02_215434_create_category_event_table
-Migrated:  2022_07_02_215434_create_category_event_table (81.11ms)
+$ sail php artisan migrate
+
+   INFO  Running migrations.
+
+  2024_02_14_182632_create_categories_table ................ 25ms DONE
+  2024_02_14_182945_create_category_event_table ........... 122ms DONE
+
 
 ```
 

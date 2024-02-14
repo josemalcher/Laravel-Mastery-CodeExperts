@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="42 Migração Tabela Perfil">
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/database/migrations/2024_02_11_215818_create_photos_table.php" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4026329-152b-42e6-bb35-098eb73798f4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Photo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +51,6 @@
   &quot;lastFilter&quot;: {
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="81ca1c7c-3114-46ac-a854-26f3aa555288" />
-        <option name="url" value="git@github.com:josemalcher/Laravel-Mastery-CodeExperts.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -195,8 +188,10 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-22.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
@@ -214,22 +209,25 @@
       <window_info id="Bookmarks" side_tool="true" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
+      <window_info id="Merge Requests" show_stripe_button="false" />
       <window_info id="Robo tasks" side_tool="true" />
       <window_info id="Commit" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14087018" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.5006649" visible="true" weight="0.16103603" />
+      <window_info id="Database" order="3" sideWeight="0.4993351" side_tool="true" visible="true" weight="0.16103603" />
+      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.32975745" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.173772" />
       <window_info anchor="bottom" id="Problems View" order="1" weight="0.21222015" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.17397389" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.23117255" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
-      <window_info anchor="right" id="Database" order="1" weight="0.24843505" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
     </layout>
   </component>
   <component name="RecentsManager">
@@ -276,7 +274,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
       </set>
     </attachedChunks>
   </component>
@@ -336,7 +334,14 @@
       <workItem from="1706793510532" duration="336000" />
       <workItem from="1706793872155" duration="4064000" />
       <workItem from="1707504577711" duration="278000" />
-      <workItem from="1707657542152" duration="11280000" />
+      <workItem from="1707657542152" duration="13181000" />
+      <workItem from="1707827938325" duration="241000" />
+      <workItem from="1707828346580" duration="222000" />
+      <workItem from="1707828806887" duration="589000" />
+      <workItem from="1707834757547" duration="44000" />
+      <workItem from="1707834849129" duration="364000" />
+      <workItem from="1707872256467" duration="1624000" />
+      <workItem from="1707930253683" duration="3247000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -636,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707684830472</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="46 Migração 1:N">
+      <option name="closed" value="true" />
+      <created>1707688895271</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1707688895271</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +669,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="209 Conclusões" />
     <MESSAGE value="214 Estados e Trabalhando Button" />
     <MESSAGE value="215 Diretiva Apply" />
     <MESSAGE value="- 216 Estilizando e Melhorando Listagem de Conteúdos" />
@@ -681,7 +693,8 @@
     <MESSAGE value="39 Removendo Dados" />
     <MESSAGE value="40 - Organizando CRUD" />
     <MESSAGE value="42 Migração Tabela Perfil" />
-    <option name="LAST_COMMIT_MESSAGE" value="42 Migração Tabela Perfil" />
+    <MESSAGE value="46 Migração 1:N" />
+    <option name="LAST_COMMIT_MESSAGE" value="46 Migração 1:N" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
