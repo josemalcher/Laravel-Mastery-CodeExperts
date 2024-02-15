@@ -2469,27 +2469,20 @@ class EventsTableSeeder extends Seeder
 ```
 
 ```
-$ php artisan migrate:fresh
+$ sail php artisan migrate:fresh
 Dropped all tables successfully.
-Migration table created successfully.
-Loading stored database schema: C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\03-PrimeirosPassosVisaoGeral\projMeusEventos\database\schema/mysql-schema.dump
-Loaded stored database schema. (694.86ms)
-Migrating: 2022_07_01_181916_create_profiles_table
-Migrated:  2022_07_01_181916_create_profiles_table (89.22ms)
-Migrating: 2022_07_02_202521_create_photos_table
-Migrated:  2022_07_02_202521_create_photos_table (51.99ms)
-Migrating: 2022_07_02_214924_create_categories_table
-Migrated:  2022_07_02_214924_create_categories_table (15.03ms)
-Migrating: 2022_07_02_215434_create_category_event_table
-Migrated:  2022_07_02_215434_create_category_event_table (81.06ms)
 
 
-$ php artisan db:seed
-Seeding: Database\Seeders\UsersTableSeeder
-Seeded:  Database\Seeders\UsersTableSeeder (143.85ms)
-Seeding: Database\Seeders\EventsTableSeeder
-Seeded:  Database\Seeders\EventsTableSeeder (136.14ms)
-Database seeding completed successfully.
+$ sail php artisan db:seed                          
+
+   INFO  Seeding database.
+
+  Database\Seeders\UsersTableSeeder .......................... RUNNING
+  Database\Seeders\UsersTableSeeder ................... 136.16 ms DONE  
+
+  Database\Seeders\EventsTableSeeder ........................... RUNNING
+  Database\Seeders\EventsTableSeeder .................... 228.61 ms DONE  
+
 
 ```
 
