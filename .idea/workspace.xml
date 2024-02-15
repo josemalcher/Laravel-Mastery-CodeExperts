@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +336,7 @@
       <workItem from="1707834849129" duration="364000" />
       <workItem from="1707872256467" duration="1624000" />
       <workItem from="1707930253683" duration="7165000" />
-      <workItem from="1707996665261" duration="1590000" />
+      <workItem from="1707996665261" duration="4796000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -661,7 +660,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707997294155</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="52 Mapeando N:N Models">
+      <option name="closed" value="true" />
+      <created>1708000847070</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1708000847070</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +688,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- 216 Estilizando e Melhorando Listagem de Conteúdos" />
     <MESSAGE value="Usando SAIL - antes de instalar o liveware" />
     <MESSAGE value="liveware instalado - limpo" />
     <MESSAGE value="199 Manipulando Ações" />
@@ -706,7 +712,8 @@
     <MESSAGE value="46 Migração 1:N" />
     <MESSAGE value="50 Migração N:N" />
     <MESSAGE value="51 Gerando Algumas Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="51 Gerando Algumas Categories" />
+    <MESSAGE value="52 Mapeando N:N Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="52 Mapeando N:N Models" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2302,11 +2302,15 @@ Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity cons
 - 57 Iniciando Factories: Profile e Photo
 
 ```
-$ php artisan make:factory PhotoFactory
-Factory created successfully.
+$ sail php artisan make:factory PhotoFactory
 
-$ php artisan make:factory ProfileFactory
-Factory created successfully.
+   INFO  Factory [database/factories/PhotoFactory.php] created successfully.
+
+$ sail php artisan make:factory ProfileFactory
+
+   INFO  Factory [database/factories/ProfileFactory.php] created successfully.
+
+
 
 ```
 
