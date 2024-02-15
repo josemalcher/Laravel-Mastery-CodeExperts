@@ -1903,7 +1903,7 @@ $ sail php artisan migrate
 - 51 Gerando Algumas Categories
 
 ```
-$ php artisan make:factory CategoryFactory
+$ sail php artisan make:factory CategoryFactory
 Factory created successfully.
 
 ```
@@ -1922,6 +1922,8 @@ Factory created successfully.
 ```
 
 ```php
+
+
 >>> \App\Models\Category::factory(5)->create();                                                                                                                                                                         
 => Illuminate\Database\Eloquent\Collection {#3557
      all: [
