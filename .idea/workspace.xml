@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/factories/ProfileFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/factories/ProfileFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/seeders/EventsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/seeders/EventsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/database/seeders/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +339,9 @@
       <workItem from="1707834849129" duration="364000" />
       <workItem from="1707872256467" duration="1624000" />
       <workItem from="1707930253683" duration="7165000" />
-      <workItem from="1707996665261" duration="6817000" />
+      <workItem from="1707996665261" duration="9057000" />
+      <workItem from="1708087123228" duration="632000" />
+      <workItem from="1708088180540" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -679,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708005886310</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="61 Executando as Factories via Seed">
+      <option name="closed" value="true" />
+      <created>1708008772136</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1708008772136</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +709,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="liveware instalado - limpo" />
     <MESSAGE value="199 Manipulando Ações" />
     <MESSAGE value="200 Mensagens de Feedback" />
     <MESSAGE value="201 Validações" />
@@ -724,7 +733,8 @@
     <MESSAGE value="51 Gerando Algumas Categories" />
     <MESSAGE value="52 Mapeando N:N Models" />
     <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
-    <option name="LAST_COMMIT_MESSAGE" value="57 Iniciando Factories: Profile e Photo" />
+    <MESSAGE value="61 Executando as Factories via Seed" />
+    <option name="LAST_COMMIT_MESSAGE" value="61 Executando as Factories via Seed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
