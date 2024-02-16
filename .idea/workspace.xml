@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/layouts/site.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +339,7 @@
       <workItem from="1707930253683" duration="7165000" />
       <workItem from="1707996665261" duration="9057000" />
       <workItem from="1708087123228" duration="632000" />
-      <workItem from="1708088180540" duration="2254000" />
+      <workItem from="1708088180540" duration="3803000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -696,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708090995469</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="65 Diretiva ForElse">
+      <option name="closed" value="true" />
+      <created>1708091615805</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1708091615805</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +723,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="200 Mensagens de Feedback" />
     <MESSAGE value="201 Validações" />
     <MESSAGE value="202 Exemplo com Banco de Dados" />
     <MESSAGE value="203 Paginação sem Reload" />
@@ -741,7 +747,8 @@
     <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
     <MESSAGE value="61 Executando as Factories via Seed" />
     <MESSAGE value="64 Loop e Passagem de Dados View" />
-    <option name="LAST_COMMIT_MESSAGE" value="64 Loop e Passagem de Dados View" />
+    <MESSAGE value="65 Diretiva ForElse" />
+    <option name="LAST_COMMIT_MESSAGE" value="65 Diretiva ForElse" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

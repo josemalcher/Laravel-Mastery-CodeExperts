@@ -2581,15 +2581,16 @@ Route::get('/', function () {
 
     <hr>
     @if(count($events))
-        <ul>
-            @foreach($events as $event)
-                <li>{{$event->title}}</li>
-            @endforeach
+    <ul>
+        @foreach($events as $event)
+            <li>{{$event->title}}</li>
+        @endforeach
     @else
-                <h3>Nenhum evento cadastrado</h3>
+        <h3>Nenhum evento cadastrado</h3>
+    </ul>
     @endif
-        </ul>
 @endsection
+
 
 ```
 
