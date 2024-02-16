@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $events = \App\Models\Event::all();
+    // $events = [];
 
     //return view('welcome', ['events'=> $events]);
     return view('welcome', compact('events'));
