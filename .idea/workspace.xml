@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/event.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Models/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/resources/views/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/event.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +338,7 @@
       <workItem from="1707930253683" duration="7165000" />
       <workItem from="1707996665261" duration="9057000" />
       <workItem from="1708087123228" duration="632000" />
-      <workItem from="1708088180540" duration="8078000" />
+      <workItem from="1708088180540" duration="11449000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -554,14 +550,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00033" summary="[REV] 10 - Panorama Inicial do Laravel">
-      <option name="closed" value="true" />
-      <created>1697658869259</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1697658869259</updated>
-    </task>
     <task id="LOCAL-00034" summary="[REV] 17 - Criando Primeira Migração">
       <option name="closed" value="true" />
       <created>1704490096826</created>
@@ -706,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708095474730</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="69 Melhorias Home e Inicio de Single">
+      <option name="closed" value="true" />
+      <created>1708097734234</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1708097734234</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,7 +722,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="203 Paginação sem Reload" />
     <MESSAGE value="204 Componentes Aninhados" />
     <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
@@ -751,7 +746,8 @@
     <MESSAGE value="65 Diretiva ForElse" />
     <MESSAGE value="67 Herança de Templates" />
     <MESSAGE value="68 Incrementando Views de Eventos" />
-    <option name="LAST_COMMIT_MESSAGE" value="68 Incrementando Views de Eventos" />
+    <MESSAGE value="69 Melhorias Home e Inicio de Single" />
+    <option name="LAST_COMMIT_MESSAGE" value="69 Melhorias Home e Inicio de Single" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
