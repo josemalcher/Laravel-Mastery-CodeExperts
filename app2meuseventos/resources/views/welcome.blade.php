@@ -19,15 +19,14 @@
                     <img src="https://via.placeholder.com/640x480.png/00dd99?text=omnis" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">{{$event->title}}</h5>
-                        <strong>Acontece em {{ $event->start_event }}</strong>
+                        <strong>Acontece em {{ $event->start_event->format('d/m/Y H:i') }}</strong>
                         <p class="card-text">{{$event->description}}</p>
+
+                        <a href="/eventos/{{$event->slug}}" class="btn btn-primary">Ver Evento</a>
                     </div>
                 </div>
             </div>
-            @if(( $loop->iteration % 3) == 0 )
-                </div>
-                <div class="row mb-4">
-            @endif
+            @if(( $loop->iteration % 3) == 0 ) </div> <div class="row mb-4"> @endif
         @empty
             <div class="col-12">
                 <div class="alert alert-warning">Nenhum evento encontrado neste site....</div>

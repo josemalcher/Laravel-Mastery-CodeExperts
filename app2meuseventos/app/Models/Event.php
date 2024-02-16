@@ -17,6 +17,11 @@ class Event extends Model
         'start_event'
     ];
 
+    // protected $dates = ['start_event']; // Descontinuado
+    protected $casts = [
+        'start_event' => 'date',
+    ];
+
     public function photos()
     {
         return $this->hasMany(Photo::class);

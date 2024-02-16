@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $events = \App\Models\Event::all();
+    $events = Event::all();
     // $events = [];
 
     //return view('welcome', ['events'=> $events]);
@@ -88,3 +88,11 @@ Route::get('/event/index',            [EventController::class, 'index']);
 Route::get('/event/store',            [EventController::class, 'store']);
 Route::get('/event/update/{event}',   [EventController::class, 'update']);
 Route::get('/event/destroy/{event}',  [EventController::class, 'destroy']);
+
+Route::get('/eventos/{slug}', function ($slug){
+
+    // $event = \App\Models\Event::where('slug', $slug)->first();
+    $event = \App\Models\Event::whereSlug($slug)->first();
+
+    return view('event', compact('event'));
+});

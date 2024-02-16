@@ -2641,9 +2641,11 @@ Route::get('/', function () {
 ```
 
 ```php
-class Event extends Model
-{
-    protected $dates = ['start_event']; // CARBON 
+    // protected $dates = ['start_event']; // Descontinuado 
+    protected $casts = [
+        'start_event' => 'date',
+    ];
+ 
 ```
 
 ```php
