@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app2meuseventos/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2meuseventos/resources/views/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/resources/views/event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +340,7 @@
       <workItem from="1707930253683" duration="7165000" />
       <workItem from="1707996665261" duration="9057000" />
       <workItem from="1708087123228" duration="632000" />
-      <workItem from="1708088180540" duration="11800000" />
+      <workItem from="1708088180540" duration="12507000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -550,14 +552,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00035" summary="[REV] 18 - Os Models">
-      <option name="closed" value="true" />
-      <created>1706701226695</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1706701226695</updated>
-    </task>
     <task id="LOCAL-00036" summary="[REV] 29 Falando Sobre Migrações">
       <option name="closed" value="true" />
       <created>1706797693359</created>
@@ -702,7 +696,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708106048184</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="71 Exibindo Fotos Evento se Existirem">
+      <option name="closed" value="true" />
+      <created>1708106400139</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1708106400139</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +724,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="205 Organizando Componentes" />
     <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="[REV] 08 - Iniciando Projeto" />
     <MESSAGE value="[REV] 09 - Diretórios Projeto" />
@@ -747,7 +748,8 @@
     <MESSAGE value="68 Incrementando Views de Eventos" />
     <MESSAGE value="69 Melhorias Home e Inicio de Single" />
     <MESSAGE value="70 Compondo View Single Evento" />
-    <option name="LAST_COMMIT_MESSAGE" value="70 Compondo View Single Evento" />
+    <MESSAGE value="71 Exibindo Fotos Evento se Existirem" />
+    <option name="LAST_COMMIT_MESSAGE" value="71 Exibindo Fotos Evento se Existirem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

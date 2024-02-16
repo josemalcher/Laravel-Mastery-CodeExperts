@@ -2682,7 +2682,31 @@ Evento - {{$event->title}}
 - 71 Exibindo Fotos Evento se Existirem
 - 72 Organizando com HomeController
 
-[03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Http/Controllers/HomerController.php](03-PrimeirosPassosVisaoGeral/projMeusEventos/app/Http/Controllers/HomerController.php)
+```
+$ sail php artisan make:controller HomeController               
+
+   INFO  Controller [app/Http/Controllers/HomeController.php] created successfully.
+
+```
+
+```php
+class HomeController extends Controller
+{
+    public function index()
+    {
+        $events = Event::all();
+
+        return view('welcome', compact('events'));
+    }
+
+    public function show($slug)
+    {
+        $event = Event::where('slug', $slug)->first();
+
+        return view('event', compact('event'));
+    }
+}
+```
 
 - 73 Conclusões
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\{EventController, HomeController};
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
@@ -89,10 +89,6 @@ Route::get('/event/store',            [EventController::class, 'store']);
 Route::get('/event/update/{event}',   [EventController::class, 'update']);
 Route::get('/event/destroy/{event}',  [EventController::class, 'destroy']);
 
-Route::get('/eventos/{slug}', function ($slug){
 
-    // $event = \App\Models\Event::where('slug', $slug)->first();
-    $event = \App\Models\Event::whereSlug($slug)->first();
-
-    return view('event', compact('event'));
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/eventos/{slug}',  [HomeController::class, 'show']);
