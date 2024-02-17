@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{EventController, HomeController};
+use App\Http\Controllers\{Admin\EventController, HomeController};
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
@@ -84,10 +84,10 @@ Route::get('/ola-mundo', [\App\Http\Controllers\HellowWordController::class, 'he
 
 Route::get('/ola/{name?}', [\App\Http\Controllers\HellowWordController::class, 'hello']);
 
-Route::get('/event/index',            [EventController::class, 'index']);
-Route::get('/event/store',            [EventController::class, 'store']);
-Route::get('/event/update/{event}',   [EventController::class, 'update']);
-Route::get('/event/destroy/{event}',  [EventController::class, 'destroy']);
+Route::get('/admin/events/index',            [EventController::class, 'index']);
+Route::get('/admin/events/store',            [EventController::class, 'store']);
+Route::get('/admin/events/update/{event}',   [EventController::class, 'update']);
+Route::get('/admin/events/destroy/{event}',  [EventController::class, 'destroy']);
 
 
 Route::get('/', [HomeController::class, 'index']);

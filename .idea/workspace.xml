@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app2meuseventos/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2meuseventos/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/app/Http/Controllers/Admin/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -340,7 +340,9 @@
       <workItem from="1707930253683" duration="7165000" />
       <workItem from="1707996665261" duration="9057000" />
       <workItem from="1708087123228" duration="632000" />
-      <workItem from="1708088180540" duration="12507000" />
+      <workItem from="1708088180540" duration="13240000" />
+      <workItem from="1708109545657" duration="72000" />
+      <workItem from="1708165285680" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -552,14 +554,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00036" summary="[REV] 29 Falando Sobre Migrações">
-      <option name="closed" value="true" />
-      <created>1706797693359</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1706797693359</updated>
-    </task>
     <task id="LOCAL-00037" summary="[REV] 30 Uma Migração de Edição">
       <option name="closed" value="true" />
       <created>1706799420190</created>
@@ -704,7 +698,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708106400139</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="72 - Organizando com HomeController">
+      <option name="closed" value="true" />
+      <created>1708107238968</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1708107238968</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +726,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="206 Componente de Edição" />
     <MESSAGE value="[REV] 08 - Iniciando Projeto" />
     <MESSAGE value="[REV] 09 - Diretórios Projeto" />
     <MESSAGE value="[REV] 10 - Panorama Inicial do Laravel" />
@@ -749,7 +750,8 @@
     <MESSAGE value="69 Melhorias Home e Inicio de Single" />
     <MESSAGE value="70 Compondo View Single Evento" />
     <MESSAGE value="71 Exibindo Fotos Evento se Existirem" />
-    <option name="LAST_COMMIT_MESSAGE" value="71 Exibindo Fotos Evento se Existirem" />
+    <MESSAGE value="72 - Organizando com HomeController" />
+    <option name="LAST_COMMIT_MESSAGE" value="72 - Organizando com HomeController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
