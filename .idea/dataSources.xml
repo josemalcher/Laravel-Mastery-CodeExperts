@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/app2meuseventos</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="APP 3 Meus Eventos@localhost" uuid="fe4cb51d-8e18-4b2c-a1e2-7a00af085229">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/laravel</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -476,7 +476,7 @@ $ sail php artisan migrate
 
    INFO  Running migrations.
 
-  2024_01_05_212259_create_events_table .................................................................................................. 27ms DONE
+  2024_01_05_212259_create_events_table ...................... 27ms DONE
 
 
 ```
