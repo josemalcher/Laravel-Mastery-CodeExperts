@@ -4,16 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app3meuseventos/app/Http/Controllers/HellowWordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app3meuseventos/resources/views/ola-mundo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV ]08 - Iniciando Projeto - APP 3">
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/bootstrap/providers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/migrations/0001_01_01_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/migrations/0001_01_01_000001_create_cache_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/migrations/0001_01_01_000002_create_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/resources/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/app/private/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app4meuseventos/vite.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10afce80-1331-4972-860d-2d071c7d46ff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fe4cb51d-8e18-4b2c-a1e2-7a00af085229.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fe4cb51d-8e18-4b2c-a1e2-7a00af085229.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app3meuseventos/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app3meuseventos/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +115,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/videoFlix/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/graham-campbell/result-type" />
@@ -192,7 +247,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-22.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -200,7 +256,7 @@
     &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -245,6 +301,7 @@
       <recent name="$PROJECT_DIR$/videoFlixSail/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\josemalcher\workspaces\Laravel-Mastery-CodeExperts\app3meuseventos" />
       <recent name="$PROJECT_DIR$/videoflixsail/resources/views/livewire/content" />
       <recent name="C:\Users\josem\Documents\workspaces\Laravel-Mastery-CodeExperts\videoFlix\resources\views\livewire\content" />
     </key>
@@ -272,16 +329,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
       </set>
     </attachedChunks>
   </component>
@@ -360,6 +417,9 @@
       <workItem from="1719600959239" duration="2439000" />
       <workItem from="1719840207310" duration="11000" />
       <workItem from="1719840278821" duration="8504000" />
+      <workItem from="1729090508997" duration="4006000" />
+      <workItem from="1729099145324" duration="1168000" />
+      <workItem from="1729100639800" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
