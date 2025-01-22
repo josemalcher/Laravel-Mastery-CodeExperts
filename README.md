@@ -450,10 +450,9 @@ $ sail php artisan migrate
 - 17 - Criando Primeira Migração
 
 ```
-$ sail php artisan make:migration create_events_table
+$ sail php artisan make:migration create_events_table          
 
-   INFO  Migration [database/migrations/2024_01_05_212259_create_events_table.php] created successfully.
-
+   INFO  Migration [database/migrations/2025_01_22_011756_create_events_table.php] created successfully.
 
 ```
 
@@ -472,12 +471,11 @@ public function up()
 ```
 
 ```
-$ sail php artisan migrate
+$  sail php artisan migrate                                           
 
    INFO  Running migrations.
 
-  2024_01_05_212259_create_events_table ...................... 27ms DONE
-
+  2025_01_22_011756_create_events_table ......................... 26.48ms DONE
 
 ```
 

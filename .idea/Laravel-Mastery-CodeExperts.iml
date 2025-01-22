@@ -27,6 +27,7 @@
       <sourceFolder url="file://$MODULE_DIR$/modulo-ponte-acl/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/app2025" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/videoFlix/tests/Unit" isTestSource="true" />
