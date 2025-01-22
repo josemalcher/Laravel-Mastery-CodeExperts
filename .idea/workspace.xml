@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 22 - Conclusões">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 29 Falando Sobre Migrações">
+      <change afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_01_22_233917_alter_events_table_add_columnslug.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/database/migrations/2025_01_22_011756_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_01_22_011756_create_events_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/database/factories/EventFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/factories/EventFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +365,7 @@
       <workItem from="1729100639800" duration="593000" />
       <workItem from="1737476214912" duration="2569000" />
       <workItem from="1737478843134" duration="2502000" />
-      <workItem from="1737494464506" duration="5357000" />
+      <workItem from="1737494464506" duration="12665000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -577,14 +577,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00042" summary="46 Migração 1:N">
-      <option name="closed" value="true" />
-      <created>1707688895271</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1707688895271</updated>
-    </task>
     <task id="LOCAL-00043" summary="50 Migração N:N">
       <option name="closed" value="true" />
       <created>1707935678457</created>
@@ -729,7 +721,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737509674971</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="[REV] 29 Falando Sobre Migrações">
+      <option name="closed" value="true" />
+      <created>1737512025107</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1737512025107</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -749,7 +749,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 30 Uma Migração de Edição" />
     <MESSAGE value="[REV] 31 Schema Dump" />
     <MESSAGE value="39 Removendo Dados" />
     <MESSAGE value="40 - Organizando CRUD" />
@@ -774,7 +773,8 @@
     <MESSAGE value="[REV ]08 - Iniciando Projeto - APP 3" />
     <MESSAGE value="[REV]08 - Iniciando Projeto - APP 2025" />
     <MESSAGE value="[REV] 22 - Conclusões" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 22 - Conclusões" />
+    <MESSAGE value="[REV] 29 Falando Sobre Migrações" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 29 Falando Sobre Migrações" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

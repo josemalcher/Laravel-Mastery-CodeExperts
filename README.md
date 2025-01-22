@@ -1007,7 +1007,7 @@ $ sail php artisan make:migration alter_events_table_add_columnslug --table=even
     }
 ```
 
--[https://laravel.com/docs/8.x/migrations#available-column-types](https://laravel.com/docs/8.x/migrations#available-column-types)
+-[https://laravel.com/docs/11.x/migrations#available-column-types](https://laravel.com/docs/11.x/migrations#available-column-types)
 
 ```
 $ sail php artisan migrate:status                                                 
