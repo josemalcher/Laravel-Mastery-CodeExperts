@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function profile()
+    {
+        // Representa a ligação entre o Model User E Model Profile
+        // e indica que USER tem um Profile
+        return $this->hasOne(Profile::class);
+        // return $this->hasOne(Profile::class, 'usuario_id'); // outro parametro
+    }
 }
