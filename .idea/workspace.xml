@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 40 Organizando CRUD">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 43 Mapeando 1:1 Models">
+      <change afterPath="$PROJECT_DIR$/app2025/()      " afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/-&gt;count();  q" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/-&gt;count();q" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Models/Photo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/database/factories/CategoryFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_01_28_202004_create_photos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_01_29_015123_create_categories_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_01_29_015343_create_category_event_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +379,7 @@
       <workItem from="1737936381603" duration="36000" />
       <workItem from="1737936422329" duration="1865000" />
       <workItem from="1737945440696" duration="1776000" />
-      <workItem from="1737989632893" duration="8899000" />
+      <workItem from="1737989632893" duration="19978000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -582,14 +591,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00046" summary="57 Iniciando Factories: Profile e Photo">
-      <option name="closed" value="true" />
-      <created>1708005886310</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1708005886310</updated>
-    </task>
     <task id="LOCAL-00047" summary="61 Executando as Factories via Seed">
       <option name="closed" value="true" />
       <created>1708008772136</created>
@@ -734,7 +735,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737946548096</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="[REV] 43 Mapeando 1:1 Models">
+      <option name="closed" value="true" />
+      <created>1738069956133</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1738069956133</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +763,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="42 Migração Tabela Perfil" />
     <MESSAGE value="46 Migração 1:N" />
     <MESSAGE value="50 Migração N:N" />
     <MESSAGE value="51 Gerando Algumas Categories" />
@@ -779,7 +787,8 @@
     <MESSAGE value="[REV] 31 Schema Dump" />
     <MESSAGE value="[REV] 39 Removendo Dados" />
     <MESSAGE value="[REV] 40 Organizando CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 40 Organizando CRUD" />
+    <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 43 Mapeando 1:1 Models" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

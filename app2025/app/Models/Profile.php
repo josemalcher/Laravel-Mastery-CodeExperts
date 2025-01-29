@@ -9,6 +9,8 @@ class Profile extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['about', 'phone' , 'social_networks'];
+
     public function user()
     {
         // por conta do nome do metodo que a coluna é user_id

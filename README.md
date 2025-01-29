@@ -1364,7 +1364,7 @@ class Profile extends Model
     protected $fillable = ['about', 'phone' , 'social_networks'];
     public function user()
     {
-        // por conta do nome do método que a coluna é user_id
+        // por conta do nome do metodo que a coluna é user_id
         return $this->belongsTo(User::class);
         // return $this->belongsTo(User::class, 'usuario_id', 'codigo');
     }
@@ -1923,8 +1923,6 @@ Factory created successfully.
 ```
 
 ```php
-
-
 >>> \App\Models\Category::factory(5)->create();                                                                                                                                                                         
 => Illuminate\Database\Eloquent\Collection {#3557
      all: [
