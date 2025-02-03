@@ -2285,6 +2285,7 @@ Illuminate\Database\QueryException with message 'SQLSTATE[23000]: Integrity cons
 
 >>> $profile->save();                                                                                                                                                                                                   
 => true
+
                                                 
 
 ```

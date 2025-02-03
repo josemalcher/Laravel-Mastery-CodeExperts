@@ -11,4 +11,9 @@ class Category extends Model
 
     protected $fillable = ['nome', 'description', 'slug'];
 
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+
 }

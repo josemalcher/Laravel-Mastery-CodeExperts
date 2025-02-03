@@ -1,0 +1,53 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#5195
+    [34mall[39m: [
+      [34;4mApp\Models\Category[39;24m {#6185
+        [34mid[39m: [35m4[39m,
+        [34mnome[39m: "[32mmaiores[39m",
+        [34mdescription[39m: "[32mVitae sed et dolores quo.[39m",
+        [34mslug[39m: "[32mmaiores[39m",
+        [34mcreated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mupdated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#5196
+          [34mevent_id[39m: [35m1[39m,
+          [34mcategory_id[39m: [35m4[39m,
+        },
+      },
+      [34;4mApp\Models\Category[39;24m {#5216
+        [34mid[39m: [35m1[39m,
+        [34mnome[39m: "[32mimpedit[39m",
+        [34mdescription[39m: "[32mEt quia perspiciatis qui sit illum.[39m",
+        [34mslug[39m: "[32mimpedit[39m",
+        [34mcreated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mupdated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#5211
+          [34mevent_id[39m: [35m1[39m,
+          [34mcategory_id[39m: [35m1[39m,
+        },
+      },
+      [34;4mApp\Models\Category[39;24m {#6181
+        [34mid[39m: [35m2[39m,
+        [34mnome[39m: "[32mincidunt[39m",
+        [34mdescription[39m: "[32mNon unde officia illo placeat dolorem expedita.[39m",
+        [34mslug[39m: "[32mincidunt[39m",
+        [34mcreated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mupdated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#5910
+          [34mevent_id[39m: [35m1[39m,
+          [34mcategory_id[39m: [35m2[39m,
+        },
+      },
+      [34;4mApp\Models\Category[39;24m {#6182
+        [34mid[39m: [35m3[39m,
+        [34mnome[39m: "[32mquis[39m",
+        [34mdescription[39m: "[32mEum nostrum suscipit ea perspiciatis.[39m",
+        [34mslug[39m: "[32mquis[39m",
+        [34mcreated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mupdated_at[39m: "[32m2025-01-29 01:59:33[39m",
+        [34mpivot[39m: [34;4mIlluminate\Database\Eloquent\Relations\Pivot[39;24m {#5201
+          [34mevent_id[39m: [35m1[39m,
+          [34mcategory_id[39m: [35m3[39m,
+        },
+      },
+    ],
+  }
+
