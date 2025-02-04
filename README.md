@@ -2339,6 +2339,8 @@ Model Populado não executado:
      photo: "https://via.placeholder.com/640x480.png/0088ff?text=sint",
    }
 
+
+
 >>> Event::factory()->has(Photo::factory(3))->create();                                                                                                                                                                 
 => App\Models\Event {#4287
      title: "Aut quos delectus cupiditate qui sed et omnis.",
@@ -2417,7 +2419,7 @@ Model Populado não executado:
 - 60 Factories com BelongsTo
 
 ```php
->>> Profile::factory()->for(user::factory())->create();                                                                                                                                                                 
+>>> Profile::factory()->for(User::factory())->create();                                                                                                                                                                 
 => App\Models\Profile {#3577
      about: "Reiciendis eos sapiente praesentium optio debitis sunt hic. Neque suscipit excepturi quia iusto tenetur officia excepturi. Error sit neque corrupti quia impedit.",
      phone: "(44) 32964-1512",

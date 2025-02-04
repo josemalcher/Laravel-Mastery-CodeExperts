@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 51 Gerando Algumas Categories">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 56 Conclusão">
+      <change afterPath="$PROJECT_DIR$/app2025/database/factories/PhotoFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/database/factories/ProfileFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +372,7 @@
       <workItem from="1737936422329" duration="1865000" />
       <workItem from="1737945440696" duration="1776000" />
       <workItem from="1737989632893" duration="20916000" />
-      <workItem from="1738619928457" duration="3156000" />
+      <workItem from="1738619928457" duration="9014000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -583,14 +584,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00048" summary="64 Loop e Passagem de Dados View">
-      <option name="closed" value="true" />
-      <created>1708090995469</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1708090995469</updated>
-    </task>
     <task id="LOCAL-00049" summary="65 Diretiva ForElse">
       <option name="closed" value="true" />
       <created>1708091615805</created>
@@ -735,7 +728,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738116086837</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="[REV] 56 Conclusão">
+      <option name="closed" value="true" />
+      <created>1738625252898</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1738625252898</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +756,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="50 Migração N:N" />
     <MESSAGE value="51 Gerando Algumas Categories" />
     <MESSAGE value="52 Mapeando N:N Models" />
     <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
@@ -780,7 +780,8 @@
     <MESSAGE value="[REV] 40 Organizando CRUD" />
     <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 51 Gerando Algumas Categories" />
+    <MESSAGE value="[REV] 56 Conclusão" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 56 Conclusão" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
