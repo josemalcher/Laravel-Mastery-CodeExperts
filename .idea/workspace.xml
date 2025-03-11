@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 56 Conclusão">
-      <change afterPath="$PROJECT_DIR$/app2025/database/factories/PhotoFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/database/factories/ProfileFactory.php" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 61 Executando as Factories via Seed">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,8 +281,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PS-243.23654.168" />
-        <option value="bundled-php-predefined-a98d8de5180a-4c3855d0ab16-com.jetbrains.php.sharedIndexes-PS-243.23654.168" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.25659.45" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.25659.45" />
       </set>
     </attachedChunks>
   </component>
@@ -372,7 +371,9 @@
       <workItem from="1737936422329" duration="1865000" />
       <workItem from="1737945440696" duration="1776000" />
       <workItem from="1737989632893" duration="20916000" />
-      <workItem from="1738619928457" duration="9014000" />
+      <workItem from="1738619928457" duration="11213000" />
+      <workItem from="1741370052184" duration="787000" />
+      <workItem from="1741698558409" duration="5446000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -584,14 +585,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00049" summary="65 Diretiva ForElse">
-      <option name="closed" value="true" />
-      <created>1708091615805</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1708091615805</updated>
-    </task>
     <task id="LOCAL-00050" summary="67 Herança de Templates">
       <option name="closed" value="true" />
       <created>1708093197614</created>
@@ -736,7 +729,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738625252898</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="[REV] 61 Executando as Factories via Seed">
+      <option name="closed" value="true" />
+      <created>1738678860886</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1738678860886</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -756,7 +757,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="51 Gerando Algumas Categories" />
     <MESSAGE value="52 Mapeando N:N Models" />
     <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
     <MESSAGE value="61 Executando as Factories via Seed" />
@@ -781,7 +781,8 @@
     <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 56 Conclusão" />
+    <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 61 Executando as Factories via Seed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
