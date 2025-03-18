@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 64 Loop e Passagem de Dados View">
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 69 Melhorias Home e Inicio de Single">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/()      " beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,33 +180,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app3meuseventos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app3meuseventos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" />
@@ -383,7 +374,7 @@
       <workItem from="1741698558409" duration="7547000" />
       <workItem from="1741813088429" duration="6791000" />
       <workItem from="1742255266367" duration="51000" />
-      <workItem from="1742255411880" duration="1530000" />
+      <workItem from="1742255411880" duration="2603000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -595,14 +586,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00051" summary="68 Incrementando Views de Eventos">
-      <option name="closed" value="true" />
-      <created>1708095474730</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1708095474730</updated>
-    </task>
     <task id="LOCAL-00052" summary="69 Melhorias Home e Inicio de Single">
       <option name="closed" value="true" />
       <created>1708097734234</created>
@@ -747,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741708161159</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="[REV] 69 Melhorias Home e Inicio de Single">
+      <option name="closed" value="true" />
+      <created>1742257740652</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1742257740652</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -767,7 +758,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
     <MESSAGE value="61 Executando as Factories via Seed" />
     <MESSAGE value="64 Loop e Passagem de Dados View" />
     <MESSAGE value="65 Diretiva ForElse" />
@@ -792,7 +782,8 @@
     <MESSAGE value="[REV] 56 Conclusão" />
     <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
     <MESSAGE value="[REV] 64 Loop e Passagem de Dados View" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 64 Loop e Passagem de Dados View" />
+    <MESSAGE value="[REV] 69 Melhorias Home e Inicio de Single" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 69 Melhorias Home e Inicio de Single" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
