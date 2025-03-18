@@ -2682,6 +2682,20 @@ Evento - {{$event->title}}
 
 - 70 Compondo View Single Evento
 - 71 Exibindo Fotos Evento se Existirem
+
+```php
+    <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="profile-tab">
+       @dd($event->photos)
+    </div>
+```
+
+```sql
+-- Atualize a coluna 'photos' com novos links únicos
+UPDATE photos
+SET photo = CONCAT('https://picsum.photos/640/480?random=', id)
+WHERE photo LIKE 'https://loremflickr.com/640/480?random=%';
+```
+
 - 72 Organizando com HomeController
 
 ```

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 69 Melhorias Home e Inicio de Single">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 70 Compondo View Single Evento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +374,7 @@
       <workItem from="1741698558409" duration="7547000" />
       <workItem from="1741813088429" duration="6791000" />
       <workItem from="1742255266367" duration="51000" />
-      <workItem from="1742255411880" duration="2603000" />
+      <workItem from="1742255411880" duration="4334000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -586,14 +586,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00052" summary="69 Melhorias Home e Inicio de Single">
-      <option name="closed" value="true" />
-      <created>1708097734234</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1708097734234</updated>
-    </task>
     <task id="LOCAL-00053" summary="70 Compondo View Single Evento">
       <option name="closed" value="true" />
       <created>1708106048184</created>
@@ -738,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742257740652</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="[REV] 70 Compondo View Single Evento">
+      <option name="closed" value="true" />
+      <created>1742258782752</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1742258782752</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -758,7 +758,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="61 Executando as Factories via Seed" />
     <MESSAGE value="64 Loop e Passagem de Dados View" />
     <MESSAGE value="65 Diretiva ForElse" />
     <MESSAGE value="67 Herança de Templates" />
@@ -783,7 +782,8 @@
     <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
     <MESSAGE value="[REV] 64 Loop e Passagem de Dados View" />
     <MESSAGE value="[REV] 69 Melhorias Home e Inicio de Single" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 69 Melhorias Home e Inicio de Single" />
+    <MESSAGE value="[REV] 70 Compondo View Single Evento" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 70 Compondo View Single Evento" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
