@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 61 Executando as Factories via Seed">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 64 Loop e Passagem de Dados View">
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/event.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/site.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd3e2cfc-d42f-4ae8-b99c-79ad388d33be.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/()      " beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
     </list>
@@ -281,8 +288,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.25659.45" />
-        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.25659.45" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
       </set>
     </attachedChunks>
   </component>
@@ -373,7 +380,10 @@
       <workItem from="1737989632893" duration="20916000" />
       <workItem from="1738619928457" duration="11213000" />
       <workItem from="1741370052184" duration="787000" />
-      <workItem from="1741698558409" duration="5446000" />
+      <workItem from="1741698558409" duration="7547000" />
+      <workItem from="1741813088429" duration="6791000" />
+      <workItem from="1742255266367" duration="51000" />
+      <workItem from="1742255411880" duration="1530000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -585,14 +595,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00050" summary="67 Herança de Templates">
-      <option name="closed" value="true" />
-      <created>1708093197614</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1708093197615</updated>
-    </task>
     <task id="LOCAL-00051" summary="68 Incrementando Views de Eventos">
       <option name="closed" value="true" />
       <created>1708095474730</created>
@@ -737,7 +739,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738678860886</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="[REV] 64 Loop e Passagem de Dados View">
+      <option name="closed" value="true" />
+      <created>1741708161158</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1741708161159</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -757,7 +767,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="52 Mapeando N:N Models" />
     <MESSAGE value="57 Iniciando Factories: Profile e Photo" />
     <MESSAGE value="61 Executando as Factories via Seed" />
     <MESSAGE value="64 Loop e Passagem de Dados View" />
@@ -782,7 +791,8 @@
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
     <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 61 Executando as Factories via Seed" />
+    <MESSAGE value="[REV] 64 Loop e Passagem de Dados View" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 64 Loop e Passagem de Dados View" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

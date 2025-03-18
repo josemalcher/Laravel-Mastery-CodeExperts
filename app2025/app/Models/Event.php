@@ -9,6 +9,11 @@ class Event extends Model
 {
     use HasFactory;
 
+    // protected $dates = ['start']; // Descontinuado
+    protected $casts = [
+        'start' => 'datetime',
+    ];
+
     protected $fillable = [
         'title',
         'description',

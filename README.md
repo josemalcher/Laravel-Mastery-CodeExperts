@@ -2645,7 +2645,7 @@ Route::get('/', function () {
 ```php
     // protected $dates = ['start_event']; // Descontinuado 
     protected $casts = [
-        'start_event' => 'date',
+        'start_event' => 'datetime',
     ];
  
 ```
