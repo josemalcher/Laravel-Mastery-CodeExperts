@@ -2742,7 +2742,7 @@ class HomeController extends Controller
 ```php
  public function index()
     {
-        $events = Event::paginate(3);
+        $events = Event::paginate(5);
 
         return view('admin.events.index', compact('events'));
     }

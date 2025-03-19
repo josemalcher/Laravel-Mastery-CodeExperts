@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 75 Organizando Rotas Painel Eventos">
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 76 Listagem de Eventos">
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +378,8 @@
       <workItem from="1741813088429" duration="6791000" />
       <workItem from="1742255266367" duration="51000" />
       <workItem from="1742255411880" duration="5527000" />
-      <workItem from="1742346401980" duration="1791000" />
+      <workItem from="1742346401980" duration="1849000" />
+      <workItem from="1742374636384" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -590,14 +591,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00056" summary="75 Organizando Rotas Painel Eventos">
-      <option name="closed" value="true" />
-      <created>1708168578131</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1708168578132</updated>
-    </task>
     <task id="LOCAL-00057" summary="76 Listagem de Eventos">
       <option name="closed" value="true" />
       <created>1708169682057</created>
@@ -742,7 +735,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742346877585</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="[REV] 76 Listagem de Eventos">
+      <option name="closed" value="true" />
+      <created>1742348233251</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1742348233251</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,7 +763,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="68 Incrementando Views de Eventos" />
     <MESSAGE value="69 Melhorias Home e Inicio de Single" />
     <MESSAGE value="70 Compondo View Single Evento" />
     <MESSAGE value="71 Exibindo Fotos Evento se Existirem" />
@@ -787,7 +787,8 @@
     <MESSAGE value="[REV] 71 Exibindo Fotos Evento se Existirem" />
     <MESSAGE value="[REV] 72 Organizando com HomeController" />
     <MESSAGE value="[REV] 75 Organizando Rotas Painel Eventos" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 75 Organizando Rotas Painel Eventos" />
+    <MESSAGE value="[REV] 76 Listagem de Eventos" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 76 Listagem de Eventos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
