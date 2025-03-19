@@ -84,8 +84,8 @@ Route::get('/queries/{event?}', function ($event = null){
 });
 
 //ROTAS CRUD BASE para Eventos
-Route::get('/events/index',           [\App\Http\Controllers\EnventController::class, 'index']);
-Route::get('/events/store',           [\App\Http\Controllers\EnventController::class, 'store']);
-Route::get('/events/update/{event}',  [\App\Http\Controllers\EnventController::class, 'update']);
-Route::get('/events/destroy/{event}', [\App\Http\Controllers\EnventController::class, 'destroy']);
+Route::get('/admin/events/index',           [\app\Http\Controllers\Admin\EnventController::class, 'index']);
+Route::get('/admin/events/store',           [\app\Http\Controllers\Admin\EnventController::class, 'store']);
+Route::get('/admin/events/update/{event}',  [\app\Http\Controllers\Admin\EnventController::class, 'update']);
+Route::get('/admin/events/destroy/{event}', [\app\Http\Controllers\Admin\EnventController::class, 'destroy']);
 
