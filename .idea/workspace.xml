@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 76 Listagem de Eventos">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 77 Paginando Dados">
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/bootstrap/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/app/private/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/private/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/public/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/logs/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,33 +198,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app3meuseventos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app3meuseventos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" />
@@ -282,8 +297,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
-        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
+        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
       </set>
     </attachedChunks>
   </component>
@@ -379,7 +394,13 @@
       <workItem from="1742255266367" duration="51000" />
       <workItem from="1742255411880" duration="5527000" />
       <workItem from="1742346401980" duration="1849000" />
-      <workItem from="1742374636384" duration="1219000" />
+      <workItem from="1742374636384" duration="5060000" />
+      <workItem from="1742466788349" duration="3284000" />
+      <workItem from="1742491465374" duration="7000" />
+      <workItem from="1743455678425" duration="97000" />
+      <workItem from="1744043907852" duration="2643000" />
+      <workItem from="1744942254655" duration="5538000" />
+      <workItem from="1752893058573" duration="4670000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -591,14 +612,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00057" summary="76 Listagem de Eventos">
-      <option name="closed" value="true" />
-      <created>1708169682057</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1708169682057</updated>
-    </task>
     <task id="LOCAL-00058" summary="[REV ]08 - Iniciando Projeto - APP 3">
       <option name="closed" value="true" />
       <created>1719584502466</created>
@@ -743,7 +756,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742348233251</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="[REV] 77 Paginando Dados">
+      <option name="closed" value="true" />
+      <created>1742375944985</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1742375944985</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -763,7 +784,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="69 Melhorias Home e Inicio de Single" />
     <MESSAGE value="70 Compondo View Single Evento" />
     <MESSAGE value="71 Exibindo Fotos Evento se Existirem" />
     <MESSAGE value="72 - Organizando com HomeController" />
@@ -788,7 +808,8 @@
     <MESSAGE value="[REV] 72 Organizando com HomeController" />
     <MESSAGE value="[REV] 75 Organizando Rotas Painel Eventos" />
     <MESSAGE value="[REV] 76 Listagem de Eventos" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 76 Listagem de Eventos" />
+    <MESSAGE value="[REV] 77 Paginando Dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 77 Paginando Dados" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
