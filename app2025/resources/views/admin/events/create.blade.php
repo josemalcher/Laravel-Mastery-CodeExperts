@@ -8,33 +8,34 @@
 @section('content')
 
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 my-5">
         <h2>Criar Evento</h2>
     </div>
 </div>
 
     <div class="row">
         <div class="col-12">
-            <form action="">
+            <form action="/admin/events/store" method="post">
                 <div class="form-group">
                     <label for="">Titulo do Evento</label>
-                    <input type="text"class="form-control">
+                    <input type="text"class="form-control" name="title">
                 </div>
 
                 <div class="form-group">
                     <label for="">Descrição</label>
-                    <input type="text"class="form-control">
+                    <input type="text"class="form-control" name="description">
                 </div>
 
                 <div class="form-group">
                     <label for="">Mais detalhes sobre o Evento</label>
-                    <input type="text"class="form-control">
+                    <textarea class="form-control" name="body" cols="30" rows="10" "></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="">Data do Evento</label>
-                    <input type="text"class="form-control">
+                    <input type="text"class="form-control" name="start">
                 </div>
+                <button type="submit" class="btn btn-lg btn-success">Criar Evento</button>
             </form>
         </div>
     </div>

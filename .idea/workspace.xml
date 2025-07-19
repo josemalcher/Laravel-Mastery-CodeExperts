@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 77 Paginando Dados">
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] UPDATE!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/-&gt;count();" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/-&gt;count();  q" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/-&gt;count();q" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/bootstrap/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/app/private/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/private/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/logs/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +202,7 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -400,7 +387,7 @@
       <workItem from="1743455678425" duration="97000" />
       <workItem from="1744043907852" duration="2643000" />
       <workItem from="1744942254655" duration="5538000" />
-      <workItem from="1752893058573" duration="4670000" />
+      <workItem from="1752893058573" duration="6194000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -612,14 +599,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00058" summary="[REV ]08 - Iniciando Projeto - APP 3">
-      <option name="closed" value="true" />
-      <created>1719584502466</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1719584502467</updated>
-    </task>
     <task id="LOCAL-00059" summary="[REV]08 - Iniciando Projeto - APP 2025">
       <option name="closed" value="true" />
       <created>1737507649636</created>
@@ -764,7 +743,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742375944985</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="[REV] UPDATE!">
+      <option name="closed" value="true" />
+      <created>1752898006840</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1752898006840</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,7 +771,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="70 Compondo View Single Evento" />
     <MESSAGE value="71 Exibindo Fotos Evento se Existirem" />
     <MESSAGE value="72 - Organizando com HomeController" />
     <MESSAGE value="75 Organizando Rotas Painel Eventos" />
@@ -809,7 +795,8 @@
     <MESSAGE value="[REV] 75 Organizando Rotas Painel Eventos" />
     <MESSAGE value="[REV] 76 Listagem de Eventos" />
     <MESSAGE value="[REV] 77 Paginando Dados" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 77 Paginando Dados" />
+    <MESSAGE value="[REV] UPDATE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] UPDATE!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

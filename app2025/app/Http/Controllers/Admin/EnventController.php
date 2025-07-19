@@ -9,7 +9,7 @@ class EnventController extends Controller
 {
     public function index()
     {
-        $events = Event::paginate(3);
+        $events = Event::paginate(5);
 
         //resource/views/admin/events/index.blade.php // admin.events.index
         return view('admin.events.index', compact('events'));
