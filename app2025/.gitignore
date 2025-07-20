@@ -278,3 +278,4 @@ modules.xml
 *.ipr
 
 # End of https://www.toptal.com/developers/gitignore/api/laravel,phpstorm+all,phpstorm+iml,phpstorm
+/storage/framework/views/
