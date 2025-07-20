@@ -4,6 +4,7 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Illuminate\Support\Str;
 
 class EnventController extends Controller
 {
@@ -22,8 +23,9 @@ class EnventController extends Controller
 
     public function store()
     {
-        dd("CHEGAMOS NO METODO" . __METHOD__);
-
+        // dd("CHEGAMOS NO METODO" . __METHOD__);
+        // dd(request()->all());
+/*
         $event = [
             'title' => 'Evento Atribuição em Massa' . rand(1, 100),
             'description' => 'Descrição',
@@ -31,27 +33,38 @@ class EnventController extends Controller
             'slug' => 'evento-atribuicao-em-massa',
             'start' => date('Y-m-d H:i:s'),
             'end' => date('Y-m-d H:i:s')
-        ];
+        ];*/
+        $event = request()->all();
+        $event['slug'] = Str::slug($event['title']);
 
-        return Event::create($event);
+        //return Event::create(request()->all());
+        Event::create($event);
+        return redirect()->to('/admin/events/index');
+    }
+    public function edit($event)
+    {
+        $event = Event::findOrFail($event);
+        return view('admin.events.edit', compact('event'));
     }
 
-    public function update($id)
+    public function update($event)
     {
-        $eventDATA = [
+        /*$eventDATA = [
             'title' => 'Evento Atribuição em Massa ' . rand(1, 100),
-        ];
+        ];*/
 
-        $event = Event::find($id);
+        $event = Event::findOrFail($event);
 
-        $event->update($eventDATA);
+        $event->update(request()->all());
 
-        return $event;
+        return redirect()->back();
     }
 
     public function destroy($id)
     {
         $event = Event::findOrFail($id);
-        return $event->delete();
+        $event->delete();
+
+        return redirect()->to('/admin/events/index');
     }
 }

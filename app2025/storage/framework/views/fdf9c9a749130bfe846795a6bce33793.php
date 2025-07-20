@@ -29,12 +29,16 @@
 
                 <div class="form-group">
                     <label for="">Mais detalhes sobre o Evento</label>
-                    <textarea class="form-control" name="body" cols="30" rows="10" "></textarea>
+                    <textarea class="form-control" name="body" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="">Data do Evento</label>
                     <input type="text"class="form-control" name="start">
+                </div>
+                <div class="form-group">
+                    <label for="">Final do Evento</label>
+                    <input type="text"class="form-control" name="end">
                 </div>
                 <button type="submit" class="btn btn-lg btn-success">Criar Evento</button>
             </form>

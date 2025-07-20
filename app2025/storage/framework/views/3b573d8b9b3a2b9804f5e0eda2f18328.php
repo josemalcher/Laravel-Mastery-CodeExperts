@@ -16,6 +16,7 @@
                     <th>#</th>
                     <th>Evento</th>
                     <th>Criado em</th>
+                    <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,10 @@
                         <td><?php echo e($event->id); ?></td>
                         <td><?php echo e($event->title); ?></td>
                         <td><?php echo e($event->created_at->format('d/m/Y H:i:s')); ?></td>
+                        <td>
+                            <a href="/admin/events/<?php echo e($event->id); ?>/edit" class="btn btn-warning">Editar</a>
+                            <a href="/admin/events/destroy/<?php echo e($event->id); ?>" class="btn btn-danger">REMOVER</a>
+                        </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <tr>
