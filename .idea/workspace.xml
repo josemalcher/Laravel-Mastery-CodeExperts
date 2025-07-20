@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 79 Entendendo CSRF no Laravel">
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 82 Linkando Edição e Remoção de Evento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +382,7 @@
       <workItem from="1744043907852" duration="2643000" />
       <workItem from="1744942254655" duration="5538000" />
       <workItem from="1752893058573" duration="10006000" />
-      <workItem from="1752982691814" duration="3284000" />
+      <workItem from="1752982691814" duration="3677000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -600,22 +594,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00061" summary="[REV] 29 Falando Sobre Migrações">
-      <option name="closed" value="true" />
-      <created>1737512025107</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1737512025107</updated>
-    </task>
-    <task id="LOCAL-00062" summary="[REV] 31 Schema Dump">
-      <option name="closed" value="true" />
-      <created>1737589927749</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1737589927749</updated>
-    </task>
     <task id="LOCAL-00063" summary="[REV] 39 Removendo Dados">
       <option name="closed" value="true" />
       <created>1737629124297</created>
@@ -752,7 +730,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752983223291</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="[REV] 82 Linkando Edição e Remoção de Evento">
+      <option name="closed" value="true" />
+      <created>1752986094379</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1752986094379</updated>
+    </task>
+    <task id="LOCAL-00081" summary="[REV] 82 Linkando Edição e Remoção de Evento">
+      <option name="closed" value="true" />
+      <created>1752986162599</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1752986162599</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -772,7 +766,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="75 Organizando Rotas Painel Eventos" />
     <MESSAGE value="76 Listagem de Eventos" />
     <MESSAGE value="[REV ]08 - Iniciando Projeto" />
     <MESSAGE value="[REV ]08 - Iniciando Projeto - APP 3" />
@@ -797,7 +790,8 @@
     <MESSAGE value="[REV] UPDATE!" />
     <MESSAGE value="[REV] 78 Tela de Criação de Evento" />
     <MESSAGE value="[REV] 79 Entendendo CSRF no Laravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 79 Entendendo CSRF no Laravel" />
+    <MESSAGE value="[REV] 82 Linkando Edição e Remoção de Evento" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 82 Linkando Edição e Remoção de Evento" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

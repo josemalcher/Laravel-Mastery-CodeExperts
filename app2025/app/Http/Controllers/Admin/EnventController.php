@@ -4,6 +4,7 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class EnventController extends Controller
@@ -21,7 +22,7 @@ class EnventController extends Controller
         return view('admin.events.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
         // dd("CHEGAMOS NO METODO" . __METHOD__);
         // dd(request()->all());
@@ -34,7 +35,7 @@ class EnventController extends Controller
             'start' => date('Y-m-d H:i:s'),
             'end' => date('Y-m-d H:i:s')
         ];*/
-        $event = request()->all();
+        $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 
         //return Event::create(request()->all());
@@ -47,7 +48,7 @@ class EnventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event)
+    public function update($event, Request $request)
     {
         /*$eventDATA = [
             'title' => 'Evento Atribuição em Massa ' . rand(1, 100),
@@ -55,7 +56,7 @@ class EnventController extends Controller
 
         $event = Event::findOrFail($event);
 
-        $event->update(request()->all());
+        $event->update($request->all());
 
         return redirect()->back();
     }
