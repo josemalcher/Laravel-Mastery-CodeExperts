@@ -22,6 +22,8 @@ class EnventController extends Controller
 
     public function store()
     {
+        dd("CHEGAMOS NO METODO" . __METHOD__);
+
         $event = [
             'title' => 'Evento Atribuição em Massa' . rand(1, 100),
             'description' => 'Descrição',

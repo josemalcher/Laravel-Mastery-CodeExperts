@@ -1,11 +1,9 @@
-@extends('layouts.app')
-
-@section('title')
+<?php $__env->startSection('title'); ?>
     Cadastar um novo Evento
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class="row">
     <div class="col-12 my-5">
@@ -17,7 +15,7 @@
         <div class="col-12">
             <form action="/admin/events/store" method="post">
 
-                @csrf
+                <?php echo csrf_field(); ?>
 
                 <div class="form-group">
                     <label for="">Titulo do Evento</label>
@@ -43,4 +41,6 @@
         </div>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /var/www/html/resources/views/admin/events/create.blade.php ENDPATH**/ ?>
