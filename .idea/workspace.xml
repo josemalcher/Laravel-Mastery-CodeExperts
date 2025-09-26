@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 82 Linkando Edição e Remoção de Evento">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 83 Melhorias Manipulação de Request">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +186,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -278,8 +282,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
-        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PS-252.26199.163" />
+        <option value="bundled-php-predefined-a98d8de5180a-f0a8ef430dfa-com.jetbrains.php.sharedIndexes-PS-252.26199.163" />
       </set>
     </attachedChunks>
   </component>
@@ -382,7 +386,8 @@
       <workItem from="1744043907852" duration="2643000" />
       <workItem from="1744942254655" duration="5538000" />
       <workItem from="1752893058573" duration="10006000" />
-      <workItem from="1752982691814" duration="3677000" />
+      <workItem from="1752982691814" duration="5516000" />
+      <workItem from="1758849808319" duration="4844000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -594,14 +599,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00063" summary="[REV] 39 Removendo Dados">
-      <option name="closed" value="true" />
-      <created>1737629124297</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1737629124297</updated>
-    </task>
     <task id="LOCAL-00064" summary="[REV] 40 Organizando CRUD">
       <option name="closed" value="true" />
       <created>1737946548096</created>
@@ -746,7 +743,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752986162599</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="[REV] 83 Melhorias Manipulação de Request">
+      <option name="closed" value="true" />
+      <created>1752986506324</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1752986506324</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -766,7 +771,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="76 Listagem de Eventos" />
     <MESSAGE value="[REV ]08 - Iniciando Projeto" />
     <MESSAGE value="[REV ]08 - Iniciando Projeto - APP 3" />
     <MESSAGE value="[REV]08 - Iniciando Projeto - APP 2025" />
@@ -791,7 +795,8 @@
     <MESSAGE value="[REV] 78 Tela de Criação de Evento" />
     <MESSAGE value="[REV] 79 Entendendo CSRF no Laravel" />
     <MESSAGE value="[REV] 82 Linkando Edição e Remoção de Evento" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 82 Linkando Edição e Remoção de Evento" />
+    <MESSAGE value="[REV] 83 Melhorias Manipulação de Request" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 83 Melhorias Manipulação de Request" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -58,7 +58,8 @@ class EnventController extends Controller
 
         $event->update($request->all());
 
-        return redirect()->back();
+        //return redirect()->back();
+        return redirect()->to('/admin/events/index');
     }
 
     public function destroy($id)
