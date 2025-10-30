@@ -2855,6 +2855,27 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
 ```
 
+```
+ » sail php artisan route:list                                                                                                                                                       1 ↵ josemalcher@j0z3M4lch3r
+
+  GET|HEAD   / .............................................................. HomeController@index
+  GET|HEAD   admin/events/create .............. admin.event.create › Admin\EnventController@create
+  GET|HEAD   admin/events/destroy/{event} ... admin.event.destroy › Admin\EnventController@destroy
+  GET|HEAD   admin/events/index ................. admin.event.index › Admin\EnventController@index
+  POST       admin/events/store ................. admin.event.store › Admin\EnventController@store
+  POST       admin/events/update/{event} ...... admin.event.update › Admin\EnventController@update
+  GET|HEAD   admin/events/{event}/edit ............ admin.event.edit › Admin\EnventController@edit
+  GET|HEAD   eventos/{slug} .................................................. HomeController@show
+  GET|HEAD   queries/{event?} .................................................................... 
+  GET|HEAD   storage/{path} ........................................................ storage.local
+  GET|HEAD   up .................................................................................. 
+
+                                                                                                                                                                                                                                                      Showing [11] routes
+
+-------------------------------------------------------------------------------
+```
+
+
 - 89 Refatorando Links nas Views
 
 ```php

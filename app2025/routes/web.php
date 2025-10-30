@@ -91,17 +91,17 @@ Route::get('/queries/{event?}', function ($event = null){
 //Route::post('/admin/events/update/{event}',  [\app\Http\Controllers\Admin\EnventController::class, 'update']);
 //Route::get('/admin/events/destroy/{event}', [\app\Http\Controllers\Admin\EnventController::class, 'destroy']);
 
-Route::prefix('/admin')->group(function () {
-    Route::prefix('/events')->group(function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\EnventController::class, 'index']);
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::prefix('/events')->name('event.')->group(function () {
+        Route::get('/index', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
 
-        Route::get('/create', [\App\Http\Controllers\Admin\EnventController::class, 'create']);
-        Route::post('/store', [\App\Http\Controllers\Admin\EnventController::class, 'store']);
+        Route::get('/create', [\App\Http\Controllers\Admin\EnventController::class, 'create'])->name('create');
+        Route::post('/store', [\App\Http\Controllers\Admin\EnventController::class, 'store'])->name('store');
 
-        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EnventController::class, 'edit']);
-        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'update']);
+        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EnventController::class, 'edit'])->name('edit');
+        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'update'])->name('update');
 
-        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'destroy']);
+        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'destroy'])->name('destroy');
 
     });
 });
