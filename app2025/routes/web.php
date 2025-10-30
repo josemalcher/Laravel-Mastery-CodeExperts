@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/eventos/{slug}', [\App\Http\Controllers\HomeController::class, 'show'])->name('event.single');
 
 
 /*
@@ -93,7 +93,7 @@ Route::get('/queries/{event?}', function ($event = null){
 
 Route::prefix('/admin')->name('admin.')->group(function () {
     Route::prefix('/events')->name('event.')->group(function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
+        Route::get('/', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
 
         Route::get('/create', [\App\Http\Controllers\Admin\EnventController::class, 'create'])->name('create');
         Route::post('/store', [\App\Http\Controllers\Admin\EnventController::class, 'store'])->name('store');

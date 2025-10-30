@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-12">
-            <form action="/admin/events/store" method="post">
+            <form action="<?php echo e(route('admin.event.create')); ?>" method="post">
 
                 <?php echo csrf_field(); ?>
 

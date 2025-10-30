@@ -40,7 +40,7 @@ class EnventController extends Controller
 
         //return Event::create(request()->all());
         Event::create($event);
-        return redirect()->to('/admin/events/index');
+        return redirect()->route('admin.event.index');
     }
     public function edit($event)
     {
@@ -59,7 +59,7 @@ class EnventController extends Controller
         $event->update($request->all());
 
         //return redirect()->back();
-        return redirect()->to('/admin/events/index');
+        return redirect()->route('admin.event.index');
     }
 
     public function destroy($id)
@@ -67,6 +67,6 @@ class EnventController extends Controller
         $event = Event::findOrFail($id);
         $event->delete();
 
-        return redirect()->to('/admin/events/index');
+        return redirect()->route('admin.event.index');
     }
 }

@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-12">
-            <form action="/admin/events/store" method="post">
+            <form action="{{route('admin.event.create')}}" method="post">
 
                 @csrf
 

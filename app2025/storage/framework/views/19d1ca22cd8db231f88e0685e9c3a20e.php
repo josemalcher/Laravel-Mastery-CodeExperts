@@ -18,7 +18,7 @@
                         <h5 class="card-title"><?php echo e($event->title); ?></h5>
                         <strong>Acontece em: <?php echo e($event->start->format('d/m/Y H:i:s')); ?></strong>
                         <p class="card-text"><?php echo e($event->description); ?></p>
-                        <a href="/eventos/<?php echo e($event->slug); ?>" class="btn btn-info">Ver Evento</a>
+                        <a href="<?php echo e(route('event.single', ['slug'=> $event->slug])); ?>" class="btn btn-info">Ver Evento</a>
                     </div>
                 </div>
             </div>

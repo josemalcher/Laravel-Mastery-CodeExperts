@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-12">
-            <form action="/admin/events/update/{{$event->id}}" method="post">
+            <form action="{{route('admin.event.update', ['event'=> $event->id])}}" method="post">
 
                 @csrf
 

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-between align-items-center">
             <h2>Meus Eventos</h2>
-            <a href="/admin/events/create" class="btn btn-success">Criar evento</a>
+            <a href="<?php echo e(route('admin.event.create')); ?>" class="btn btn-success">Criar evento</a>
         </div>
         <div class="col-12">
 
@@ -26,8 +26,8 @@
                         <td><?php echo e($event->title); ?></td>
                         <td><?php echo e($event->created_at->format('d/m/Y H:i:s')); ?></td>
                         <td>
-                            <a href="/admin/events/<?php echo e($event->id); ?>/edit" class="btn btn-warning">Editar</a>
-                            <a href="/admin/events/destroy/<?php echo e($event->id); ?>" class="btn btn-danger">REMOVER</a>
+                            <a href="<?php echo e(route('admin.event.edit', ['event'=> $event->id])); ?>" class="btn btn-info">Editar</a>
+                            <a href="<?php echo e(route('admin.event.destroy', ['event'=> $event->id])); ?>" class="btn btn-danger">Remover</a>
                         </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>

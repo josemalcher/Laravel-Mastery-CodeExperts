@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 87 Organizando Rotas com Prefixo e Grupo">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 88 Usando Apelido de Rotas">
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Mastery-CodeExperts.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/19d1ca22cd8db231f88e0685e9c3a20e.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/19d1ca22cd8db231f88e0685e9c3a20e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +396,7 @@
       <workItem from="1752893058573" duration="10006000" />
       <workItem from="1752982691814" duration="5516000" />
       <workItem from="1758849808319" duration="5220000" />
-      <workItem from="1761789910246" duration="742000" />
+      <workItem from="1761789910246" duration="3641000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -600,14 +608,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00065" summary="[REV] 43 Mapeando 1:1 Models">
-      <option name="closed" value="true" />
-      <created>1738069956133</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1738069956133</updated>
-    </task>
     <task id="LOCAL-00066" summary="[REV] 51 Gerando Algumas Categories">
       <option name="closed" value="true" />
       <created>1738116086837</created>
@@ -752,7 +752,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758854798721</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="[REV] 88 Usando Apelido de Rotas">
+      <option name="closed" value="true" />
+      <created>1761790771190</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1761790771190</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -772,7 +780,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV ]08 - Iniciando Projeto - APP 3" />
     <MESSAGE value="[REV]08 - Iniciando Projeto - APP 2025" />
     <MESSAGE value="[REV] 22 - Conclusões" />
     <MESSAGE value="[REV] 29 Falando Sobre Migrações" />
@@ -797,7 +804,8 @@
     <MESSAGE value="[REV] 82 Linkando Edição e Remoção de Evento" />
     <MESSAGE value="[REV] 83 Melhorias Manipulação de Request" />
     <MESSAGE value="[REV] 87 Organizando Rotas com Prefixo e Grupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 87 Organizando Rotas com Prefixo e Grupo" />
+    <MESSAGE value="[REV] 88 Usando Apelido de Rotas" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 88 Usando Apelido de Rotas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
