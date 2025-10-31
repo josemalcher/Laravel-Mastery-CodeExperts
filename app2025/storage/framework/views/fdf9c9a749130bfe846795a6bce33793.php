@@ -11,9 +11,19 @@
     </div>
 </div>
 
+<?php if($errors->any()): ?>
+    <div class="alert alert-danger">
+        <ul>
+            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $erro): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($erro); ?></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
     <div class="row">
         <div class="col-12">
-            <form action="<?php echo e(route('admin.event.create')); ?>" method="post">
+            <form action="<?php echo e(route('admin.event.store')); ?>" method="post">
 
                 <?php echo csrf_field(); ?>
 

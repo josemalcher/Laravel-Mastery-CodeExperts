@@ -35,6 +35,14 @@ class EnventController extends Controller
             'start' => date('Y-m-d H:i:s'),
             'end' => date('Y-m-d H:i:s')
         ];*/
+
+        $request->validate([
+            'title' => 'required|min:30',
+            'description' => 'required',
+            'body' => 'required',
+            'start_event' => 'required',
+        ]);
+
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
 

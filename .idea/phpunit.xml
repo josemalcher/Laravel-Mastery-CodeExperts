@@ -3,14 +3,14 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Unit" />
-        <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Feature" />
-        <option value="$PROJECT_DIR$/videoFlix/tests/Unit" />
-        <option value="$PROJECT_DIR$/videoFlix/tests/Feature" />
-        <option value="$PROJECT_DIR$/appMeusEventos/tests/Unit" />
-        <option value="$PROJECT_DIR$/appMeusEventos/tests/Feature" />
         <option value="$PROJECT_DIR$/modulo-ponte-acl/tests/Unit" />
         <option value="$PROJECT_DIR$/modulo-ponte-acl/tests/Feature" />
+        <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Unit" />
+        <option value="$PROJECT_DIR$/02-Ambiente/07-Laravel-Installer-Windows/proj02-teste/tests/Feature" />
+        <option value="$PROJECT_DIR$/appMeusEventos/tests/Unit" />
+        <option value="$PROJECT_DIR$/appMeusEventos/tests/Feature" />
+        <option value="$PROJECT_DIR$/videoFlix/tests/Unit" />
+        <option value="$PROJECT_DIR$/videoFlix/tests/Feature" />
       </list>
     </option>
   </component>
