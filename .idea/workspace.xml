@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 92 Conclusões">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 95 Exibindo Todas as Validações na View">
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
@@ -391,7 +391,8 @@
       <workItem from="1761789910246" duration="3783000" />
       <workItem from="1761864439289" duration="737000" />
       <workItem from="1761877814272" duration="77000" />
-      <workItem from="1761877953012" duration="595000" />
+      <workItem from="1761877953012" duration="798000" />
+      <workItem from="1761964741492" duration="1089000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -603,14 +604,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00067" summary="[REV] 56 Conclusão">
-      <option name="closed" value="true" />
-      <created>1738625252898</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1738625252898</updated>
-    </task>
     <task id="LOCAL-00068" summary="[REV] 61 Executando as Factories via Seed">
       <option name="closed" value="true" />
       <created>1738678860886</created>
@@ -755,7 +748,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761793596204</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="[REV] 95 Exibindo Todas as Validações na View">
+      <option name="closed" value="true" />
+      <created>1761878633385</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1761878633385</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +776,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 22 - Conclusões" />
     <MESSAGE value="[REV] 29 Falando Sobre Migrações" />
     <MESSAGE value="[REV] 31 Schema Dump" />
     <MESSAGE value="[REV] 39 Removendo Dados" />
@@ -800,7 +800,8 @@
     <MESSAGE value="[REV] 87 Organizando Rotas com Prefixo e Grupo" />
     <MESSAGE value="[REV] 88 Usando Apelido de Rotas" />
     <MESSAGE value="[REV] 92 Conclusões" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 92 Conclusões" />
+    <MESSAGE value="[REV] 95 Exibindo Todas as Validações na View" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 95 Exibindo Todas as Validações na View" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

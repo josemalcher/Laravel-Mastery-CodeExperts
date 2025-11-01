@@ -30,27 +30,52 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="">Titulo do Evento</label>
-                    <input type="text"class="form-control" name="title">
+                    <label>Título Evento</label>
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" name="title">
+                    @error('title')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
-                    <label for="">Descrição</label>
-                    <input type="text"class="form-control" name="description">
+                    <label>Descrição Rápida Evento</label>
+                    <input type="text" class="form-control @error('description') is-invalid @enderror" name="description">
+                    @error('description')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="">Mais detalhes sobre o Evento</label>
-                    <textarea class="form-control" name="body" cols="30" rows="10"></textarea>
+                    <textarea class="form-control"  @error('body') is-invalid @enderror" name="body" cols="30" rows="10"></textarea>
+                    @error('body')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="">Data do Evento</label>
-                    <input type="text"class="form-control" name="start">
+                    <input type="text"class="form-control"  @error('start') is-invalid @enderror" name="start">
+                    @error('start')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="">Final do Evento</label>
-                    <input type="text"class="form-control" name="end">
+                    <input type="text"class="form-control"  @error('end') is-invalid @enderror" name="end">
+                    @error('end')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-lg btn-success">Criar Evento</button>
             </form>

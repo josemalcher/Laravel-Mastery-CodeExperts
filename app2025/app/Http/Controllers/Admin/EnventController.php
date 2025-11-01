@@ -40,7 +40,8 @@ class EnventController extends Controller
             'title' => 'required|min:30',
             'description' => 'required',
             'body' => 'required',
-            'start_event' => 'required',
+            'start' => 'required',
+            'end' => 'required',
         ]);
 
         $event = $request->all();
