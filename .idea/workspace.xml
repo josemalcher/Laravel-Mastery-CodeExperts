@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 95 Exibindo Todas as Validações na View">
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 96 Exibindo Validações POr Input">
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Requests/EventRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -392,7 +393,7 @@
       <workItem from="1761864439289" duration="737000" />
       <workItem from="1761877814272" duration="77000" />
       <workItem from="1761877953012" duration="798000" />
-      <workItem from="1761964741492" duration="1089000" />
+      <workItem from="1761964741492" duration="3572000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -604,14 +605,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00068" summary="[REV] 61 Executando as Factories via Seed">
-      <option name="closed" value="true" />
-      <created>1738678860886</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1738678860886</updated>
-    </task>
     <task id="LOCAL-00069" summary="[REV] 64 Loop e Passagem de Dados View">
       <option name="closed" value="true" />
       <created>1741708161158</created>
@@ -756,7 +749,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761878633385</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="[REV] 96 Exibindo Validações POr Input">
+      <option name="closed" value="true" />
+      <created>1761965867903</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1761965867903</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,7 +777,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 29 Falando Sobre Migrações" />
     <MESSAGE value="[REV] 31 Schema Dump" />
     <MESSAGE value="[REV] 39 Removendo Dados" />
     <MESSAGE value="[REV] 40 Organizando CRUD" />
@@ -801,7 +801,8 @@
     <MESSAGE value="[REV] 88 Usando Apelido de Rotas" />
     <MESSAGE value="[REV] 92 Conclusões" />
     <MESSAGE value="[REV] 95 Exibindo Todas as Validações na View" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 95 Exibindo Todas as Validações na View" />
+    <MESSAGE value="[REV] 96 Exibindo Validações POr Input" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 96 Exibindo Validações POr Input" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

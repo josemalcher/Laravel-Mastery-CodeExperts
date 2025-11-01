@@ -3,6 +3,7 @@
 namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -22,7 +23,7 @@ class EnventController extends Controller
         return view('admin.events.create');
     }
 
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
         // dd("CHEGAMOS NO METODO" . __METHOD__);
         // dd(request()->all());
@@ -36,13 +37,19 @@ class EnventController extends Controller
             'end' => date('Y-m-d H:i:s')
         ];*/
 
-        $request->validate([
-            'title' => 'required|min:30',
-            'description' => 'required',
-            'body' => 'required',
-            'start' => 'required',
-            'end' => 'required',
-        ]);
+//        $request->validate([
+//            'title' => 'required|min:30',
+//            'description' => 'required',
+//            'body' => 'required',
+//            'start' => 'required',
+//            'end' => 'required',
+//        ],
+//            [
+//                'title.required' => 'Este campo de Títuilo é obrigatório',
+//
+//                'required' => 'Este campo é obrigatório',
+//                'min' => 'Este campo requer mais caracteres. Mínimo é de :min'
+//            ]);
 
         $event = $request->all();
         $event['slug'] = Str::slug($event['title']);
@@ -57,7 +64,7 @@ class EnventController extends Controller
         return view('admin.events.edit', compact('event'));
     }
 
-    public function update($event, Request $request)
+    public function update($event, EventRequest $request)
     {
         /*$eventDATA = [
             'title' => 'Evento Atribuição em Massa ' . rand(1, 100),
