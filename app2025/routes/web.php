@@ -105,3 +105,4 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
     });
 });
+Route::resource('res', \App\Http\Controllers\ResController::class);

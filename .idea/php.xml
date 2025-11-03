@@ -122,6 +122,7 @@
       <path value="$PROJECT_DIR$/videoFlix/vendor/composer" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/videoFlix/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/app2025/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
