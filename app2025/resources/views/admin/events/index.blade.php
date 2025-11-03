@@ -18,7 +18,7 @@
                     <th>#</th>
                     <th>Evento</th>
                     <th>Criado em</th>
-                    <th>Ações</th>
+                    <th width="15%">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,9 +27,14 @@
                         <td>{{$event->id}}</td>
                         <td>{{$event->title}}</td>
                         <td>{{$event->created_at->format('d/m/Y H:i:s')}}</td>
-                        <td>
+                        <td class="d-flex justify-content-between">
                             <a href="{{ route('admin.event.edit', ['event'=> $event->id]) }}" class="btn btn-info">Editar</a>
-                            <a href="{{ route('admin.event.destroy', ['event'=> $event->id]) }}" class="btn btn-danger">Remover</a>
+{{--                            <a href="{{ route('admin.event.destroy', ['event'=> $event->id]) }}" class="btn btn-danger">Remover</a>--}}
+                            <form action="{{ route('admin.event.destroy', ['event'=> $event->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">Remover</button>
+                            </form>
                         </td>
                     </tr>
                 @empty

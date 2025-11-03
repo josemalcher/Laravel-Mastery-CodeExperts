@@ -16,7 +16,7 @@
                     <th>#</th>
                     <th>Evento</th>
                     <th>Criado em</th>
-                    <th>Ações</th>
+                    <th width="15%">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,9 +25,14 @@
                         <td><?php echo e($event->id); ?></td>
                         <td><?php echo e($event->title); ?></td>
                         <td><?php echo e($event->created_at->format('d/m/Y H:i:s')); ?></td>
-                        <td>
+                        <td class="d-flex justify-content-between">
                             <a href="<?php echo e(route('admin.event.edit', ['event'=> $event->id])); ?>" class="btn btn-info">Editar</a>
-                            <a href="<?php echo e(route('admin.event.destroy', ['event'=> $event->id])); ?>" class="btn btn-danger">Remover</a>
+
+                            <form action="<?php echo e(route('admin.event.destroy', ['event'=> $event->id])); ?>" method="post">
+                                <?php echo csrf_field(); ?>
+                                <?php echo method_field('DELETE'); ?>
+                                <button class="btn btn-danger">Remover</button>
+                            </form>
                         </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>

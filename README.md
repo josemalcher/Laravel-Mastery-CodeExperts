@@ -3218,15 +3218,19 @@ Controller created successfully.
 ```
 
 ```
-$ php artisan route:list --name=events.photos
+ sail php artisan route:list --name=event.photos                                                                                                                   1 ↵ josemalcher@j0z3M4lch3r
 
-  GET|HEAD   admin/events/{event}/photos ............. admin.events.photos.index › Admin\EventPhotoController@index
-  POST       admin/events/{event}/photos ............. admin.events.photos.store › Admin\EventPhotoController@store  
-  GET|HEAD   admin/events/{event}/photos/create ...... admin.events.photos.create › Admin\EventPhotoController@create  
-  GET|HEAD   admin/events/{event}/photos/{photo} ..... admin.events.photos.show › Admin\EventPhotoController@show  
-  PUT|PATCH  admin/events/{event}/photos/{photo} ..... admin.events.photos.update › Admin\EventPhotoController@update  
-  DELETE     admin/events/{event}/photos/{photo} ..... admin.events.photos.destroy › Admin\EventPhotoController@destroy  
-  GET|HEAD   admin/events/{event}/photos/{photo}/edit .. admin.events.photos.edit › Admin\EventPhotoController@edit  
+  GET|HEAD        admin/event/{event}/photos ..................... admin.event.photos.index › Admin\EventPhotoController@index
+  POST            admin/event/{event}/photos ..................... admin.event.photos.store › Admin\EventPhotoController@store
+  GET|HEAD        admin/event/{event}/photos/create ............ admin.event.photos.create › Admin\EventPhotoController@create
+  GET|HEAD        admin/event/{event}/photos/{photo} ............... admin.event.photos.show › Admin\EventPhotoController@show
+  PUT|PATCH       admin/event/{event}/photos/{photo} ........... admin.event.photos.update › Admin\EventPhotoController@update
+  DELETE          admin/event/{event}/photos/{photo} ......... admin.event.photos.destroy › Admin\EventPhotoController@destroy
+  GET|HEAD        admin/event/{event}/photos/{photo}/edit .......... admin.event.photos.edit › Admin\EventPhotoController@edit
+
+                                                                                                                                                                                                                                       Showing [7] routes
+                                                                                                                                                                                                                            Showing [7] routes
+  
 ```
 
 ```php
@@ -3290,25 +3294,50 @@ class EventController extends Controller
 - 112 Intro e Obtendo Laravel UI
 
 ```
-$ composer require laravel/ui:^3.2
+ sail composer require laravel/ui                                                                                                                                      josemalcher@j0z3M4lch3r
 ./composer.json has been updated
 Running composer update laravel/ui
 Loading composer repositories with package information
 Updating dependencies
 Lock file operations: 1 install, 0 updates, 0 removals
-  - Locking laravel/ui (v3.4.6)
+  - Locking laravel/ui (v4.6.1)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Downloading laravel/ui (v4.6.1)
+  - Installing laravel/ui (v4.6.1): Extracting archive
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
 
+   INFO  Discovering packages.  
+
+  laravel/pail ................................................................................................................................ DONE
+  laravel/sail ................................................................................................................................ DONE
+  laravel/tinker .............................................................................................................................. DONE
+  laravel/ui .................................................................................................................................. DONE
+  nesbot/carbon ............................................................................................................................... DONE
+  nunomaduro/collision ........................................................................................................................ DONE
+  nunomaduro/termwind ......................................................................................................................... DONE
+
+79 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+   INFO  No publishable resources for tag [laravel-assets].  
+
+No security vulnerability advisories found.
+Using version ^4.6 for laravel/ui
 ```
 
 ```
-$ php artisan | grep -i "ui"
-  -q, --quiet           Do not output any message
-  ui                    Swap the front-end scaffolding for the application
-  package:discover      Rebuild the cached package manifest
+$ sail php artisan | grep -i "ui"                                                                                                                                       josemalcher@j0z3M4lch3r
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  ui                        Swap the front-end scaffolding for the application
+  package:discover          Rebuild the cached package manifest
  ui
-  ui:auth               Scaffold basic login and registration views and routes
-  ui:controllers        Scaffold the authentication controllers
-
+  ui:auth                   Scaffold basic login and registration views and routes
+  ui:controllers            Scaffold the authentication controllers
 ```
 
 - 113 Gerando Autenticação

@@ -59,26 +59,26 @@ Route::get('/queries/{event?}', function ($event = null){
 
 });*/
 
-Route::get('/queries/{event?}', function ($event = null){
-/*
-    $eventDATA = [
-        // 'title' => 'Evento Atribuição em Massa',
-        'description' => 'Descrição ATUALIZADA',
-        // 'body' => 'Conteudo do Evento',
-        // 'slug' => 'evento-atribuicao-em-massa',
-        // 'start_event' => date('Y-m-d H:i:s')
-    ];
+Route::get('/queries/{event?}', function ($event = null) {
+    /*
+        $eventDATA = [
+            // 'title' => 'Evento Atribuição em Massa',
+            'description' => 'Descrição ATUALIZADA',
+            // 'body' => 'Conteudo do Evento',
+            // 'slug' => 'evento-atribuicao-em-massa',
+            // 'start_event' => date('Y-m-d H:i:s')
+        ];
 
-    $event = \App\Models\Event::find(1);
-    $event->update($eventDATA);
+        $event = \App\Models\Event::find(1);
+        $event->update($eventDATA);
 
-    return $event;*/
+        return $event;*/
 
 
     // $event = \App\Models\Event::findOrFail(2);
     //return $event->delete(); // 1
 
-    return \App\Models\Event::destroy([8,7,6]); // 3
+    return \App\Models\Event::destroy([8, 7, 6]); // 3
 
 
 });
@@ -92,17 +92,27 @@ Route::get('/queries/{event?}', function ($event = null){
 //Route::get('/admin/events/destroy/{event}', [\app\Http\Controllers\Admin\EnventController::class, 'destroy']);
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::prefix('/events')->name('event.')->group(function () {
-        Route::get('/', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
+//    Route::prefix('/events')->name('event.')->group(function () {
+//        Route::get('/', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
+//
+//        Route::get('/create', [\App\Http\Controllers\Admin\EnventController::class, 'create'])->name('create');
+//        Route::post('/store', [\App\Http\Controllers\Admin\EnventController::class, 'store'])->name('store');
+//
+//        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EnventController::class, 'edit'])->name('edit');
+//        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'update'])->name('update');
+//
+//        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'destroy'])->name('destroy');
+//
+//    });
 
-        Route::get('/create', [\App\Http\Controllers\Admin\EnventController::class, 'create'])->name('create');
-        Route::post('/store', [\App\Http\Controllers\Admin\EnventController::class, 'store'])->name('store');
-
-        Route::get('/{event}/edit', [\App\Http\Controllers\Admin\EnventController::class, 'edit'])->name('edit');
-        Route::post('/update/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'update'])->name('update');
-
-        Route::get('/destroy/{event}', [\App\Http\Controllers\Admin\EnventController::class, 'destroy'])->name('destroy');
-
-    });
+    Route::resource('event',        \App\Http\Controllers\Admin\EnventController::class);
+    Route::resource('event.photos', \App\Http\Controllers\Admin\EventPhotoController::class);
+/*    Route::resources([
+        'events' => \App\Http\Controllers\Admin\EventController::class,
+        'events.photos' => \App\Http\Controllers\Admin\EventPhotoController::class
+    ],
+    [
+        'except' => ['destroy']
+    ]);*/
 });
-Route::resource('res', \App\Http\Controllers\ResController::class);
+// Route::resource('res', \App\Http\Controllers\ResController::class);
