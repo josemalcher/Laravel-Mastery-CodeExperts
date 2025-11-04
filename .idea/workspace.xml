@@ -4,15 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 104 Criando Controllers como Recurso">
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EventPhotoController.php" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 112 Intro e Obtendo Laravel UI">
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/sass/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/19d1ca22cd8db231f88e0685e9c3a20e.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/275c7c02e2528e6029079c885e2d2418.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/297ce1fa99e5419738e8963741b5a979.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/41a3cc70fc98432c68c6518a68377e7f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/5c2001e939204ec0b7ec56c9a9f31d3d.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/dd310000961f2d208873a737c27d849a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +420,8 @@
       <workItem from="1761877953012" duration="798000" />
       <workItem from="1761964741492" duration="3990000" />
       <workItem from="1762043609260" duration="621000" />
-      <workItem from="1762136926531" duration="4216000" />
+      <workItem from="1762136926531" duration="4644000" />
+      <workItem from="1762218794364" duration="2857000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -610,14 +633,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00071" summary="[REV] 70 Compondo View Single Evento">
-      <option name="closed" value="true" />
-      <created>1742258782752</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1742258782752</updated>
-    </task>
     <task id="LOCAL-00072" summary="[REV] 71 Exibindo Fotos Evento se Existirem">
       <option name="closed" value="true" />
       <created>1742260703597</created>
@@ -762,7 +777,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762138495854</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="[REV] 112 Intro e Obtendo Laravel UI">
+      <option name="closed" value="true" />
+      <created>1762142411686</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1762142411686</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +805,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 40 Organizando CRUD" />
     <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
@@ -807,7 +829,8 @@
     <MESSAGE value="[REV] 96 Exibindo Validações POr Input" />
     <MESSAGE value="[REV] 101 Conclusões" />
     <MESSAGE value="[REV] 104 Criando Controllers como Recurso" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 104 Criando Controllers como Recurso" />
+    <MESSAGE value="[REV] 112 Intro e Obtendo Laravel UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 112 Intro e Obtendo Laravel UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
