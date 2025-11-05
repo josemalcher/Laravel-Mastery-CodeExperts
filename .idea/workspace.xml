@@ -4,37 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 112 Intro e Obtendo Laravel UI">
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app2025/resources/views/home.blade.php" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 113 Gerando Autenticação">
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/19d1ca22cd8db231f88e0685e9c3a20e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/275c7c02e2528e6029079c885e2d2418.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/297ce1fa99e5419738e8963741b5a979.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/41a3cc70fc98432c68c6518a68377e7f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/5c2001e939204ec0b7ec56c9a9f31d3d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/dd310000961f2d208873a737c27d849a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/fdf9c9a749130bfe846795a6bce33793.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/c6e4ea11ca7454f87ab86a2864a7cc06.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,7 +401,8 @@
       <workItem from="1761964741492" duration="3990000" />
       <workItem from="1762043609260" duration="621000" />
       <workItem from="1762136926531" duration="4644000" />
-      <workItem from="1762218794364" duration="2857000" />
+      <workItem from="1762218794364" duration="2873000" />
+      <workItem from="1762307509598" duration="3436000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -633,14 +614,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00072" summary="[REV] 71 Exibindo Fotos Evento se Existirem">
-      <option name="closed" value="true" />
-      <created>1742260703597</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1742260703597</updated>
-    </task>
     <task id="LOCAL-00073" summary="[REV] 72 Organizando com HomeController">
       <option name="closed" value="true" />
       <created>1742261048451</created>
@@ -785,7 +758,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762142411686</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="[REV] 113 Gerando Autenticação">
+      <option name="closed" value="true" />
+      <created>1762221831647</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1762221831647</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -805,7 +786,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
     <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
@@ -830,7 +810,19 @@
     <MESSAGE value="[REV] 101 Conclusões" />
     <MESSAGE value="[REV] 104 Criando Controllers como Recurso" />
     <MESSAGE value="[REV] 112 Intro e Obtendo Laravel UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 112 Intro e Obtendo Laravel UI" />
+    <MESSAGE value="[REV] 113 Gerando Autenticação" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 113 Gerando Autenticação" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
