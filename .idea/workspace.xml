@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 104 Criando Controllers como Recurso">
-      <change afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EventPhotoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Admin/EnventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/admin/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/3b573d8b9b3a2b9804f5e0eda2f18328.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}

@@ -116,3 +116,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     ]);*/
 });
 // Route::resource('res', \App\Http\Controllers\ResController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

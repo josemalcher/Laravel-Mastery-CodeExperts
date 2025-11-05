@@ -3,15 +3,25 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "build-css": "sass --load-path=node_modules resources/sass/app.scss public/css/app.css",
+        "build-js": "vite build && cp public/build/assets/app*.js public/js/app.js"
+
     },
     "devDependencies": {
+        "@popperjs/core": "^2.11.6",
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.47",
+        "sass": "^1.93.3",
         "tailwindcss": "^3.4.13",
         "vite": "^6.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.5.0",
+        "jquery": "^3.7.1",
+        "popper.js": "^1.16.1"
     }
 }
