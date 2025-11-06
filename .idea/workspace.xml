@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 104 Criando Controllers como Recurso">
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 115 Adaptações do Nosso Painel PROBLEMA na importação do app.js Usar o MIX">
+      <change afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,34 +186,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app2025/resources/views/admin/events&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/josemalcher/workspaces/Laravel-Mastery-CodeExperts/app2025/resources/views/layouts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" />
@@ -245,11 +243,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\josemalcher\workspaces\Laravel-Mastery-CodeExperts\app2025\resources\views\layouts" />
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\josemalcher\workspaces\Laravel-Mastery-CodeExperts\app2025\resources\views\admin\events" />
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\josemalcher\workspaces\Laravel-Mastery-CodeExperts\app3meuseventos" />
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\josemalcher\projetos\Laravel-Mastery-CodeExperts\videoFlixSail\app\Http" />
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\josemalcher\projetos\Laravel-Mastery-CodeExperts\videoFlixSail\resources\views" />
-      <recent name="$PROJECT_DIR$/videoFlixSail/app/Http" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\josemalcher\workspaces\Laravel-Mastery-CodeExperts\app3meuseventos" />
@@ -401,6 +399,8 @@
       <workItem from="1761964741492" duration="3990000" />
       <workItem from="1762043609260" duration="621000" />
       <workItem from="1762136926531" duration="4216000" />
+      <workItem from="1762388881313" duration="1065000" />
+      <workItem from="1762391340767" duration="3697000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -612,14 +612,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00071" summary="[REV] 70 Compondo View Single Evento">
-      <option name="closed" value="true" />
-      <created>1742258782752</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1742258782752</updated>
-    </task>
     <task id="LOCAL-00072" summary="[REV] 71 Exibindo Fotos Evento se Existirem">
       <option name="closed" value="true" />
       <created>1742260703597</created>
@@ -764,7 +756,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762138495854</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="[REV] 115 Adaptações do Nosso Painel PROBLEMA na importação do app.js Usar o MIX">
+      <option name="closed" value="true" />
+      <created>1762315495045</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1762315495045</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,7 +784,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 40 Organizando CRUD" />
     <MESSAGE value="[REV] 43 Mapeando 1:1 Models" />
     <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
@@ -809,7 +808,8 @@
     <MESSAGE value="[REV] 96 Exibindo Validações POr Input" />
     <MESSAGE value="[REV] 101 Conclusões" />
     <MESSAGE value="[REV] 104 Criando Controllers como Recurso" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 104 Criando Controllers como Recurso" />
+    <MESSAGE value="[REV] 115 Adaptações do Nosso Painel PROBLEMA na importação do app.js Usar o MIX" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 115 Adaptações do Nosso Painel PROBLEMA na importação do app.js Usar o MIX" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

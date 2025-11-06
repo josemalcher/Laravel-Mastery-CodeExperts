@@ -91,7 +91,7 @@ Route::get('/queries/{event?}', function ($event = null) {
 //Route::post('/admin/events/update/{event}',  [\app\Http\Controllers\Admin\EnventController::class, 'update']);
 //Route::get('/admin/events/destroy/{event}', [\app\Http\Controllers\Admin\EnventController::class, 'destroy']);
 
-Route::prefix('/admin')->name('admin.')->group(function () {
+Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
 //    Route::prefix('/events')->name('event.')->group(function () {
 //        Route::get('/', [\App\Http\Controllers\Admin\EnventController::class, 'index'])->name('index');
 //
