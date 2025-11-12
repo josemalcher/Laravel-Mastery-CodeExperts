@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 115 Adaptações do Nosso Painel">
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+    <list default="true" id="8d916f3b-c926-404f-a278-d0e577d1af1e" name="Changes" comment="[REV] 116 O Btn de Logout">
+      <change afterPath="$PROJECT_DIR$/app2025/database/migrations/2025_11_12_023310_alter_table_events_add_column_owner_id.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/EventsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/database/seeders/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" beforeDir="false" afterPath="$PROJECT_DIR$/app2025/storage/framework/views/8af96f1aa4ca539680bbb419b6450c05.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +403,8 @@
       <workItem from="1762388881313" duration="1065000" />
       <workItem from="1762391340767" duration="4277000" />
       <workItem from="1762396663249" duration="33000" />
-      <workItem from="1762482394273" duration="521000" />
+      <workItem from="1762482394273" duration="1325000" />
+      <workItem from="1762913301574" duration="1510000" />
     </task>
     <task id="LOCAL-00001" summary="191 Instalando o Breeze">
       <created>1679448756712</created>
@@ -610,14 +616,6 @@
       <option name="project" value="LOCAL" />
       <updated>1681937111608</updated>
     </task>
-    <task id="LOCAL-00073" summary="[REV] 72 Organizando com HomeController">
-      <option name="closed" value="true" />
-      <created>1742261048451</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1742261048451</updated>
-    </task>
     <task id="LOCAL-00074" summary="[REV] 75 Organizando Rotas Painel Eventos">
       <option name="closed" value="true" />
       <created>1742346877585</created>
@@ -762,7 +760,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762396232369</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="[REV] 116 O Btn de Logout">
+      <option name="closed" value="true" />
+      <created>1762482978767</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1762482978767</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +788,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[REV] 51 Gerando Algumas Categories" />
     <MESSAGE value="[REV] 56 Conclusão" />
     <MESSAGE value="[REV] 61 Executando as Factories via Seed" />
     <MESSAGE value="[REV] 64 Loop e Passagem de Dados View" />
@@ -807,7 +812,8 @@
     <MESSAGE value="[REV] 104 Criando Controllers como Recurso" />
     <MESSAGE value="[REV] 115 Adaptações do Nosso Painel PROBLEMA na importação do app.js Usar o MIX" />
     <MESSAGE value="[REV] 115 Adaptações do Nosso Painel" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REV] 115 Adaptações do Nosso Painel" />
+    <MESSAGE value="[REV] 116 O Btn de Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REV] 116 O Btn de Logout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3407,8 +3407,9 @@ $ npm run dev
 - 118 Configurações para Dono de Evento
 
 ```
-$ php artisan make:migration alter_table_events_add_column_owner_id --table=events
-Created Migration: 2023_03_09_190205_alter_table_events_add_column_owner_id
+$  sail php artisan make:migration alter_table_events_add_column_owner_id --table=events                                                                           josemalcher@j0z3M4lch3r
+
+   INFO  Migration [database/migrations/2025_11_12_023310_alter_table_events_add_column_owner_id.php] created successfully.  
 ```
 
 ```php
@@ -3435,7 +3436,11 @@ class AlterTableEventsAddColumnOwnerId extends Migration
 ```
 
 ```
-$ php artisan migrate
+$ sail php artisan migrate                                                                                                                                    1 ↵ josemalcher@j0z3M4lch3r
+
+   INFO  Running migrations.  
+
+  2025_11_12_023310_alter_table_events_add_column_owner_id ........... 104.23ms DONE
 
 ```
 
